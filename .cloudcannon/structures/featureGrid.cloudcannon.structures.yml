@@ -175,7 +175,7 @@ featureGridItems:
             step: 1
             default: 1
     - label: Pricing Item
-      icon: currency-dollar
+      icon: attach_money
       value:
         _component: page-sections/features/feature-grid/pricing-item
         title: Tier
