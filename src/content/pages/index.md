@@ -410,18 +410,18 @@ pageSections:
           list:
             _component: building-blocks/core-elements/list
             items:
-              - _component: building-blocks/core-elements/list/list-item
-                text: Global CDN with 800+ edge nodes
+              - text: Global CDN with 800+ edge nodes
                 iconName: check-circle
                 iconColor: purple
-              - _component: building-blocks/core-elements/list/list-item
-                text: Automated SSL certificate management
+                link: ''
+              - text: Automated SSL certificate management
                 iconName: check-circle
                 iconColor: purple
-              - _component: building-blocks/core-elements/list/list-item
-                text: "Complimentary network topology consult with\Lour most artistic engineer"
+                link: ''
+              - text: "Complimentary network topology consult with\Lour most artistic engineer"
                 iconName: check-circle
                 iconColor: purple
+                link: ''
             direction: vertical
             alignmentHorizontal: start
             size: md
@@ -448,18 +448,18 @@ pageSections:
           list:
             _component: building-blocks/core-elements/list
             items:
-              - _component: building-blocks/core-elements/list/list-item
-                text: Priority traffic routing
+              - text: Priority traffic routing
                 iconName: check-circle
                 iconColor: purple
-              - _component: building-blocks/core-elements/list/list-item
-                text: Dedicated customer success specialist
+                link: ''
+              - text: Dedicated customer success specialist
                 iconName: check-circle
                 iconColor: purple
-              - _component: building-blocks/core-elements/list/list-item
-                text: "Annual infrastructure health assessment conducted by our senior architects,\Lcomplete with a 40-page report bound in a collectible presentation folder"
+                link: ''
+              - text: "Annual infrastructure health assessment conducted by our senior architects,\Lcomplete with a 40-page report bound in a collectible presentation folder"
                 iconName: check-circle
                 iconColor: purple
+                link: ''
             direction: vertical
             alignmentHorizontal: start
             size: md

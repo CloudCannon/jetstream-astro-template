@@ -47,6 +47,12 @@ collections_config:
         remove_empty_inputs: false
         remove_extra_inputs: false
         name: New Page
+      blog-index:
+        path: .cloudcannon/schemas/blog-index.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
   blog:
     path: src/content/blog
     glob:

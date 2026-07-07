@@ -175,7 +175,7 @@ featureGridItems:
             step: 1
             default: 1
     - label: Pricing Item
-      icon: currency-dollar
+      icon: attach_money
       value:
         _component: page-sections/features/feature-grid/pricing-item
         title: Tier
@@ -187,18 +187,18 @@ featureGridItems:
         list:
           _component: building-blocks/core-elements/list
           items:
-            - _component: building-blocks/core-elements/list/list-item
-              text: List item 1
+            - text: List item 1
               iconName: heart
               iconColor: default
-            - _component: building-blocks/core-elements/list/list-item
-              text: List item 2
+              link:
+            - text: List item 2
               iconName: heart
               iconColor: default
-            - _component: building-blocks/core-elements/list/list-item
-              text: List item 3
+              link:
+            - text: List item 3
               iconName: heart
               iconColor: default
+              link:
           direction: vertical
           alignmentHorizontal: start
           size: md
@@ -221,7 +221,7 @@ featureGridItems:
         subtext:
           - key: description
         icon:
-          - currency-dollar
+          - attach_money
       _inputs:
         title:
           comment: Card heading.
@@ -232,7 +232,7 @@ featureGridItems:
             structures:
               values:
                 - label: Price
-                  icon: currency-dollar
+                  icon: attach_money
                   value:
                     prefix: $
                     amount: "599"
