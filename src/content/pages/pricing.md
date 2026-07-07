@@ -74,14 +74,17 @@ pageSections:
                 text: Global CDN with 800+ edge nodes
                 iconName: globe-americas
                 iconColor: default
+                link: ''
               - _component: building-blocks/core-elements/list/list-item
                 text: Automated SSL certificate management
                 iconName: shield-check
                 iconColor: default
+                link: ''
               - _component: building-blocks/core-elements/list/list-item
                 text: "Complimentary network topology consult with\Lour most artistic engineer"
                 iconName: heart
                 iconColor: default
+                link: ''
             direction: vertical
             alignmentHorizontal: start
             size: md
@@ -112,14 +115,17 @@ pageSections:
                 text: Priority traffic routing
                 iconName: adjustments-horizontal
                 iconColor: default
+                link: ''
               - _component: building-blocks/core-elements/list/list-item
                 text: Dedicated customer success specialist
                 iconName: chat-bubble-left-right
                 iconColor: default
+                link: ''
               - _component: building-blocks/core-elements/list/list-item
                 text: "Annual infrastructure health assessment conducted by our senior architects,\Lcomplete with a 40-page report bound in a collectible presentation folder"
                 iconName: heart
                 iconColor: default
+                link: ''
             direction: vertical
             alignmentHorizontal: start
             size: md
@@ -152,38 +158,47 @@ pageSections:
                 text: Custom API rate limits
                 iconName: chart-bar
                 iconColor: default
+                link: ''
               - _component: building-blocks/core-elements/list/list-item
                 text: Dedicated Slack channel with our operations team
                 iconName: chat-bubble-bottom-center-text
                 iconColor: default
+                link: ''
               - _component: building-blocks/core-elements/list/list-item
                 text: Quarterly capacity planning sessions
                 iconName: clipboard-document-list
                 iconColor: default
+                link: ''
               - _component: building-blocks/core-elements/list/list-item
                 text: Custom security rules
                 iconName: lock-closed
                 iconColor: default
+                link: ''
               - _component: building-blocks/core-elements/list/list-item
                 text: Priority feature requests
                 iconName: question-mark-circle
                 iconColor: default
+                link: ''
               - _component: building-blocks/core-elements/list/list-item
                 text: Private peering arrangements
                 iconName: globe-alt
                 iconColor: default
+                link: ''
               - _component: building-blocks/core-elements/list/list-item
                 text: Daily infrastructure audits
                 iconName: clipboard-document-check
                 iconColor: default
+                link: ''
               - _component: building-blocks/core-elements/list/list-item
                 text: Contractual response times
                 iconName: clock
                 iconColor: default
+                link: ''
               - _component: building-blocks/core-elements/list/list-item
                 text: Access to ‘experimental’ features
                 iconName: heart
                 iconColor: default
+                link: ''
             direction: vertical
             alignmentHorizontal: start
             size:
