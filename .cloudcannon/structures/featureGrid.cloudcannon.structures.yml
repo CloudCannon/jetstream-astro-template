@@ -221,7 +221,7 @@ featureGridItems:
         subtext:
           - key: description
         icon:
-          - currency-dollar
+          - attach_money
       _inputs:
         title:
           comment: Card heading.
@@ -232,7 +232,7 @@ featureGridItems:
             structures:
               values:
                 - label: Price
-                  icon: currency-dollar
+                  icon: attach_money
                   value:
                     prefix: $
                     amount: "599"
