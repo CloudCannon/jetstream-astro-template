@@ -187,18 +187,15 @@ featureGridItems:
         list:
           _component: building-blocks/core-elements/list
           items:
-            - _component: building-blocks/core-elements/list/list-item
-              text: List item 1
+            - text: List item 1
               iconName: heart
               iconColor: default
               link:
-            - _component: building-blocks/core-elements/list/list-item
-              text: List item 2
+            - text: List item 2
               iconName: heart
               iconColor: default
               link:
-            - _component: building-blocks/core-elements/list/list-item
-              text: List item 3
+            - text: List item 3
               iconName: heart
               iconColor: default
               link:
