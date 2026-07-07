@@ -180,10 +180,6 @@ const getPageUrl = (pageNum: number) => {
           border-bottom-left-radius: var(--radius-sm);
           border-inline-start: 1px solid var(--color-border);
           border-top-left-radius: var(--radius-sm);
-
-          &.current {
-            border-inline-start: 1px solid var(--color-bg-brand-muted);
-          }
         }
 
         &:last-child {
@@ -204,7 +200,7 @@ const getPageUrl = (pageNum: number) => {
       .current,
       .current:hover {
         background-color: var(--color-bg-brand-muted);
-        border-color: var(--color-bg-brand-muted);
+        border-color: var(--color-border);
         color: var(--color-text);
         cursor: default;
       }
