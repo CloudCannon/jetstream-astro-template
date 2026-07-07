@@ -3,3 +3,70 @@ list:
   style: select
   values_from_glob:
     - /src/components/building-blocks/core-elements/list/list.cloudcannon.structure-value.yml
+listItems:
+  values:
+    - label: List Item
+      value:
+        text: "List item"
+        iconName: ""
+        iconColor: default
+        link:
+      preview:
+        icon: text_fields
+        image:
+          - template: src/icons/{iconName}.svg
+      _inputs:
+        link:
+          type: url
+          comment: Optional URL. When set, only the text is linked; the icon stays outside the anchor (e.g. table of contents or external services).
+        text:
+          type: markdown
+          comment: The text to display in the list item.
+          options:
+            blockquote: false
+            bold: true
+            format:
+            italic: true
+            link: true
+            strike: false
+            subscript: true
+            superscript: true
+            underline: false
+            bulletedlist: false
+            numberedlist: false
+            removeformat: true
+        iconName:
+          type: select
+          comment: The name of the icon to display. Sourced from [Heroicons](https://heroicons.com/).
+          hidden: "listType !== 'icon'"
+          options:
+            values: _select_data.icons
+            preview:
+              text:
+                - key: name
+              image:
+                - template: src/icons/{id}.svg
+        iconColor:
+          type: select
+          comment: The color of the icon.
+          hidden: "listType !== 'icon'"
+          options:
+            values:
+              - id: default
+                name: Default
+              - id: blue
+                name: Blue
+              - id: green
+                name: Green
+              - id: yellow
+                name: Yellow
+              - id: orange
+                name: Orange
+              - id: red
+                name: Red
+              - id: purple
+                name: Purple
+              - id: pink
+                name: Pink
+              - id: cyan
+                name: Cyan
