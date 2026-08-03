@@ -156,7 +156,7 @@ const article = {
           >
             <Image
               source={post.data.image}
-              alt={post.data.title}
+              alt={post.data.image_alt}
               rounded={true}
               data-prop-src="image"
               data-prop-alt="title"
@@ -192,10 +192,10 @@ const article = {
         <div class="hero-image">
           <Image
             source={post.data.image}
-            alt={post.data.title}
+            alt={post.data.image_alt}
             rounded={true}
             data-prop-src="image"
-            data-prop-alt="title"
+            data-prop-alt="image_alt"
           />
         </div>
       )

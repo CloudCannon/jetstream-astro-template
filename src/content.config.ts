@@ -100,6 +100,7 @@ const blogPostSchema = z.object({
   date: z.coerce.date(),
   author: z.string().default("Anonymous"),
   image: z.string().optional(),
+  image_alt: z.string().optional(),
   tag: z.string().default("Uncategorized"),
   counters: z.array(z.any()).optional(),
   keywords: z.array(z.string()).optional(),
