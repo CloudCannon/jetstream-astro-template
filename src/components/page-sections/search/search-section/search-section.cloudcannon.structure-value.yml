@@ -1,0 +1,39 @@
+label: Search Section
+icon: search
+description: >-
+  Pagefind site search with a heading, content type tabs, a search field, and
+  client-side results.
+value:
+  _component: page-sections/search/search-section
+  id:
+  heading: How can we help?
+  headingSize: 2xl
+  subtext: Search every page and post on this website.
+  placeholder: Search
+  buttonText: Search
+  filters:
+    - label: Website (All)
+      type: ""
+    - label: Blog
+      type: Article
+  resultsPerPage: 10
+  unavailableMessage: Search is unavailable right now. Please try again later.
+  maxContentWidth: 2xl
+  paddingVertical: 2xl
+  colorScheme: inherit
+  backgroundColor: base
+  contentBackground: false
+  rounded: false
+preview:
+  text:
+    - Search Section
+  subtext:
+    - key: heading
+  icon: search
+picker_preview:
+  text: Search Section
+  subtext: >-
+    Pagefind site search with a heading, content type tabs, a search field, and
+    client-side results.
+_inputs_from_glob:
+  - /src/components/page-sections/search/search-section/search-section.cloudcannon.inputs.yml
