@@ -17,66 +17,71 @@ const {
 
 const isValidName = name && typeof name === "string" && name.trim();
 
-if (!_component && !isValidName) {
-  return;
-}
+// Render nothing when there is no icon to show. Don't return early from the
+// frontmatter — components rendered on their own (e.g. a CloudCannon editable
+// region re-rendering after an edit) must always return markup, even if empty.
+const shouldRender = Boolean(_component || isValidName);
 
 // Generate unique ID for this icon instance if using gradient
 const gradientId = color === "brand-gradient" ? `icon-brand-gradient-${crypto.randomUUID()}` : null;
 ---
 
-<div
-  class:list={[
-    "icon",
-    `size-${size}`,
-    `color-${color}`,
-    background && "background",
-    background && iconOffset && "icon-offset",
-    alignmentHorizontal && `align-${alignmentHorizontal}`,
-    name?.includes("social/") && "fill",
-    className,
-  ]}
-  {...htmlAttributes as any}
->
-  {
-    gradientId && (
-      <svg
-        class="svg-paint-servers"
-        width="0"
-        height="0"
-        aria-hidden="true"
-        focusable="false"
-        style="position: absolute;"
-      >
-        <defs>
-          <linearGradient
-            id={gradientId}
-            x1="0%"
-            y1="0%"
-            x2="0%"
-            y2="100%"
-          >
-            <stop
-              offset="0%"
-              stop-color="var(--color-bg-brand)"
-              stop-opacity="1"
-            />
-            <stop
-              offset="100%"
-              stop-color="var(--color-bg-inverse)"
-              stop-opacity="1"
-            />
-          </linearGradient>
-        </defs>
-      </svg>
-    )
-  }
-  <AstroIcon
-    name={String(name).trim()}
-    is:inline
-    style={gradientId ? `--gradient-id: url(#${gradientId});` : undefined}
-  />
-</div>
+{
+  shouldRender && (
+    <div
+      class:list={[
+        "icon",
+        `size-${size}`,
+        `color-${color}`,
+        background && "background",
+        background && iconOffset && "icon-offset",
+        alignmentHorizontal && `align-${alignmentHorizontal}`,
+        name?.includes("social/") && "fill",
+        className,
+      ]}
+      {...(htmlAttributes as any)}
+    >
+      {gradientId && (
+        <svg
+          class="svg-paint-servers"
+          width="0"
+          height="0"
+          aria-hidden="true"
+          focusable="false"
+          style="position: absolute;"
+        >
+          <defs>
+            <linearGradient
+              id={gradientId}
+              x1="0%"
+              y1="0%"
+              x2="0%"
+              y2="100%"
+            >
+              <stop
+                offset="0%"
+                stop-color="var(--color-bg-brand)"
+                stop-opacity="1"
+              />
+              <stop
+                offset="100%"
+                stop-color="var(--color-bg-inverse)"
+                stop-opacity="1"
+              />
+            </linearGradient>
+          </defs>
+        </svg>
+      )}
+      {isValidName && (
+        <AstroIcon
+          name={String(name).trim()}
+          is:inline
+          style={gradientId ? `--gradient-id: url(#${gradientId});` : undefined}
+        />
+      )}
+    </div>
+  )
+}
 
 <style is:global>
   @layer components {
