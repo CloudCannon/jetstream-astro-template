@@ -192,8 +192,8 @@ const usesAfterContentSections = !hasAfterSlot && showBeforeAfter && afterConten
       margin-top: var(--spacing-lg);
       position: relative;
 
-      &:has(> a.card-inner:hover)::before,
-      &:has(.button:hover)::before {
+      &:has(> a.card-inner)::before,
+      &:has(.button > a)::before {
         --angle: 0deg;
         content: "";
         position: absolute;
@@ -207,11 +207,21 @@ const usesAfterContentSections = !hasAfterSlot && showBeforeAfter && afterConten
           var(--color-bg-inverse),
           var(--color-bg-brand)
         );
-        animation: rotate-angle 2s linear infinite;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--animation-normal) ease;
+        /* Paused until hover so the angle holds its position on the way out */
+        animation: rotate-angle 2s linear infinite paused;
+      }
+
+      &:has(> a.card-inner:hover)::before,
+      &:has(.button > a:hover)::before {
+        opacity: 1;
+        animation-play-state: running;
       }
 
       &:has(> a.card-inner:hover) > .card-inner,
-      &:has(.button:hover) > .card-inner.border {
+      &:has(.button > a:hover) > .card-inner.border {
         border-color: transparent;
       }
 
@@ -246,7 +256,8 @@ const usesAfterContentSections = !hasAfterSlot && showBeforeAfter && afterConten
         text-decoration: none;
         transition:
           transform 0.2s ease,
-          box-shadow 0.2s ease;
+          box-shadow 0.2s ease,
+          border-color var(--animation-normal) ease;
         z-index: 1;
 
         &.rounded {

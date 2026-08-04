@@ -80,10 +80,12 @@ const cardClasses = ["team-item", className].filter(Boolean).join(" ");
         min-height: 5rem;
         display: flex;
         flex-direction: column;
+        transition: color var(--animation-normal) ease;
 
         .team-name,
         .team-role {
           color: var(--color-text-muted);
+          transition: color var(--animation-normal) ease;
         }
         .simple-text {
           position: relative;
@@ -96,6 +98,7 @@ const cardClasses = ["team-item", className].filter(Boolean).join(" ");
             display: block;
             width: 100%;
             z-index: var(--layer-below);
+            transition: border-color var(--animation-normal) ease;
           }
           &::after {
             position: absolute;
@@ -107,6 +110,7 @@ const cardClasses = ["team-item", className].filter(Boolean).join(" ");
             width: 10px;
             border-radius: var(--radius-full);
             z-index: var(--layer-below);
+            transition: background-color var(--animation-normal) ease;
           }
         }
       }
@@ -114,6 +118,27 @@ const cardClasses = ["team-item", className].filter(Boolean).join(" ");
         position: relative;
         width: 75%;
         justify-self: end;
+
+        &::before {
+          --angle: 0deg;
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          margin: -4px;
+          border-radius: var(--radius-full);
+          background: conic-gradient(
+            from var(--angle),
+            var(--color-bg-brand),
+            var(--color-bg-inverse),
+            var(--color-bg-brand)
+          );
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity var(--animation-normal) ease;
+          /* Paused until hover so the angle holds its position on the way out */
+          animation: rotate-angle 2s linear infinite paused;
+        }
 
         .team-image {
           margin: 0;
@@ -125,7 +150,6 @@ const cardClasses = ["team-item", className].filter(Boolean).join(" ");
 
       &:hover {
         .team-content {
-          max-width: 70%;
           color: var(--color-text-strong);
 
           .team-name,
@@ -133,45 +157,18 @@ const cardClasses = ["team-item", className].filter(Boolean).join(" ");
             color: var(--color-text-strong);
           }
           .simple-text {
-            position: relative;
             &::before {
-              border-bottom: 2px solid var(--color-text-brand);
-              content: "";
-              top: calc(100% + 20px);
-              position: absolute;
-              display: block;
-              width: 100%;
-              z-index: var(--layer-below);
+              border-bottom-color: var(--color-text-brand);
             }
             &::after {
-              position: absolute;
-              top: calc(100% + 16px);
-              display: block;
-              content: "";
-              background: var(--color-text-brand);
-              height: 10px;
-              width: 10px;
-              border-radius: var(--radius-full);
-              z-index: var(--layer-below);
+              background-color: var(--color-text-brand);
             }
           }
         }
         .team-image-container {
           &::before {
-            --angle: 0deg;
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: -1;
-            margin: -4px;
-            border-radius: var(--radius-full);
-            background: conic-gradient(
-              from var(--angle),
-              var(--color-bg-brand),
-              var(--color-bg-inverse),
-              var(--color-bg-brand)
-            );
-            animation: rotate-angle 2s linear infinite;
+            opacity: 1;
+            animation-play-state: running;
           }
           .team-image {
             filter: grayscale(0);
