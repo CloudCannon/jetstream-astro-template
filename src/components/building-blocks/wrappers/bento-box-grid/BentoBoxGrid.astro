@@ -11,6 +11,7 @@ const {
   useDefaultEditableBinding = false,
   _component,
   "data-children-prop": childrenDataProp,
+  "data-children-component-key": childrenComponentKey,
   ...htmlAttributes
 } = Astro.props;
 
@@ -32,6 +33,7 @@ const arrayDataAttributes = effectiveChildrenProp
   ? {
       "data-editable": "array",
       "data-prop": effectiveChildrenProp,
+      ...(childrenComponentKey ? { "data-component-key": childrenComponentKey } : {}),
     }
   : {};
 

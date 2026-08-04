@@ -22,11 +22,11 @@ const arrayDataAttributes = effectiveChildrenProp
 
 <div
   class:list={["bento-box-grid-item", className]}
+  style={`--column-span: ${columnSpan}; --row-span: ${rowSpan}; ${userStyle ?? ""}`}
   {...htmlAttributes}
 >
   <div
     class="bento-box-grid-item-content"
-    style={`--column-span: ${columnSpan}; --row-span: ${rowSpan}; ${userStyle ?? ""}`}
     {...arrayDataAttributes}
   >
     <slot>
@@ -45,11 +45,6 @@ const arrayDataAttributes = effectiveChildrenProp
 <style is:global>
   @layer components {
     .bento-box-grid-item {
-      display: contents;
-    }
-
-    .bento-box-grid-item > .bento-box-grid-item-content {
-      container-type: inline-size;
       grid-column: 1 / -1;
       grid-row: span var(--row-span, 1);
       padding: var(--spacing-sm);
@@ -58,6 +53,11 @@ const arrayDataAttributes = effectiveChildrenProp
       @media (width >= 768px) {
         grid-column: span var(--column-span, 4);
       }
+    }
+
+    .bento-box-grid-item > .bento-box-grid-item-content {
+      container-type: inline-size;
+      height: 100%;
     }
 
     .bento-box-grid-item > .bento-box-grid-item-content > *:only-child {
