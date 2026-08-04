@@ -122,9 +122,19 @@ collections_config:
         comment: Optional image path for the blog post.
         cascade: true
       tag:
-        type: text
+        type: select
         options:
           required: true
+          allow_create: true
+          values:
+            - Caching
+            - Uptime
+            - Downtime
+            - Example
+            - Security
+            - Performance
+            - CDN
+            - Prediction
         comment: Tag relevant to this post's content.
         cascade: true
       counters:
