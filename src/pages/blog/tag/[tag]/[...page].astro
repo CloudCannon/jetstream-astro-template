@@ -142,7 +142,7 @@ const team = await getCollection("team");
                     {post.data.image && (
                       <Image
                         source={post.data.image}
-                        alt={post.data.title}
+                        alt={post.data.image_alt}
                         aspectRatio="landscape"
                         editable={false}
                         rounded={true}
@@ -162,7 +162,7 @@ const team = await getCollection("team");
                       style="margin-bottom: var(--spacing-md); margin-top: var(--spacing-sm);"
                       editable={false}
                     >
-                      {post.data.title}
+                      {post.data.title.replace(/<[^>]*>/g, "")}
                     </Heading>
                     <SimpleText
                       size="md"

@@ -76,9 +76,10 @@ collections_config:
       - visual
     _inputs:
       title:
-        type: text
+        type: html
         options:
           required: true
+          styles: .cloudcannon/styles/editor.css
         comment: The title of the blog post.
         cascade: false
       keywords:

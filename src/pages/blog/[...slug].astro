@@ -112,9 +112,8 @@ const article = {
           alignmentHorizontal="start"
           class="heading"
           data-prop="title"
-        >
-          {post.data.title}
-        </Heading>
+          text={post.data.title}
+        />
         <p class="breadcrumb">
           <a
             href="/blog/"
@@ -159,7 +158,7 @@ const article = {
               alt={post.data.image_alt}
               rounded={true}
               data-prop-src="image"
-              data-prop-alt="title"
+              data-prop-alt="image_alt"
             />
           </div>
           <div
@@ -284,7 +283,7 @@ const article = {
           </SimpleText>
           <ButtonGroup style="margin: 0px;">
             <Button
-              link={`mailto:?subject=${post.data.title}&body=Check out this article: ${Astro.url}`}
+              link={`mailto:?subject=${post.data.title.replace(/<[^>]*>/g, "")}&body=Check out this article: ${Astro.url}`}
               variant="secondary"
               size="lg"
               iconName="envelope"
@@ -339,7 +338,7 @@ const article = {
               >
                 <Image
                   source={recentPost.data.image}
-                  alt={recentPost.data.title}
+                  alt={recentPost.data.image_alt}
                   aspectRatio="landscape"
                   editable={false}
                   rounded={true}
@@ -357,9 +356,8 @@ const article = {
                   size="xs"
                   style="margin-bottom: var(--spacing-xs); margin-top: 0;"
                   editable={false}
-                >
-                  {recentPost.data.title}
-                </Heading>
+                  text={recentPost.data.title.replace(/<[^>]*>/g, "")}
+                />
                 <SimpleText
                   size="sm"
                   style="color: var(--color-text-muted); margin-top: 0; font-weight: var(--font-weight-bold);"

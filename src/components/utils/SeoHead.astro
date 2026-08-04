@@ -39,7 +39,7 @@ const {
   article,
   noindex = false,
 } = Astro.props;
-const formattedTitle = site.titleFormat.replace("{title}", title);
+const formattedTitle = site.titleFormat.replace("{title}", title.replace(/<[^>]*>/g, ""));
 const pageDescription = description || site.description;
 const pageImage = resolveImageSource(image || site.logoSource);
 const canonicalUrl = canonical || Astro.url.href;
