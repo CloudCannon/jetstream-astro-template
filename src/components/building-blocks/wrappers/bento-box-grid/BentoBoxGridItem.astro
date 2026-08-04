@@ -22,11 +22,13 @@ const arrayDataAttributes = effectiveChildrenProp
 
 <div
   class:list={["bento-box-grid-item", className]}
-  style={`--column-span: ${columnSpan}; --row-span: ${rowSpan}; ${userStyle ?? ""}`}
   {...htmlAttributes}
 >
   <div
     class="bento-box-grid-item-content"
+    data-column-span={columnSpan}
+    data-row-span={rowSpan}
+    style={userStyle}
     {...arrayDataAttributes}
   >
     <slot>
@@ -44,14 +46,68 @@ const arrayDataAttributes = effectiveChildrenProp
 
 <style is:global>
   @layer components {
+    /*
+      This element carries `data-editable="array-item"`, so it must generate a box for
+      CloudCannon's reorder/drag controls to anchor and hit-test against — `display: contents`
+      leaves them positioned against a distant ancestor and unusable.
+
+      The spans are read from data attributes on the child rather than a custom property set
+      here, because CloudCannon never diffs an array item's own attributes on re-render — only
+      its descendants'. Keeping the values on the child is what lets the span inputs update
+      live in the visual editor.
+    */
     .bento-box-grid-item {
       grid-column: 1 / -1;
-      grid-row: span var(--row-span, 1);
       padding: var(--spacing-sm);
       height: 100%;
+    }
 
-      @media (width >= 768px) {
-        grid-column: span var(--column-span, 4);
+    .bento-box-grid-item:has(> [data-row-span="2"]) {
+      grid-row: span 2;
+    }
+    .bento-box-grid-item:has(> [data-row-span="3"]) {
+      grid-row: span 3;
+    }
+    .bento-box-grid-item:has(> [data-row-span="4"]) {
+      grid-row: span 4;
+    }
+
+    @media (width >= 768px) {
+      .bento-box-grid-item:has(> [data-column-span="1"]) {
+        grid-column: span 1;
+      }
+      .bento-box-grid-item:has(> [data-column-span="2"]) {
+        grid-column: span 2;
+      }
+      .bento-box-grid-item:has(> [data-column-span="3"]) {
+        grid-column: span 3;
+      }
+      .bento-box-grid-item:has(> [data-column-span="4"]) {
+        grid-column: span 4;
+      }
+      .bento-box-grid-item:has(> [data-column-span="5"]) {
+        grid-column: span 5;
+      }
+      .bento-box-grid-item:has(> [data-column-span="6"]) {
+        grid-column: span 6;
+      }
+      .bento-box-grid-item:has(> [data-column-span="7"]) {
+        grid-column: span 7;
+      }
+      .bento-box-grid-item:has(> [data-column-span="8"]) {
+        grid-column: span 8;
+      }
+      .bento-box-grid-item:has(> [data-column-span="9"]) {
+        grid-column: span 9;
+      }
+      .bento-box-grid-item:has(> [data-column-span="10"]) {
+        grid-column: span 10;
+      }
+      .bento-box-grid-item:has(> [data-column-span="11"]) {
+        grid-column: span 11;
+      }
+      .bento-box-grid-item:has(> [data-column-span="12"]) {
+        grid-column: span 12;
       }
     }
 
