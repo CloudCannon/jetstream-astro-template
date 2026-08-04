@@ -33,8 +33,6 @@ collections_config:
       - name: Add New Page
         icon: pages
         schema: default
-    create:
-      path: "[relative_base_path]/{filename|slugify|lowercase}.md"
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
@@ -47,6 +45,8 @@ collections_config:
         remove_empty_inputs: false
         remove_extra_inputs: false
         name: New Page
+        create:
+          path: '[relative_base_path]/{title|slugify}.md'
       blog-index:
         path: .cloudcannon/schemas/blog-index.md
         reorder_inputs: true
@@ -180,8 +180,6 @@ collections_config:
       - name: Add New Blog Post
         icon: article
         schema: default
-    create:
-      path: "[relative_base_path]/{filename|slugify|lowercase}.mdx"
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
@@ -193,6 +191,8 @@ collections_config:
         remove_empty_inputs: false
         remove_extra_inputs: false
         name: New Blog Post
+        create:
+          path: '[relative_base_path]/{title|slugify}.md'
   team:
     path: src/content/team
     icon: groups
@@ -274,6 +274,8 @@ collections_config:
         remove_empty_inputs: false
         remove_extra_inputs: false
         name: New Team Member
+        create:
+          path: '[relative_base_path]/{name|slugify}.md'
   data:
     path: src/data
     glob:
