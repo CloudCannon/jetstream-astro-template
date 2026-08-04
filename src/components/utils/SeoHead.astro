@@ -18,7 +18,7 @@ interface ArticleSeoData {
 
 export interface Props {
   site: SiteSeoData;
-  title: string;
+  title?: string | null;
   description?: string | null;
   keywords?: string[] | null;
   image?: string | null;
@@ -39,7 +39,13 @@ const {
   article,
   noindex = false,
 } = Astro.props;
-const formattedTitle = site.titleFormat.replace("{title}", title.replace(/<[^>]*>/g, ""));
+const plainTitle = title?.replace(/<[^>]*>/g, "").trim();
+// Pages without a title (e.g. the home page) fall back to the title format with the
+// {title} placeholder and any leftover separator removed, then to the site name.
+const formattedTitle = plainTitle
+  ? site.titleFormat.replace("{title}", plainTitle)
+  : site.titleFormat.replace("{title}", "").replace(/^[\s|\-–—:·/•]+|[\s|\-–—:·/•]+$/g, "") ||
+    site.name;
 const pageDescription = description || site.description;
 const pageImage = resolveImageSource(image || site.logoSource);
 const canonicalUrl = canonical || Astro.url.href;

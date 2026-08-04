@@ -9,7 +9,7 @@ import SiteFonts from "@layouts/SiteFonts.astro";
 import VideoElements from "@components/utils/VideoElements.astro";
 
 export interface Props {
-  title: string;
+  title?: string | null;
   description?: string | null;
   keywords?: string[] | null;
   image?: string | null;

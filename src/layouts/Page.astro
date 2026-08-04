@@ -11,7 +11,7 @@ import type { ContentBlock } from "../types";
 
 type Props = {
   frontmatter?: {
-    title: string;
+    title?: string | null;
     description?: string;
     keywords?: string[];
     image?: string;
@@ -59,7 +59,7 @@ const {
   footer = footerData,
 } = Astro.props as Props;
 
-const title = frontmatter?.title ?? titleProp ?? "";
+const title = frontmatter?.title ?? titleProp;
 const description = frontmatter?.description ?? descriptionProp;
 const keywords = frontmatter?.keywords ?? keywordsProp;
 const image = frontmatter?.image ?? imageProp;

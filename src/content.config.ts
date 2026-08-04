@@ -6,7 +6,7 @@ const docsViewerSizeSchema = z.enum(["sm", "md", "lg", "xl"]);
 
 const pageSchema = z.object({
   url: z.string().optional(),
-  title: z.string(),
+  title: z.string().optional().nullable(),
   description: z.string().optional(),
   keywords: z.array(z.string()).optional(),
   image: z.string().optional(),

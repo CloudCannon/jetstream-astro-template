@@ -1096,6 +1096,13 @@ file_config:
       pageSections:
         hidden: true
         cascade: true
+  - glob: src/content/pages/index.md
+    _inputs:
+      title:
+        type: text
+        comment: >-
+          Optional. Leave empty to use your site title on its own, or add a
+          title to show it before your site title.
 timezone: Etc/UTC
 _structures_from_glob:
   - /.cloudcannon/structures/*.cloudcannon.structures.yml
