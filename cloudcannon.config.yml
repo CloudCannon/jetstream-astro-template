@@ -79,6 +79,7 @@ collections_config:
         type: html
         options:
           required: true
+          initial_height: 135
           styles: .cloudcannon/styles/editor.css
         comment: The title of the blog post.
         cascade: false
