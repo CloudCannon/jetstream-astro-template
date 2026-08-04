@@ -54,16 +54,6 @@ _structures:
         value:
           icon: ""
           link: ""
-        preview:
-          text:
-            - key: icon
-            - Social Link
-          subtext:
-            - key: link
-            - Add URL
-          image:
-            - template: src/icons/{icon}.svg
-          icon: share
         _inputs:
           icon:
             type: select
