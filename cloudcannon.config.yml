@@ -138,6 +138,9 @@ collections_config:
         comment: Tag relevant to this post's content.
         cascade: true
       counters:
+        type: array
+        comment: >-
+          Optional statistics displayed alongside the image in the post hero.
         options:
           structures:
             style: select

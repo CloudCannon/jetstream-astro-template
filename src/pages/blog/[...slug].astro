@@ -188,7 +188,7 @@ const article = {
           </div>
         </Split>
       ) : (
-        <div class="hero-image">
+        <div class="hero-image hero-image-centered">
           <Image
             source={post.data.image}
             alt={post.data.image_alt}
@@ -400,11 +400,49 @@ const article = {
         font-size: var(--font-size-sm);
       }
 
+      .counters {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        margin-top: var(--spacing-xl);
+
+        @container (max-width: 700px) {
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin-top: 0;
+        }
+
+        .counter-container {
+          @container (max-width: 700px) {
+            flex: 1 1 150px;
+          }
+
+          .counter {
+            color: var(--color-text);
+            margin-top: 0;
+          }
+
+          .simple-text {
+            margin: 0;
+
+            .simple-text-content {
+              font-weight: var(--font-weight-bold);
+              margin: var(--spacing-xs) 0 0;
+              text-wrap: wrap;
+            }
+          }
+        }
+      }
+
       .hero-image {
         position: relative;
         max-width: min(100%, var(--content-width-xl));
         height: 450px;
         margin-top: var(--spacing-xl);
+
+        &.hero-image-centered {
+          margin-inline: auto;
+        }
 
         &::before {
           --angle: 0deg;
