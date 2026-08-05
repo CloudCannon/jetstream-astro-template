@@ -363,6 +363,15 @@ _inputs:
     cascade: true
   logoAlternateSource:
     type: image
+  slug:
+    type: text
+    comment: >-
+      Optional. Sets a custom url for this page instead of using the
+      file name — entering `our-pricing` publishes this page at
+      `/our-pricing/`. Leave this empty to keep using the file name. Be
+      careful changing this on a page that is already live: the old address
+      will stop working, so any existing links to it will break.
+    cascade: false
 _select_data:
   # Selectable UI icons match [Heroicons](https://heroicons.com/); SVGs live in src/icons/.
   icons:
@@ -1061,6 +1070,9 @@ file_config:
         hidden: true
         cascade: true
       url:
+        hidden: true
+        cascade: true
+      slug:
         hidden: true
         cascade: true
       cta.buttonSections:

@@ -6,6 +6,8 @@ const docsViewerSizeSchema = z.enum(["sm", "md", "lg", "xl"]);
 
 const pageSchema = z.object({
   url: z.string().optional(),
+  // Astro's glob loader reads `slug` to override the entry id generated from the file path.
+  slug: z.string().optional(),
   title: z.string().optional().nullable(),
   description: z.string().optional(),
   keywords: z.array(z.string()).optional(),
@@ -95,6 +97,8 @@ const docsComponentsCollection = defineCollection({
 });
 
 const blogPostSchema = z.object({
+  // Astro's glob loader reads `slug` to override the entry id generated from the file path.
+  slug: z.string().optional(),
   title: z.string(),
   description: z.string(),
   date: z.coerce.date(),
