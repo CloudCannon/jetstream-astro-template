@@ -174,12 +174,7 @@ const article = {
               data-prop="counter"
               data-component="building-blocks/core-elements/counter"
             >
-              <Counter
-                {...counter.counter}
-                data-prop-number="number"
-                data-prop-prefix="prefix"
-                data-prop-suffix="suffix"
-              />
+              <Counter {...counter.counter} />
             </editable-component>
             <SimpleText
               text={counter.subtext}

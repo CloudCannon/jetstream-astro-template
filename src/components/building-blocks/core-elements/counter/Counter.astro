@@ -6,6 +6,7 @@ const {
   alignmentHorizontal = "start",
   size,
   class: className,
+  editable = true,
   useDefaultEditableBinding = false,
   "data-prop-number": customDataPropNumber,
   "data-prop-prefix": customDataPropPrefix,
@@ -17,19 +18,21 @@ const {
 const startNumber = Math.floor(number * 0.2);
 const duration = 500;
 
-const effectiveNumberProp = customDataPropNumber ?? (useDefaultEditableBinding ? "number" : null);
-const numberDataAttributes = effectiveNumberProp
-  ? { "data-editable": "text", "data-prop": effectiveNumberProp }
+// These bindings live in the component, defaulting to its own field names,
+// because CloudCannon re-renders a component editable region by calling the
+// component with only its data as props — anything the parent template passes
+// is dropped on that render. Pass a `data-prop-*` value to bind to a different
+// path, or `editable={false}` to opt out entirely.
+const numberDataAttributes = editable
+  ? { "data-editable": "text", "data-prop": customDataPropNumber ?? "number" }
   : {};
 
-const effectivePrefixProp = customDataPropPrefix ?? (useDefaultEditableBinding ? "prefix" : null);
-const prefixDataAttributes = effectivePrefixProp
-  ? { "data-editable": "text", "data-prop": effectivePrefixProp }
+const prefixDataAttributes = editable
+  ? { "data-editable": "text", "data-prop": customDataPropPrefix ?? "prefix" }
   : {};
 
-const effectiveSuffixProp = customDataPropSuffix ?? (useDefaultEditableBinding ? "suffix" : null);
-const suffixDataAttributes = effectiveSuffixProp
-  ? { "data-editable": "text", "data-prop": effectiveSuffixProp }
+const suffixDataAttributes = editable
+  ? { "data-editable": "text", "data-prop": customDataPropSuffix ?? "suffix" }
   : {};
 ---
 
