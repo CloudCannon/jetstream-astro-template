@@ -183,6 +183,21 @@ const article = {
             />
           </div>
         ))}
+        <template>
+          <div class="counter-container">
+            <editable-component
+              data-prop="counter"
+              data-component="building-blocks/core-elements/counter"
+            >
+              <Counter number={0} />
+            </editable-component>
+            <SimpleText
+              text="Counter subtext"
+              alignmentHorizontal="start"
+              data-prop={`subtext`}
+            />
+          </div>
+        </template>
       </div>
     </Split>
   </CustomSection>
