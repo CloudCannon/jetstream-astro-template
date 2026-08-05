@@ -143,67 +143,53 @@ const article = {
         </p>
       </Fragment>
     </Split>
-    {
-      post.data?.counters?.length > 0 ? (
-        <Split
-          distributionMode="three-quarters-quarter"
-          gap="lg"
-        >
+    <Split
+      distributionMode="three-quarters-quarter"
+      gap="lg"
+    >
+      <div
+        class="hero-image"
+        slot="first"
+      >
+        <Image
+          source={post.data.image}
+          alt={post.data.image_alt}
+          rounded={true}
+          data-prop-src="image"
+          data-prop-alt="image_alt"
+        />
+      </div>
+      <div
+        class="counters"
+        slot="second"
+        data-editable="array"
+        data-prop="counters"
+      >
+        {post.data?.counters?.map((counter: any, index: number) => (
           <div
-            class="hero-image"
-            slot="first"
+            class="counter-container"
+            data-editable="array-item"
           >
-            <Image
-              source={post.data.image}
-              alt={post.data.image_alt}
-              rounded={true}
-              data-prop-src="image"
-              data-prop-alt="image_alt"
+            <editable-component
+              data-prop="counter"
+              data-component="building-blocks/core-elements/counter"
+            >
+              <Counter
+                {...counter.counter}
+                data-prop-number="number"
+                data-prop-prefix="prefix"
+                data-prop-suffix="suffix"
+              />
+            </editable-component>
+            <SimpleText
+              text={counter.subtext}
+              alignmentHorizontal="start"
+              data-prop={`subtext`}
             />
           </div>
-          <div
-            class="counters"
-            slot="second"
-            data-editable="array"
-            data-prop="counters"
-          >
-            {post.data?.counters?.map((counter: any, index: number) => (
-              <div
-                class="counter-container"
-                data-editable="array-item"
-              >
-                <editable-component
-                  data-prop="counter"
-                  data-component="building-blocks/core-elements/counter"
-                >
-                  <Counter
-                    {...counter.counter}
-                    data-prop-number="number"
-                    data-prop-prefix="prefix"
-                    data-prop-suffix="suffix"
-                  />
-                </editable-component>
-                <SimpleText
-                  text={counter.subtext}
-                  alignmentHorizontal="start"
-                  data-prop={`subtext`}
-                />
-              </div>
-            ))}
-          </div>
-        </Split>
-      ) : (
-        <div class="hero-image hero-image-centered">
-          <Image
-            source={post.data.image}
-            alt={post.data.image_alt}
-            rounded={true}
-            data-prop-src="image"
-            data-prop-alt="image_alt"
-          />
-        </div>
-      )
-    }
+        ))}
+      </div>
+    </Split>
   </CustomSection>
   <CustomSection
     maxContentWidth="2xl"
@@ -439,15 +425,22 @@ const article = {
         }
       }
 
+      .split:has(.counters):not(:has(.counter-container)) {
+        > .split-inner {
+          --split-columns-desktop: 1fr;
+          row-gap: 0;
+        }
+
+        .hero-image {
+          margin-inline: auto;
+        }
+      }
+
       .hero-image {
         position: relative;
         max-width: min(100%, var(--content-width-xl));
         height: 450px;
         margin-top: var(--spacing-xl);
-
-        &.hero-image-centered {
-          margin-inline: auto;
-        }
 
         &::before {
           --angle: 0deg;
