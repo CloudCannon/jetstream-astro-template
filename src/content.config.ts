@@ -15,7 +15,7 @@ const docsViewerSizeSchema = z.enum(["sm", "md", "lg", "xl"]);
 const permalinkOrPath = ({ entry, data }: { entry: string; data: Record<string, unknown> }) =>
   typeof data.permalink === "string" && data.permalink
     ? data.permalink
-    : entry.replace(/\.mdx?$/, "").replace(/(^|\/)index$/, "");
+    : entry.replace(/\.mdx?$/, "");
 
 const pageSchema = z.object({
   url: z.string().optional(),
