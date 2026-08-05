@@ -1,5 +1,6 @@
 ---
 _schema: default
+permalink:
 title: Pricing
 description: ''
 keywords: []

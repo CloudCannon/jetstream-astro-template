@@ -1,5 +1,6 @@
 ---
 _schema: default
+permalink:
 title: 
 description: >-
   An Astro template built for CloudCannon with visual editing, flexible

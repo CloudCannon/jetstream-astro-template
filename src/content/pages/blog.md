@@ -1,5 +1,6 @@
 ---
 _schema: blog-index
+permalink:
 title: Blog
 description: >-
   Read our latest articles and insights on web development, design, and

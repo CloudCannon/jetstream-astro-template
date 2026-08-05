@@ -4,7 +4,7 @@ collections_config:
     glob:
       - "**/*.md"
     icon: web
-    url: /[full_slug]/
+    url: '/{permalink|if=permalink}[slug|unless=permalink]/'
     disable_url: false
     description: >-
       Welcome to the **Pages Collection**! This Collection contains all the
@@ -59,7 +59,7 @@ collections_config:
       - "**/*.mdx"
     name:
     icon: article
-    url: /blog/[full_slug]/
+    url: '/blog/{permalink|if=permalink}[slug|unless=permalink]/'
     disable_url: false
     description: >-
       Welcome to the **Blog Collection**! This *Collection* contains all the
@@ -363,7 +363,7 @@ _inputs:
     cascade: true
   logoAlternateSource:
     type: image
-  slug:
+  permalink:
     type: text
     comment: >-
       Optional. Sets a custom url for this page instead of using the
@@ -1072,7 +1072,7 @@ file_config:
       url:
         hidden: true
         cascade: true
-      slug:
+      permalink:
         hidden: true
         cascade: true
       cta.buttonSections:

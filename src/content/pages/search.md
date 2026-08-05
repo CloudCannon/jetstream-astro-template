@@ -1,5 +1,6 @@
 ---
 _schema: default
+permalink:
 title: Search
 description: >-
   Static Pagefind search across pages and posts—filter by type with no backend.

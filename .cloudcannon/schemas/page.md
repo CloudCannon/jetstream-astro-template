@@ -1,7 +1,7 @@
 ---
 title:
 description: ''
-slug:
+permalink:
 keywords: []
 pageSections: []
 ---

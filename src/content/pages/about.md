@@ -1,6 +1,7 @@
 ---
 _schema: default
 title: About
+permalink:
 pageSections:
   - _component: page-sections/heroes/hero-split
     title: Our mission

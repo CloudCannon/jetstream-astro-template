@@ -4,10 +4,22 @@ import { defineCollection, z } from "astro:content";
 const contentBlockSchema = z.object({ _component: z.string() }).passthrough();
 const docsViewerSizeSchema = z.enum(["sm", "md", "lg", "xl"]);
 
+/**
+ * Routes an entry by its file path, unless front matter sets a `permalink`.
+ *
+ * Astro's own override key is `slug`, which the glob loader reads with no config.
+ * We deliberately don't use it: CloudCannon's `url` template can't reference a front
+ * matter field named after one of its fixed placeholders (`[slug]`).
+ * 
+ */
+const permalinkOrPath = ({ entry, data }: { entry: string; data: Record<string, unknown> }) =>
+  typeof data.permalink === "string" && data.permalink
+    ? data.permalink
+    : entry.replace(/\.mdx?$/, "").replace(/(^|\/)index$/, "");
+
 const pageSchema = z.object({
   url: z.string().optional(),
-  // Astro's glob loader reads `slug` to override the entry id generated from the file path.
-  slug: z.string().optional(),
+  permalink: z.string().optional().nullable(),
   title: z.string().optional().nullable(),
   description: z.string().optional(),
   keywords: z.array(z.string()).optional(),
@@ -82,7 +94,11 @@ const docsComponentSchema = z.object({
 });
 
 const pagesCollection = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/pages" }),
+  loader: glob({
+    pattern: "**/*.md",
+    base: "./src/content/pages",
+    generateId: permalinkOrPath,
+  }),
   schema: pageSchema,
 });
 
@@ -97,8 +113,7 @@ const docsComponentsCollection = defineCollection({
 });
 
 const blogPostSchema = z.object({
-  // Astro's glob loader reads `slug` to override the entry id generated from the file path.
-  slug: z.string().optional(),
+  permalink: z.string().optional().nullable(),
   title: z.string(),
   description: z.string(),
   date: z.coerce.date(),
@@ -111,7 +126,11 @@ const blogPostSchema = z.object({
 });
 
 const blogCollection = defineCollection({
-  loader: glob({ pattern: "**/*.mdx", base: "./src/content/blog" }),
+  loader: glob({
+    pattern: "**/*.mdx",
+    base: "./src/content/blog",
+    generateId: permalinkOrPath,
+  }),
   schema: blogPostSchema,
 });
 
