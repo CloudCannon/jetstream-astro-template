@@ -6,34 +6,13 @@ const {
   alignmentHorizontal = "start",
   size,
   class: className,
-  editable = true,
-  useDefaultEditableBinding = false,
-  "data-prop-number": customDataPropNumber,
-  "data-prop-prefix": customDataPropPrefix,
-  "data-prop-suffix": customDataPropSuffix,
+  useDefaultEditableBinding: _useDefaultEditableBinding = false,
   _component,
   ...htmlAttributes
 } = Astro.props;
 
 const startNumber = Math.floor(number * 0.2);
 const duration = 500;
-
-// These bindings live in the component, defaulting to its own field names,
-// because CloudCannon re-renders a component editable region by calling the
-// component with only its data as props — anything the parent template passes
-// is dropped on that render. Pass a `data-prop-*` value to bind to a different
-// path, or `editable={false}` to opt out entirely.
-const numberDataAttributes = editable
-  ? { "data-editable": "text", "data-prop": customDataPropNumber ?? "number" }
-  : {};
-
-const prefixDataAttributes = editable
-  ? { "data-editable": "text", "data-prop": customDataPropPrefix ?? "prefix" }
-  : {};
-
-const suffixDataAttributes = editable
-  ? { "data-editable": "text", "data-prop": customDataPropSuffix ?? "suffix" }
-  : {};
 ---
 
 <div
@@ -41,17 +20,16 @@ const suffixDataAttributes = editable
   {...htmlAttributes}
 >
   <span class:list={["counter-inner", `alignment-${alignmentHorizontal}`, size && `size-${size}`]}>
-    {prefix && <span class="prefix" {...prefixDataAttributes}>{prefix}</span>}
+    {prefix && <span class="prefix">{prefix}</span>}
     <span
       class="number"
       data-target={`${number}`}
       data-start={`${startNumber}`}
       data-duration={`${duration}`}
       aria-live="off"
-      {...numberDataAttributes}
       >{number}</span
     >
-    {suffix && <span class="suffix" {...suffixDataAttributes}>{suffix}</span>}
+    {suffix && <span class="suffix">{suffix}</span>}
   </span>
 </div>
 
