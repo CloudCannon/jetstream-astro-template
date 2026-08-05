@@ -123,6 +123,8 @@ pageSections:
               ago.
             columnSpan: 8
             rowSpan: 1
+      - _component: page-sections/features/feature-carousel-grid/feature-carousel-slide
+        cards:
           - _component: page-sections/features/feature-carousel-grid/feature-carousel-card
             decorative: false
             style: surface-linear-gradient
@@ -151,8 +153,6 @@ pageSections:
             text: Feature Carousel Card Description
             columnSpan: 4
             rowSpan: 1
-      - _component: page-sections/features/feature-carousel-grid/feature-carousel-slide
-        cards:
           - _component: page-sections/features/feature-carousel-grid/feature-carousel-card
             decorative: true
             style: surface-linear-gradient
@@ -179,7 +179,7 @@ pageSections:
               Single points of failure are design flaws we've engineered out of
               existence through redundant systems, diverse routing, and healthy
               paranoia.
-            columnSpan: 4
+            columnSpan: 5
             rowSpan: 1
           - _component: page-sections/features/feature-carousel-grid/feature-carousel-card
             decorative: true
@@ -188,8 +188,10 @@ pageSections:
             eyebrowText: ''
             heading: Feature Carousel Card Title
             text: Feature Carousel Card Description
-            columnSpan: 4
+            columnSpan: 3
             rowSpan: 1
+      - _component: page-sections/features/feature-carousel-grid/feature-carousel-slide
+        cards:
           - _component: page-sections/features/feature-carousel-grid/feature-carousel-card
             decorative: false
             style: surface-linear-gradient
