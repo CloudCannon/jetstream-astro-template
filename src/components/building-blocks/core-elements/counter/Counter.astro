@@ -6,13 +6,31 @@ const {
   alignmentHorizontal = "start",
   size,
   class: className,
-  useDefaultEditableBinding: _useDefaultEditableBinding = false,
+  useDefaultEditableBinding = false,
+  "data-prop-number": customDataPropNumber,
+  "data-prop-prefix": customDataPropPrefix,
+  "data-prop-suffix": customDataPropSuffix,
   _component,
   ...htmlAttributes
 } = Astro.props;
 
 const startNumber = Math.floor(number * 0.2);
 const duration = 500;
+
+const effectiveNumberProp = customDataPropNumber ?? (useDefaultEditableBinding ? "number" : null);
+const numberDataAttributes = effectiveNumberProp
+  ? { "data-editable": "text", "data-prop": effectiveNumberProp }
+  : {};
+
+const effectivePrefixProp = customDataPropPrefix ?? (useDefaultEditableBinding ? "prefix" : null);
+const prefixDataAttributes = effectivePrefixProp
+  ? { "data-editable": "text", "data-prop": effectivePrefixProp }
+  : {};
+
+const effectiveSuffixProp = customDataPropSuffix ?? (useDefaultEditableBinding ? "suffix" : null);
+const suffixDataAttributes = effectiveSuffixProp
+  ? { "data-editable": "text", "data-prop": effectiveSuffixProp }
+  : {};
 ---
 
 <div
@@ -20,16 +38,17 @@ const duration = 500;
   {...htmlAttributes}
 >
   <span class:list={["counter-inner", `alignment-${alignmentHorizontal}`, size && `size-${size}`]}>
-    {prefix && <span class="prefix">{prefix}</span>}
+    {prefix && <span class="prefix" {...prefixDataAttributes}>{prefix}</span>}
     <span
       class="number"
       data-target={`${number}`}
       data-start={`${startNumber}`}
       data-duration={`${duration}`}
       aria-live="off"
+      {...numberDataAttributes}
       >{number}</span
     >
-    {suffix && <span class="suffix">{suffix}</span>}
+    {suffix && <span class="suffix" {...suffixDataAttributes}>{suffix}</span>}
   </span>
 </div>
 
