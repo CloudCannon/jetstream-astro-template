@@ -1,7 +1,7 @@
 ---
 _schema: default
 permalink:
-title: 
+title:
 description: >-
   An Astro template built for CloudCannon with visual editing, flexible
   components, and an exceptional developer experience. Deploy your next project

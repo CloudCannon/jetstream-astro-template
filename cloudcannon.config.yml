@@ -4,7 +4,7 @@ collections_config:
     glob:
       - "**/*.md"
     icon: web
-    url: '/{permalink|if=permalink}[slug|unless=permalink]/'
+    url: "/{permalink|if=permalink}[slug|unless=permalink]/"
     disable_url: false
     description: >-
       Welcome to the **Pages Collection**! This Collection contains all the
@@ -46,7 +46,7 @@ collections_config:
         remove_extra_inputs: false
         name: New Page
         create:
-          path: '[relative_base_path]/{title|slugify}.md'
+          path: "[relative_base_path]/{title|slugify}.md"
       blog-index:
         path: .cloudcannon/schemas/blog-index.md
         reorder_inputs: true
@@ -59,7 +59,7 @@ collections_config:
       - "**/*.mdx"
     name:
     icon: article
-    url: '/blog/{permalink|if=permalink}[slug|unless=permalink]/'
+    url: "/blog/{permalink|if=permalink}[slug|unless=permalink]/"
     disable_url: false
     description: >-
       Welcome to the **Blog Collection**! This *Collection* contains all the
@@ -205,7 +205,7 @@ collections_config:
         remove_extra_inputs: false
         name: New Blog Post
         create:
-          path: '[relative_base_path]/{title|slugify}.md'
+          path: "[relative_base_path]/{title|slugify}.md"
   team:
     path: src/content/team
     icon: groups
@@ -288,7 +288,7 @@ collections_config:
         remove_extra_inputs: false
         name: New Team Member
         create:
-          path: '[relative_base_path]/{name|slugify}.md'
+          path: "[relative_base_path]/{name|slugify}.md"
   data:
     path: src/data
     glob:

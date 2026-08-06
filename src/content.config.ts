@@ -10,7 +10,7 @@ const docsViewerSizeSchema = z.enum(["sm", "md", "lg", "xl"]);
  * Astro's own override key is `slug`, which the glob loader reads with no config.
  * We deliberately don't use it: CloudCannon's `url` template can't reference a front
  * matter field named after one of its fixed placeholders (`[slug]`).
- * 
+ *
  */
 const permalinkOrPath = ({ entry, data }: { entry: string; data: Record<string, unknown> }) =>
   typeof data.permalink === "string" && data.permalink

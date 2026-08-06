@@ -165,24 +165,26 @@ const article = {
         data-editable="array"
         data-prop="counters"
       >
-        {post.data?.counters?.map((counter: any, index: number) => (
-          <div
-            class="counter-container"
-            data-editable="array-item"
-          >
-            <editable-component
-              data-prop="counter"
-              data-component="building-blocks/core-elements/counter"
+        {
+          post.data?.counters?.map((counter: any, index: number) => (
+            <div
+              class="counter-container"
+              data-editable="array-item"
             >
-              <Counter {...counter.counter} />
-            </editable-component>
-            <SimpleText
-              text={counter.subtext}
-              alignmentHorizontal="start"
-              data-prop={`subtext`}
-            />
-          </div>
-        ))}
+              <editable-component
+                data-prop="counter"
+                data-component="building-blocks/core-elements/counter"
+              >
+                <Counter {...counter.counter} />
+              </editable-component>
+              <SimpleText
+                text={counter.subtext}
+                alignmentHorizontal="start"
+                data-prop={`subtext`}
+              />
+            </div>
+          ))
+        }
         <template>
           <div class="counter-container">
             <editable-component
