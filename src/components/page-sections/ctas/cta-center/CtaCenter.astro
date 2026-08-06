@@ -26,7 +26,8 @@ const {
 ---
 
 <CustomSection
-  class:list={["cta-center", rounded ? "cta-center-rounded" : "", className]}
+  class:list={["cta-center", className]}
+  contentClass={rounded ? "cta-center-rounded" : ""}
   label={id}
   maxContentWidth={maxContentWidth}
   paddingHorizontal="md"
