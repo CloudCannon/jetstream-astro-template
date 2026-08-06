@@ -125,8 +125,8 @@ const {
         }
       }
 
-      &.cta-center-rounded {
-        .outer-content > .background {
+      &.outer-content.cta-center-rounded {
+        > .background {
           border-top-right-radius: var(--radius-md);
           border-bottom-right-radius: var(--radius-md);
         }
@@ -135,7 +135,7 @@ const {
           border-bottom-left-radius: var(--radius-md);
         }
 
-        .outer-content > .background {
+        > .background {
           @container cta-center (max-width: 1024px) {
             border-radius: var(--radius-md);
           }
