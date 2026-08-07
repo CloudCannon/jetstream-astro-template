@@ -1,6 +1,7 @@
 ---
 _schema: default
-title: Jetstream | Astro Template for CloudCannon
+permalink:
+title:
 description: >-
   An Astro template built for CloudCannon with visual editing, flexible
   components, and an exceptional developer experience. Deploy your next project

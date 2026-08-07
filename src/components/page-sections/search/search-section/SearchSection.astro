@@ -1,0 +1,615 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Button from "@core-elements/button/Button.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
+import Input from "@forms/input/Input.astro";
+import Split from "@wrappers/split/Split.astro";
+
+interface SearchFilter {
+  /** Tab label shown to the visitor. */
+  label?: string;
+  /** Pagefind `Type` filter value (`Page`, `Article`). Leave empty to search everything. */
+  type?: string;
+}
+
+const {
+  id = "",
+  heading = "",
+  headingSize = "2xl",
+  subtext = "",
+  placeholder = "Search",
+  buttonText = "Search",
+  filters = [] as SearchFilter[],
+  resultsPerPage = 10,
+  unavailableMessage = "Search is unavailable right now. Please try again later.",
+  maxContentWidth = "2xl",
+  paddingHorizontal = "md",
+  paddingVertical = "2xl",
+  colorScheme = "inherit",
+  backgroundColor = "base",
+  contentBackground = false,
+  rounded = false,
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const fieldId = `search-field-${crypto.randomUUID()}`;
+const filterGroupName = `search-filter-${crypto.randomUUID()}`;
+const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
+---
+
+<CustomSection
+  label={id}
+  id={id}
+  maxContentWidth={maxContentWidth}
+  paddingHorizontal={paddingHorizontal}
+  paddingVertical={paddingVertical}
+  colorScheme={colorScheme}
+  backgroundColor={backgroundColor}
+  contentBackground={contentBackground}
+  rounded={rounded}
+  class:list={["search-section", className]}
+  data-results-per-page={resultsPerPage}
+  data-unavailable-message={unavailableMessage}
+  data-pagefind-ignore="all"
+  {...htmlAttributes}
+>
+  <Split
+    class="search-section-intro"
+    distributionMode="half"
+    alignmentVertical="center"
+    gap="2xl"
+    minSplitWidth={800}
+  >
+    <Fragment slot="first">
+      <Heading
+        level="h1"
+        size={headingSize}
+        text={heading}
+        data-prop="heading"
+      />
+    </Fragment>
+    <Fragment slot="second">
+      <Text
+        class="search-section-subtext"
+        text={subtext}
+        data-prop="subtext"
+      />
+    </Fragment>
+  </Split>
+
+  {
+    filterOptions.length > 1 && (
+      <div
+        class="search-tabs"
+        role="radiogroup"
+        aria-label="Filter results by type"
+      >
+        {filterOptions.map((filter: SearchFilter, index: number) => (
+          <label class="search-tab">
+            <input
+              class="search-tab-input"
+              type="radio"
+              name={filterGroupName}
+              value={filter.type ?? ""}
+              checked={index === 0}
+            />
+            <span class="search-tab-label">{filter.label}</span>
+          </label>
+        ))}
+      </div>
+    )
+  }
+
+  <label
+    class="visually-hidden"
+    for={fieldId}
+  >
+    {placeholder}
+  </label>
+  {/* A GET form so the page still works without JavaScript — results render client-side below. */}
+  <form
+    class="search-form"
+    role="search"
+    method="get"
+  >
+    <Input
+      class="search-form-field"
+      id={fieldId}
+      type="search"
+      name="q"
+      placeholder={placeholder}
+      iconName="magnifying-glass"
+    />
+    <Button
+      class="search-form-submit"
+      element="button"
+      type="submit"
+      text={buttonText}
+      iconName="arrow-right"
+      iconPosition="after"
+      variant="primary"
+      size="md"
+    />
+  </form>
+
+  <div class="search-results">
+    <p
+      class="search-status"
+      role="status"
+      aria-live="polite"
+    >
+    </p>
+    <div class="search-results-list"></div>
+    <div
+      class="search-results-more"
+      hidden
+    >
+      <Button
+        element="button"
+        type="button"
+        class="search-load-more"
+        text="Load more results"
+        iconName="arrow-long-down"
+        iconPosition="after"
+        variant="tertiary"
+        size="md"
+      />
+    </div>
+  </div>
+</CustomSection>
+
+<script>
+  import { onPageLoad } from "@components/utils/onPageLoad";
+
+  interface PagefindSubResult {
+    title: string;
+    url: string;
+    excerpt: string;
+  }
+
+  interface PagefindResultData {
+    url: string;
+    excerpt: string;
+    meta?: Record<string, string>;
+    filters?: Record<string, string[]>;
+    sub_results?: PagefindSubResult[];
+  }
+
+  interface PagefindResult {
+    id: string;
+    data: () => Promise<PagefindResultData>;
+  }
+
+  interface Pagefind {
+    search: (
+      query: string | null,
+      options?: { filters?: Record<string, string> }
+    ) => Promise<{ results: PagefindResult[] }>;
+  }
+
+  const DEBOUNCE_MS = 250;
+  const SUB_RESULT_LIMIT = 3;
+
+  let pagefindPromise: Promise<Pagefind> | null = null;
+
+  /**
+   * The index is generated after the site build (`.cloudcannon/postbuild` runs
+   * `npx pagefind --site dist`), so the module only exists in the built output.
+   * Building the URL at runtime keeps Vite from trying to resolve it at build time.
+   */
+  function loadPagefind(): Promise<Pagefind> {
+    if (!pagefindPromise) {
+      const moduleUrl = new URL("/pagefind/pagefind.js", window.location.origin).href;
+
+      pagefindPromise = import(/* @vite-ignore */ moduleUrl).catch((error) => {
+        pagefindPromise = null;
+        throw error;
+      });
+    }
+
+    return pagefindPromise;
+  }
+
+  /** Build a result card reusing the global `.card` styles. */
+  function buildResult(data: PagefindResultData) {
+    const card = document.createElement("div");
+    const inner = document.createElement("div");
+    const outerContent = document.createElement("div");
+    const content = document.createElement("div");
+
+    card.className = "card search-result";
+    inner.className = "card-inner rounded border";
+    outerContent.className = "card-outer-content";
+    content.className = "card-content pad-x-lg pad-y-md";
+
+    const type = data.filters?.Type?.[0];
+
+    if (type) {
+      const badge = document.createElement("p");
+
+      badge.className = "search-result-type";
+      badge.textContent = type;
+      content.append(badge);
+    }
+
+    const title = document.createElement("h2");
+    const titleLink = document.createElement("a");
+
+    title.className = "search-result-title";
+    titleLink.href = data.url;
+    titleLink.textContent = data.meta?.title || data.url;
+    title.append(titleLink);
+    content.append(title);
+
+    const excerpt = document.createElement("p");
+
+    excerpt.className = "search-result-excerpt";
+    // Pagefind escapes the excerpt and only adds `<mark>` highlights.
+    excerpt.innerHTML = data.excerpt;
+    content.append(excerpt);
+
+    const subResults = (data.sub_results ?? [])
+      .filter((subResult) => subResult.url !== data.url)
+      .slice(0, SUB_RESULT_LIMIT);
+
+    if (subResults.length) {
+      const subList = document.createElement("ul");
+
+      subList.className = "search-result-subresults";
+
+      subResults.forEach((subResult) => {
+        const item = document.createElement("li");
+        const link = document.createElement("a");
+
+        link.href = subResult.url;
+        link.textContent = subResult.title;
+        item.append(link);
+        subList.append(item);
+      });
+
+      content.append(subList);
+    }
+
+    outerContent.append(content);
+    inner.append(outerContent);
+    card.append(inner);
+
+    return card;
+  }
+
+  function setupSearchSection(section: HTMLElement) {
+    if (section.dataset.searchInitialized === "true") return;
+
+    const form = section.querySelector<HTMLFormElement>(".search-form");
+    const field = section.querySelector<HTMLInputElement>(".search-form-field .field");
+    const status = section.querySelector<HTMLElement>(".search-status");
+    const list = section.querySelector<HTMLElement>(".search-results-list");
+    const moreWrapper = section.querySelector<HTMLElement>(".search-results-more");
+    const moreButton = moreWrapper?.querySelector("button") ?? null;
+    const filterInputs = Array.from(
+      section.querySelectorAll<HTMLInputElement>(".search-tab-input")
+    );
+
+    if (!form || !field || !status || !list) return;
+
+    section.dataset.searchInitialized = "true";
+
+    const pageSize = Number(section.dataset.resultsPerPage) || 10;
+    const unavailableMessage = section.dataset.unavailableMessage || "";
+
+    let results: PagefindResult[] = [];
+    let shown = 0;
+    let requestId = 0;
+    let debounceTimer: number | undefined;
+
+    const activeType = () => filterInputs.find((input) => input.checked)?.value ?? "";
+
+    /** Keep the query in the address bar so searches are shareable and survive a reload. */
+    const syncUrl = (query: string, type: string) => {
+      const url = new URL(window.location.href);
+
+      if (query) url.searchParams.set("q", query);
+      else url.searchParams.delete("q");
+
+      if (type) url.searchParams.set("type", type);
+      else url.searchParams.delete("type");
+
+      window.history.replaceState({}, "", `${url.pathname}${url.search}`);
+    };
+
+    const renderNext = async (id: number) => {
+      const batch = results.slice(shown, shown + pageSize);
+
+      shown += batch.length;
+
+      const items = await Promise.all(batch.map((result) => result.data()));
+
+      if (id !== requestId) return;
+
+      items.forEach((data) => list.append(buildResult(data)));
+
+      if (moreWrapper) moreWrapper.hidden = shown >= results.length;
+    };
+
+    const runSearch = async (query: string, { updateUrl = true } = {}) => {
+      const type = activeType();
+      const id = ++requestId;
+
+      if (updateUrl) syncUrl(query, type);
+
+      results = [];
+      shown = 0;
+      list.replaceChildren();
+
+      if (moreWrapper) moreWrapper.hidden = true;
+
+      if (!query) {
+        status.textContent = "";
+        return;
+      }
+
+      let pagefind: Pagefind;
+
+      try {
+        pagefind = await loadPagefind();
+      } catch {
+        if (id === requestId) status.textContent = unavailableMessage;
+        return;
+      }
+
+      const search = await pagefind.search(query, type ? { filters: { Type: type } } : undefined);
+
+      if (id !== requestId) return;
+
+      results = search.results;
+
+      if (!results.length) {
+        status.textContent = `No results for “${query}”. Try a different search term.`;
+        return;
+      }
+
+      status.textContent = `${results.length} result${results.length === 1 ? "" : "s"} for “${query}”.`;
+      await renderNext(id);
+    };
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      window.clearTimeout(debounceTimer);
+      runSearch(field.value.trim());
+    });
+
+    field.addEventListener("input", () => {
+      window.clearTimeout(debounceTimer);
+      debounceTimer = window.setTimeout(() => runSearch(field.value.trim()), DEBOUNCE_MS);
+    });
+
+    field.addEventListener("focus", () => loadPagefind().catch(() => {}), { once: true });
+
+    filterInputs.forEach((input) => {
+      input.addEventListener("change", () => {
+        window.clearTimeout(debounceTimer);
+        runSearch(field.value.trim());
+      });
+    });
+
+    moreButton?.addEventListener("click", () => renderNext(requestId));
+
+    const params = new URLSearchParams(window.location.search);
+    const initialQuery = params.get("q")?.trim() ?? "";
+    const initialType = params.get("type") ?? "";
+    const initialFilter = filterInputs.find((input) => input.value === initialType);
+
+    if (initialType && initialFilter) initialFilter.checked = true;
+
+    if (initialQuery) {
+      field.value = initialQuery;
+      runSearch(initialQuery, { updateUrl: false });
+    }
+  }
+
+  function initSearchSections() {
+    document
+      .querySelectorAll<HTMLElement>(".search-section")
+      .forEach((section) => setupSearchSection(section));
+  }
+
+  onPageLoad(initSearchSections);
+</script>
+
+<style is:global>
+  @layer page-sections {
+    .search-section {
+      .search-section-subtext .text-inner > p {
+        color: var(--color-text-strong);
+        font-weight: var(--font-weight-bold);
+      }
+
+      .search-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-lg);
+        margin-top: var(--spacing-2xl);
+      }
+
+      .search-tab {
+        cursor: pointer;
+        font-weight: var(--font-weight-normal);
+        position: relative;
+      }
+
+      .search-tab-input {
+        appearance: none;
+        inset: 0;
+        margin: 0;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+      }
+
+      .search-tab-label {
+        border-bottom: 2px solid transparent;
+        color: var(--color-text);
+        display: inline-block;
+        font-family: var(--font-headings);
+        padding-bottom: var(--spacing-xs);
+        transition:
+          border-color var(--animation-normal) ease-in-out,
+          color var(--animation-normal) ease-in-out;
+        white-space: nowrap;
+      }
+
+      .search-tab:hover .search-tab-label {
+        color: var(--color-text-strong);
+      }
+
+      .search-tab-input:checked + .search-tab-label {
+        border-bottom-color: currentcolor;
+        color: var(--color-text-strong);
+      }
+
+      .search-tab-input:focus-visible + .search-tab-label {
+        outline: 2px solid var(--color-focus-ring);
+        outline-offset: 4px;
+      }
+
+      .search-form {
+        align-items: stretch;
+        display: flex;
+        gap: var(--spacing-sm);
+        margin-top: var(--spacing-md);
+      }
+
+      .search-form-field {
+        margin-bottom: 0;
+
+        .field-shell {
+          border-color: var(--color-border);
+          border-radius: var(--radius-sm);
+          height: 100%;
+          padding-inline: var(--spacing-em-md);
+        }
+
+        .field {
+          padding-block: var(--spacing-em-sm);
+        }
+      }
+
+      .search-form-submit .button-inner {
+        height: 100%;
+        padding-inline: var(--spacing-em-md);
+      }
+
+      .search-results {
+        margin-top: var(--spacing-xl);
+      }
+
+      .search-status:empty {
+        display: none;
+      }
+
+      .search-status {
+        color: var(--color-text-muted);
+        font-size: var(--font-size-sm);
+        margin: 0;
+      }
+
+      .search-results-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+
+        &:not(:empty) {
+          margin-top: var(--spacing-lg);
+        }
+      }
+
+      .search-result {
+        height: auto;
+        margin-top: 0;
+
+        .card-inner {
+          transition: border-color var(--animation-normal) ease-in-out;
+        }
+
+        &:hover .card-inner.border {
+          border-color: var(--color-border-strong);
+        }
+      }
+
+      .search-result-type {
+        color: var(--color-text-muted);
+        font-family: var(--font-headings);
+        font-size: var(--font-size-xs);
+        letter-spacing: var(--font-letter-spacing-xs);
+        margin: 0;
+        text-transform: uppercase;
+      }
+
+      .search-result-title {
+        font-size: var(--font-size-heading-xs);
+        margin-block: var(--spacing-xs) 0;
+
+        a {
+          color: var(--color-text-strong);
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.12em;
+          }
+        }
+      }
+
+      .search-result-excerpt {
+        color: var(--color-text);
+        font-size: var(--font-size-sm);
+        margin-block: var(--spacing-xs) 0;
+
+        mark {
+          background: none;
+          color: var(--color-text-strong);
+          font-weight: var(--font-weight-bold);
+        }
+      }
+
+      .search-result-subresults {
+        display: flex;
+        flex-direction: column;
+        font-size: var(--font-size-sm);
+        gap: var(--spacing-xs);
+        list-style: none;
+        margin-block: var(--spacing-sm) 0;
+        padding: 0;
+
+        a {
+          color: var(--color-text-muted);
+
+          &:hover {
+            color: var(--color-text-strong);
+          }
+        }
+      }
+
+      .search-results-more {
+        margin-top: var(--spacing-lg);
+      }
+
+      @container (max-width: 480px) {
+        .search-form {
+          flex-direction: column;
+        }
+
+        .search-form-submit {
+          display: flex;
+
+          .button-inner {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+</style>

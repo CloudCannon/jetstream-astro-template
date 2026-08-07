@@ -337,7 +337,7 @@ function createNavItemData(item, level, parentGroupId) {
       const hamburger = document.querySelector(`label[for="${toggleId}"].nav-hamburger`);
 
       // Handle navigation toggle state and accessibility
-      function handleNavToggle(isOpen) {
+      function handleNavToggle(isOpen, returnFocus = true) {
         if (isOpen) {
           nav.setAttribute("aria-hidden", "false");
           nav.style.transform = "translateX(0)";
@@ -347,9 +347,24 @@ function createNavItemData(item, level, parentGroupId) {
           nav.setAttribute("aria-hidden", "true");
           nav.style.transform = "translateX(-100%)";
           document.body.style.overflow = "";
-          hamburger?.focus();
+          if (returnFocus) hamburger?.focus();
         }
       }
+
+      // Close the menu when a link is followed. Same-page links (such as
+      // `/#services` while already on the home page) never trigger a page load,
+      // so nothing else would close the menu for them.
+      nav.addEventListener("click", (e) => {
+        if (e.defaultPrevented || !toggle?.checked) return;
+
+        const link = e.target?.closest("a[href]");
+        if (!link || (link.target && link.target !== "_self")) return;
+
+        toggle.checked = false;
+        // Don't pull focus back to the hamburger — that would scroll away from
+        // the anchor the user just jumped to.
+        handleNavToggle(false, false);
+      });
 
       // Handle hamburger button interactions
       if (hamburger && toggle) {

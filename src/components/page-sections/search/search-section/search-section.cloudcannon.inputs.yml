@@ -1,0 +1,164 @@
+placeholder:
+  type: text
+  comment: Placeholder text shown in the empty search field.
+buttonText:
+  type: text
+  comment: Label for the search button.
+filters:
+  type: array
+  comment: >-
+    Tabs that narrow results by content type. Two or more tabs are needed for
+    the tabs to show. The first tab is selected by default.
+  options:
+    structures:
+      - label: Search Filter
+        icon: filter_alt
+        value:
+          label: ""
+          type: ""
+        preview:
+          text:
+            - key: label
+          subtext:
+            - key: type
+          icon: filter_alt
+        _inputs:
+          label:
+            type: text
+            comment: The tab label shown to visitors.
+          type:
+            type: select
+            comment: >-
+              Limit this tab to one content type. Leave empty to search the
+              whole website.
+            options:
+              allow_empty: true
+              empty_type: string
+              values:
+                - id: ""
+                  name: Everything
+                - id: Page
+                  name: Pages
+                - id: Article
+                  name: Blog posts
+resultsPerPage:
+  type: number
+  comment: How many results to show before the “Load more results” button.
+  options:
+    min: 1
+    step: 1
+unavailableMessage:
+  type: text
+  comment: >-
+    Message shown when the search index can't be loaded. The index is generated
+    after the site builds, so it is unavailable when previewing locally.
+headingSize:
+  comment: The font size of the heading text.
+  type: select
+  options:
+    values:
+      - id: xl
+        name: Extra Large
+      - id: 2xl
+        name: 2xl
+      - id: 3xl
+        name: 3xl
+
+id:
+  type: text
+  comment: Unique identifier for the section which can be used as an anchor link.
+heading:
+  type: html
+  comment: Main heading text for the section.
+  options:
+    styles: .cloudcannon/styles/editor.css
+subtext:
+  type: markdown
+  comment: Optional subtext displayed beside the heading.
+  options:
+    bold: true
+    italic: true
+    link: true
+    underline: true
+maxContentWidth:
+  type: select
+  comment: Maximum width constraint for the content.
+  options:
+    values:
+      - id: xs
+        name: Extra Small
+      - id: sm
+        name: Small
+      - id: md
+        name: Medium
+      - id: lg
+        name: Large
+      - id: xl
+        name: Extra Large
+      - id: 2xl
+        name: 2xl
+      - id: 3xl
+        name: 3xl
+paddingVertical:
+  type: select
+  comment: Vertical padding applied to the section content.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: xs
+        name: Extra Small
+      - id: sm
+        name: Small
+      - id: md
+        name: Medium
+      - id: lg
+        name: Large
+      - id: xl
+        name: Extra Large
+      - id: 2xl
+        name: 2xl
+      - id: 3xl
+        name: 3xl
+      - id: 4xl
+        name: 4xl
+colorScheme:
+  type: select
+  comment: Color scheme theme for the section.
+  options:
+    values:
+      - id: inherit
+        name: Inherit
+      - id: light
+        name: Light
+      - id: dark
+        name: Dark
+backgroundColor:
+  type: select
+  comment: Background color for the section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: highlight-grid
+        name: Highlight Grid
+      - id: surface-linear-gradient
+        name: Surface Linear Gradient
+      - id: highlight-linear-gradient
+        name: Highlight Linear Gradient
+      - id: highlight-radial-gradient
+        name: Highlight Radial Gradient
+contentBackground:
+  type: switch
+  comment: Add a radial background in the base color behind the content.
+rounded:
+  type: switch
+  comment: Whether to apply rounded corners to the section.

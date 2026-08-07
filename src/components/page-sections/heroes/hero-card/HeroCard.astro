@@ -20,6 +20,7 @@ const {
     eyebrowText: "",
     heading: "",
     subtext: "",
+    metaText: "",
     buttonSections: [],
     image: {},
     counters: [],
@@ -78,7 +79,8 @@ if (card.usePost && card.post) {
       ...card,
       eyebrowText: post.data.tag || card.eyebrowText,
       heading: post.data.title || card.heading,
-      subtext: `${post.data.description}<br><br>**By ${author?.data.name || "Anonymous"} | ${date}**`,
+      subtext: post.data.description || card.subtext,
+      metaText: `By ${author?.data.name || "Anonymous"} | ${date}`,
       image: post.data.image
         ? { source: post.data.image, alt: post.data.title, rounded: true }
         : card.image,
@@ -224,10 +226,16 @@ const snakePath =
             alignmentHorizontal="left"
             {...!card.usePost && { "data-prop": "card.heading" }}
           />
-          <SimpleText
+          <Text
             text={finalCard.subtext}
             alignmentHorizontal="left"
             {...!card.usePost && { "data-prop": "card.subtext" }}
+          />
+          <SimpleText
+            text={finalCard.metaText}
+            alignmentHorizontal="left"
+            class="meta-text"
+            {...!card.usePost && { "data-prop": "card.metaText" }}
           />
           <ButtonGroup
             buttonSections={finalCard.buttonSections}
@@ -303,6 +311,11 @@ const snakePath =
           margin: 0;
           color: var(--color-text-brand);
           font-weight: var(--font-weight-bold);
+        }
+
+        .meta-text p {
+          font-weight: var(--font-weight-bold);
+          color: var(--color-text-muted);
         }
 
         .counters {

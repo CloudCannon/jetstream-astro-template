@@ -27,9 +27,10 @@ const {
 
 const hasValidSrc = source && typeof source === "string" && source.trim() !== "";
 
-if (!_component && !hasValidSrc) {
-  return;
-}
+// Render nothing when there is no image to show. Don't return early from the
+// frontmatter — components rendered on their own (e.g. a CloudCannon editable
+// region re-rendering after an edit) must always return markup, even if empty.
+const shouldRender = Boolean(_component || hasValidSrc);
 
 const normalizedAlt = alt || "";
 const isEditable =
@@ -86,58 +87,60 @@ if (hasAlternate) {
 }
 ---
 
-<div
-  class:list={["image", className]}
-  {...htmlAttributes}
->
-  <div
-    class:list={[
-      "image-inner",
-      aspectRatio && "ratio",
-      aspectRatio && `ratio-${aspectRatio}`,
-      positionClass,
-      rounded && "rounded",
-      background && "background",
-    ]}
-  >
-    {
-      imageEntries.map(({ prepared, attrs, wrapperClass }) => {
-        const img = prepared.shouldRenderOptimizedPicture ? (
-          <Picture
-            src={prepared.imageSrc}
-            alt={normalizedAlt}
-            widths={prepared.filteredWidths}
-            sizes={effectiveSizes}
-            formats={["webp"]}
-            width={prepared.finalWidth}
-            height={prepared.finalHeight}
-            fit={prepared.useFit}
-            position={prepared.usePosition}
-            loading={priority ? "eager" : "lazy"}
-            decoding={priority ? "sync" : "async"}
-            fetchpriority={priority ? "high" : undefined}
-            {...attrs}
-          />
-        ) : (
-          <picture>
-            <img
+{
+  shouldRender && (
+    <div
+      class:list={["image", className]}
+      {...htmlAttributes}
+    >
+      <div
+        class:list={[
+          "image-inner",
+          aspectRatio && "ratio",
+          aspectRatio && `ratio-${aspectRatio}`,
+          positionClass,
+          rounded && "rounded",
+          background && "background",
+        ]}
+      >
+        {imageEntries.map(({ prepared, attrs, wrapperClass }) => {
+          const img = prepared.shouldRenderOptimizedPicture ? (
+            <Picture
               src={prepared.imageSrc}
               alt={normalizedAlt}
+              widths={prepared.filteredWidths}
+              sizes={effectiveSizes}
+              formats={["webp"]}
+              width={prepared.finalWidth}
+              height={prepared.finalHeight}
+              fit={prepared.useFit}
+              position={prepared.usePosition}
               loading={priority ? "eager" : "lazy"}
               decoding={priority ? "sync" : "async"}
               fetchpriority={priority ? "high" : undefined}
-              width={prepared.imageWidth}
-              height={prepared.imageHeight}
               {...attrs}
             />
-          </picture>
-        );
+          ) : (
+            <picture>
+              <img
+                src={prepared.imageSrc}
+                alt={normalizedAlt}
+                loading={priority ? "eager" : "lazy"}
+                decoding={priority ? "sync" : "async"}
+                fetchpriority={priority ? "high" : undefined}
+                width={prepared.imageWidth}
+                height={prepared.imageHeight}
+                {...attrs}
+              />
+            </picture>
+          );
 
-        return wrapperClass ? <div class:list={wrapperClass}>{img}</div> : img;
-      })
-    }
-  </div>
-</div>
+          return wrapperClass ? <div class:list={wrapperClass}>{img}</div> : img;
+        })}
+      </div>
+    </div>
+  )
+}
 
 <style is:global>
   @layer components {

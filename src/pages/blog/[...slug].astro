@@ -112,9 +112,8 @@ const article = {
           alignmentHorizontal="start"
           class="heading"
           data-prop="title"
-        >
-          {post.data.title}
-        </Heading>
+          text={post.data.title}
+        />
         <p class="breadcrumb">
           <a
             href="/blog/"
@@ -144,62 +143,65 @@ const article = {
         </p>
       </Fragment>
     </Split>
-    {
-      post.data?.counters?.length > 0 ? (
-        <Split
-          distributionMode="three-quarters-quarter"
-          gap="lg"
-        >
-          <div
-            class="hero-image"
-            slot="first"
-          >
-            <Image
-              source={post.data.image}
-              alt={post.data.title}
-              rounded={true}
-              data-prop-src="image"
-              data-prop-alt="title"
+    <Split
+      distributionMode="three-quarters-quarter"
+      gap="lg"
+    >
+      <div
+        class="hero-image"
+        slot="first"
+      >
+        <Image
+          source={post.data.image}
+          alt={post.data.image_alt}
+          rounded={true}
+          data-prop-src="image"
+          data-prop-alt="image_alt"
+        />
+      </div>
+      <div
+        class="counters"
+        slot="second"
+        data-editable="array"
+        data-prop="counters"
+      >
+        {
+          post.data?.counters?.map((counter: any, index: number) => (
+            <div
+              class="counter-container"
+              data-editable="array-item"
+            >
+              <editable-component
+                data-prop="counter"
+                data-component="building-blocks/core-elements/counter"
+              >
+                <Counter {...counter.counter} />
+              </editable-component>
+              <SimpleText
+                text={counter.subtext}
+                alignmentHorizontal="start"
+                data-prop={`subtext`}
+              />
+            </div>
+          ))
+        }
+        <template>
+          <div class="counter-container">
+            <editable-component
+              data-prop="counter"
+              data-component="building-blocks/core-elements/counter"
+            >
+              <Counter number={0} />
+            </editable-component>
+            <SimpleText
+              text="Counter subtext"
+              alignmentHorizontal="start"
+              data-prop={`subtext`}
             />
           </div>
-          <div
-            class="counters"
-            slot="second"
-            data-editable="array"
-            data-prop="counters"
-          >
-            {post.data?.counters?.map((counter: any, index: number) => (
-              <div
-                class="counter-container"
-                data-editable="array-item"
-              >
-                <editable-component
-                  data-prop="counter"
-                  data-component="building-blocks/core-elements/counter"
-                >
-                  <Counter {...counter.counter} />
-                </editable-component>
-                <SimpleText
-                  text={counter.subtext}
-                  alignmentHorizontal="start"
-                  data-prop={`subtext`}
-                />
-              </div>
-            ))}
-          </div>
-        </Split>
-      ) : (
-        <div class="hero-image">
-          <Image
-            source={post.data.image}
-            alt={post.data.title}
-            rounded={true}
-            data-prop-src="image"
-            data-prop-alt="title"
-          />
-        </div>
-      )
-    }
+        </template>
+      </div>
+    </Split>
   </CustomSection>
   <CustomSection
     maxContentWidth="2xl"
@@ -284,7 +286,7 @@ const article = {
           </SimpleText>
           <ButtonGroup style="margin: 0px;">
             <Button
-              link={`mailto:?subject=${post.data.title}&body=Check out this article: ${Astro.url}`}
+              link={`mailto:?subject=${post.data.title.replace(/<[^>]*>/g, "")}&body=Check out this article: ${Astro.url}`}
               variant="secondary"
               size="lg"
               iconName="envelope"
@@ -339,7 +341,7 @@ const article = {
               >
                 <Image
                   source={recentPost.data.image}
-                  alt={recentPost.data.title}
+                  alt={recentPost.data.image_alt}
                   aspectRatio="landscape"
                   editable={false}
                   rounded={true}
@@ -357,9 +359,8 @@ const article = {
                   size="xs"
                   style="margin-bottom: var(--spacing-xs); margin-top: 0;"
                   editable={false}
-                >
-                  {recentPost.data.title}
-                </Heading>
+                  text={recentPost.data.title.replace(/<[^>]*>/g, "")}
+                />
                 <SimpleText
                   size="sm"
                   style="color: var(--color-text-muted); margin-top: 0; font-weight: var(--font-weight-bold);"
@@ -400,6 +401,51 @@ const article = {
         color: var(--color-text-muted);
         font-weight: var(--font-weight-bold);
         font-size: var(--font-size-sm);
+      }
+
+      .counters {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        margin-top: var(--spacing-xl);
+
+        @container (max-width: 700px) {
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin-top: 0;
+        }
+
+        .counter-container {
+          @container (max-width: 700px) {
+            flex: 1 1 150px;
+          }
+
+          .counter {
+            color: var(--color-text);
+            margin-top: 0;
+          }
+
+          .simple-text {
+            margin: 0;
+
+            .simple-text-content {
+              font-weight: var(--font-weight-bold);
+              margin: var(--spacing-xs) 0 0;
+              text-wrap: wrap;
+            }
+          }
+        }
+      }
+
+      .split:has(.counters):not(:has(.counter-container)) {
+        > .split-inner {
+          --split-columns-desktop: 1fr;
+          row-gap: 0;
+        }
+
+        .hero-image {
+          margin-inline: auto;
+        }
       }
 
       .hero-image {

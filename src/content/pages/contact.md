@@ -1,5 +1,6 @@
 ---
 _schema: default
+permalink:
 title: Contact
 pageSections:
   - _component: page-sections/ctas/cta-form
