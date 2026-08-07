@@ -4,7 +4,7 @@ collections_config:
     glob:
       - "**/*.md"
     icon: web
-    url: /[full_slug]/
+    url: "/{permalink|if=permalink}[slug|unless=permalink]/"
     disable_url: false
     description: >-
       Welcome to the **Pages Collection**! This Collection contains all the
@@ -33,8 +33,6 @@ collections_config:
       - name: Add New Page
         icon: pages
         schema: default
-    create:
-      path: "[relative_base_path]/{filename|slugify|lowercase}.md"
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
@@ -47,6 +45,8 @@ collections_config:
         remove_empty_inputs: false
         remove_extra_inputs: false
         name: New Page
+        create:
+          path: "[relative_base_path]/{title|slugify}.md"
       blog-index:
         path: .cloudcannon/schemas/blog-index.md
         reorder_inputs: true
@@ -59,7 +59,7 @@ collections_config:
       - "**/*.mdx"
     name:
     icon: article
-    url: /blog/[full_slug]/
+    url: "/blog/{permalink|if=permalink}[slug|unless=permalink]/"
     disable_url: false
     description: >-
       Welcome to the **Blog Collection**! This *Collection* contains all the
@@ -76,9 +76,11 @@ collections_config:
       - visual
     _inputs:
       title:
-        type: text
+        type: html
         options:
           required: true
+          initial_height: 135
+          styles: .cloudcannon/styles/editor.css
         comment: The title of the blog post.
         cascade: false
       keywords:
@@ -109,7 +111,7 @@ collections_config:
               - key: name
         comment: >-
           The author of the blog post. Note that author details in the post will
-          not live update, you will need to save abd rebuild.
+          not live update, you will need to save and rebuild.
         cascade: true
       image:
         type: image
@@ -117,15 +119,28 @@ collections_config:
           paths:
             uploads: src/assets/images
           required: true
-        comment: Optional image path for the blog post.
+        comment: Image path for the blog post.
         cascade: true
       tag:
-        type: text
+        type: select
         options:
           required: true
+          allow_create: true
+          values:
+            - Caching
+            - Uptime
+            - Downtime
+            - Example
+            - Security
+            - Performance
+            - CDN
+            - Prediction
         comment: Tag relevant to this post's content.
         cascade: true
       counters:
+        type: array
+        comment: >-
+          Optional statistics displayed alongside the image in the post hero.
         options:
           structures:
             style: select
@@ -178,8 +193,6 @@ collections_config:
       - name: Add New Blog Post
         icon: article
         schema: default
-    create:
-      path: "[relative_base_path]/{filename|slugify|lowercase}.mdx"
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
@@ -191,6 +204,8 @@ collections_config:
         remove_empty_inputs: false
         remove_extra_inputs: false
         name: New Blog Post
+        create:
+          path: "[relative_base_path]/{title|slugify}.md"
   team:
     path: src/content/team
     icon: groups
@@ -272,6 +287,8 @@ collections_config:
         remove_empty_inputs: false
         remove_extra_inputs: false
         name: New Team Member
+        create:
+          path: "[relative_base_path]/{name|slugify}.md"
   data:
     path: src/data
     glob:
@@ -346,6 +363,15 @@ _inputs:
     cascade: true
   logoAlternateSource:
     type: image
+  permalink:
+    type: text
+    comment: >-
+      Optional. Sets a custom url for this page instead of using the
+      file name — entering `our-pricing` publishes this page at
+      `/our-pricing/`. Leave this empty to keep using the file name. Be
+      careful changing this on a page that is already live: the old address
+      will stop working, so any existing links to it will break.
+    cascade: false
 _select_data:
   # Selectable UI icons match [Heroicons](https://heroicons.com/); SVGs live in src/icons/.
   icons:
@@ -1046,6 +1072,9 @@ file_config:
       url:
         hidden: true
         cascade: true
+      permalink:
+        hidden: true
+        cascade: true
       cta.buttonSections:
         type: array
         options:
@@ -1092,6 +1121,13 @@ file_config:
       pageSections:
         hidden: true
         cascade: true
+  - glob: src/content/pages/index.md
+    _inputs:
+      title:
+        type: text
+        comment: >-
+          Optional. Leave empty to use your site title on its own, or add a
+          title to show it before your site title.
 timezone: Etc/UTC
 _structures_from_glob:
   - /.cloudcannon/structures/*.cloudcannon.structures.yml

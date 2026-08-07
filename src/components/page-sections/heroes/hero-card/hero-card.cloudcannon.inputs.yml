@@ -12,6 +12,7 @@ card:
             eyebrowText: "Card Hero Eyebrow"
             heading: "Card Hero Heading"
             subtext: "Card Hero Subtext"
+            metaText: "Card Hero Meta Text"
             buttonSections: []
             image: {}
             counters: []
@@ -44,6 +45,10 @@ card:
                 italic: true
                 link: true
                 underline: true
+            metaText:
+              type: text
+              comment: Optional emphasised line displayed beneath the subtext. Replaced by the post author and date when using a post.
+              hidden: "usePost"
             buttonSections:
               type: array
               comment: Calls-to-action shown beneath the copy block.

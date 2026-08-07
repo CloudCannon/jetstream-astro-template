@@ -1,5 +1,6 @@
 ---
 _schema: blog-index
+permalink:
 title: Blog
 description: >-
   Read our latest articles and insights on web development, design, and
@@ -30,6 +31,7 @@ heroSections:
       subtext: >-
         Sometimes good enough isn't good enough, especially when our engineers
         have strong opinions about query optimization.
+      metaText:
       buttonSections:
         - _component: building-blocks/core-elements/button
           text: Learn why we did it

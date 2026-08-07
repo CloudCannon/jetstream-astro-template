@@ -4,6 +4,7 @@ title:
 image:
   type: object
   options:
+    empty_type: object
     structures:
       values:
         - label: Image

@@ -8,6 +8,7 @@ import BentoBoxGridItem from "@wrappers/bento-box-grid/BentoBoxGridItem.astro";
 import Card from "@wrappers/card/Card.astro";
 
 const {
+  link = "",
   image = {
     source: "",
     alt: "",
@@ -38,6 +39,7 @@ const {
     rounded
     border
     backgroundColor="base"
+    link={link}
   >
     <Fragment slot="before">
       <Image
