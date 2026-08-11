@@ -4,9 +4,6 @@ description: Arranges content into a grid that adapts to screen size, with items
 value:
   _component: building-blocks/wrappers/bento-box
   label: ""
-  layout: center
-  minItemWidth: 280
-  maxItemWidth: 400
   items: []
   gap: md
 preview:

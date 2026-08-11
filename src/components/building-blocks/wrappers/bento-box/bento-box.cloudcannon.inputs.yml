@@ -1,27 +1,12 @@
 label:
   comment: Optional label for the grid to help identify it in the editor.
   type: text
-layout:
-  comment: Defines how grid items are arranged.
-  type: select
-  options:
-    values:
-      - id: start
-        name: Left Aligned
-      - id: center
-        name: Center Aligned
-minItemWidth:
-  comment: The minimum width for each grid item in pixels.
-  type: number
-maxItemWidth:
-  comment: The maximum width for each grid item in pixels.
-  type: number
 items:
   label: Grid Items
   comment: Array of grid items, each containing content blocks to render.
   type: array
   options:
-    structures: _structures.gridItems
+    structures: _structures.bentoBoxItems
 gap:
   comment: The gap between grid items.
   type: select

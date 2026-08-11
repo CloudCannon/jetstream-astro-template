@@ -3,7 +3,6 @@ title: Primary Bento Box
 spacing: null
 blocks:
   _component: building-blocks/wrappers/bento-box
-  layout: center
   gap: md
   items:
     - columnSpan: 6

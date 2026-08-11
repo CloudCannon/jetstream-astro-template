@@ -2,7 +2,6 @@
 import BentoBoxItem from "./BentoBoxItem.astro";
 
 const {
-  layout = "center",
   class: className,
   style: userStyle,
   items = [],
@@ -48,7 +47,7 @@ if (!_component && !hasItems && !hasSlotContent) return;
 >
   <div
     {...arrayDataAttributes}
-    class:list={["bento-box-inner", `layout-${layout}`]}
+    class="bento-box-inner"
     style={gridStyles}
   >
     <slot>
@@ -57,7 +56,6 @@ if (!_component && !hasItems && !hasSlotContent) return;
           <BentoBoxItem
             data-id="building-blocks/wrappers/bento-box/bento-box-item"
             data-editable="array-item"
-            class:list={`layout-${layout}`}
             useDefaultEditableBinding={!!effectiveChildrenProp}
             {...item}
           />
