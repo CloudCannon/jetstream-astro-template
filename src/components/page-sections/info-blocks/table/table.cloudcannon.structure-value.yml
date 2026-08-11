@@ -3,6 +3,7 @@ icon: table_rows
 description: Description for table component.
 value:
   _component: page-sections/info-blocks/table
+  _uuid:
   id:
   eyebrowIcon: {}
   eyebrowText: Eyebrow placeholder

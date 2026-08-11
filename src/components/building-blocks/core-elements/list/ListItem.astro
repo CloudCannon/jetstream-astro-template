@@ -1,5 +1,6 @@
 ---
 import Icon from "@core-elements/icon/Icon.astro";
+import { resolveRosey } from "@component-utils/roseyKey";
 import MarkdownIt from "markdown-it";
 
 const {
@@ -11,6 +12,8 @@ const {
   class: className,
   useDefaultEditableBinding = false,
   "data-prop": customDataProp,
+  "data-rosey": roseyId,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -18,15 +21,21 @@ const {
 const md = new MarkdownIt({ html: true });
 
 const effectiveDataProp = customDataProp ?? (useDefaultEditableBinding ? "text" : null);
+// data-type must match the rendered richness — renderInline() emits inline-rich HTML.
+// Without it the region defaults to "span" and the field reads as perpetually stale.
 const textDataAttributes = effectiveDataProp
-  ? { "data-editable": "text", "data-prop": effectiveDataProp }
+  ? { "data-editable": "text", "data-type": "text", "data-prop": effectiveDataProp }
   : {};
+// Every item derives the same "text" key, so the per-item namespace is what keeps
+// them apart.
+const roseyAttributes = resolveRosey(roseyId, effectiveDataProp);
 
 const hasIcon = showIcon && iconName;
 ---
 
 <li
   class:list={["item", className, hasIcon && "list-item-has-icon"]}
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   {
@@ -46,13 +55,19 @@ const hasIcon = showIcon && iconName;
         href={link}
         class="item-inner"
       >
-        <p {...textDataAttributes}>
+        <p
+          {...textDataAttributes}
+          {...roseyAttributes}
+        >
           {text ? <Fragment set:html={md.renderInline(text)} /> : <slot />}
         </p>
       </a>
     ) : (
       <span class="item-inner">
-        <p {...textDataAttributes}>
+        <p
+          {...textDataAttributes}
+          {...roseyAttributes}
+        >
           {text ? <Fragment set:html={md.renderInline(text)} /> : <slot />}
         </p>
       </span>

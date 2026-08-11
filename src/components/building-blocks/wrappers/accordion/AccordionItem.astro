@@ -8,6 +8,7 @@ const {
   useDefaultEditableBinding = false,
   isOpen = false,
   accordionName,
+  _uuid,
   _component,
   "data-children-prop": childrenDataProp,
   ...htmlAttributes
@@ -16,7 +17,12 @@ const {
 const effectiveChildrenProp =
   childrenDataProp ?? (useDefaultEditableBinding ? "contentSections" : null);
 const arrayDataAttributes = effectiveChildrenProp
-  ? { "data-editable": "array", "data-prop": effectiveChildrenProp }
+  ? {
+      "data-editable": "array",
+      "data-prop": effectiveChildrenProp,
+      "data-component-key": "_component",
+      "data-id-key": "_uuid",
+    }
   : {};
 ---
 
@@ -24,10 +30,18 @@ const arrayDataAttributes = effectiveChildrenProp
   class="accordion-item"
   open={isOpen}
   name={accordionName}
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <summary class="accordion-item-title">
-    <span class="accordion-item-title-text">{title}</span>
+    {/* The chevron is a sibling, not a child, so the key stays on the text span. */}
+    <span
+      class="accordion-item-title-text"
+      data-editable={useDefaultEditableBinding ? "text" : undefined}
+      data-prop={useDefaultEditableBinding ? "title" : undefined}
+      data-rosey="title"
+      >{title}</span
+    >
     <Icon
       name="chevron-down"
       size="none"

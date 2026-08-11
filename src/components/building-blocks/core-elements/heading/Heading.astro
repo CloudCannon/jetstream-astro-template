@@ -1,5 +1,6 @@
 ---
 import Icon from "@core-elements/icon/Icon.astro";
+import { resolveRosey } from "@component-utils/roseyKey";
 import MarkdownIt from "markdown-it";
 
 const {
@@ -13,14 +14,22 @@ const {
   class: className,
   useDefaultEditableBinding = false,
   "data-prop": customDataProp,
+  "data-rosey": roseyId,
   _component,
   ...htmlAttributes
 } = Astro.props;
 
 const effectiveDataProp = customDataProp ?? (useDefaultEditableBinding ? "text" : null);
 const textDataAttributes = effectiveDataProp
-  ? { "data-editable": "text", "data-type": "text", "data-prop": effectiveDataProp }
+  ? {
+      "data-editable": "text",
+      "data-type": "text",
+      "data-prop": effectiveDataProp,
+    }
   : {};
+// Kept separate from textDataAttributes so an explicit key still lands on
+// non-editable headings, which have no data-prop to derive from.
+const roseyAttributes = resolveRosey(roseyId, effectiveDataProp);
 
 const md = MarkdownIt({ html: true });
 let MarkdownText = text ? md.renderInline(text) : "";
@@ -54,6 +63,7 @@ if (!_component && !hasText && !hasSlotContent) return;
     <span
       class="heading-text"
       {...textDataAttributes}
+      {...roseyAttributes}
     >
       <slot>
         {text && <Fragment set:html={MarkdownText} />}

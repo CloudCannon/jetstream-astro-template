@@ -1,0 +1,93 @@
+---
+_schema: default
+title: Warum wir unseren DNS-Resolver von Grund auf neu gebaut haben (wieder)
+description: >-
+  Manchmal ist „gut genug“ nicht gut genug — besonders dann, wenn unsere
+  Ingenieurinnen und Ingenieure klare Meinungen zur Optimierung von Abfragen
+  haben.
+date: 2026-02-19T00:00:00Z
+author: 470d9a38-a9ab-4112-b222-8e10e7d5ac7d
+image: /src/assets/images/blog-dns-resolver.png
+image_alt: Macro shot of a circuit board's chips, resistors and solder joints lit in orange and blue
+tag: Performance
+---
+
+Unser DNS-Resolver funktionierte einwandfrei. Die Antwortzeiten lagen weltweit bei durchschnittlich 47 Millisekunden. Die Cache-Trefferquote pendelte um 94 %. Kundenbeschwerden gab es keine. Nach jedem vernünftigen Maßstab hatten wir ein solides, verlässliches System gebaut, das genau das tat, was ein DNS-Resolver tun soll.
+
+Unser Engineering-Team war mit dem Wort „vernünftig“ nicht einverstanden.
+
+## Das Problem, das sonst niemand sah
+
+DNS-Abfragen sollen schnell sein. Sie sind der erste Schritt in nahezu jeder Interaktion im Internet — bevor der Browser eine Website laden kann, bevor ein API-Aufruf durchgeht, bevor irgendetwas Nützliches passiert, steht eine DNS-Auflösung. Die meisten Anbieter halten 50 Millisekunden für akzeptabel. Branchenübliche Standards legen nahe, dass alles unter 100 Millisekunden in Ordnung sei.
+
+Wir hielten das für philosophisch unhaltbar.
+
+Wenn Sie täglich 400 Milliarden DNS-Abfragen über 847 Edge-Knoten verarbeiten, summieren sich selbst kleine Optimierungen dramatisch. Eine Verbesserung von 10 Millisekunden pro Abfrage bedeutet 46 Tage gesammelte Zeit, die unsere Kunden sparen — und zwar an jedem einzelnen Tag. Unser leitender DNS-Ingenieur legte diese Rechnung in einem Quartalsreview vor und ließ eine einzige Frage folgen: „Warum lassen wir 46 Tage liegen?“
+
+Niemand hatte eine gute Antwort.
+
+## Die sechsmonatige Entwurfsphase
+
+Sechs Monate lang haben wir keine Zeile Code geschrieben. Unser Produktteam trieb das leicht in den Wahnsinn, aber unser CTO bestand darauf. Wir mussten genau verstehen, warum sich unser bestehender Resolver so verhielt, wie er sich verhielt, bevor wir etwas Besseres bauen konnten.
+
+Unser Team analysierte Abfragemuster, vermaß die Cache-Effizienz unter verschiedenen Lastbedingungen und untersuchte, wie Anfragen durch unser Netzwerk wandern. Dabei zeigte sich: Unser Resolver war auf durchschnittliche Leistung optimiert. Typische Abfragen behandelte er glänzend, Randfälle nur ausreichend.
+
+Randfälle, so wurde uns klar, lagen gar nicht am Rand. Sie machten 18 % unseres Traffics aus.
+
+Der Durchbruch kam in einer besonders langen Whiteboard-Sitzung, als jemand vorschlug, DNS nicht länger als Abfragedienst zu denken, sondern als Vorhersageproblem.
+
+Was wäre, wenn unser Resolver Abfragen vorwegnehmen könnte, bevor sie eintreffen?
+
+Der Raum blieb etwa 30 Sekunden still. Dann sagte jemand: „Das ist entweder brillant oder unmöglich“ — und wir verbrachten die folgenden vier Monate damit, Ersteres zu beweisen.
+
+## Einen Resolver bauen, der die Zukunft vorhersagt
+
+Im Zentrum unserer neuen Architektur steht, was wir „spekulative Auflösung“ nennen. Das System analysiert Traffic-Muster im gesamten Netzwerk und berechnet Antworten für Abfragen vor, die es erwartet. Trifft eine Abfrage dann tatsächlich ein, liegt die Antwort schon im Speicher bereit.
+
+Dafür mussten wir unsere Caching-Schicht von Grund auf neu bauen. Klassische DNS-Caches speichern Antworten auf Abfragen, die bereits gestellt wurden. Unser Cache speichert Antworten auf Abfragen, die wahrscheinlich gestellt werden — auf Basis zeitlicher Muster, geografischer Korrelationen und dessen, was unsere Machine-Learning-Modelle über normales Traffic-Verhalten gelernt haben.
+
+Außerdem haben wir alles parallelisiert. Der alte Resolver verarbeitete Abfragen sequenziell: nachschlagen, validieren, cachen, antworten. Die neue Version erledigt all das gleichzeitig über mehrere Kerne, wobei verschiedene Threads verschiedene Teile der Auflösung übernehmen. Die Validierung läuft, während wir die Antwort bereits vorbereiten.
+
+Das Ergebnis? Die durchschnittliche Antwortzeit sank von 47 Millisekunden auf 1,2 Millisekunden.
+
+## Die 840.000 gelöschten Codezeilen
+
+In der Umsetzungsphase haben wir viel Code geschrieben. Das meiste davon war schlecht.
+
+Unser erster funktionierender Prototyp erreichte Antwortzeiten von 8 Millisekunden — besser als das alte System, aber nicht gut genug. Wir haben ihn verworfen. Die zweite Version schaffte 3 Millisekunden, stürzte aber unter hoher Last ab. Auch die haben wir verworfen.
+
+Version drei kam nahe heran. Version vier näher. Version fünf brachte einen Caching-Fehler mit, dessen Ursache wir drei Tage lang gesucht haben. Bei Version sieben hatten wir etwas, das verlässlich funktionierte, glänzend arbeitete und rund 840.000 Codezeilen hinter sich ließ, die unterwegs geschrieben und wieder gelöscht wurden.
+
+Unsere Versionsgeschichte aus dieser Zeit ist ein Denkmal der Iteration. Jeder gescheiterte Ansatz lehrte uns etwas darüber, was nicht funktioniert, und verengte damit den Raum dessen, was funktioniert. Als wir in Produktion gingen, hatten wir die meisten möglichen Fehler ausgeschlossen — durch das einfache Mittel, sie zuvor alle gemacht zu haben.
+
+## Das Management überzeugen, dass es nötig war
+
+Wir haben drei All-Hands-Meetings gebraucht, um zu erklären, warum ein völlig funktionsfähiger DNS-Resolver ersetzt werden musste. Das erste lief nicht gut. Unsere CFO fragte, warum wir Engineering-Ressourcen in etwas stecken, worüber sich keine Kundschaft beschwert.
+
+Unser CTO rief die Kostenanalyse auf. Der Leistungsgewinn würde die Serverkosten um 23 % pro Jahr senken. Höhere Cache-Trefferquoten würden die Bandbreitenkosten drücken. Die größere Zuverlässigkeit würde jene DNS-Ausfälle verhindern, die panische Kunden-E-Mails und Notfallanrufe auslösen.
+
+Die CFO hörte auf zu widersprechen und begann, nach dem Zeitplan zu fragen.
+
+Das zweite Meeting behandelte das technische Risiko. Kerninfrastruktur zu ersetzen ist gefährlich. DNS ist kritisch. Wenn die Migration schiefgeht, merkt es jede Kundin und jeder Kunde sofort. Unser VP Engineering stellte den Rollout-Plan vor: gestaffelte Ausrollung über die Edge-Knoten, automatische Rollback-Auslöser, Echtzeit-Monitoring-Dashboards und ein Notschalter, der in unter 10 Sekunden auf das alte System zurückstellt.
+
+Das dritte Meeting war kürzer. Das Management gab das Projekt frei, und unser Engineering-Team begann mit dem Rollout.
+
+## Was wir gelernt haben
+
+Einen DNS-Resolver zweimal zu bauen lehrt Dinge, die man beim ersten Mal nicht lernt. Wir haben gelernt, dass Performance-Optimierung ebenso viel mit dem Vorhersagen von Verhalten zu tun hat wie mit dem Messen. Wir haben gelernt, dass Cache-Effizienz mehr zählt als Cache-Größe. Wir haben gelernt, dass parallele Verarbeitung schwer korrekt umzusetzen ist — und die Mühe wert.
+
+Vor allem haben wir gelernt: „gut genug“ ist der Feind von „wirklich gut“.
+
+Unser neuer Resolver beantwortet inzwischen 99,99 % der Abfragen in unter 2 Millisekunden. Die Cache-Trefferquote erreichte 99,97 %. Kundenbeschwerden gibt es weiterhin keine — aber jetzt machen auch unsere internen Kennzahlen uns glücklich.
+
+Würden wir ihn noch einmal neu bauen? Wahrscheinlich. Unser Team diskutiert bereits über Version drei, auch wenn das Management gebeten hat, mit dem Vorschlag mindestens ein Jahr zu warten. Wir nennen das „offensive Zurückhaltung“ und halten es für einen vernünftigen Kompromiss.
+
+## Technische Daten für Neugierige:
+
+- 47 ms durchschnittliche Abfragezeit (alter Resolver)
+- 1,2 ms durchschnittliche Abfragezeit (neuer Resolver)
+- 6 Monate Entwurf vor der ersten Codezeile
+- 840.000 Codezeilen geschrieben und wieder gelöscht
+- 3 All-Hands-Meetings für die Freigabe nötig
+- 99,99 % der Abfragen unter 2 ms aufgelöst
+- 99,97 % Cache-Trefferquote erreicht

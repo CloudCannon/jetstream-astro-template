@@ -134,6 +134,18 @@ const blogCollection = defineCollection({
   schema: blogPostSchema,
 });
 
+// Filenames must match the English original — the [locale] route derives its slug from
+// the filename, so /fr/blog/<slug>/ shares the English page's Rosey keys.
+const blogFrCollection = defineCollection({
+  loader: glob({ pattern: "**/*.mdx", base: "./src/content/blog_fr" }),
+  schema: blogPostSchema,
+});
+
+const blogDeCollection = defineCollection({
+  loader: glob({ pattern: "**/*.mdx", base: "./src/content/blog_de" }),
+  schema: blogPostSchema,
+});
+
 const teamSchema = z.object({
   uuid: z.string(),
   name: z.string(),
@@ -154,5 +166,7 @@ export const collections = {
   "docs-pages": docsPagesCollection,
   "docs-components": docsComponentsCollection,
   blog: blogCollection,
+  blog_fr: blogFrCollection,
+  blog_de: blogDeCollection,
   team: teamCollection,
 };

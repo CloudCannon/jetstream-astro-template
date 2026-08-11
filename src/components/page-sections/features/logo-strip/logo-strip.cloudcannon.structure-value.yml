@@ -3,6 +3,7 @@ icon: image
 description: Showcase logos to build trust and credibility.
 value:
   _component: page-sections/features/logo-strip
+  _uuid:
   id:
   heading: "Heading text"
   images: []

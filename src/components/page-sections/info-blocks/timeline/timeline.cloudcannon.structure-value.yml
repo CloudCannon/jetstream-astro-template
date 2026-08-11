@@ -3,31 +3,40 @@ icon: timeline
 description: Description for Timeline component.
 value:
   _component: page-sections/info-blocks/timeline
+  _uuid:
   id:
   eyebrowIcon: {}
   eyebrowText: ""
   heading: "Our Journey"
   subtext: "Track the key milestones in our story"
   items:
-    - icon:
+    - _component: page-sections/info-blocks/timeline/timeline-item
+      _uuid:
+      icon:
         name: light-bulb
         color: brand-gradient
       date: "2020"
       heading: "Foundation & Vision"
       text: "Started with a bold vision to transform how businesses approach digital solutions."
-    - icon:
+    - _component: page-sections/info-blocks/timeline/timeline-item
+      _uuid:
+      icon:
         name: light-bulb
         color: brand-gradient
       date: "2021"
       heading: "First Major Launch"
       text: "Released our flagship product serving over 100 companies."
-    - icon:
+    - _component: page-sections/info-blocks/timeline/timeline-item
+      _uuid:
+      icon:
         name: light-bulb
         color: brand-gradient
       date: "2022"
       heading: "Global Expansion"
       text: "Expanded operations to three new continents."
-    - icon:
+    - _component: page-sections/info-blocks/timeline/timeline-item
+      _uuid:
+      icon:
         name: light-bulb
         color: brand-gradient
       date: "2023"
@@ -48,6 +57,7 @@ _structures:
       - label: Item
         value:
           _component: page-sections/info-blocks/timeline/timeline-item
+          _uuid:
           icon:
             name: ""
             color: ""
@@ -95,5 +105,12 @@ _structures:
             type: text
             comment: Heading for the item.
           text:
-            type: textarea
+            # markdown, not textarea: TimelineItem renders this through <Text>, which
+            # emits block HTML. A plain input makes CloudCannon store the raw source,
+            # which never matches what Rosey captured, so the key reads as stale forever.
+            type: markdown
             comment: Text for the item.
+            options:
+              bold: true
+              italic: true
+              link: true

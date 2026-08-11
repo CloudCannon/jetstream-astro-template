@@ -1,0 +1,247 @@
+---
+import RenderBlock from "@components/utils/renderBlock.astro";
+import { blogCollectionFor, dateLocaleFor, localeCodes } from "@component-utils/locales";
+import { slugifyLabel } from "@component-utils/slugify";
+import Button from "@core-elements/button/Button.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Pagination from "@core-elements/pagination/Pagination.astro";
+import SimpleText from "@core-elements/simple-text/SimpleText.astro";
+import Page from "@layouts/Page.astro";
+import CustomSection from "@page-sections/builders/custom-section/CustomSection.astro";
+import BentoBoxGrid from "@wrappers/bento-box-grid/BentoBoxGrid.astro";
+import BentoBoxGridItem from "@wrappers/bento-box-grid/BentoBoxGridItem.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+import Card from "@wrappers/card/Card.astro";
+import { getCollection } from "astro:content";
+
+// Built natively — a Rosey copy of /blog/ would list the English posts under /fr/.
+export async function getStaticPaths({ paginate }) {
+  const paths = [];
+
+  for (const locale of localeCodes) {
+    const blogPosts = (await getCollection(blogCollectionFor(locale))).sort(
+      (a: any, b: any) => b.data.date.getTime() - a.data.date.getTime()
+    );
+
+    // This locale's posts only, so no chip offers a tag with nothing behind it.
+    const allTags = Array.from(
+      new Set(blogPosts.map((post: any) => post.data.tag).filter(Boolean))
+    ).sort();
+
+    paths.push(
+      // paginate() needs both — without props, pagination links read /undefined/blog/2/.
+      ...paginate(blogPosts, {
+        pageSize: 8,
+        params: { locale },
+        props: { locale, selectedTag: "all", allTags },
+      })
+    );
+  }
+
+  return paths;
+}
+
+const { page, locale } = Astro.props;
+const selectedTag = Astro.props.selectedTag || "all";
+const allTags = Astro.props.allTags || [];
+
+// Try to load blog page from pages collection for hero sections
+let blogPage: any;
+
+try {
+  const pages = await getCollection("pages");
+
+  blogPage = pages.find((page: any) => page.id === "blog");
+} catch {}
+
+const pageTitle = blogPage?.data?.title ?? "Blog";
+const pageDescription =
+  blogPage?.data?.description ??
+  "Read our latest articles and insights on web development, design, and technology.";
+const heroSections = blogPage?.data?.heroSections ?? [];
+const ctaSections = blogPage?.data?.ctaSections ?? [];
+
+const team = await getCollection("team");
+---
+
+<!-- roseyRoot="blog" — the English listing's root, so /blog/, /blog/2/ and every locale
+     share one set of keys rather than minting their own. -->
+<Page
+  title={pageTitle}
+  description={pageDescription}
+  roseyRoot="blog"
+  roseySeo
+>
+  <div
+    data-editable="array"
+    data-prop="heroSections"
+    data-component-key="_component"
+    data-id-key="_uuid"
+  >
+    <RenderBlock contentSections={heroSections} />
+  </div>
+
+  <CustomSection
+    id="posts"
+    maxContentWidth="2xl"
+    paddingHorizontal="lg"
+    paddingVertical="2xl"
+    colorScheme="light"
+    backgroundColor="highlight-grid"
+  >
+    {
+      page.data.length > 0 ? (
+        <>
+          {allTags.length > 0 && (
+            // Tag slugs stay canonical in the URL; only the labels translate. The "tags"
+            // root makes each label one global key shared with the tag pages.
+            <ButtonGroup data-rosey-root="tags">
+              <Button
+                link={`/${locale}/blog#posts`}
+                variant={selectedTag === "all" ? "secondary" : "base"}
+                text="All"
+                editable={false}
+                data-rosey="all"
+              />
+              {allTags.map((tag: string) => (
+                <Button
+                  link={`/${locale}/blog/tag/${tag}#posts`}
+                  variant={selectedTag === tag ? "secondary" : "base"}
+                  text={tag}
+                  editable={false}
+                  data-rosey={slugifyLabel(tag)}
+                />
+              ))}
+            </ButtonGroup>
+          )}
+          <BentoBoxGrid
+            gap="sm"
+            layout="start"
+            minItemWidth="320"
+            maxItemWidth="400"
+            style="margin-top: var(--spacing-2xl)"
+            editable={false}
+            class="blog-grid"
+          >
+            {page.data.map((post: any, index: number) => {
+              const pubDate = post.data.date.toLocaleDateString(dateLocaleFor(locale), {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              });
+
+              // Slug comes from the filename, which matches the English original, so
+              // /fr/blog/x/ lines up with /blog/x/.
+              const slug = post.id?.replace(/\.mdx?$/, "") || post.slug;
+
+              // Set column span: first post is 7, second is 5, rest are 4
+              const columnSpan = index === 0 ? 7 : index === 1 ? 5 : 4;
+
+              // Get author page from uuid
+              const author = team.find((m: any) => m.data.uuid === post.data.author);
+
+              return (
+                <BentoBoxGridItem
+                  columnSpan={columnSpan}
+                  editable={false}
+                >
+                  <Card
+                    link={`/${locale}/blog/${slug}`}
+                    rounded={true}
+                    border={false}
+                    backgroundColor="accent"
+                    paddingVertical="md"
+                    paddingHorizontal="md"
+                    editable={false}
+                  >
+                    {post.data.image && (
+                      <Image
+                        source={post.data.image}
+                        alt={post.data.image_alt}
+                        aspectRatio="landscape"
+                        editable={false}
+                        rounded={true}
+                        style="max-height: 230px; width: 100%;"
+                      />
+                    )}
+                    {/* Reuses the shared tags: keys, so card labels translate without
+                        adding any of their own. */}
+                    <SimpleText
+                      size="sm"
+                      style="color: var(--color-text-brand); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-xs);"
+                      editable={false}
+                      data-rosey-root="tags"
+                      data-rosey={slugifyLabel(post.data.tag ?? "")}
+                    >
+                      {post.data.tag}
+                    </SimpleText>
+                    {/* Title and description come from this locale's own content file,
+                        so they carry no keys. */}
+                    <Heading
+                      level="h3"
+                      size="md"
+                      style="margin-bottom: var(--spacing-md); margin-top: var(--spacing-sm);"
+                      editable={false}
+                      text={post.data.title.replace(/<[^>]*>/g, "")}
+                      data-rosey={false}
+                    />
+                    <SimpleText
+                      size="md"
+                      style="margin-top: 0;"
+                      editable={false}
+                      data-rosey={false}
+                    >
+                      {post.data.description}
+                    </SimpleText>
+                    <SimpleText
+                      size="sm"
+                      style="font-weight: var(--font-weight-bold); color: var(--color-text-muted); margin-bottom: var(--spacing-xs);"
+                      editable={false}
+                      data-rosey={false}
+                    >
+                      By {author?.data.name || "Anonymous"} | {pubDate}
+                    </SimpleText>
+                  </Card>
+                </BentoBoxGridItem>
+              );
+            })}
+          </BentoBoxGrid>
+          <Pagination
+            page={page}
+            showArrows={true}
+            anchor="posts"
+            style="margin-top: var(--spacing-2xl);"
+          />
+        </>
+      ) : (
+        <SimpleText
+          alignmentHorizontal="center"
+          style="margin-top: var(--spacing-2xl);"
+          editable={false}
+          data-rosey="empty"
+        >
+          No blog posts yet. Check back soon!
+        </SimpleText>
+      )
+    }
+  </CustomSection>
+
+  <div
+    data-editable="array"
+    data-prop="ctaSections"
+    data-component-key="_component"
+    data-id-key="_uuid"
+  >
+    <RenderBlock contentSections={ctaSections} />
+  </div>
+</Page>
+
+<style is:global>
+  @layer page-sections {
+    .blog-grid .card .image .image-inner {
+      max-height: 230px;
+      width: 100%;
+    }
+  }
+</style>

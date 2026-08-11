@@ -3,6 +3,7 @@ icon: star
 description: Used to group and style large sections of a page.
 value:
   _component: page-sections/builders/custom-section
+  _uuid:
   label: ""
   contentSections: []
   maxContentWidth: 2xl

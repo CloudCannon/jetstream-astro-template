@@ -55,6 +55,8 @@ if (!_component && !hasImages) return;
           variant="ghost"
           hideText={true}
           aria-label="Previous image"
+          data-rosey-root="ui"
+          data-rosey-attrs-explicit={JSON.stringify({ "aria-label": "carousel_previous" })}
           class="prev"
           element="button"
         />
@@ -126,6 +128,8 @@ if (!_component && !hasImages) return;
           variant="ghost"
           hideText={true}
           aria-label="Next image"
+          data-rosey-root="ui"
+          data-rosey-attrs-explicit={JSON.stringify({ "aria-label": "carousel_next" })}
           class="next"
           element="button"
         />

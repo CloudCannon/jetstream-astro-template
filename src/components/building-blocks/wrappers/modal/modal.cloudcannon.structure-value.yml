@@ -3,6 +3,7 @@ icon: open_in_new
 description: Dialog overlay triggered by a button, for focused content or actions.
 value:
   _component: building-blocks/wrappers/modal
+  _uuid:
   label: null
   heading: null
   triggerText: Open

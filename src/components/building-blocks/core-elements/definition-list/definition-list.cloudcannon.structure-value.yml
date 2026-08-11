@@ -3,6 +3,7 @@ icon: dns
 description: Lists term/definition pairs for structured content.
 value:
   _component: building-blocks/core-elements/definition-list
+  _uuid:
   items: []
   alignmentHorizontal: start
 preview:
@@ -20,6 +21,7 @@ _structures:
       - label: Definition List Item
         value:
           _component: building-blocks/core-elements/definition-list/definition-list-item
+          _uuid:
           title: ""
           text: ""
         preview:

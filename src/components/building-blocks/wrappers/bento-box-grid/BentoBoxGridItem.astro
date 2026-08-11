@@ -8,6 +8,10 @@ const {
   style: userStyle,
   columnSpan = 4,
   rowSpan = 1,
+  // Structural wrapper: no namespace of its own. Its children carry their own _uuid,
+  // so a block keeps its translation when moved between wrappers. Destructured only
+  // to keep it off the DOM.
+  _uuid,
   _component,
   "data-children-prop": childrenDataProp,
   ...htmlAttributes
@@ -16,7 +20,12 @@ const {
 const effectiveChildrenProp =
   childrenDataProp ?? (useDefaultEditableBinding ? "contentSections" : null);
 const arrayDataAttributes = effectiveChildrenProp
-  ? { "data-editable": "array", "data-prop": effectiveChildrenProp }
+  ? {
+      "data-editable": "array",
+      "data-prop": effectiveChildrenProp,
+      "data-component-key": "_component",
+      "data-id-key": "_uuid",
+    }
   : {};
 ---
 

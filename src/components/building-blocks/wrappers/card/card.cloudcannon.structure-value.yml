@@ -3,6 +3,7 @@ icon: crop_square
 description: Groups related content within a section.
 value:
   _component: building-blocks/wrappers/card
+  _uuid:
   label: null
   contentSections: []
   maxContentWidth: null

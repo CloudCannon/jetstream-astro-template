@@ -26,8 +26,13 @@ socials:
   options:
     structures: _structures.socialItems
 footerText:
-  type: text
+  # markdown, not text — rendered through <Text> as block HTML.
+  type: markdown
   comment: "Legal text or copyright information to display at the bottom of the footer."
+  options:
+    bold: true
+    italic: true
+    link: true
 _structures:
   linkItems:
     values:

@@ -3,6 +3,7 @@ icon: view_sidebar
 description: Description for Tabbed Content component.
 value:
   _component: page-sections/info-blocks/tabbed-content
+  _uuid:
   id:
   eyebrowIcon: {}
   eyebrowText: Eyebrow placeholder

@@ -23,6 +23,7 @@ const {
   label,
   "data-children-prop": childrenDataProp,
   editable = false,
+  _uuid,
   _component,
   class: className,
   ...htmlAttributes
@@ -53,7 +54,12 @@ if (autoScroll) {
 
 const effectiveChildrenProp = childrenDataProp ?? (editable ? "slides" : null);
 const arrayDataAttributes = effectiveChildrenProp
-  ? { "data-editable": "array", "data-prop": effectiveChildrenProp }
+  ? {
+      "data-editable": "array",
+      "data-prop": effectiveChildrenProp,
+      "data-component-key": "_component",
+      "data-id-key": "_uuid",
+    }
   : {};
 
 const carouselClasses = "carousel";
@@ -96,7 +102,8 @@ if (!_component && !hasSlides && !hasSlotContent) return;
               <CarouselSlide
                 {...slide}
                 data-editable="array-item"
-                data-id="building-blocks/wrappers/carousel/carousel-slide"
+                data-component="building-blocks/wrappers/carousel/carousel-slide"
+                data-id={slide._uuid ?? "building-blocks/wrappers/carousel/carousel-slide"}
                 editable={!!effectiveChildrenProp}
                 aria-label={`Slide ${index + 1} of ${slides.length}`}
               />

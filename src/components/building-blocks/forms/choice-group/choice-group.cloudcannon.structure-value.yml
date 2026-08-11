@@ -3,6 +3,7 @@ icon: check_box
 description: Form field for selecting one or more options.
 value:
   _component: building-blocks/forms/choice-group
+  _uuid:
   title: My Choice Group
   name: my_choice_group
   required: false

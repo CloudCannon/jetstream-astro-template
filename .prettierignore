@@ -10,3 +10,7 @@ pnpm-lock.yaml
 *.log
 coverage/
 .cache/
+# Rewritten by `rosey-cloudcannon-connector write-locales` on every build, which
+# omits the trailing newline prettier wants. Formatting them just churns.
+rosey/locales/
+_untranslated_site/

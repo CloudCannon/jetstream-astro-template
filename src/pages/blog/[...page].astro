@@ -1,5 +1,6 @@
 ---
 import RenderBlock from "@components/utils/renderBlock.astro";
+import { slugifyLabel } from "@component-utils/slugify";
 import Button from "@core-elements/button/Button.astro";
 import Heading from "@core-elements/heading/Heading.astro";
 import Image from "@core-elements/image/Image.astro";
@@ -53,15 +54,19 @@ const ctaSections = blogPage?.data?.ctaSections ?? [];
 const team = await getCollection("team");
 ---
 
+<!-- roseyRoot="blog" so /blog/ and /blog/2/ share one namespace instead of the
+     paginated route minting its own set of keys. -->
 <Page
   title={pageTitle}
   description={pageDescription}
+  roseyRoot="blog"
+  roseySeo
 >
   <div
     data-editable="array"
     data-prop="heroSections"
     data-component-key="_component"
-    data-id-key="_component"
+    data-id-key="_uuid"
   >
     <RenderBlock contentSections={heroSections} />
   </div>
@@ -78,12 +83,15 @@ const team = await getCollection("team");
       page.data.length > 0 ? (
         <>
           {allTags.length > 0 && (
-            <ButtonGroup>
+            // Tag slugs stay canonical in the URL; only the labels translate. The "tags"
+            // root makes each label one global key shared with the tag pages.
+            <ButtonGroup data-rosey-root="tags">
               <Button
                 link="/blog#posts"
                 variant={selectedTag === "all" ? "secondary" : "base"}
                 text="All"
                 editable={false}
+                data-rosey="all"
               />
               {allTags.map((tag: string) => (
                 <Button
@@ -91,6 +99,7 @@ const team = await getCollection("team");
                   variant={selectedTag === tag ? "secondary" : "base"}
                   text={tag}
                   editable={false}
+                  data-rosey={slugifyLabel(tag)}
                 />
               ))}
             </ButtonGroup>
@@ -144,10 +153,14 @@ const team = await getCollection("team");
                         style="max-height: 230px; width: 100%;"
                       />
                     )}
+                    {/* Reuses the shared tags: keys, so card labels translate without
+                        adding any of their own. */}
                     <SimpleText
                       size="sm"
                       style="color: var(--color-text-brand); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-xs);"
                       editable={false}
+                      data-rosey-root="tags"
+                      data-rosey={slugifyLabel(post.data.tag ?? "")}
                     >
                       {post.data.tag}
                     </SimpleText>
@@ -189,6 +202,7 @@ const team = await getCollection("team");
           alignmentHorizontal="center"
           style="margin-top: var(--spacing-2xl);"
           editable={false}
+          data-rosey="empty"
         >
           No blog posts yet. Check back soon!
         </SimpleText>
@@ -200,7 +214,7 @@ const team = await getCollection("team");
     data-editable="array"
     data-prop="ctaSections"
     data-component-key="_component"
-    data-id-key="_component"
+    data-id-key="_uuid"
   >
     <RenderBlock contentSections={ctaSections} />
   </div>

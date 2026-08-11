@@ -2,11 +2,11 @@
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Heading from "@core-elements/heading/Heading.astro";
 import Text from "@core-elements/text/Text.astro";
-import Card from "@wrappers/card/Card.astro";
 import Icon from "@core-elements/icon/Icon.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import Button from "@core-elements/button/Button.astro";
 import SimpleText from "@core-elements/simple-text/SimpleText.astro";
+import TimelineItem from "@page-sections/info-blocks/timeline/TimelineItem.astro";
 
 const {
   id = "",
@@ -23,6 +23,7 @@ const {
   verticalOffset = {},
   rounded = false,
   class: className,
+  _uuid,
   _component,
   useDefaultEditableBinding = false,
   ...htmlAttributes
@@ -31,6 +32,7 @@ const {
 
 <CustomSection
   class:list={["timeline", className]}
+  data-rosey-ns={_uuid}
   maxContentWidth={maxContentWidth}
   paddingHorizontal="lg"
   paddingVertical={paddingVertical}
@@ -67,63 +69,24 @@ const {
   <div class="timeline-wrapper">
     <div
       class="timeline-carousel-container"
+      data-editable="array"
       data-prop="items"
+      data-component-key="_component"
+      data-id-key="_uuid"
     >
       <div class="timeline-carousel">
         <div class="timeline-line"></div>
 
         {
           items.map((item: any, index: number) => (
-            <div
-              class="timeline-item"
+            <TimelineItem
+              {...item}
+              useDefaultEditableBinding={true}
               data-index={index}
-            >
-              <div class="timeline-marker">
-                <Icon
-                  name={item.icon.name}
-                  size="md"
-                  color={item.icon.color}
-                  background={true}
-                  iconOffset={true}
-                />
-              </div>
-              <Card
-                class="timeline-card"
-                paddingHorizontal="lg"
-                paddingVertical="xs"
-                rounded={false}
-                border={false}
-                backgroundColor=""
-              >
-                <div class="timeline-content">
-                  {item.date && (
-                    <Text
-                      class="timeline-date"
-                      data-prop={`items.${index}.date`}
-                    >
-                      {item.date}
-                    </Text>
-                  )}
-                  {item.heading && (
-                    <Heading
-                      level="h3"
-                      size="md"
-                      alignmentHorizontal="start"
-                      data-prop={`items.${index}.heading`}
-                    >
-                      {item.heading}
-                    </Heading>
-                  )}
-                  {item.text && (
-                    <Text
-                      text={item.text}
-                      alignmentHorizontal="start"
-                      data-prop={`items.${index}.text`}
-                    />
-                  )}
-                </div>
-              </Card>
-            </div>
+              data-editable="array-item"
+              data-component="page-sections/info-blocks/timeline/timeline-item"
+              data-id={item._uuid ?? "page-sections/info-blocks/timeline/timeline-item"}
+            />
           ))
         }
       </div>

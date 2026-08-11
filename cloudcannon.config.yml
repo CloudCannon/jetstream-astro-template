@@ -206,6 +206,66 @@ collections_config:
         name: New Blog Post
         create:
           path: "[relative_base_path]/{title|slugify}.md"
+  blog_fr:
+    path: src/content/blog_fr
+    glob:
+      - "**/*.mdx"
+    name: Blog (Français)
+    icon: newspaper
+    url: /fr/blog/[full_slug]/
+    disable_url: false
+    description: >-
+      The **French** blog posts. Edit these like any other post — the body is a
+      real content file, not a translation string.
+
+
+      Leave the filename, `tag`, `image`, `date` and `author` as they are: the URL
+      and the tag pages are built from them, and the tag label is translated
+      separately.
+    _enabled_editors:
+      - content
+      - visual
+    disable_add: true
+    disable_add_folder: true
+    disable_file_actions: false
+    schemas:
+      default:
+        path: .cloudcannon/schemas/blog-post.mdx
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: New Blog Post
+  blog_de:
+    path: src/content/blog_de
+    glob:
+      - "**/*.mdx"
+    name: Blog (Deutsch)
+    icon: newspaper
+    url: /de/blog/[full_slug]/
+    disable_url: false
+    description: >-
+      The **German** blog posts. Edit these like any other post — the body is a
+      real content file, not a translation string.
+
+
+      Leave the filename, `tag`, `image`, `date` and `author` as they are: the URL
+      and the tag pages are built from them, and the tag label is translated
+      separately.
+    _enabled_editors:
+      - content
+      - visual
+    disable_add: true
+    disable_add_folder: true
+    disable_file_actions: false
+    schemas:
+      default:
+        path: .cloudcannon/schemas/blog-post.mdx
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: New Blog Post
   team:
     path: src/content/team
     icon: groups
@@ -354,7 +414,49 @@ collections_config:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
+  locales:
+    path: rosey/locales
+    name: Locales
+    icon: translate
+    disable_add: true
+    disable_add_folder: true
+    disable_file_actions: true
+    _inputs:
+      value:
+        type: html
+        label: Translation
+        cascade: true
+      original:
+        hidden: true
+        cascade: true
+      _base_original:
+        disabled: true
+        hidden: false
+        label: Original Text
+        cascade: true
+collection_groups:
+  - heading: Pages
+    collections:
+      - pages
+  - heading: Blog
+    collections:
+      - blog
+      - blog_fr
+      - blog_de
+  - heading: Data
+    collections:
+      - data
+      - team
+  - heading: Translations
+    collections:
+      - locales
 _inputs:
+  _uuid:
+    type: text
+    instance_value: UUID
+    comment: Stable per-block ID used as the Rosey translation namespace.
+    hidden: true
+    cascade: true
   pageSections:
     comment: The main sections of the page.
     cascade: true
@@ -1133,3 +1235,10 @@ _structures_from_glob:
   - /.cloudcannon/structures/*.cloudcannon.structures.yml
 _snippets_from_glob:
   - /**/*.cloudcannon.snippets.yml
+data_config:
+  # The connector reads locales through `api.dataset("locales_<code>")`, so the
+  # `locales_` prefix is required, not a convention.
+  locales_fr:
+    path: rosey/locales/fr.json
+  locales_de:
+    path: rosey/locales/de.json

@@ -7,13 +7,21 @@ const {
   value,
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
+  id,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
 
-const fieldId = htmlAttributes.id || `textarea-${crypto.randomUUID()}`;
+const fieldId = id || `textarea-${crypto.randomUUID()}`;
 ---
 
+{
+  /* htmlAttributes carries the caller's data-editable/data-component. CloudCannon's
+    re-render replaces this element's children with a fresh copy of the component, so
+    data-rosey-ns has to sit strictly inside it — on the root it would be re-emitted by
+    the copy, doubling the namespace on every key below. */
+}
 <div
   class:list={["textarea", className]}
   {...htmlAttributes}
@@ -23,8 +31,10 @@ const fieldId = htmlAttributes.id || `textarea-${crypto.randomUUID()}`;
       <label
         for={fieldId}
         class="label"
+        data-rosey-ns={_uuid}
       >
-        {label}
+        {/* Key on the span, not the <label> — the required marker is a non-text child. */}
+        <span data-rosey="label">{label}</span>
         {required && (
           <span
             class="textarea-required"
@@ -43,6 +53,10 @@ const fieldId = htmlAttributes.id || `textarea-${crypto.randomUUID()}`;
     required={required}
     aria-required={required}
     class="field"
+    data-rosey-ns={_uuid}
+    data-rosey-attrs-explicit={placeholder
+      ? JSON.stringify({ placeholder: "placeholder" })
+      : undefined}
     >{value}</textarea
   >
 </div>

@@ -3,6 +3,7 @@ icon: format_quote
 description: Displays customer quotes and reviews.
 value:
   _component: building-blocks/core-elements/testimonial
+  _uuid:
   text: My testimonial text.
   authorName: Charlie Parker
   authorDescription: Author

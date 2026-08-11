@@ -7,13 +7,21 @@ const {
   value = "on",
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
+  id,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
 
-const fieldId = htmlAttributes.id || `toggle-${crypto.randomUUID()}`;
+const fieldId = id || `toggle-${crypto.randomUUID()}`;
 ---
 
+{
+  /* htmlAttributes carries the caller's data-editable/data-component. CloudCannon's
+    re-render replaces this element's children with a fresh copy of the component, so
+    data-rosey-ns has to sit strictly inside it — on the root it would be re-emitted by
+    the copy, doubling the namespace on every key below. */
+}
 <div
   class:list={["toggle", className]}
   {...htmlAttributes}
@@ -21,6 +29,7 @@ const fieldId = htmlAttributes.id || `toggle-${crypto.randomUUID()}`;
   <label
     class="toggle-container"
     for={fieldId}
+    data-rosey-ns={_uuid}
   >
     <span class="toggle-switch">
       <input
@@ -38,7 +47,8 @@ const fieldId = htmlAttributes.id || `toggle-${crypto.randomUUID()}`;
     {
       label && (
         <span class="toggle-label">
-          {label}
+          {/* Key on the inner span — the required marker is a non-text child. */}
+          <span data-rosey="label">{label}</span>
           {required && (
             <span
               class="toggle-required"

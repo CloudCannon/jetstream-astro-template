@@ -1,5 +1,6 @@
 ---
 import CustomSection from "@builders/custom-section/CustomSection.astro";
+import { slugifyLabel } from "@component-utils/slugify";
 import Button from "@core-elements/button/Button.astro";
 import Heading from "@core-elements/heading/Heading.astro";
 import Text from "@core-elements/text/Text.astro";
@@ -31,6 +32,7 @@ const {
   contentBackground = false,
   rounded = false,
   class: className,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -54,6 +56,7 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
   data-results-per-page={resultsPerPage}
   data-unavailable-message={unavailableMessage}
   data-pagefind-ignore="all"
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <Split
@@ -86,6 +89,7 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
         class="search-tabs"
         role="radiogroup"
         aria-label="Filter results by type"
+        data-rosey-attrs-explicit={JSON.stringify({ "aria-label": "filter_by_type" })}
       >
         {filterOptions.map((filter: SearchFilter, index: number) => (
           <label class="search-tab">
@@ -96,7 +100,13 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
               value={filter.type ?? ""}
               checked={index === 0}
             />
-            <span class="search-tab-label">{filter.label}</span>
+            {/* Filters are bare {type, label} pairs with no _uuid, so the label is the key. */}
+            <span
+              class="search-tab-label"
+              data-rosey={filter.label ? `filter_${slugifyLabel(filter.label)}` : undefined}
+            >
+              {filter.label}
+            </span>
           </label>
         ))}
       </div>
@@ -106,6 +116,7 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
   <label
     class="visually-hidden"
     for={fieldId}
+    data-rosey="search_label"
   >
     {placeholder}
   </label>
@@ -132,6 +143,7 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
       iconPosition="after"
       variant="primary"
       size="md"
+      data-rosey="submit_text"
     />
   </form>
 
@@ -152,6 +164,7 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
         type="button"
         class="search-load-more"
         text="Load more results"
+        data-rosey="load_more"
         iconName="arrow-long-down"
         iconPosition="after"
         variant="tertiary"

@@ -3,6 +3,7 @@ icon: view_headline
 description: Paragraph for plain text content with inline markdown formatting.
 value:
   _component: building-blocks/core-elements/simple-text
+  _uuid:
   text: My text goes here.
   alignmentHorizontal: start
   size: md

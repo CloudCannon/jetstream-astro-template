@@ -1,6 +1,9 @@
 # build output
 dist/
 
+# Rosey builds the translated site from a copy of dist/
+_untranslated_site/
+
 _docs/
 /docGen.js
 

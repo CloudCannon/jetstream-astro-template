@@ -3,6 +3,7 @@ icon: expand_all
 description: Interactive component for showing and hiding content panels.
 value:
   _component: building-blocks/wrappers/accordion
+  _uuid:
   label: null
   items: []
   openFirst: false

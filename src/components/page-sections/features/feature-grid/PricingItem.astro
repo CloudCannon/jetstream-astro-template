@@ -19,6 +19,7 @@ const {
   columnSpan,
   rowSpan,
   class: className,
+  _uuid,
   _component,
   useDefaultEditableBinding = false,
   ...htmlAttributes
@@ -30,6 +31,7 @@ const {
   rowSpan={rowSpan}
   data-prop-columnSpan="columnSpan"
   data-prop-rowSpan="rowSpan"
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <Card
@@ -56,10 +58,16 @@ const {
       alignmentHorizontal="start"
     >
       {
+        /* Keys are written out rather than derived from data-prop, because a dot in a
+          Rosey key is read as a nested path when the connector saves an edit. The
+          amount is a number and gets no key at all. */
+      }
+      {
         price?.prefix && (
           <span
             data-editable="text"
             data-prop="price.prefix"
+            data-rosey="price_prefix"
           >
             {price?.prefix}
           </span>
@@ -80,6 +88,7 @@ const {
           <span
             data-editable="text"
             data-prop="price.suffix"
+            data-rosey="price_suffix"
             class="feature-price-suffix"
           >
             {price?.suffix}

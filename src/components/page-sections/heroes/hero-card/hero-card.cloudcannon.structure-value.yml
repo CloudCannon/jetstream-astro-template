@@ -3,6 +3,7 @@ icon: add
 description: Description for Hero Card component.
 value:
   _component: page-sections/heroes/hero-card
+  _uuid:
   id:
   eyebrowIcon: {}
   heading: "Card Hero Heading"

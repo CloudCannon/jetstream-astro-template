@@ -3,6 +3,7 @@ icon: title
 description: Centered hero with heading, subtext, buttons, and a large image.
 value:
   _component: page-sections/heroes/hero-center
+  _uuid:
   id:
   eyebrowIcon: {}
   eyebrowText: Eyebrow placeholder
@@ -11,6 +12,7 @@ value:
   subtext: Subtext placeholder
   buttonSections:
     - _component: building-blocks/core-elements/button
+      _uuid:
       text: My Button
       hideText: false
       link: ""

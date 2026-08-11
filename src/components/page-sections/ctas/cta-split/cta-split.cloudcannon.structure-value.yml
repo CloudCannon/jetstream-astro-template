@@ -3,6 +3,7 @@ icon: hero
 description: Side-by-side CTA with copy on one side and stacked buttons on the other.
 value:
   _component: page-sections/ctas/cta-split
+  _uuid:
   id:
   heading: Heading text
   subtext: Subtext placeholder text that will be replaced with actual content.
@@ -10,6 +11,7 @@ value:
   imageAlt: CTA image
   buttonSections:
     - _component: building-blocks/core-elements/button
+      _uuid:
       text: My Button
       hideText: false
       link: ""

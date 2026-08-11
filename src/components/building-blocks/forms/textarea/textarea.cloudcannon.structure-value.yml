@@ -3,6 +3,7 @@ icon: text_ad
 description: Form field for entering multi-line text.
 value:
   _component: building-blocks/forms/textarea
+  _uuid:
   label: My textarea
   name: my_textarea
   required: false

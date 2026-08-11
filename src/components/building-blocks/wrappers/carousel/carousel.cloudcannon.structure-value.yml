@@ -3,6 +3,7 @@ icon: image
 description: Displays multiple items in a sliding gallery.
 value:
   _component: building-blocks/wrappers/carousel
+  _uuid:
   label: ""
   slides: []
   autoPlay: false

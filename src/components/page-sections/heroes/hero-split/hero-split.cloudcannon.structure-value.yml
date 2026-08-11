@@ -3,6 +3,7 @@ icon: title
 description: Prominent section block for landing pages.
 value:
   _component: page-sections/heroes/hero-split
+  _uuid:
   id:
   title: Our approach
   eyebrowIcon: {}
@@ -11,6 +12,7 @@ value:
   subtext: Subtitle placeholder text that will be replaced with actual content.
   buttonSections:
     - _component: building-blocks/core-elements/button
+      _uuid:
       text: My Button
       hideText: false
       link: ""

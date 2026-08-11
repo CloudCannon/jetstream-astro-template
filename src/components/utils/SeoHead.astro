@@ -26,6 +26,11 @@ export interface Props {
   type?: "website" | "article";
   article?: ArticleSeoData | null;
   noindex?: boolean;
+  // Head text isn't on the page, so it's only reachable through the Locales collection.
+  // Opt-in per route: pages whose head comes from translated content must not have keys,
+  // since a Rosey value would override the content file's own title.
+  roseyTitleKey?: string;
+  roseyDescriptionKey?: string;
 }
 
 const {
@@ -38,6 +43,8 @@ const {
   type: pageType = "website",
   article,
   noindex = false,
+  roseyTitleKey,
+  roseyDescriptionKey,
 } = Astro.props;
 const plainTitle = title?.replace(/<[^>]*>/g, "").trim();
 // Pages without a title (e.g. the home page) fall back to the title format with the
@@ -60,7 +67,7 @@ const articleAuthors = Array.isArray(article?.author)
 const articleTags = article?.tags?.filter(Boolean) ?? [];
 ---
 
-<title>{formattedTitle}</title>
+<title data-rosey={roseyTitleKey}>{formattedTitle}</title>
 {
   noindex ? (
     <meta
@@ -92,9 +99,14 @@ const articleTags = article?.tags?.filter(Boolean) ?? [];
 {
   pageDescription ? (
     <>
+      {/* Attribute text, so it needs the explicit form. og:description is left in the
+          default language along with the rest of the OG/Twitter tags. */}
       <meta
         name="description"
         content={pageDescription}
+        data-rosey-attrs-explicit={
+          roseyDescriptionKey ? JSON.stringify({ content: roseyDescriptionKey }) : undefined
+        }
       />
       <meta
         property="og:description"

@@ -49,9 +49,13 @@ const { contentSections, useDefaultEditableBinding = true } = Astro.props;
     }
 
     return Component ? (
+      // data-component makes CloudCannon re-render the item on add/reorder instead of
+      // cloning a sibling's DOM. A clone would inherit the sibling's data-rosey-ns and
+      // silently collide translation keys until the editor reloads.
       <Component
         data-editable={useDefaultEditableBinding ? "array-item" : undefined}
-        data-id={block._component}
+        data-component={block._component}
+        data-id={block._uuid ?? block._component}
         {...block}
         useDefaultEditableBinding={useDefaultEditableBinding}
       />

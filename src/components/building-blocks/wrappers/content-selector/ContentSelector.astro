@@ -10,6 +10,7 @@ const {
   label,
   useDefaultEditableBinding = false,
   "data-children-prop": childrenDataProp,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -23,7 +24,12 @@ const groupName = `tabs-${uniqueId}`;
 
 const effectiveChildrenProp = childrenDataProp ?? (useDefaultEditableBinding ? "items" : null);
 const arrayDataAttributes = effectiveChildrenProp
-  ? { "data-editable": "array", "data-prop": effectiveChildrenProp }
+  ? {
+      "data-editable": "array",
+      "data-prop": effectiveChildrenProp,
+      "data-component-key": "_component",
+      "data-id-key": "_uuid",
+    }
   : {};
 
 const hasItems = items?.length > 0;

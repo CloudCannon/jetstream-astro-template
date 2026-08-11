@@ -81,9 +81,14 @@ const getPageUrl = (pageNum: number) => {
 };
 ---
 
+<!-- The arrows are icon-only, so their text lives in aria-label and needs attribute
+     keys rather than data-rosey. data-rosey-root escapes the page's namespace so
+     every paginated route shares one set of keys instead of minting its own. -->
 <nav
   class:list={["pagination", className]}
   aria-label="Pagination Navigation"
+  data-rosey-root="pagination"
+  data-rosey-attrs-explicit={JSON.stringify({ "aria-label": "aria_label" })}
   {...htmlAttributes}
 >
   {
@@ -92,6 +97,7 @@ const getPageUrl = (pageNum: number) => {
         href={getPageUrl(currentPage - 1)}
         class="pagination-arrow pagination-prev"
         aria-label="Go to previous page"
+        data-rosey-attrs-explicit={JSON.stringify({ "aria-label": "aria_previous" })}
       >
         <Icon
           name="chevron-left"
@@ -143,6 +149,7 @@ const getPageUrl = (pageNum: number) => {
         href={getPageUrl(currentPage + 1)}
         class="pagination-arrow pagination-next"
         aria-label="Go to next page"
+        data-rosey-attrs-explicit={JSON.stringify({ "aria-label": "aria_next" })}
       >
         <Icon
           name="chevron-right"

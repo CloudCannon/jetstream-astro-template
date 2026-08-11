@@ -3,6 +3,7 @@ icon: view_sidebar
 description: Lets users switch between different content panels using tabs.
 value:
   _component: building-blocks/wrappers/content-selector
+  _uuid:
   label: ""
   items: []
   navigationPosition: start

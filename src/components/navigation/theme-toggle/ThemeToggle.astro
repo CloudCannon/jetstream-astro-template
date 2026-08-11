@@ -4,10 +4,17 @@ import { Icon as AstroIcon } from "astro-icon/components";
 const { class: className, ...htmlAttributes } = Astro.props;
 ---
 
+{
+  /* One toggle per page and no _uuid to namespace with, so the label lives under the
+    shared "ui" root and is translated once for the whole site. It's attribute text,
+    which needs the explicit form. */
+}
 <button
   type="button"
   class:list={["theme-toggle", className]}
   aria-label="Toggle dark mode"
+  data-rosey-root="ui"
+  data-rosey-attrs-explicit={JSON.stringify({ "aria-label": "theme_toggle" })}
   {...htmlAttributes}
 >
   <span class="theme-toggle-icon theme-toggle-sun">

@@ -1,5 +1,6 @@
 ---
 import Image from "@core-elements/image/Image.astro";
+import { resolveRosey } from "@component-utils/roseyKey";
 import MarkdownIt from "markdown-it";
 const {
   text,
@@ -12,6 +13,10 @@ const {
   "data-prop": customDataProp,
   "data-prop-author-name": customDataPropAuthorName,
   "data-prop-author-description": customDataPropAuthorDescription,
+  "data-rosey": roseyId,
+  "data-rosey-author-name": roseyAuthorName,
+  "data-rosey-author-description": roseyAuthorDescription,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -20,30 +25,40 @@ const md = MarkdownIt({ html: true });
 const MarkdownText = text ? md.render(text) : "";
 
 const effectiveDataProp = customDataProp ?? (useDefaultEditableBinding ? "text" : null);
+// md.render() output is block-level; see Text.astro for why data-type matters.
 const textDataAttributes = effectiveDataProp
-  ? { "data-editable": "text", "data-prop": effectiveDataProp }
+  ? { "data-editable": "text", "data-type": "block", "data-prop": effectiveDataProp }
   : {};
+const roseyAttributes = resolveRosey(roseyId, effectiveDataProp);
 
 const effectiveAuthorNameProp =
   customDataPropAuthorName ?? (useDefaultEditableBinding ? "authorName" : null);
 const authorNameDataAttributes = effectiveAuthorNameProp
   ? { "data-editable": "text", "data-prop": effectiveAuthorNameProp }
   : {};
+// Author names are identity values — call sites pass data-rosey-author-name={false}.
+const authorNameRoseyAttributes = resolveRosey(roseyAuthorName, effectiveAuthorNameProp);
 
 const effectiveAuthorDescProp =
   customDataPropAuthorDescription ?? (useDefaultEditableBinding ? "authorDescription" : null);
 const authorDescriptionDataAttributes = effectiveAuthorDescProp
   ? { "data-editable": "text", "data-prop": effectiveAuthorDescProp }
   : {};
+const authorDescriptionRoseyAttributes = resolveRosey(
+  roseyAuthorDescription,
+  effectiveAuthorDescProp
+);
 ---
 
 <blockquote
   class:list={["testimonial", `alignment-${alignmentHorizontal}`, className]}
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <div
     class="quote"
     {...textDataAttributes}
+    {...roseyAttributes}
   >
     <slot>
       {text && <Fragment set:html={MarkdownText} />}
@@ -63,6 +78,7 @@ const authorDescriptionDataAttributes = effectiveAuthorDescProp
       <strong
         class="name"
         {...authorNameDataAttributes}
+        {...authorNameRoseyAttributes}
       >
         {authorName}
       </strong>
@@ -73,6 +89,7 @@ const authorDescriptionDataAttributes = effectiveAuthorDescProp
             <span
               class="description"
               {...authorDescriptionDataAttributes}
+              {...authorDescriptionRoseyAttributes}
             >
               {authorDescription}
             </span>

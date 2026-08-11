@@ -3,6 +3,7 @@ icon: title
 description: Headings for content hierarchy.
 value:
   _component: building-blocks/core-elements/heading
+  _uuid:
   text: My Heading
   level: h2
   size: default

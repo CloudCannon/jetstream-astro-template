@@ -1,4 +1,6 @@
 ---
+import { mdxComponents } from "@component-utils/mdxComponents";
+import { slugifyLabel } from "@component-utils/slugify";
 import Button from "@core-elements/button/Button.astro";
 import Counter from "@core-elements/counter/Counter.astro";
 import Heading from "@core-elements/heading/Heading.astro";
@@ -11,30 +13,7 @@ import Card from "@wrappers/card/Card.astro";
 import Split from "@wrappers/split/Split.astro";
 import { getCollection, render, type CollectionEntry } from "astro:content";
 
-// Automatically import all components from building-blocks and page-sections for MDX
-const buildingBlocksImports = import.meta.glob("../../components/building-blocks/**/*.astro", {
-  eager: true,
-});
-
-const pageSectionsImports = import.meta.glob("../../components/page-sections/**/*.astro", {
-  eager: true,
-});
-
-// Merge both import objects
-const componentImports = { ...buildingBlocksImports, ...pageSectionsImports };
-
-// Build components object with PascalCase names from file paths
-const mdxComponents: Record<string, any> = {};
-
-Object.entries(componentImports).forEach(([path, module]) => {
-  const pathParts = path.split("/");
-  const fileName = pathParts[pathParts.length - 1].replace(".astro", "");
-
-  // Component name is already PascalCase from filename
-  const componentName = fileName;
-
-  mdxComponents[componentName] = (module as any).default;
-});
+import "@styles/blog-post.css";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -80,6 +59,9 @@ const article = {
 };
 ---
 
+<!-- No roseySeo: the head comes from post frontmatter, which stays in the default
+     language. hideLocaleSwitcher hides the connector's switcher here, because the post
+     body carries no Rosey keys and switching locale would offer nothing to translate. -->
 <Page
   title={post.data.title}
   description={post.data.description}
@@ -87,6 +69,7 @@ const article = {
   image={post.data.image}
   type="article"
   article={article}
+  hideLocaleSwitcher
 >
   <CustomSection
     class:list={["hero-feature"]}
@@ -106,6 +89,10 @@ const article = {
       gap="lg"
     >
       <Fragment slot="first">
+        {
+          /* Post frontmatter is not translated — it belongs to the post file, not to
+            Rosey — so these opt out of the derived key. */
+        }
         <Heading
           level="h1"
           size="2xl"
@@ -113,18 +100,29 @@ const article = {
           class="heading"
           data-prop="title"
           text={post.data.title}
+          data-rosey={false}
         />
-        <p class="breadcrumb">
+        {
+          /* data-rosey-root escapes the per-post namespace, so "Blog" is one key across
+            every post rather than one each. The tag link below sets its own root. */
+        }
+        <p
+          class="breadcrumb"
+          data-rosey-root="post"
+        >
           <a
             href="/blog/"
             class="blog-link"
+            data-rosey="breadcrumb_blog"
             >Blog</a
           > / <a
             href={`/blog/tag/${post.data.tag}`}
             class="tag"
+            data-rosey-root="tags"
             ><span
               data-editable="text"
               data-prop="tag"
+              data-rosey={slugifyLabel(post.data.tag ?? "")}
               >{post.data.tag}</span
             ></a
           >
@@ -135,6 +133,7 @@ const article = {
           alignmentHorizontal="start"
           class="description"
           data-prop="description"
+          data-rosey={false}
         >
           {post.data.description}
         </SimpleText>
@@ -171,16 +170,24 @@ const article = {
               class="counter-container"
               data-editable="array-item"
             >
+              {/* Counter values and their labels come from post frontmatter, which is
+                  translated in the locale's own content file, so they opt out of the
+                  derived keys. */}
               <editable-component
                 data-prop="counter"
                 data-component="building-blocks/core-elements/counter"
               >
-                <Counter {...counter.counter} />
+                <Counter
+                  {...counter.counter}
+                  data-rosey-prefix={false}
+                  data-rosey-suffix={false}
+                />
               </editable-component>
               <SimpleText
                 text={counter.subtext}
                 alignmentHorizontal="start"
                 data-prop={`subtext`}
+                data-rosey={false}
               />
             </div>
           ))
@@ -191,12 +198,17 @@ const article = {
               data-prop="counter"
               data-component="building-blocks/core-elements/counter"
             >
-              <Counter number={0} />
+              <Counter
+                number={0}
+                data-rosey-prefix={false}
+                data-rosey-suffix={false}
+              />
             </editable-component>
             <SimpleText
               text="Counter subtext"
               alignmentHorizontal="start"
               data-prop={`subtext`}
+              data-rosey={false}
             />
           </div>
         </template>
@@ -274,6 +286,10 @@ const article = {
         }
 
         <div class="share-section">
+          {
+            /* data-rosey-root escapes the per-post namespace so this is one key for every
+              post rather than one per post. */
+          }
           <SimpleText
             size="md"
             class="share-section-text"
@@ -281,6 +297,8 @@ const article = {
             data-editable="source"
             data-path="/src/pages/blog/[...slug].astro"
             data-key="share-section-heading"
+            data-rosey-root="post"
+            data-rosey="share"
           >
             Share this article:
           </SimpleText>
@@ -317,6 +335,8 @@ const article = {
           data-editable="source"
           data-path="/src/pages/blog/[...slug].astro"
           data-key="sidebar-heading"
+          data-rosey-root="post"
+          data-rosey="latest_news"
           >Latest News</SimpleText
         >
         {
@@ -376,203 +396,6 @@ const article = {
     </Split>
   </CustomSection>
 </Page>
-
-<style is:global>
-  @layer page-sections {
-    .hero-feature {
-      .breadcrumb {
-        color: var(--color-text-brand);
-        font-weight: var(--font-weight-bold);
-      }
-      .blog-link {
-        text-decoration: none;
-        color: var(--color-text-brand);
-      }
-      .tag {
-        text-decoration: none;
-        color: var(--color-text-brand);
-      }
-
-      .description {
-        font-weight: var(--font-weight-bold);
-      }
-
-      .author {
-        color: var(--color-text-muted);
-        font-weight: var(--font-weight-bold);
-        font-size: var(--font-size-sm);
-      }
-
-      .counters {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-lg);
-        margin-top: var(--spacing-xl);
-
-        @container (max-width: 700px) {
-          flex-direction: row;
-          flex-wrap: wrap;
-          margin-top: 0;
-        }
-
-        .counter-container {
-          @container (max-width: 700px) {
-            flex: 1 1 150px;
-          }
-
-          .counter {
-            color: var(--color-text);
-            margin-top: 0;
-          }
-
-          .simple-text {
-            margin: 0;
-
-            .simple-text-content {
-              font-weight: var(--font-weight-bold);
-              margin: var(--spacing-xs) 0 0;
-              text-wrap: wrap;
-            }
-          }
-        }
-      }
-
-      .split:has(.counters):not(:has(.counter-container)) {
-        > .split-inner {
-          --split-columns-desktop: 1fr;
-          row-gap: 0;
-        }
-
-        .hero-image {
-          margin-inline: auto;
-        }
-      }
-
-      .hero-image {
-        position: relative;
-        max-width: min(100%, var(--content-width-xl));
-        height: 450px;
-        margin-top: var(--spacing-xl);
-
-        &::before {
-          --angle: 0deg;
-          content: "";
-          position: absolute;
-          inset: 0;
-          z-index: -1;
-          margin: -4px;
-          border-radius: calc(var(--radius-lg) + 4px);
-          background: conic-gradient(
-            from var(--angle),
-            var(--color-bg-brand),
-            var(--color-bg-inverse),
-            var(--color-bg-brand)
-          );
-          animation: rotate-angle 2s linear infinite;
-        }
-
-        .image {
-          margin: 0;
-          height: 100%;
-
-          .image-inner {
-            max-height: 450px;
-            overflow: hidden;
-            height: 100%;
-          }
-
-          picture {
-            height: 100%;
-          }
-
-          img {
-            max-height: 450px;
-            object-fit: cover;
-            height: 100%;
-          }
-        }
-      }
-    }
-
-    .share-section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--spacing-sm);
-      align-items: center;
-      margin: var(--spacing-xl) 0;
-
-      .share-section-text {
-        flex: 0 0 auto;
-      }
-
-      .button-group {
-        flex: 0 1 50%;
-      }
-    }
-
-    .post-layout {
-      position: relative;
-      > .pane.second {
-        position: sticky;
-        top: calc(var(--spacing-nav-height) + var(--spacing-md));
-        margin-bottom: var(--spacing-xl);
-      }
-    }
-
-    .post-container.custom-section > .outer-content > .content {
-      padding-bottom: 0 !important;
-    }
-
-    .post {
-      display: grid;
-      margin-inline: auto;
-      margin-top: var(--spacing-xl);
-    }
-
-    .post > h1,
-    .post > h2,
-    .post > h3,
-    .post > h4,
-    .post > h5,
-    .post > h6 {
-      margin-bottom: 0;
-      margin-top: 1rem;
-    }
-
-    .post > h1:first-child,
-    .post > h2:first-child,
-    .post > h3:first-child,
-    .post > h4:first-child,
-    .post > h5:first-child,
-    .post > h6:first-child {
-      margin-top: 0;
-    }
-
-    .post > .astro-code {
-      margin-block: var(--spacing-xl);
-    }
-
-    .post-image {
-      margin-top: var(--spacing-xl);
-    }
-    .sidebar .card .image .image-inner {
-      max-height: 150px;
-      width: 100%;
-    }
-  }
-
-  .post-tags .post-tag-link {
-    color: inherit;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.15em;
-  }
-
-  .post-tags .post-tag-link:hover {
-    color: var(--color-text-strong);
-    text-decoration-thickness: 2px;
-  }
-</style>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {

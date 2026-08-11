@@ -1,0 +1,4887 @@
+{
+  "version": 2,
+  "keys": {
+    "404:cta:8bf35bde-e6c4-4b54-9aae-62c0c3fea193:text": {
+      "original": " Back home ",
+      "value": null,
+      "pages": {
+        "404.html": 1
+      },
+      "total": 1
+    },
+    "404:cta:eyebrowText": {
+      "original": "",
+      "value": null,
+      "pages": {
+        "404.html": 1
+      },
+      "total": 1
+    },
+    "404:cta:heading": {
+      "original": "Page not found | 404",
+      "value": null,
+      "pages": {
+        "404.html": 1
+      },
+      "total": 1
+    },
+    "404:cta:subtext": {
+      "original": " <p>This page doesn't exist, which is statistically improbable but technically accurate.<br>Why not return to our homepage, where everything definitely exists?</p> ",
+      "value": null,
+      "pages": {
+        "404.html": 1
+      },
+      "total": 1
+    },
+    "404:page_description": {
+      "original": "The page you're looking for doesn't exist.",
+      "value": null,
+      "pages": {
+        "404.html": 1
+      },
+      "total": 1
+    },
+    "404:page_title": {
+      "original": "Page not found | 404 | Jetstream Astro Template for CloudCannon",
+      "value": null,
+      "pages": {
+        "404.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:003fee29-aa7d-451f-8cc3-3c802198bc59:date": {
+      "original": "  <p>September 2025</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:003fee29-aa7d-451f-8cc3-3c802198bc59:heading": {
+      "original": "  Achieved 847 global edge nodes  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:003fee29-aa7d-451f-8cc3-3c802198bc59:text": {
+      "original": "  <p>Our original three-person engineering team now leads a department of 200 who share their pathological intolerance for downtime.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:23faf92f-1d24-4aaf-87e1-76a9614e110b:date": {
+      "original": "  <p>November 2022</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:23faf92f-1d24-4aaf-87e1-76a9614e110b:heading": {
+      "original": "  Certificates that renew themselves  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:23faf92f-1d24-4aaf-87e1-76a9614e110b:text": {
+      "original": "  <p>We launched automated SSL certificate management after customer support received their 10,000th \"help, my certificate expired\" ticket.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:34f182a7-c20d-48d1-b6bb-9f8ac0d2d675:date": {
+      "original": "  <p>February 2020</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:34f182a7-c20d-48d1-b6bb-9f8ac0d2d675:heading": {
+      "original": "  Trial by traffic  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:34f182a7-c20d-48d1-b6bb-9f8ac0d2d675:text": {
+      "original": "  <p>We successfully mitigated our first major DDoS attack (4.2Tbps); our engineering team celebrated with a pizza-and-additional-monitoring-party.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:b0e47b7e-4f48-483a-b249-30b361e47e1f:date": {
+      "original": "  <p>August 2019</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:b0e47b7e-4f48-483a-b249-30b361e47e1f:heading": {
+      "original": "  First node goes live  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:b0e47b7e-4f48-483a-b249-30b361e47e1f:text": {
+      "original": "  <p>Our first edge node deployed in Singapore. We then monitored it obsessively for three weeks straight.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:e6486b96-db79-4ab2-be09-68797171b667:date": {
+      "original": "  <p>March 2019</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:e6486b96-db79-4ab2-be09-68797171b667:heading": {
+      "original": "  The 3am decision  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:e6486b96-db79-4ab2-be09-68797171b667:text": {
+      "original": "  <p>We founded Jetstream after a particularly frustrating 3am incident response call convinced our co-founders that existing solutions lacked sufficient ambition.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:heading": {
+      "original": "  How it all began  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:0c381501-e607-4e35-93e9-b70f7da358ef:subtext": {
+      "original": "  <p>Architecture discussions in a poorly-ventilated office became a working prototype, then a functioning network, then a company that takes global internet infrastructure perhaps more seriously than is strictly necessary.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:55fedd0c-553a-4d27-9c2d-be1112a71a30:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:55fedd0c-553a-4d27-9c2d-be1112a71a30:heading": {
+      "original": "  Join the team that takes infrastructure personally  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:55fedd0c-553a-4d27-9c2d-be1112a71a30:text": {
+      "original": " View open positions ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:37a00608-28a6-4d93-bbf2-e1b8c175d0b2:eyebrowText": {
+      "original": " Obsessive redundancy ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:37a00608-28a6-4d93-bbf2-e1b8c175d0b2:heading": {
+      "original": " Multiple backups for our backups ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:37a00608-28a6-4d93-bbf2-e1b8c175d0b2:text": {
+      "original": "  <p>Single points of failure are design flaws we've engineered out of existence through redundant systems, diverse routing, and healthy paranoia.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:443a202c-180b-430a-98d7-0d7d8f8f2449:eyebrowText": {
+      "original": " Automatic everything ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:443a202c-180b-430a-98d7-0d7d8f8f2449:heading": {
+      "original": " Infrastructure that manages itself ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:443a202c-180b-430a-98d7-0d7d8f8f2449:text": {
+      "original": "  <p>SSL renewals, traffic routing, threat detection, and capacity scaling happen without human intervention — our systems make better decisions faster than people can.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:52435d45-4807-4ed7-a3da-f0194170e5f8:eyebrowText": {
+      "original": " Zero-trust security ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:52435d45-4807-4ed7-a3da-f0194170e5f8:heading": {
+      "original": " Assume everything is a threat ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:52435d45-4807-4ed7-a3da-f0194170e5f8:text": {
+      "original": "  <p>Every request gets verified, every connection gets encrypted, every login attempt gets scrutinized by systems that never get tired or complacent.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:68f6be7e-47b4-42f0-abf7-0900dbe9e726:eyebrowText": {
+      "original": " Obsessive redundancy ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:68f6be7e-47b4-42f0-abf7-0900dbe9e726:heading": {
+      "original": " Redundancy layers all the way down ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:68f6be7e-47b4-42f0-abf7-0900dbe9e726:text": {
+      "original": "  <p>Every critical system has a backup. Every backup has a backup. We stopped counting after layer five but they're definitely there.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:858e4b2d-5f72-4ff9-8cb4-187d1fb71119:eyebrowText": {
+      "original": " Global reach ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:858e4b2d-5f72-4ff9-8cb4-187d1fb71119:heading": {
+      "original": " 847 edge nodes, six continents ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:858e4b2d-5f72-4ff9-8cb4-187d1fb71119:text": {
+      "original": "  <p>Your content lives closer to your users than their nearest coffee shop, with redundant routing that assumes failure is always one misconfigured router away.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:9416c5a1-6a2e-4c88-b585-4c3b9e0fca67:37a00608-28a6-4d93-bbf2-e1b8c175d0b2:eyebrowText": {
+      "original": " Obsessive redundancy ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:9416c5a1-6a2e-4c88-b585-4c3b9e0fca67:37a00608-28a6-4d93-bbf2-e1b8c175d0b2:heading": {
+      "original": " Multiple backups for our backups ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:9416c5a1-6a2e-4c88-b585-4c3b9e0fca67:37a00608-28a6-4d93-bbf2-e1b8c175d0b2:text": {
+      "original": "  <p>Single points of failure are design flaws we've engineered out of existence through redundant systems, diverse routing, and healthy paranoia.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:9416c5a1-6a2e-4c88-b585-4c3b9e0fca67:52435d45-4807-4ed7-a3da-f0194170e5f8:eyebrowText": {
+      "original": " Zero-trust security ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:9416c5a1-6a2e-4c88-b585-4c3b9e0fca67:52435d45-4807-4ed7-a3da-f0194170e5f8:heading": {
+      "original": " Assume everything is a threat ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:9416c5a1-6a2e-4c88-b585-4c3b9e0fca67:52435d45-4807-4ed7-a3da-f0194170e5f8:text": {
+      "original": "  <p>Every request gets verified, every connection gets encrypted, every login attempt gets scrutinized by systems that never get tired or complacent.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:b5cef602-5f1e-497a-9dbc-26b8a705d80f:443a202c-180b-430a-98d7-0d7d8f8f2449:eyebrowText": {
+      "original": " Automatic everything ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:b5cef602-5f1e-497a-9dbc-26b8a705d80f:443a202c-180b-430a-98d7-0d7d8f8f2449:heading": {
+      "original": " Infrastructure that manages itself ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:b5cef602-5f1e-497a-9dbc-26b8a705d80f:443a202c-180b-430a-98d7-0d7d8f8f2449:text": {
+      "original": "  <p>SSL renewals, traffic routing, threat detection, and capacity scaling happen without human intervention — our systems make better decisions faster than people can.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:b5cef602-5f1e-497a-9dbc-26b8a705d80f:858e4b2d-5f72-4ff9-8cb4-187d1fb71119:eyebrowText": {
+      "original": " Global reach ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:b5cef602-5f1e-497a-9dbc-26b8a705d80f:858e4b2d-5f72-4ff9-8cb4-187d1fb71119:heading": {
+      "original": " 847 edge nodes, six continents ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:b5cef602-5f1e-497a-9dbc-26b8a705d80f:858e4b2d-5f72-4ff9-8cb4-187d1fb71119:text": {
+      "original": "  <p>Your content lives closer to your users than their nearest coffee shop, with redundant routing that assumes failure is always one misconfigured router away.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:b5cef602-5f1e-497a-9dbc-26b8a705d80f:fe7bb9df-10d3-4af8-a167-97f737839835:eyebrowText": {
+      "original": " Real-time visibility ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:b5cef602-5f1e-497a-9dbc-26b8a705d80f:fe7bb9df-10d3-4af8-a167-97f737839835:heading": {
+      "original": " Analytics that update in a snap ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:b5cef602-5f1e-497a-9dbc-26b8a705d80f:fe7bb9df-10d3-4af8-a167-97f737839835:text": {
+      "original": "  <p>Monitor every request and every potential threat through dashboards that show you what's happening now, not five minutes ago.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:c4edfb9e-95fa-4e00-812d-64acd0022b19:68f6be7e-47b4-42f0-abf7-0900dbe9e726:eyebrowText": {
+      "original": " Obsessive redundancy ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:c4edfb9e-95fa-4e00-812d-64acd0022b19:68f6be7e-47b4-42f0-abf7-0900dbe9e726:heading": {
+      "original": " Redundancy layers all the way down ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:c4edfb9e-95fa-4e00-812d-64acd0022b19:68f6be7e-47b4-42f0-abf7-0900dbe9e726:text": {
+      "original": "  <p>Every critical system has a backup. Every backup has a backup. We stopped counting after layer five but they're definitely there.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:c4edfb9e-95fa-4e00-812d-64acd0022b19:c89f3881-bcad-4f96-a6de-7843af565b47:eyebrowText": {
+      "original": " Obsessive redundancy ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:c4edfb9e-95fa-4e00-812d-64acd0022b19:c89f3881-bcad-4f96-a6de-7843af565b47:heading": {
+      "original": " Trust nothing, backup everything ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:c4edfb9e-95fa-4e00-812d-64acd0022b19:c89f3881-bcad-4f96-a6de-7843af565b47:text": {
+      "original": "  <p>If it's critical, it's redundant. If it's redundant, it has a backup. Our infrastructure assumes failure is always one misconfiguration away from happening.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:c89f3881-bcad-4f96-a6de-7843af565b47:eyebrowText": {
+      "original": " Obsessive redundancy ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:c89f3881-bcad-4f96-a6de-7843af565b47:heading": {
+      "original": " Trust nothing, backup everything ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:c89f3881-bcad-4f96-a6de-7843af565b47:text": {
+      "original": "  <p>If it's critical, it's redundant. If it's redundant, it has a backup. Our infrastructure assumes failure is always one misconfiguration away from happening.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:fe7bb9df-10d3-4af8-a167-97f737839835:eyebrowText": {
+      "original": " Real-time visibility ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:fe7bb9df-10d3-4af8-a167-97f737839835:heading": {
+      "original": " Analytics that update in a snap ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:fe7bb9df-10d3-4af8-a167-97f737839835:text": {
+      "original": "  <p>Monitor every request and every potential threat through dashboards that show you what's happening now, not five minutes ago.</p>\n  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:heading": {
+      "original": "  Our core commitments  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:b66c659a-82db-4a57-a878-548cedd2d782:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:b66c659a-82db-4a57-a878-548cedd2d782:heading": {
+      "original": "  The team behind the network  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:b66c659a-82db-4a57-a878-548cedd2d782:subtext": {
+      "original": " Engineers, optimists, and people who refuse to accept that anything is impossible until proven otherwise. ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:c73c8ec5-28cc-42b5-b229-b1487c595074:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:c73c8ec5-28cc-42b5-b229-b1487c595074:heading": {
+      "original": "  <p><span class=\"highlight-text\">We exist to make the internet work</span> the way people assume it already does.</p>  ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:c73c8ec5-28cc-42b5-b229-b1487c595074:title": {
+      "original": " Our mission ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:page_description": {
+      "original": "A polished, high-performance marketing website template for Astro, with visual editing and multilingual translation on CloudCannon.",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:page_title": {
+      "original": "About | Jetstream Astro Template for CloudCannon",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:authorDescription": {
+      "original": " Placeholder Copywriter, Jetstream ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+      },
+      "total": 3
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:authorName": {
+      "original": " Robin Poynter ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+      },
+      "total": 3
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:button_text": {
+      "original": " Get started ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+      },
+      "total": 3
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:cell_cell-one": {
+      "original": " Cell one ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 5,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 5,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 5
+      },
+      "total": 15
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:cell_cell-three": {
+      "original": " Cell three ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 5,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 5,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 5
+      },
+      "total": 15
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:cell_cell-two": {
+      "original": " Cell two ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 5,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 5,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 5
+      },
+      "total": 15
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:description": {
+      "original": "  <p>Feature description placeholder text that will be replaced with actual content. This placeholder text is slightly longer, because this card is set to take up two rows in the grid rather than one.</p>\n  ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 6,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 6,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 6
+      },
+      "total": 18
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:eyebrow": {
+      "original": "  Optional eyebrow text displayed above the title  ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 4,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 4,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 4
+      },
+      "total": 12
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:eyebrowText": {
+      "original": " Optional label displayed above the CTA Center heading. ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 7,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 7,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 7
+      },
+      "total": 21
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:header_header-one": {
+      "original": " Header One ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+      },
+      "total": 3
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:header_header-three": {
+      "original": " Header Three ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+      },
+      "total": 3
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:header_header-two": {
+      "original": " Header Two ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+      },
+      "total": 3
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:heading": {
+      "original": "  <p>Main heading text for the CTA Center section.</p>  ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 7,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 7,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 7
+      },
+      "total": 21
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:label": {
+      "original": "My input",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 8,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 8,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 8
+      },
+      "total": 24
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:option_option-1": {
+      "original": " Option 1  ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+      },
+      "total": 3
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:option_option-2": {
+      "original": " Option 2  ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+      },
+      "total": 3
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:option_option-3": {
+      "original": " Option 3  ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+      },
+      "total": 3
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:placeholder": {
+      "original": "name@example.com",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 4,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 4,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 4
+      },
+      "total": 12
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:price_prefix": {
+      "original": " $ ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+      },
+      "total": 3
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:price_suffix": {
+      "original": " /mo ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+      },
+      "total": 3
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:section_section-one": {
+      "original": " Section One ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+      },
+      "total": 3
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:section_section-three": {
+      "original": " Section Three ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+      },
+      "total": 3
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:section_section-two": {
+      "original": " Section Two ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+      },
+      "total": 3
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:subtext": {
+      "original": "  <p>Optional subtext displayed beneath the CTA Center heading.</p>\n  ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 7,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 7,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 7
+      },
+      "total": 21
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:text": {
+      "original": " Button text with optional icon ",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 12,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 12,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 12
+      },
+      "total": 36
+    },
+    "blog/sample-blog-post-with-a-range-of-snippets:title": {
+      "original": "Question text 1",
+      "value": null,
+      "pages": {
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 10,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 10,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 10
+      },
+      "total": 30
+    },
+    "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:card_heading": {
+      "original": "  Why we rebuilt our DNS resolver from scratch (<span class=\"highlight-text\">again</span>)  ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
+      },
+      "total": 4
+    },
+    "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:card_subtext": {
+      "original": "  <p>Sometimes good enough isn't good enough, especially when our engineers have strong opinions about query optimization.</p>\n  ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
+      },
+      "total": 4
+    },
+    "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:heading": {
+      "original": "  The engineering journal  ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
+      },
+      "total": 4
+    },
+    "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:subtext": {
+      "original": "  <p>Insights, updates, and occasional technical deep-dives from the team that keeps the internet running.</p>\n  ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 5,
+        "blog/index.html": 5,
+        "de/blog/index.html": 5,
+        "fr/blog/index.html": 5
+      },
+      "total": 20
+    },
+    "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:suffix": {
+      "original": " ms ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 3,
+        "blog/index.html": 3,
+        "de/blog/index.html": 3,
+        "fr/blog/index.html": 3
+      },
+      "total": 12
+    },
+    "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:text": {
+      "original": " Learn why we did it ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
+      },
+      "total": 4
+    },
+    "blog:7db52143-7dee-4ca3-9015-4531e5614fc9:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
+      },
+      "total": 4
+    },
+    "blog:7db52143-7dee-4ca3-9015-4531e5614fc9:heading": {
+      "original": "  Let's build your next tech breakthough together  ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
+      },
+      "total": 4
+    },
+    "blog:7db52143-7dee-4ca3-9015-4531e5614fc9:text": {
+      "original": " Or talk to us about fiber optics instead ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
+      },
+      "total": 4
+    },
+    "blog:page_description": {
+      "original": "Read our latest articles and insights on web development, design, and technology.",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
+      },
+      "total": 4
+    },
+    "blog:page_title": {
+      "original": "Blog | Jetstream Astro Template for CloudCannon",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
+      },
+      "total": 4
+    },
+    "contact:91088337-2ba5-4f01-b226-49fcbdc83792:4e431881-7f7f-476b-9324-62be7c2adce8:label": {
+      "original": "Name",
+      "value": null,
+      "pages": {
+        "contact/index.html": 1
+      },
+      "total": 1
+    },
+    "contact:91088337-2ba5-4f01-b226-49fcbdc83792:ca86bbcd-42af-426e-995c-533e3a6dba44:label": {
+      "original": "Message",
+      "value": null,
+      "pages": {
+        "contact/index.html": 1
+      },
+      "total": 1
+    },
+    "contact:91088337-2ba5-4f01-b226-49fcbdc83792:d30ea50d-cbf9-4532-a933-abe220a66fff:label": {
+      "original": "Email",
+      "value": null,
+      "pages": {
+        "contact/index.html": 1
+      },
+      "total": 1
+    },
+    "contact:91088337-2ba5-4f01-b226-49fcbdc83792:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "contact/index.html": 1
+      },
+      "total": 1
+    },
+    "contact:91088337-2ba5-4f01-b226-49fcbdc83792:heading": {
+      "original": "  Need more info?<br><span class=\"highlight-text\">Contact us</span>  ",
+      "value": null,
+      "pages": {
+        "contact/index.html": 1
+      },
+      "total": 1
+    },
+    "contact:91088337-2ba5-4f01-b226-49fcbdc83792:subtext": {
+      "original": "  <p>Our solutions team stands ready with answers and an appropriate level of enthusiasm.</p>\n  ",
+      "value": null,
+      "pages": {
+        "contact/index.html": 1
+      },
+      "total": 1
+    },
+    "contact:91088337-2ba5-4f01-b226-49fcbdc83792:text": {
+      "original": " Send message ",
+      "value": null,
+      "pages": {
+        "contact/index.html": 1
+      },
+      "total": 1
+    },
+    "contact:page_description": {
+      "original": "Contact our solutions team, which is standing ready with answers you'd ever need.",
+      "value": null,
+      "pages": {
+        "contact/index.html": 1
+      },
+      "total": 1
+    },
+    "contact:page_title": {
+      "original": "Contact | Jetstream Astro Template for CloudCannon",
+      "value": null,
+      "pages": {
+        "contact/index.html": 1
+      },
+      "total": 1
+    },
+    "footer:about": {
+      "original": " About ",
+      "value": null,
+      "pages": {
+        "404.html": 1,
+        "about/index.html": 1,
+        "blog/2/index.html": 1,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 1,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 1,
+        "blog/index.html": 1,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 1,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 1,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 1,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 1,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 1,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 1,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 1,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 1,
+        "contact/index.html": 1,
+        "de/blog/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "fr/blog/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "index.html": 1,
+        "pricing/index.html": 1,
+        "search/index.html": 1
+      },
+      "total": 42
+    },
+    "footer:blog": {
+      "original": " Blog ",
+      "value": null,
+      "pages": {
+        "404.html": 1,
+        "about/index.html": 1,
+        "blog/2/index.html": 1,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 1,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 1,
+        "blog/index.html": 1,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 1,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 1,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 1,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 1,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 1,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 1,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 1,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 1,
+        "contact/index.html": 1,
+        "de/blog/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "fr/blog/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "index.html": 1,
+        "pricing/index.html": 1,
+        "search/index.html": 1
+      },
+      "total": 42
+    },
+    "footer:contact": {
+      "original": " Contact ",
+      "value": null,
+      "pages": {
+        "404.html": 1,
+        "about/index.html": 1,
+        "blog/2/index.html": 1,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 1,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 1,
+        "blog/index.html": 1,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 1,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 1,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 1,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 1,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 1,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 1,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 1,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 1,
+        "contact/index.html": 1,
+        "de/blog/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "fr/blog/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "index.html": 1,
+        "pricing/index.html": 1,
+        "search/index.html": 1
+      },
+      "total": 42
+    },
+    "footer:home": {
+      "original": " Home ",
+      "value": null,
+      "pages": {
+        "404.html": 1,
+        "about/index.html": 1,
+        "blog/2/index.html": 1,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 1,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 1,
+        "blog/index.html": 1,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 1,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 1,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 1,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 1,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 1,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 1,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 1,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 1,
+        "contact/index.html": 1,
+        "de/blog/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "fr/blog/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "index.html": 1,
+        "pricing/index.html": 1,
+        "search/index.html": 1
+      },
+      "total": 42
+    },
+    "footer:legal": {
+      "original": "  <p>© 2026 All rights reserved.</p>\n  ",
+      "value": null,
+      "pages": {
+        "404.html": 1,
+        "about/index.html": 1,
+        "blog/2/index.html": 1,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 1,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 1,
+        "blog/index.html": 1,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 1,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 1,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 1,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 1,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 1,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 1,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 1,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 1,
+        "contact/index.html": 1,
+        "de/blog/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "fr/blog/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "index.html": 1,
+        "pricing/index.html": 1,
+        "search/index.html": 1
+      },
+      "total": 42
+    },
+    "footer:pricing": {
+      "original": " Pricing ",
+      "value": null,
+      "pages": {
+        "404.html": 1,
+        "about/index.html": 1,
+        "blog/2/index.html": 1,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 1,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 1,
+        "blog/index.html": 1,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 1,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 1,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 1,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 1,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 1,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 1,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 1,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 1,
+        "contact/index.html": 1,
+        "de/blog/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "fr/blog/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "index.html": 1,
+        "pricing/index.html": 1,
+        "search/index.html": 1
+      },
+      "total": 42
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:button_text": {
+      "original": " Get started ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:f1609a2e-0fcc-43f8-944a-e6761ca2d8c9:text": {
+      "original": " Priority traffic routing ",
+      "value": null,
+      "pages": {
+        "index.html": 3
+      },
+      "total": 3
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:price_prefix": {
+      "original": " $ ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:price_suffix": {
+      "original": " /mo ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:subtext": {
+      "original": "  <p>For organizations that refuse to accept the concept of downtime</p>\n  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:title": {
+      "original": " Team ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:51714e17-4b62-460c-8719-77b8bf487f48:text": {
+      "original": " Global CDN with 800+ edge nodes ",
+      "value": null,
+      "pages": {
+        "index.html": 3
+      },
+      "total": 3
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:button_text": {
+      "original": " Get started ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:price_prefix": {
+      "original": " $ ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:price_suffix": {
+      "original": " /mo ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:subtext": {
+      "original": "  <p>For organizations that need reliability</p>\n  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:title": {
+      "original": " Standard ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:heading": {
+      "original": "  Pricing that scales with your ambition  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:subtext": {
+      "original": "  <p>Choose the plan that matches your current infrastructure needs, then upgrade when your inevitable success makes it necessary. We'll be here, ready with congratulations and additional bandwidth.</p>\n  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:4deb5b23-bf53-45de-b19a-f088334929f1:0ef1e1d7-2fce-4b43-8385-35ec5bc58a62:description": {
+      "original": "  <p>Your websites will load faster than human perception allows. We're not saying we've broken the laws of physics, but our CDN operates at speeds that would make light jealous.</p>\n  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:4deb5b23-bf53-45de-b19a-f088334929f1:0ef1e1d7-2fce-4b43-8385-35ec5bc58a62:title": {
+      "original": " Content delivery acceleration ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:4deb5b23-bf53-45de-b19a-f088334929f1:8b1a1b10-b049-4d58-b759-6e158553130f:description": {
+      "original": "  <p>We trust nothing and verify everything, twice. Sometimes three times if it's Tuesday. Our security team operates under the principle that paranoia isn't a bug — it's a feature we bill for.</p>\n  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:4deb5b23-bf53-45de-b19a-f088334929f1:8b1a1b10-b049-4d58-b759-6e158553130f:title": {
+      "original": " Zero-trust security framework ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:4deb5b23-bf53-45de-b19a-f088334929f1:92ab48c3-c441-4f60-8a24-b19fe26dda04:description": {
+      "original": "  <p>Bad actors don't stand a chance against our behavioral analysis engines, which have been trained on every known attack pattern, plus several we invented just to be thorough.</p>\n  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:4deb5b23-bf53-45de-b19a-f088334929f1:92ab48c3-c441-4f60-8a24-b19fe26dda04:eyebrowText": {
+      "original": "  We've got this.  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:4deb5b23-bf53-45de-b19a-f088334929f1:92ab48c3-c441-4f60-8a24-b19fe26dda04:title": {
+      "original": " DDoS mitigation that never sleeps ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:4deb5b23-bf53-45de-b19a-f088334929f1:a7036702-a6bf-40c6-90b8-3205f204cb8b:description": {
+      "original": "  <p>Our automated certificate lifecycle system renews your SSL certificates before they even think about expiring. We've eliminated the 3am renewal panic entirely.</p>\n  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:4deb5b23-bf53-45de-b19a-f088334929f1:a7036702-a6bf-40c6-90b8-3205f204cb8b:title": {
+      "original": " Automated SSL / TLS management ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:4deb5b23-bf53-45de-b19a-f088334929f1:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:4deb5b23-bf53-45de-b19a-f088334929f1:f8c634cd-4690-4568-a864-3fdcb1e0c185:description": {
+      "original": "  <p>Our global DNS infrastructure responds in fractions of milliseconds that require new units of measurement. Your domain names resolve before users finished typing them.</p>\n  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:4deb5b23-bf53-45de-b19a-f088334929f1:f8c634cd-4690-4568-a864-3fdcb1e0c185:title": {
+      "original": " DNS resolution bordering on prescient ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:4deb5b23-bf53-45de-b19a-f088334929f1:heading": {
+      "original": "  Jetstream protects what matters most: <br>your uptime percentage  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:4deb5b23-bf53-45de-b19a-f088334929f1:subtext": {
+      "original": "  <p>Everything you need to scale from boutique team to a global enterprise without the operational friction —&nbsp;or the science fiction.</p>\n  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:55923a16-4468-45e1-83dc-e18a8169bb02:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:55923a16-4468-45e1-83dc-e18a8169bb02:heading": {
+      "original": "  Introducing<br><span class=\"highlight-text\">Jetstream</span>  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:55923a16-4468-45e1-83dc-e18a8169bb02:subtext": {
+      "original": "  <p>A new Astro template by CloudCannon, built with our <a href=\"https://lemon-pear.cloudvent.net/\">Astro Component Starter</a> for top performance, true visual editing, and an ideal developer experience.</p>\n  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:55923a16-4468-45e1-83dc-e18a8169bb02:text": {
+      "original": " Deploy Jetstream on CloudCannon ",
+      "value": null,
+      "pages": {
+        "index.html": 2
+      },
+      "total": 2
+    },
+    "index:6900a886-16f8-4c52-aa87-a0ca5d55c247:authorDescription": {
+      "original": " CTO, MediConnect Healthcare ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:6900a886-16f8-4c52-aa87-a0ca5d55c247:authorName": {
+      "original": " Dr. Liz Vante ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:6900a886-16f8-4c52-aa87-a0ca5d55c247:text": {
+      "original": "  <p>Downtime used to be a weekly crisis. Now it's a theoretical concept we vaguely remember.</p>\n  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:69076c96-2f59-46c6-95e2-bc1d35b1f8dd:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:69076c96-2f59-46c6-95e2-bc1d35b1f8dd:heading": {
+      "original": "  Ready for performance that defies conventional wisdom?  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:69076c96-2f59-46c6-95e2-bc1d35b1f8dd:text": {
+      "original": " Book a strategy session ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:bf10aca8-2465-4dae-adab-96e1e6b88a69:heading": {
+      "original": "  We’ve solved the internet for the world’s most ambitious engineering teams.  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:4d8a8b67-7da8-4850-88cc-60abf671e42e:suffix": {
+      "original": " % ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:c339bedd-58c0-44a2-8be0-f985ee463f05:suffix": {
+      "original": " s ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:e3a408d3-257c-4336-b087-e6d62f178b7b:suffix": {
+      "original": " x ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:f7c19cc3-f480-4e45-81c2-9d4f5637b507:suffix": {
+      "original": " % ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:heading": {
+      "original": "  Customer solutions that solve themselves  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:subtext": {
+      "original": "  <p>We don't just provide infrastructure — we provide infrastructure that understands your business. And your heart.</p>\n  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:text": {
+      "original": "  We implemented our low-latency routing protocol and deployed dedicated health sector edge nodes with HIPAA-compliant encryption that doesn't slow things down.<br>Doctors can read patient expressions in real-time, and medical care is delivered at the speed of actual conversation — which, our research indicates, is how medical care should work.  ",
+      "value": null,
+      "pages": {
+        "index.html": 6
+      },
+      "total": 6
+    },
+    "index:page_description": {
+      "original": "An Astro template built for CloudCannon with visual editing, flexible components, and an exceptional developer experience. Deploy your next project with speed and style.",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:page_title": {
+      "original": "Jetstream Astro Template for CloudCannon",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "nav:about": {
+      "original": " About ",
+      "value": null,
+      "pages": {
+        "404.html": 2,
+        "about/index.html": 2,
+        "blog/2/index.html": 2,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 2,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 2,
+        "blog/index.html": 2,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 2,
+        "blog/tag/CDN/index.html": 2,
+        "blog/tag/Caching/index.html": 2,
+        "blog/tag/Downtime/index.html": 2,
+        "blog/tag/Example/index.html": 2,
+        "blog/tag/Performance/index.html": 2,
+        "blog/tag/Photons/index.html": 2,
+        "blog/tag/Prediction/index.html": 2,
+        "blog/tag/Security/index.html": 2,
+        "blog/tag/Uptime/index.html": 2,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 2,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 2,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 2,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 2,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 2,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 2,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 2,
+        "contact/index.html": 2,
+        "de/blog/index.html": 2,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "de/blog/tag/Example/index.html": 2,
+        "de/blog/tag/Performance/index.html": 2,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "fr/blog/index.html": 2,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "fr/blog/tag/Example/index.html": 2,
+        "fr/blog/tag/Performance/index.html": 2,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "index.html": 2,
+        "pricing/index.html": 2,
+        "search/index.html": 2
+      },
+      "total": 84
+    },
+    "nav:back-to-site": {
+      "original": " ← Back to site ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:blog": {
+      "original": " Blog ",
+      "value": null,
+      "pages": {
+        "404.html": 2,
+        "about/index.html": 2,
+        "blog/2/index.html": 2,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 2,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 2,
+        "blog/index.html": 2,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 2,
+        "blog/tag/CDN/index.html": 2,
+        "blog/tag/Caching/index.html": 2,
+        "blog/tag/Downtime/index.html": 2,
+        "blog/tag/Example/index.html": 2,
+        "blog/tag/Performance/index.html": 2,
+        "blog/tag/Photons/index.html": 2,
+        "blog/tag/Prediction/index.html": 2,
+        "blog/tag/Security/index.html": 2,
+        "blog/tag/Uptime/index.html": 2,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 2,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 2,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 2,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 2,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 2,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 2,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 2,
+        "contact/index.html": 2,
+        "de/blog/index.html": 2,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "de/blog/tag/Example/index.html": 2,
+        "de/blog/tag/Performance/index.html": 2,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "fr/blog/index.html": 2,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "fr/blog/tag/Example/index.html": 2,
+        "fr/blog/tag/Performance/index.html": 2,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "index.html": 2,
+        "pricing/index.html": 2,
+        "search/index.html": 2
+      },
+      "total": 84
+    },
+    "nav:building-blocks": {
+      "original": "Building Blocks",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:core-elements": {
+      "original": "Core Elements",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:core-elements:button": {
+      "original": " Button ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:core-elements:counter": {
+      "original": " Counter ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:core-elements:definition-list": {
+      "original": " Definition List ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:core-elements:divider": {
+      "original": " Divider ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:core-elements:embed": {
+      "original": " Embed ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:core-elements:heading": {
+      "original": " Heading ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:core-elements:icon": {
+      "original": " Icon ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:core-elements:image": {
+      "original": " Image ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:core-elements:list": {
+      "original": " List ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:core-elements:pagination": {
+      "original": " Pagination ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:core-elements:simple-text": {
+      "original": " Simple Text ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:core-elements:spacer": {
+      "original": " Spacer ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:core-elements:testimonial": {
+      "original": " Testimonial ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:core-elements:text": {
+      "original": " Text ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:core-elements:video": {
+      "original": " Video ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:forms": {
+      "original": "Forms",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:forms:choice-group": {
+      "original": " Choice Group ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:forms:date": {
+      "original": " Date ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:forms:file-upload": {
+      "original": " File Upload ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:forms:form": {
+      "original": " Form ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:forms:hidden": {
+      "original": " Hidden ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:forms:input": {
+      "original": " Input ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:forms:range": {
+      "original": " Range ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:forms:segments": {
+      "original": " Segments ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:forms:select": {
+      "original": " Select ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:forms:submit": {
+      "original": " Submit ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:forms:textarea": {
+      "original": " Textarea ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:forms:toggle": {
+      "original": " Toggle ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:wrappers": {
+      "original": "Wrappers",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:wrappers:accordion": {
+      "original": " Accordion ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:wrappers:bento-box": {
+      "original": " Bento Box ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:wrappers:bento-box-grid": {
+      "original": " Bento Box Grid ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:wrappers:button-group": {
+      "original": " Button Group ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:wrappers:card": {
+      "original": " Card ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:wrappers:carousel": {
+      "original": " Carousel ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:wrappers:content-selector": {
+      "original": " Content Selector ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:wrappers:grid": {
+      "original": " Grid ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:wrappers:image-carousel": {
+      "original": " Image Carousel ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:wrappers:modal": {
+      "original": " Modal ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:wrappers:split": {
+      "original": " Split ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:building-blocks:wrappers:video-modal": {
+      "original": " Video Modal ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:component-builder": {
+      "original": " Component Builder ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:contact": {
+      "original": " Contact ",
+      "value": null,
+      "pages": {
+        "404.html": 2,
+        "about/index.html": 2,
+        "blog/2/index.html": 2,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 2,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 2,
+        "blog/index.html": 2,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 2,
+        "blog/tag/CDN/index.html": 2,
+        "blog/tag/Caching/index.html": 2,
+        "blog/tag/Downtime/index.html": 2,
+        "blog/tag/Example/index.html": 2,
+        "blog/tag/Performance/index.html": 2,
+        "blog/tag/Photons/index.html": 2,
+        "blog/tag/Prediction/index.html": 2,
+        "blog/tag/Security/index.html": 2,
+        "blog/tag/Uptime/index.html": 2,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 2,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 2,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 2,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 2,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 2,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 2,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 2,
+        "contact/index.html": 2,
+        "de/blog/index.html": 2,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "de/blog/tag/Example/index.html": 2,
+        "de/blog/tag/Performance/index.html": 2,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "fr/blog/index.html": 2,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "fr/blog/tag/Example/index.html": 2,
+        "fr/blog/tag/Performance/index.html": 2,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "index.html": 2,
+        "pricing/index.html": 2,
+        "search/index.html": 2
+      },
+      "total": 84
+    },
+    "nav:features": {
+      "original": "Features",
+      "value": null,
+      "pages": {
+        "404.html": 2,
+        "about/index.html": 2,
+        "blog/2/index.html": 2,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 2,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 2,
+        "blog/index.html": 2,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 2,
+        "blog/tag/CDN/index.html": 2,
+        "blog/tag/Caching/index.html": 2,
+        "blog/tag/Downtime/index.html": 2,
+        "blog/tag/Example/index.html": 2,
+        "blog/tag/Performance/index.html": 2,
+        "blog/tag/Photons/index.html": 2,
+        "blog/tag/Prediction/index.html": 2,
+        "blog/tag/Security/index.html": 2,
+        "blog/tag/Uptime/index.html": 2,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 2,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 2,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 2,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 2,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 2,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 2,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 2,
+        "contact/index.html": 2,
+        "de/blog/index.html": 2,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "de/blog/tag/Example/index.html": 2,
+        "de/blog/tag/Performance/index.html": 2,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "fr/blog/index.html": 2,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "fr/blog/tag/Example/index.html": 2,
+        "fr/blog/tag/Performance/index.html": 2,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "index.html": 2,
+        "pricing/index.html": 2,
+        "search/index.html": 2
+      },
+      "total": 84
+    },
+    "nav:features:problems-we-ve-solved": {
+      "original": " Problems we've solved ↓ ",
+      "value": null,
+      "pages": {
+        "404.html": 2,
+        "about/index.html": 2,
+        "blog/2/index.html": 2,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 2,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 2,
+        "blog/index.html": 2,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 2,
+        "blog/tag/CDN/index.html": 2,
+        "blog/tag/Caching/index.html": 2,
+        "blog/tag/Downtime/index.html": 2,
+        "blog/tag/Example/index.html": 2,
+        "blog/tag/Performance/index.html": 2,
+        "blog/tag/Photons/index.html": 2,
+        "blog/tag/Prediction/index.html": 2,
+        "blog/tag/Security/index.html": 2,
+        "blog/tag/Uptime/index.html": 2,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 2,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 2,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 2,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 2,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 2,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 2,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 2,
+        "contact/index.html": 2,
+        "de/blog/index.html": 2,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "de/blog/tag/Example/index.html": 2,
+        "de/blog/tag/Performance/index.html": 2,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "fr/blog/index.html": 2,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "fr/blog/tag/Example/index.html": 2,
+        "fr/blog/tag/Performance/index.html": 2,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "index.html": 2,
+        "pricing/index.html": 2,
+        "search/index.html": 2
+      },
+      "total": 84
+    },
+    "nav:features:what-we-do-best": {
+      "original": " What we do best ↓ ",
+      "value": null,
+      "pages": {
+        "404.html": 2,
+        "about/index.html": 2,
+        "blog/2/index.html": 2,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 2,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 2,
+        "blog/index.html": 2,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 2,
+        "blog/tag/CDN/index.html": 2,
+        "blog/tag/Caching/index.html": 2,
+        "blog/tag/Downtime/index.html": 2,
+        "blog/tag/Example/index.html": 2,
+        "blog/tag/Performance/index.html": 2,
+        "blog/tag/Photons/index.html": 2,
+        "blog/tag/Prediction/index.html": 2,
+        "blog/tag/Security/index.html": 2,
+        "blog/tag/Uptime/index.html": 2,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 2,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 2,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 2,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 2,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 2,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 2,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 2,
+        "contact/index.html": 2,
+        "de/blog/index.html": 2,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "de/blog/tag/Example/index.html": 2,
+        "de/blog/tag/Performance/index.html": 2,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "fr/blog/index.html": 2,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "fr/blog/tag/Example/index.html": 2,
+        "fr/blog/tag/Performance/index.html": 2,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "index.html": 2,
+        "pricing/index.html": 2,
+        "search/index.html": 2
+      },
+      "total": 84
+    },
+    "nav:get-started": {
+      "original": " Get started ",
+      "value": null,
+      "pages": {
+        "404.html": 1,
+        "about/index.html": 1,
+        "blog/2/index.html": 1,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 1,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 1,
+        "blog/index.html": 1,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 1,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 1,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 1,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 1,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 1,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 1,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 1,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 1,
+        "contact/index.html": 1,
+        "de/blog/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "fr/blog/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "index.html": 1,
+        "pricing/index.html": 1,
+        "search/index.html": 1
+      },
+      "total": 42
+    },
+    "nav:getting-started": {
+      "original": "Getting Started",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:getting-started:building-a-page-section": {
+      "original": " Building a Page Section ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:getting-started:customizing-your-brand": {
+      "original": " Customizing Your Brand ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:getting-started:editing-a-page": {
+      "original": " Editing a Page ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:getting-started:editing-the-blog": {
+      "original": " Editing the Blog ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:getting-started:how-visual-editing-works": {
+      "original": " How Visual Editing Works ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:getting-started:project-tour": {
+      "original": " Project Tour ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:home": {
+      "original": " Home ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:navigation": {
+      "original": "Navigation",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:navigation:bar": {
+      "original": " Bar ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:navigation:footer": {
+      "original": " Footer ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:navigation:main-nav": {
+      "original": " Main Nav ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:navigation:mobile": {
+      "original": " Mobile ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:navigation:side": {
+      "original": " Side ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections": {
+      "original": "Page Sections",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:builders": {
+      "original": "Builders",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:builders:custom-section": {
+      "original": " Custom Section ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:ctas": {
+      "original": "CTAs",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:ctas:cta-center": {
+      "original": " CTA Center ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:ctas:cta-form": {
+      "original": " CTA Form ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:ctas:cta-split": {
+      "original": " CTA Split ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:features": {
+      "original": "Features",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:features:feature-carousel-grid": {
+      "original": " Feature Carousel Grid ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:features:feature-grid": {
+      "original": " Feature Grid ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:features:feature-slider": {
+      "original": " Feature Slider ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:features:feature-split": {
+      "original": " Feature Split ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:features:logo-strip": {
+      "original": " Logo Strip ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:heroes": {
+      "original": "Heroes",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:heroes:hero-card": {
+      "original": " Hero Card ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:heroes:hero-center": {
+      "original": " Hero Center ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:heroes:hero-split": {
+      "original": " Hero Split ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:info-blocks": {
+      "original": "Info Blocks",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:info-blocks:faq-section": {
+      "original": " FAQ Section ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:info-blocks:tabbed-content": {
+      "original": " Tabbed Content ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:info-blocks:table": {
+      "original": " Table ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:info-blocks:timeline": {
+      "original": " Timeline ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:people": {
+      "original": "People",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:people:team-grid": {
+      "original": " Team Grid ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:page-sections:people:testimonial-section": {
+      "original": " Testimonial Section ",
+      "value": null,
+      "pages": {
+        "component-docs/building-a-page-section/index.html": 1,
+        "component-docs/component-builder/index.html": 1,
+        "component-docs/customizing-your-brand/index.html": 1,
+        "component-docs/editing-a-page/index.html": 1,
+        "component-docs/editing-the-blog/index.html": 1,
+        "component-docs/getting-started/index.html": 1,
+        "component-docs/index.html": 1,
+        "component-docs/project-tour/index.html": 1,
+        "component-docs/visually-edit-components/index.html": 1
+      },
+      "total": 9
+    },
+    "nav:pricing": {
+      "original": " Pricing ",
+      "value": null,
+      "pages": {
+        "404.html": 2,
+        "about/index.html": 2,
+        "blog/2/index.html": 2,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 2,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 2,
+        "blog/index.html": 2,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 2,
+        "blog/tag/CDN/index.html": 2,
+        "blog/tag/Caching/index.html": 2,
+        "blog/tag/Downtime/index.html": 2,
+        "blog/tag/Example/index.html": 2,
+        "blog/tag/Performance/index.html": 2,
+        "blog/tag/Photons/index.html": 2,
+        "blog/tag/Prediction/index.html": 2,
+        "blog/tag/Security/index.html": 2,
+        "blog/tag/Uptime/index.html": 2,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 2,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 2,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 2,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 2,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 2,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 2,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 2,
+        "contact/index.html": 2,
+        "de/blog/index.html": 2,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "de/blog/tag/Example/index.html": 2,
+        "de/blog/tag/Performance/index.html": 2,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "fr/blog/index.html": 2,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 2,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 2,
+        "fr/blog/tag/Example/index.html": 2,
+        "fr/blog/tag/Performance/index.html": 2,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 2,
+        "index.html": 2,
+        "pricing/index.html": 2,
+        "search/index.html": 2
+      },
+      "total": 84
+    },
+    "nav:search": {
+      "original": " Search ",
+      "value": null,
+      "pages": {
+        "404.html": 1,
+        "about/index.html": 1,
+        "blog/2/index.html": 1,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 1,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 1,
+        "blog/index.html": 1,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 1,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 1,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 1,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 1,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 1,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 1,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 1,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 1,
+        "contact/index.html": 1,
+        "de/blog/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "fr/blog/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "index.html": 1,
+        "pricing/index.html": 1,
+        "search/index.html": 1
+      },
+      "total": 42
+    },
+    "pagination:aria_label": {
+      "original": "Pagination Navigation",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/index.html": 1
+      },
+      "total": 2
+    },
+    "pagination:aria_next": {
+      "original": "Go to next page",
+      "value": null,
+      "pages": {
+        "blog/index.html": 1
+      },
+      "total": 1
+    },
+    "pagination:aria_previous": {
+      "original": "Go to previous page",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1
+      },
+      "total": 1
+    },
+    "post:breadcrumb_blog": {
+      "original": "Blog",
+      "value": null,
+      "pages": {
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 1,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 1,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 1,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 1,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 1,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 1,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 1,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 1,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 1,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1
+      },
+      "total": 19
+    },
+    "post:latest_news": {
+      "original": " Latest News ",
+      "value": null,
+      "pages": {
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 1,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 1,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 1,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 1,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 1,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 1,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 1,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 1,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 1,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1
+      },
+      "total": 19
+    },
+    "post:share": {
+      "original": " \nShare this article:\n ",
+      "value": null,
+      "pages": {
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 1,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 1,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 1,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 1,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 1,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 1,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 1,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 1,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 1,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1
+      },
+      "total": 19
+    },
+    "pricing:7a77bb8e-fe69-401a-86e4-2216b8322d07:9c3edb61-c4cf-47b8-8107-eae212ca56a5:label": {
+      "original": "Email",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:7a77bb8e-fe69-401a-86e4-2216b8322d07:b23d5749-89a5-4f56-a779-c1da39033c07:label": {
+      "original": "Message",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:7a77bb8e-fe69-401a-86e4-2216b8322d07:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:7a77bb8e-fe69-401a-86e4-2216b8322d07:fd577c73-319b-4927-842d-3cd1045aa4fa:label": {
+      "original": "Name",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:7a77bb8e-fe69-401a-86e4-2216b8322d07:heading": {
+      "original": "  Need more info?<br><span class=\"highlight-text\">Contact us</span>  ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:7a77bb8e-fe69-401a-86e4-2216b8322d07:subtext": {
+      "original": "  <p>Our solutions team stands ready with answers and an appropriate level of enthusiasm.</p>\n  ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:7a77bb8e-fe69-401a-86e4-2216b8322d07:text": {
+      "original": " Send message ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:865c667b-da57-47d5-9288-6021835371cb:1171b6c3-bdbe-47e1-bf75-5b9a59d765f4:text": {
+      "original": "  <p>Approximately seven minutes for basic setup, assuming you can type reasonably fast and don't get distracted.</p>\n<p>Our onboarding process involves pointing your DNS at our nameservers and letting our automation handle the rest.</p>\n<p>For more complex migrations requiring custom configurations, our team can have you operational within 24 hours.</p>\n<p>We've timed it. Multiple times. With stopwatches.</p>\n  ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 2
+      },
+      "total": 2
+    },
+    "pricing:865c667b-da57-47d5-9288-6021835371cb:1171b6c3-bdbe-47e1-bf75-5b9a59d765f4:title": {
+      "original": "How quickly can I get started?",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:865c667b-da57-47d5-9288-6021835371cb:31154b29-6cad-4ba9-9d64-87ab542472ab:text": {
+      "original": "  <p>You can cancel anytime from your dashboard without talking to a retention specialist who's been trained to make you feel guilty.</p>\n<p>We'll continue service through the end of your billing period, provide export tools for your configuration data, and part ways professionally.</p>\n<p>Our cancellation process takes approximately 90 seconds, which our legal team insists is still too generous but our engineering team considers appropriately respectful of people's time.</p>\n  ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 2
+      },
+      "total": 2
+    },
+    "pricing:865c667b-da57-47d5-9288-6021835371cb:31154b29-6cad-4ba9-9d64-87ab542472ab:title": {
+      "original": "What if I need to cancel my service?",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:865c667b-da57-47d5-9288-6021835371cb:ecbff5cb-8457-4cf4-97ad-b5874fa08620:text": {
+      "original": "  <p>We'll send you a polite notification and continue serving your traffic without interruption, because throttling your users mid-session seems counterproductive to everyone involved.</p>\n<p>You'll be billed for overage at a reasonable per-GB rate that we've listed clearly in our documentation.</p>\n<p>If you're consistently exceeding your plan limits, we'll suggest upgrading to a tier that matches your actual usage — our billing team considers surprises a sign of poor communication.</p>\n  ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 2
+      },
+      "total": 2
+    },
+    "pricing:865c667b-da57-47d5-9288-6021835371cb:ecbff5cb-8457-4cf4-97ad-b5874fa08620:title": {
+      "original": "What happens if I exceed my bandwidth limit?",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:865c667b-da57-47d5-9288-6021835371cb:heading": {
+      "original": "  Common questions  ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:text": {
+      "original": " Custom API rate limits ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 9
+      },
+      "total": 9
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:button_text": {
+      "original": " Get started ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:subtext": {
+      "original": "  <p>For organizations that consider infrastructure a competitive advantage</p>\n  ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:title": {
+      "original": " Enterprise ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:9cf82f02-01bd-463a-8009-7b30fc5fe14e:text": {
+      "original": " Global CDN with 800+ edge nodes ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 3
+      },
+      "total": 3
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:button_text": {
+      "original": " Get started ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:price_prefix": {
+      "original": " $ ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:price_suffix": {
+      "original": " /mo ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:subtext": {
+      "original": "  <p>For organizations that need reliability</p>\n  ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:title": {
+      "original": " Standard ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:2d5ed86e-98d8-4f05-ada6-f2cdf95e69ae:text": {
+      "original": " Priority traffic routing ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 3
+      },
+      "total": 3
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:button_text": {
+      "original": " Get started ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:price_prefix": {
+      "original": " $ ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:price_suffix": {
+      "original": " /mo ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:subtext": {
+      "original": "  <p>For organizations that refuse to accept the concept of downtime</p>\n  ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:title": {
+      "original": " Team ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_100-domains": {
+      "original": " 100+ domains ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_10tb-month": {
+      "original": " 10TB/month ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_1ms-guaranteed": {
+      "original": " &lt;1ms guaranteed ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_24-7-1-hour-response": {
+      "original": " 24/7, 1-hour response ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_25-8-15-minute-response-with-dedicated-team": {
+      "original": " 25/8, 15-minute response with dedicated team ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_2ms-average": {
+      "original": " &lt;2ms average ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_50tb-month": {
+      "original": " 50TB/month ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_5ms-average": {
+      "original": " &lt;5ms average ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_847-locations": {
+      "original": " 847 locations ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_847-locations-priority-routing": {
+      "original": " 847 locations + priority routing ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_99-9": {
+      "original": " 99.9% ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_99-99": {
+      "original": " 99.99% ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_99-999-with-financial-guarantees": {
+      "original": " 99.999% with financial guarantees ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_bandwidth-included": {
+      "original": " Bandwidth included ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_business-hours-4-hour-response": {
+      "original": " Business hours, 4-hour response ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_custom-allocation": {
+      "original": " Custom allocation ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_custom-certificates-and-private-ca-integration": {
+      "original": " Custom certificates and private CA integration ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_custom-dedicated-nodes": {
+      "original": " Custom dedicated nodes ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_custom-mitigation": {
+      "original": " Custom mitigation ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_ddos-protection": {
+      "original": " DDoS protection ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_dns-query-response-time": {
+      "original": " DNS query response time ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_global-edge-nodes": {
+      "original": " Global edge nodes ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_ssl-certificate-management": {
+      "original": " SSL certificate management ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_support-availability": {
+      "original": " Support availability ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_unlimited-domains": {
+      "original": " Unlimited domains ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_up-to-10tbps": {
+      "original": " Up to 10Tbps ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_up-to-50tbps": {
+      "original": " Up to 50Tbps ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:cell_uptime-sla": {
+      "original": " Uptime SLA ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:header_enterprise": {
+      "original": " Enterprise ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:header_standard": {
+      "original": " Standard ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:header_team": {
+      "original": " Team ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:heading": {
+      "original": "  Compare plan features  ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:section_performance-and-delivery": {
+      "original": " Performance and delivery ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:b48c3b76-96a6-4e86-85a8-bf7e3b5f117c:section_security-and-reliability": {
+      "original": " Security and reliability ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 2
+      },
+      "total": 2
+    },
+    "pricing:c791a404-7d89-4f00-a61a-33d122370996:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:c791a404-7d89-4f00-a61a-33d122370996:heading": {
+      "original": "  Pricing designed<br>by <span class=\"highlight-text\">engineers</span><br>who know value  ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:c791a404-7d89-4f00-a61a-33d122370996:subtext": {
+      "original": "  <p>We’ve eliminated the confusion typically associated with infrastructure pricing <br>through a strategy we call \"being straightforward about what things cost.\"</p>\n  ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:c791a404-7d89-4f00-a61a-33d122370996:text": {
+      "original": " Book a demo ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:page_description": {
+      "original": "A polished, high-performance marketing website template for Astro, with visual editing and multilingual translation on CloudCannon.",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:page_title": {
+      "original": "Pricing | Jetstream Astro Template for CloudCannon",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "search:f1870518-3c20-4273-af16-bb3f5700e704:filter_blog": {
+      "original": " Blog ",
+      "value": null,
+      "pages": {
+        "search/index.html": 1
+      },
+      "total": 1
+    },
+    "search:f1870518-3c20-4273-af16-bb3f5700e704:filter_by_type": {
+      "original": "Filter results by type",
+      "value": null,
+      "pages": {
+        "search/index.html": 1
+      },
+      "total": 1
+    },
+    "search:f1870518-3c20-4273-af16-bb3f5700e704:filter_website-all": {
+      "original": " Website (All) ",
+      "value": null,
+      "pages": {
+        "search/index.html": 1
+      },
+      "total": 1
+    },
+    "search:f1870518-3c20-4273-af16-bb3f5700e704:heading": {
+      "original": "  How can we help?  ",
+      "value": null,
+      "pages": {
+        "search/index.html": 1
+      },
+      "total": 1
+    },
+    "search:f1870518-3c20-4273-af16-bb3f5700e704:load_more": {
+      "original": " Load more results ",
+      "value": null,
+      "pages": {
+        "search/index.html": 1
+      },
+      "total": 1
+    },
+    "search:f1870518-3c20-4273-af16-bb3f5700e704:placeholder": {
+      "original": "Search",
+      "value": null,
+      "pages": {
+        "search/index.html": 1
+      },
+      "total": 1
+    },
+    "search:f1870518-3c20-4273-af16-bb3f5700e704:search_label": {
+      "original": " Search ",
+      "value": null,
+      "pages": {
+        "search/index.html": 1
+      },
+      "total": 1
+    },
+    "search:f1870518-3c20-4273-af16-bb3f5700e704:submit_text": {
+      "original": " Search ",
+      "value": null,
+      "pages": {
+        "search/index.html": 1
+      },
+      "total": 1
+    },
+    "search:f1870518-3c20-4273-af16-bb3f5700e704:subtext": {
+      "original": "  <p>Deep dives into infrastructure, operational excellence, and the future of the edge-first web.</p>\n  ",
+      "value": null,
+      "pages": {
+        "search/index.html": 1
+      },
+      "total": 1
+    },
+    "search:page_description": {
+      "original": "Static Pagefind search across pages and posts—filter by type with no backend.",
+      "value": null,
+      "pages": {
+        "search/index.html": 1
+      },
+      "total": 1
+    },
+    "search:page_title": {
+      "original": "Search | Jetstream Astro Template for CloudCannon",
+      "value": null,
+      "pages": {
+        "search/index.html": 1
+      },
+      "total": 1
+    },
+    "tag_page_description": {
+      "original": "Read our latest articles and insights on web development, design, and technology.",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 13
+    },
+    "tag_page_titles:caching": {
+      "original": "Blog - Caching | Jetstream Astro Template for CloudCannon",
+      "value": null,
+      "pages": {
+        "blog/tag/Caching/index.html": 1
+      },
+      "total": 1
+    },
+    "tag_page_titles:cdn": {
+      "original": "Blog - CDN | Jetstream Astro Template for CloudCannon",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1
+      },
+      "total": 1
+    },
+    "tag_page_titles:downtime": {
+      "original": "Blog - Downtime | Jetstream Astro Template for CloudCannon",
+      "value": null,
+      "pages": {
+        "blog/tag/Downtime/index.html": 1
+      },
+      "total": 1
+    },
+    "tag_page_titles:example": {
+      "original": "Blog - Example | Jetstream Astro Template for CloudCannon",
+      "value": null,
+      "pages": {
+        "blog/tag/Example/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1
+      },
+      "total": 3
+    },
+    "tag_page_titles:performance": {
+      "original": "Blog - Performance | Jetstream Astro Template for CloudCannon",
+      "value": null,
+      "pages": {
+        "blog/tag/Performance/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 3
+    },
+    "tag_page_titles:photons": {
+      "original": "Blog - Photons | Jetstream Astro Template for CloudCannon",
+      "value": null,
+      "pages": {
+        "blog/tag/Photons/index.html": 1
+      },
+      "total": 1
+    },
+    "tag_page_titles:prediction": {
+      "original": "Blog - Prediction | Jetstream Astro Template for CloudCannon",
+      "value": null,
+      "pages": {
+        "blog/tag/Prediction/index.html": 1
+      },
+      "total": 1
+    },
+    "tag_page_titles:security": {
+      "original": "Blog - Security | Jetstream Astro Template for CloudCannon",
+      "value": null,
+      "pages": {
+        "blog/tag/Security/index.html": 1
+      },
+      "total": 1
+    },
+    "tag_page_titles:uptime": {
+      "original": "Blog - Uptime | Jetstream Astro Template for CloudCannon",
+      "value": null,
+      "pages": {
+        "blog/tag/Uptime/index.html": 1
+      },
+      "total": 1
+    },
+    "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:card_heading": {
+      "original": "  Why we rebuilt our DNS resolver from scratch (<span class=\"highlight-text\">again</span>)  ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 13
+    },
+    "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:card_subtext": {
+      "original": "  <p>Sometimes good enough isn't good enough, especially when our engineers have strong opinions about query optimization.</p>\n  ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 13
+    },
+    "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:heading": {
+      "original": "  The engineering journal  ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 13
+    },
+    "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:subtext": {
+      "original": "  <p>Insights, updates, and occasional technical deep-dives from the team that keeps the internet running.</p>\n  ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 5,
+        "blog/tag/Caching/index.html": 5,
+        "blog/tag/Downtime/index.html": 5,
+        "blog/tag/Example/index.html": 5,
+        "blog/tag/Performance/index.html": 5,
+        "blog/tag/Photons/index.html": 5,
+        "blog/tag/Prediction/index.html": 5,
+        "blog/tag/Security/index.html": 5,
+        "blog/tag/Uptime/index.html": 5,
+        "de/blog/tag/Example/index.html": 5,
+        "de/blog/tag/Performance/index.html": 5,
+        "fr/blog/tag/Example/index.html": 5,
+        "fr/blog/tag/Performance/index.html": 5
+      },
+      "total": 65
+    },
+    "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:suffix": {
+      "original": " ms ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 3,
+        "blog/tag/Caching/index.html": 3,
+        "blog/tag/Downtime/index.html": 3,
+        "blog/tag/Example/index.html": 3,
+        "blog/tag/Performance/index.html": 3,
+        "blog/tag/Photons/index.html": 3,
+        "blog/tag/Prediction/index.html": 3,
+        "blog/tag/Security/index.html": 3,
+        "blog/tag/Uptime/index.html": 3,
+        "de/blog/tag/Example/index.html": 3,
+        "de/blog/tag/Performance/index.html": 3,
+        "fr/blog/tag/Example/index.html": 3,
+        "fr/blog/tag/Performance/index.html": 3
+      },
+      "total": 39
+    },
+    "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:text": {
+      "original": " Learn why we did it ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 13
+    },
+    "tags:7db52143-7dee-4ca3-9015-4531e5614fc9:eyebrowText": {
+      "original": "  ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 13
+    },
+    "tags:7db52143-7dee-4ca3-9015-4531e5614fc9:heading": {
+      "original": "  Let's build your next tech breakthough together  ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 13
+    },
+    "tags:7db52143-7dee-4ca3-9015-4531e5614fc9:text": {
+      "original": " Or talk to us about fiber optics instead ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 13
+    },
+    "tags:all": {
+      "original": " All ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 17
+    },
+    "tags:caching": {
+      "original": " Caching ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 1,
+        "blog/index.html": 2,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 2,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1
+      },
+      "total": 14
+    },
+    "tags:cdn": {
+      "original": " CDN ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 2,
+        "blog/index.html": 1,
+        "blog/tag/CDN/index.html": 2,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 1
+      },
+      "total": 14
+    },
+    "tags:downtime": {
+      "original": " Downtime ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 2,
+        "blog/index.html": 1,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 2,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 1
+      },
+      "total": 14
+    },
+    "tags:example": {
+      "original": " Example ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/index.html": 3,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 3,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/index.html": 3,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "de/blog/tag/Example/index.html": 3,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/index.html": 3,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "fr/blog/tag/Example/index.html": 3,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 35
+    },
+    "tags:performance": {
+      "original": " Performance ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/index.html": 5,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 5,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 1,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 1,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 1,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "de/blog/index.html": 2,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 2,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "fr/blog/index.html": 2,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 2,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1
+      },
+      "total": 35
+    },
+    "tags:photons": {
+      "original": " Photons ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 2,
+        "blog/index.html": 1,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 2,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 1
+      },
+      "total": 14
+    },
+    "tags:prediction": {
+      "original": " Prediction ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 2,
+        "blog/index.html": 1,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 2,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 1
+      },
+      "total": 14
+    },
+    "tags:security": {
+      "original": "Security",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/index.html": 2,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 1,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 2,
+        "blog/tag/Uptime/index.html": 1
+      },
+      "total": 14
+    },
+    "tags:uptime": {
+      "original": "Uptime",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 2,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 1,
+        "blog/index.html": 1,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 2
+      },
+      "total": 14
+    },
+    "ui:theme_toggle": {
+      "original": "Toggle dark mode",
+      "value": null,
+      "pages": {
+        "404.html": 1,
+        "about/index.html": 1,
+        "blog/2/index.html": 1,
+        "blog/five-signs-your-cdn-is-lying-to-you-about-cache-hit-rates/index.html": 1,
+        "blog/how-we-achieve-99-999-uptime-redundancy-paranoia-and-spite/index.html": 1,
+        "blog/index.html": 1,
+        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "blog/ssl-certificates-a-love-story-about-automation-and-trust/index.html": 1,
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "blog/the-great-ddos-attack-of-last-tuesday-a-postmortem/index.html": 1,
+        "blog/the-meeting-where-we-decided-downtime-was-optional/index.html": 1,
+        "blog/we-added-47-edge-nodes-last-month-and-nobody-noticed/index.html": 1,
+        "blog/what-happened-when-an-entire-country-tried-to-stream-the-same-thing/index.html": 1,
+        "blog/what-happens-when-you-ping-our-network-10-billion-times/index.html": 1,
+        "blog/why-our-engineers-get-excited-about-fiber-optic-cables/index.html": 1,
+        "blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "blog/your-traffic-patterns-are-more-predictable-than-you-think/index.html": 1,
+        "component-docs/building-a-page-section/index.html": 2,
+        "component-docs/component-builder/index.html": 2,
+        "component-docs/customizing-your-brand/index.html": 2,
+        "component-docs/editing-a-page/index.html": 2,
+        "component-docs/editing-the-blog/index.html": 2,
+        "component-docs/getting-started/index.html": 2,
+        "component-docs/index.html": 2,
+        "component-docs/project-tour/index.html": 2,
+        "component-docs/visually-edit-components/index.html": 2,
+        "contact/index.html": 1,
+        "de/blog/index.html": 1,
+        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "de/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "de/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "fr/blog/index.html": 1,
+        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
+        "fr/blog/sample-blog-post-with-all-markdown-styling-options/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1,
+        "fr/blog/why-we-rebuilt-our-dns-resolver-from-scratch-again/index.html": 1,
+        "index.html": 1,
+        "pricing/index.html": 1,
+        "search/index.html": 1
+      },
+      "total": 60
+    }
+  }
+}

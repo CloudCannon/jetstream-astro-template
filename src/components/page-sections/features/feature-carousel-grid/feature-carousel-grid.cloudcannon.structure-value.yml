@@ -3,6 +3,7 @@ icon: view_carousel
 description: Carousel bento box grid of cards to display features.
 value:
   _component: page-sections/features/feature-carousel-grid
+  _uuid:
   id:
   eyebrowIcon: {}
   eyebrowText: Eyebrow text
@@ -25,6 +26,7 @@ _structures:
       - label: Slide
         value:
           _component: page-sections/features/feature-carousel-grid/feature-carousel-slide
+          _uuid:
           cards: []
         preview:
           icon: space_dashboard
@@ -36,6 +38,7 @@ _structures:
                 - label: Card
                   value:
                     _component: page-sections/features/feature-carousel-grid/feature-carousel-card
+                    _uuid:
                     decorative: false
                     style: surface-linear-gradient
                     eyebrowIcon: {}

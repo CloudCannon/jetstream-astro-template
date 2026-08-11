@@ -15,12 +15,14 @@ const {
   backgroundColor,
   background,
   class: className,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
 ---
 
 <CustomSection
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
   class:list={["faq-section", className]}
   label={sectionLabel}

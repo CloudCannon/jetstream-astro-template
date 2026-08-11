@@ -10,6 +10,7 @@ const {
   useDefaultEditableBinding = false,
   class: className,
   label,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -17,7 +18,12 @@ const {
 const effectiveChildrenProp =
   childrenDataProp ?? (useDefaultEditableBinding ? "buttonSections" : null);
 const arrayDataAttributes = effectiveChildrenProp
-  ? { "data-editable": "array", "data-prop": effectiveChildrenProp }
+  ? {
+      "data-editable": "array",
+      "data-prop": effectiveChildrenProp,
+      "data-component-key": "_component",
+      "data-id-key": "_uuid",
+    }
   : {};
 
 if (!htmlAttributes.id && label) {

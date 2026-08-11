@@ -2,7 +2,7 @@
   "_schema": "seo",
   "name": "Jetstream Astro Template for CloudCannon",
   "url": "https://example.com",
-  "description": "",
+  "description": "A polished, high-performance marketing website template for Astro, with visual editing and multilingual translation on CloudCannon.",
   "logoSource": "/images/logo.svg",
   "titleFormat": "{title} | Jetstream Astro Template for CloudCannon",
   "twitterHandle": "@yourusername"

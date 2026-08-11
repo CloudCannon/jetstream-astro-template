@@ -3,9 +3,11 @@ icon: rectangle
 description: Arranges buttons side by side with consistent spacing.
 value:
   _component: building-blocks/wrappers/button-group
+  _uuid:
   label: null
   buttonSections:
     - _component: building-blocks/core-elements/button
+      _uuid:
       text: My Button
       hideText: false
       link: ""

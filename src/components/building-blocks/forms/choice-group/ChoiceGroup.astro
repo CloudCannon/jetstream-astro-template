@@ -1,4 +1,6 @@
 ---
+import { slugifyLabel } from "@component-utils/slugify";
+
 const {
   name,
   options = [],
@@ -8,6 +10,7 @@ const {
   multiple = false,
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -20,14 +23,22 @@ const inputName = multiple ? `${name}[]` : name;
   class:list={["choice-group", className]}
   {...htmlAttributes}
 >
+  {
+    /* htmlAttributes carries the caller's data-editable/data-component. CloudCannon's
+      re-render replaces this element's children with a fresh copy of the component, so
+      data-rosey-ns has to sit strictly inside it — on the root it would be re-emitted by
+      the copy, doubling the namespace on every key below. */
+  }
   <fieldset
     class="choice-group-fieldset"
     role={multiple ? "group" : "radiogroup"}
+    data-rosey-ns={_uuid}
   >
     {
       title && (
         <legend class="legend">
-          {title}
+          {/* Key on the span, not the <legend> — the required marker is a non-text child. */}
+          <span data-rosey="title">{title}</span>
           {required && (
             <span
               class="choice-group-required"
@@ -54,7 +65,13 @@ const inputName = multiple ? `${name}[]` : name;
               aria-required={required && index === 0}
               class="choice-group-field"
             />
-            <span class="choice-group-label-text">{option.label}</span>
+            {/* Options are bare {value, label} pairs with no _uuid, so the label is the key. */}
+            <span
+              class="choice-group-label-text"
+              data-rosey={option.label ? `option_${slugifyLabel(option.label)}` : undefined}
+            >
+              {option.label}
+            </span>
           </label>
         ))
       }

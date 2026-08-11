@@ -3,6 +3,7 @@ icon: people
 description: Grid layout for showcasing team members.
 value:
   _component: page-sections/people/team-grid
+  _uuid:
   id:
   eyebrowIcon: {}
   eyebrowText: Our team
@@ -221,6 +222,7 @@ _structures:
         icon: person
         value:
           _component: page-sections/people/team-grid/team-item
+          _uuid:
           name: Team member name
           role: Job title
           imageSource: /src/assets/images/component-docs/profile.jpg

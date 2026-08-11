@@ -1,0 +1,386 @@
+---
+import {
+  blogCollectionFor,
+  dateLocaleFor,
+  localeCodes,
+  type Locale,
+} from "@component-utils/locales";
+import { mdxComponents } from "@component-utils/mdxComponents";
+import { slugifyLabel } from "@component-utils/slugify";
+import Button from "@core-elements/button/Button.astro";
+import Counter from "@core-elements/counter/Counter.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import SimpleText from "@core-elements/simple-text/SimpleText.astro";
+import Page from "@layouts/Page.astro";
+import CustomSection from "@page-sections/builders/custom-section/CustomSection.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+import Card from "@wrappers/card/Card.astro";
+import Split from "@wrappers/split/Split.astro";
+import { getCollection, render } from "astro:content";
+
+import "@styles/blog-post.css";
+
+export async function getStaticPaths() {
+  const paths = [];
+
+  for (const locale of localeCodes) {
+    const posts = await getCollection(blogCollectionFor(locale));
+
+    for (const post of posts) {
+      const slug = post.id?.replace(/\.mdx?$/, "") || post.slug;
+
+      paths.push({
+        // locale in props too — params don't reach Astro.props, so links read /undefined/.
+        params: { locale, slug },
+        props: { post, locale },
+      });
+    }
+  }
+
+  return paths;
+}
+
+interface Props {
+  post: any;
+  locale: Locale;
+}
+
+const { post, locale } = Astro.props as Props;
+const slug = post.id?.replace(/\.mdx?$/, "") || post.slug;
+const { Content } = await render(post);
+const date = post.data.date.toLocaleDateString(dateLocaleFor(locale), {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+
+// This locale's collection only, so the sidebar never links to an untranslated post.
+const allPosts = await getCollection(blogCollectionFor(locale));
+const recentPosts = allPosts
+  .filter((p) => p.id !== post.id)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 3);
+
+const team = await getCollection("team");
+const author = team.find((m: any) => m.data.uuid === post.data.author);
+---
+
+<!-- roseyRoot must be the English path, not this page's URL, or the shared chrome mints a
+     duplicate `fr/blog/x:…` key set. No switcher: the body is translated in the file. -->
+<Page
+  title={post.data.title}
+  description={post.data.description}
+  image={post.data.image}
+  roseyRoot={`blog/${slug}`}
+  hideLocaleSwitcher
+>
+  <CustomSection
+    class:list={["hero-feature"]}
+    maxContentWidth="2xl"
+    paddingHorizontal="lg"
+    paddingVertical="4xl"
+    colorScheme="light"
+    backgroundColor="highlight-grid"
+    contentBackground="true"
+    verticalOffset={{
+      size: "nav-height",
+      direction: "back",
+    }}
+  >
+    <Split
+      distributionMode="half"
+      gap="lg"
+    >
+      <Fragment slot="first">
+        {/* Already in this language — it comes from the locale's content file. */}
+        <Heading
+          level="h1"
+          size="2xl"
+          alignmentHorizontal="left"
+          class="heading"
+          data-prop="title"
+          text={post.data.title}
+          data-rosey={false}
+        />
+        <p
+          class="breadcrumb"
+          data-rosey-root="post"
+        >
+          <a
+            href={`/${locale}/blog/`}
+            class="blog-link"
+            data-rosey="breadcrumb_blog"
+            >Blog</a
+          > / <a
+            href={`/${locale}/blog/tag/${post.data.tag}`}
+            class="tag"
+            data-rosey-root="tags"
+            ><span
+              data-editable="text"
+              data-prop="tag"
+              data-rosey={slugifyLabel(post.data.tag ?? "")}
+              >{post.data.tag}</span
+            ></a
+          >
+        </p>
+      </Fragment>
+      <Fragment slot="second">
+        <SimpleText
+          alignmentHorizontal="left"
+          class="description"
+          data-prop="description"
+          data-rosey={false}
+        >
+          {post.data.description}
+        </SimpleText>
+        <p class="author">
+          By {author?.data.name || "Anonymous"} | {date}
+        </p>
+      </Fragment>
+    </Split>
+    {
+      post.data?.counters?.length > 0 ? (
+        <Split
+          distributionMode="three-quarters-quarter"
+          gap="lg"
+        >
+          <div
+            class="hero-image"
+            slot="first"
+          >
+            <Image
+              source={post.data.image}
+              alt={post.data.image_alt}
+              rounded={true}
+              data-prop-src="image"
+              data-prop-alt="image_alt"
+            />
+          </div>
+          <div
+            class="counters"
+            slot="second"
+            data-editable="array"
+            data-prop="counters"
+          >
+            {post.data?.counters?.map((counter: any) => (
+              <div
+                class="counter-container"
+                data-editable="array-item"
+              >
+                <editable-component
+                  data-prop="counter"
+                  data-component="building-blocks/core-elements/counter"
+                >
+                  <Counter
+                    {...counter.counter}
+                    data-rosey-prefix={false}
+                    data-rosey-suffix={false}
+                  />
+                </editable-component>
+                <SimpleText
+                  text={counter.subtext}
+                  alignmentHorizontal="left"
+                  data-prop={`subtext`}
+                  data-rosey={false}
+                />
+              </div>
+            ))}
+          </div>
+        </Split>
+      ) : (
+        <div class="hero-image">
+          <Image
+            source={post.data.image}
+            alt={post.data.image_alt}
+            rounded={true}
+            data-prop-src="image"
+            data-prop-alt="image_alt"
+          />
+        </div>
+      )
+    }
+  </CustomSection>
+  <CustomSection
+    maxContentWidth="2xl"
+    paddingHorizontal="lg"
+    paddingVertical="4xl"
+    colorScheme="light"
+    backgroundColor="base"
+    class="post-container"
+  >
+    <Split
+      distributionMode="three-quarters-quarter"
+      gap="xl"
+      class="post-layout"
+    >
+      <div
+        class="post"
+        slot="first"
+      >
+        <editable-text data-prop="@content">
+          <Content components={mdxComponents} />
+        </editable-text>
+
+        {
+          author && (
+            <Card
+              rounded={true}
+              border={false}
+              backgroundColor="accent"
+              paddingVertical="md"
+              paddingHorizontal="md"
+              editable={false}
+              class="author-card"
+            >
+              <Split
+                distributionMode="fixed-flexible"
+                fixedWidth="66"
+                minSplitWidth="200"
+                gap="md"
+              >
+                <Image
+                  slot="first"
+                  source={author.data.imageSource}
+                  alt={author.data.name}
+                  aspectRatio="square"
+                  rounded={true}
+                  editable={false}
+                  style="border-radius: var(--radius-full);"
+                />
+                <div slot="second">
+                  <Heading
+                    level="h3"
+                    size="sm"
+                    style="margin-bottom: var(--spacing-md); margin-top: 0;"
+                    editable={false}
+                  >
+                    {author.data.name}
+                  </Heading>
+                  <SimpleText
+                    size="sm"
+                    style="margin-top: 0; color: var(--color-text-muted); font-weight: var(--font-weight-bold);"
+                    editable={false}
+                  >
+                    {author.data.role}
+                  </SimpleText>
+                </div>
+              </Split>
+            </Card>
+          )
+        }
+
+        <div class="share-section">
+          {/* Source-edited on the English route only — one string, one place. */}
+          <SimpleText
+            size="md"
+            class="share-section-text"
+            style="font-weight: var(--font-weight-bold); margin: 0px;"
+            data-rosey-root="post"
+            data-rosey="share"
+          >
+            Share this article:
+          </SimpleText>
+          <ButtonGroup style="margin: 0px;">
+            <Button
+              link={`mailto:?subject=${post.data.title}&body=Check out this article: ${Astro.url}`}
+              variant="secondary"
+              size="lg"
+              iconName="envelope"
+              hideText={true}
+              text="Share via Email"
+              style="border-radius: var(--radius-full);"
+            />
+            <Button
+              variant="secondary"
+              size="lg"
+              iconName="link"
+              hideText={true}
+              text="Copy link"
+              class="copy-link-btn"
+              style="border-radius: var(--radius-full);"
+            />
+          </ButtonGroup>
+        </div>
+      </div>
+      <div
+        class="sidebar"
+        slot="second"
+      >
+        <SimpleText
+          size="sm"
+          class="sidebar-title"
+          style="border-bottom: 2px solid var(--color-border-subtle); color: var(--color-text-brand); font-weight: var(--font-weight-bold); margin-top: var(--spacing-md);"
+          data-rosey-root="post"
+          data-rosey="latest_news"
+          >Latest News</SimpleText
+        >
+        {
+          recentPosts.map((recentPost) => {
+            const recentSlug = recentPost.id?.replace(/\.mdx?$/, "") || recentPost.slug;
+            const postDate = recentPost.data.date.toLocaleDateString(dateLocaleFor(locale), {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            });
+            const recentAuthor = team.find((m: any) => m.data.uuid === recentPost.data.author);
+
+            return (
+              <Card
+                link={`/${locale}/blog/${recentSlug}`}
+                rounded={true}
+                border={false}
+                backgroundColor="accent"
+                paddingVertical="sm"
+                paddingHorizontal="sm"
+                editable={false}
+              >
+                <Image
+                  source={recentPost.data.image}
+                  alt={recentPost.data.title}
+                  aspectRatio="landscape"
+                  editable={false}
+                  rounded={true}
+                  style="max-height: 150px; width: 100%;"
+                />
+                <SimpleText
+                  size="xs"
+                  style="color: var(--color-text-brand); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-xs); margin-top: var(--spacing-sm);"
+                  editable={false}
+                >
+                  {recentPost.data.tag}
+                </SimpleText>
+                <Heading
+                  level="h3"
+                  size="xs"
+                  style="margin-bottom: var(--spacing-xs); margin-top: 0;"
+                  editable={false}
+                >
+                  {recentPost.data.title}
+                </Heading>
+                <SimpleText
+                  size="sm"
+                  style="color: var(--color-text-muted); margin-top: 0; font-weight: var(--font-weight-bold);"
+                  editable={false}
+                >
+                  By {recentAuthor?.data.name || "Anonymous"} | {postDate}
+                </SimpleText>
+              </Card>
+            );
+          })
+        }
+      </div>
+    </Split>
+  </CustomSection>
+</Page>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const copyBtn = document.querySelector(".copy-link-btn");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText(window.location.href);
+      });
+    }
+  });
+</script>

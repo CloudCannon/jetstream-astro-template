@@ -3,6 +3,7 @@ icon: grid_on
 description: Arranges content into a grid that adapts to screen size.
 value:
   _component: building-blocks/wrappers/grid
+  _uuid:
   label: ""
   layout: center
   minItemWidth: 280

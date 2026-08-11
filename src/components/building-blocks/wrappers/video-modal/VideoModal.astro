@@ -15,6 +15,7 @@ const {
   size = "lg",
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -43,6 +44,7 @@ if (!_component && !hasVideo) return;
   size={size}
   class:list={["video-modal", className]}
   _component={_component}
+  _uuid={_uuid}
   data-video-type={type}
   data-video-id={videoId}
   data-video-title={title}

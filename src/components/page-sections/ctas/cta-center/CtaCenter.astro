@@ -20,6 +20,7 @@ const {
   paddingVertical = "4xl",
   class: className,
   rounded = false,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -38,6 +39,7 @@ const {
   rounded={false}
   style={`--max-width: var(--content-width-${maxContentWidth})`}
   id={id}
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <Icon {...eyebrowIcon} />

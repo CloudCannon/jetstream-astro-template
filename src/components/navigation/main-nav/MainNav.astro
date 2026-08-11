@@ -1,6 +1,7 @@
 ---
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Bar from "@components/navigation/bar/Bar.astro";
+import LocalePicker from "@components/navigation/locale-picker/LocalePicker.astro";
 import Mobile from "@components/navigation/mobile/Mobile.astro";
 import ThemeToggle from "@components/navigation/theme-toggle/ThemeToggle.astro";
 import Image from "@core-elements/image/Image.astro";
@@ -62,10 +63,13 @@ const mobileNavData = [
   <div class="nav-end">
     <Bar
       navData={navData}
+      roseyNs="nav"
       class="desktop-main-nav"
     />
 
     {themeToggle && <ThemeToggle />}
+    <LocalePicker class="desktop-locale-picker" />
+
     <ButtonGroup
       direction="row"
       align="center"

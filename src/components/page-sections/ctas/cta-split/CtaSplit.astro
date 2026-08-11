@@ -21,6 +21,7 @@ const {
   colorScheme = "inherit",
   backgroundColor,
   class: className,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -36,6 +37,7 @@ const {
   backgroundColor={backgroundColor}
   rounded={rounded}
   id={id}
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <Split

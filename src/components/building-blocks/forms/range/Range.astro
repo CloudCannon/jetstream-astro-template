@@ -11,6 +11,7 @@ const {
   id: customId,
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -27,11 +28,15 @@ const initialPct = ((defaultValue - min) / (max - min)) * 100;
   {
     label && (
       <div class="range-header">
+        {/* htmlAttributes sits on the root, so the namespace goes inside it — on the
+            root CloudCannon's re-render would emit it twice. */}
         <label
           for={fieldId}
           class="label"
+          data-rosey-ns={_uuid}
         >
-          {label}
+          {/* Key on the span, not the <label> — the required marker is a non-text child. */}
+          <span data-rosey="label">{label}</span>
           {required && (
             <span
               class="range-required"

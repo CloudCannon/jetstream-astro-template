@@ -11,6 +11,7 @@ const {
   label,
   useDefaultEditableBinding = false,
   "data-children-prop": childrenDataProp,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -25,7 +26,12 @@ const accordionName = singleOpen ? `accordion-${crypto.randomUUID()}` : undefine
 
 const effectiveChildrenProp = childrenDataProp ?? (useDefaultEditableBinding ? "items" : null);
 const arrayDataAttributes = effectiveChildrenProp
-  ? { "data-editable": "array", "data-prop": effectiveChildrenProp }
+  ? {
+      "data-editable": "array",
+      "data-prop": effectiveChildrenProp,
+      "data-component-key": "_component",
+      "data-id-key": "_uuid",
+    }
   : {};
 
 const hasItems = items?.length > 0;
@@ -50,7 +56,8 @@ if (!_component && !hasItems && !hasSlotContent) return;
               accordionName={accordionName}
               useDefaultEditableBinding={!!effectiveChildrenProp}
               data-editable="array-item"
-              data-id="building-blocks/wrappers/accordion/accordion-item"
+              data-component="building-blocks/wrappers/accordion/accordion-item"
+              data-id={item._uuid ?? "building-blocks/wrappers/accordion/accordion-item"}
               {...item}
             />
           );

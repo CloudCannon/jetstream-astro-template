@@ -4,9 +4,11 @@ faqItems:
       icon: help_outline
       value:
         _component: building-blocks/wrappers/accordion/accordion-item
+        _uuid:
         title: Question text
         contentSections:
           - _component: building-blocks/core-elements/text
+            _uuid:
             text: Answer text goes here.
       preview:
         text:

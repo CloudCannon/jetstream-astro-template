@@ -6,6 +6,7 @@ description: >-
   Static Pagefind search across pages and posts—filter by type with no backend.
 pageSections:
   - _component: page-sections/search/search-section
+    _uuid: f1870518-3c20-4273-af16-bb3f5700e704
     id:
     heading: How can we help?
     headingSize: 2xl

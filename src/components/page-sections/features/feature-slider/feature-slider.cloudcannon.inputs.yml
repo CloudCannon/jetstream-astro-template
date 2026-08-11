@@ -5,8 +5,14 @@ heading:
   type: text
   comment: Main heading for the slider section.
 subtext:
-  type: textarea
+  # markdown, not textarea: rendered through <Text> as block HTML, and a plain input
+  # would make CloudCannon store the raw source, flagging the Rosey key stale forever.
+  type: markdown
   comment: Supporting copy beneath the heading.
+  options:
+    bold: true
+    italic: true
+    link: true
 slides:
   type: array
   label: Slides

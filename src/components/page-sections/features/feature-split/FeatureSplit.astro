@@ -26,6 +26,7 @@ const {
   paddingVertical = "4xl",
   rounded = false,
   class: className,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -45,6 +46,7 @@ const featureSplitId = `feature-split-${crypto.randomUUID()}`;
   rounded={rounded}
   data-feature-split-id={featureSplitId}
   id={id}
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <Split

@@ -14,6 +14,7 @@ const {
   label,
   gap = "md",
   useDefaultEditableBinding = false,
+  _uuid,
   _component,
   "data-children-prop": childrenDataProp,
   ...htmlAttributes
@@ -34,7 +35,13 @@ const gridStyles = [
 
 const effectiveChildrenProp = childrenDataProp ?? (useDefaultEditableBinding ? "items" : null);
 const arrayDataAttributes = effectiveChildrenProp
-  ? { "data-editable": "array", "data-prop": effectiveChildrenProp, "data-direction": "row" }
+  ? {
+      "data-editable": "array",
+      "data-prop": effectiveChildrenProp,
+      "data-direction": "row",
+      "data-component-key": "_component",
+      "data-id-key": "_uuid",
+    }
   : {};
 
 const hasItems = items?.length > 0;
@@ -56,7 +63,8 @@ if (!_component && !hasItems && !hasSlotContent) return;
       {
         items?.map((item: ItemProps) => (
           <GridItem
-            data-id="building-blocks/wrappers/grid/grid-item"
+            data-component="building-blocks/wrappers/grid/grid-item"
+            data-id={item._uuid ?? "building-blocks/wrappers/grid/grid-item"}
             data-editable="array-item"
             class:list={`layout-${layout}`}
             useDefaultEditableBinding={!!effectiveChildrenProp}

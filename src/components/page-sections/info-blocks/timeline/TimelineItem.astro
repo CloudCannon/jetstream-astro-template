@@ -1,0 +1,78 @@
+---
+import Heading from "@core-elements/heading/Heading.astro";
+import Icon from "@core-elements/icon/Icon.astro";
+import Text from "@core-elements/text/Text.astro";
+import Card from "@wrappers/card/Card.astro";
+
+// Extracted from Timeline so each item owns its own namespace. Inline in the parent
+// loop, the props were index-based (`items.0.heading`), which made every key move
+// when an editor inserted or reordered an item.
+const {
+  icon = { name: "", color: "" },
+  date = "",
+  heading = "",
+  text = "",
+  useDefaultEditableBinding = false,
+  class: className,
+  _uuid,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<div
+  class:list={["timeline-item", className]}
+  data-rosey-ns={_uuid}
+  {...htmlAttributes}
+>
+  <div class="timeline-marker">
+    <Icon
+      name={icon?.name}
+      size="md"
+      color={icon?.color}
+      background={true}
+      iconOffset={true}
+    />
+  </div>
+  <Card
+    class="timeline-card"
+    paddingHorizontal="lg"
+    paddingVertical="xs"
+    rounded={false}
+    border={false}
+    backgroundColor=""
+  >
+    <div class="timeline-content">
+      {
+        date && (
+          <Text
+            class="timeline-date"
+            text={date}
+            alignmentHorizontal="start"
+            data-prop={useDefaultEditableBinding ? "date" : undefined}
+          />
+        )
+      }
+      {
+        heading && (
+          <Heading
+            level="h3"
+            size="md"
+            alignmentHorizontal="start"
+            text={heading}
+            data-prop={useDefaultEditableBinding ? "heading" : undefined}
+          />
+        )
+      }
+      {
+        text && (
+          <Text
+            text={text}
+            alignmentHorizontal="start"
+            data-prop={useDefaultEditableBinding ? "text" : undefined}
+          />
+        )
+      }
+    </div>
+  </Card>
+</div>

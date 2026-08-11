@@ -18,10 +18,16 @@ const page = pageData?.data || {
 <Page
   title={page.title}
   description={page.description}
+  roseySeo
 >
+  {
+    /* The CTA is a single object in 404.md, not an array item, so there is no _uuid to
+      namespace it with — a literal segment does the job. */
+  }
   <section
     class="custom-section cta-center cta-center-rounded"
     style="--max-width: var(--content-width-xl)"
+    data-rosey-ns="cta"
   >
     <div
       class="outer-content"
@@ -46,7 +52,9 @@ const page = pageData?.data || {
             <span
               class="simple-text-inner"
               data-editable="text"
+              data-type="text"
               data-prop="cta.eyebrowText"
+              data-rosey="eyebrowText"
               data-astro-cid-523qj64f
               >{page.cta.eyebrowText}</span
             >
@@ -63,7 +71,9 @@ const page = pageData?.data || {
             <span
               class="heading-text"
               data-editable="text"
+              data-type="text"
               data-prop="cta.heading"
+              data-rosey="heading"
               set:html={page.cta.heading}
               data-astro-cid-ewdoq4kp
             />
@@ -76,7 +86,9 @@ const page = pageData?.data || {
           <div
             class="text-inner align-center"
             data-editable="text"
+            data-type="block"
             data-prop="cta.subtext"
+            data-rosey="subtext"
             data-astro-cid-r4icev6a
           >
             <p set:html={page.cta.subtext} />
@@ -98,9 +110,13 @@ const page = pageData?.data || {
                 <span
                   class="button"
                   data-editable="array-item"
+                  data-rosey-ns={button._uuid}
                   data-astro-cid-fb4wagyx
                 >
-                  <Button {...button} />
+                  <Button
+                    {...button}
+                    data-prop="text"
+                  />
                 </span>
               ))
             }

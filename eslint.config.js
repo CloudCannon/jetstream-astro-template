@@ -21,7 +21,7 @@ export default [
         {
           args: "none",
           varsIgnorePattern:
-            "^(_|editable|useDefaultEditableBinding|_useDefaultEditableBinding|_component)$",
+            "^(_|_uuid|editable|useDefaultEditableBinding|_useDefaultEditableBinding|_component)$",
         },
       ],
       "no-console": "off",
@@ -59,7 +59,7 @@ export default [
         {
           args: "none",
           varsIgnorePattern:
-            "^(_|editable|useDefaultEditableBinding|_useDefaultEditableBinding|_component)$",
+            "^(_|_uuid|editable|useDefaultEditableBinding|_useDefaultEditableBinding|_component)$",
         },
       ],
       "@typescript-eslint/no-explicit-any": "off",
@@ -97,7 +97,7 @@ export default [
         {
           args: "none",
           varsIgnorePattern:
-            "^(_|editable|useDefaultEditableBinding|_useDefaultEditableBinding|_component)$",
+            "^(_|_uuid|editable|useDefaultEditableBinding|_useDefaultEditableBinding|_component)$",
         },
       ],
     },
@@ -184,6 +184,8 @@ export default [
     ignores: [
       "node_modules/**",
       "dist/**",
+      // Rosey's pre-translation copy of dist, left behind by .cloudcannon/postbuild.
+      "_untranslated_site/**",
       ".astro/**",
       "**/*.min.js",
       "packages/*/dist/**",

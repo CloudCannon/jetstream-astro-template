@@ -7,13 +7,21 @@ const {
   multiple = false,
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
+  id,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
 
-const fieldId = htmlAttributes.id || `file-upload-${crypto.randomUUID()}`;
+const fieldId = id || `file-upload-${crypto.randomUUID()}`;
 ---
 
+{
+  /* htmlAttributes carries the caller's data-editable/data-component. CloudCannon's
+    re-render replaces this element's children with a fresh copy of the component, so
+    data-rosey-ns has to sit strictly inside it — on the root it would be re-emitted by
+    the copy, doubling the namespace on every key below. */
+}
 <div
   class:list={["file-upload", className]}
   {...htmlAttributes}
@@ -23,8 +31,10 @@ const fieldId = htmlAttributes.id || `file-upload-${crypto.randomUUID()}`;
       <label
         for={fieldId}
         class="label"
+        data-rosey-ns={_uuid}
       >
-        {label}
+        {/* Key on the span, not the <label> — the required marker is a non-text child. */}
+        <span data-rosey="label">{label}</span>
         {required && (
           <span
             class="file-upload-required"

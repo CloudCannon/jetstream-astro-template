@@ -1,6 +1,7 @@
 ---
 import Icon from "@core-elements/icon/Icon.astro";
 import type { SegmentOption } from "../../../../types";
+import { slugifyLabel } from "@component-utils/slugify";
 
 const {
   name,
@@ -12,6 +13,7 @@ const {
   keepStateOnRefresh = false,
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -24,6 +26,7 @@ const inputType = multiple ? "checkbox" : "radio";
   class:list={["segments", className]}
   role={multiple ? "group" : "radiogroup"}
   aria-labelledby={title ? `${groupId}-legend` : undefined}
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   {
@@ -32,7 +35,8 @@ const inputType = multiple ? "checkbox" : "radio";
         id={`${groupId}-legend`}
         class="legend"
       >
-        {title}
+        {/* Key on the span, not the <legend> — the required marker is a non-text child. */}
+        <span data-rosey="title">{title}</span>
         {required && (
           <span
             class="segments-required"
@@ -76,7 +80,15 @@ const inputType = multiple ? "checkbox" : "radio";
                 aria-hidden="true"
               />
             )}
-            {option.label && !iconOnly && <span class="segment-label">{option.label}</span>}
+            {/* Options are bare pairs with no _uuid, so the label is the key. */}
+            {option.label && !iconOnly && (
+              <span
+                class="segment-label"
+                data-rosey={`option_${slugifyLabel(option.label)}`}
+              >
+                {option.label}
+              </span>
+            )}
           </span>
         </label>
       ))

@@ -3,6 +3,7 @@ icon: view_week
 description: Split layout that pairs narrative content with a focused feature list.
 value:
   _component: page-sections/features/feature-split
+  _uuid:
   sectionLabel: ""
   eyebrow: Eyebrow text
   heading: Heading text

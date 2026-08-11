@@ -3,6 +3,7 @@ icon: vertical_split
 description: Two-column layout for side-by-side content.
 value:
   _component: building-blocks/wrappers/split
+  _uuid:
   label: ""
   firstColumnContentSections: []
   secondColumnContentSections: []

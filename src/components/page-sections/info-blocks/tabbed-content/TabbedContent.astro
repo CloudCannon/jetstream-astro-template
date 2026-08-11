@@ -22,6 +22,7 @@ const {
   rounded = false,
   class: className,
   useDefaultEditableBinding = false,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -41,6 +42,7 @@ const snakePath =
   verticalOffset={verticalOffset}
   rounded={rounded}
   id={id}
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <div class="background-decoration-container">
@@ -141,13 +143,13 @@ const snakePath =
         data-prop="heading"
         text={heading}
       />
+      <!-- No slot children: a slot bypasses Text's md.render, so the page would show
+           raw markdown while the editor stores rendered HTML — permanently stale. -->
       <Text
         text={subtext}
         alignmentHorizontal="start"
         data-prop="subtext"
-      >
-        {subtext}
-      </Text>
+      />
 
       <ContentSelector
         items={tabs}

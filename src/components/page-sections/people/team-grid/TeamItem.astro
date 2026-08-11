@@ -12,6 +12,7 @@ const {
   imageAlt = "",
   editable = false,
   class: className,
+  _uuid,
   _component,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
   ...htmlAttributes
@@ -20,9 +21,14 @@ const {
 const cardClasses = ["team-item", className].filter(Boolean).join(" ");
 ---
 
-<GridItem>
+{
+  /* htmlAttributes carries the caller's data-editable/data-component, which belong on
+    the root element: CloudCannon's re-render nests the component inside the region,
+    doubling every data-rosey-ns below it and breaking translation lookups. */
+}
+<GridItem {...htmlAttributes}>
   <Card
-    {...htmlAttributes}
+    data-rosey-ns={_uuid}
     class:list={cardClasses || undefined}
     paddingHorizontal="lg"
     paddingVertical="sm"
@@ -38,6 +44,7 @@ const cardClasses = ["team-item", className].filter(Boolean).join(" ");
         alignmentHorizontal="start"
         style="margin-bottom: var(--spacing-xs); margin-top: 0;"
         data-prop={editable ? "name" : undefined}
+        data-rosey={false}
       >
         {name}
       </Heading>

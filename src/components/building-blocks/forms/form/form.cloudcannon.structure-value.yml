@@ -3,6 +3,7 @@ icon: checklist_rtl
 description: Groups form fields into one submission area.
 value:
   _component: building-blocks/forms/form
+  _uuid:
   action: ./
   formBlocks: []
 preview:

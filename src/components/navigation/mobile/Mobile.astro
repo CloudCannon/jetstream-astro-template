@@ -1,8 +1,10 @@
 ---
+import LocalePicker from "@components/navigation/locale-picker/LocalePicker.astro";
 import Button from "@core-elements/button/Button.astro";
 import Icon from "@core-elements/icon/Icon.astro";
 import Image from "@core-elements/image/Image.astro";
 import { itemHasSplitNavLink } from "@component-utils/navSplitLink";
+import { slugifyLabel } from "@component-utils/slugify";
 
 const {
   logoSource,
@@ -70,9 +72,12 @@ function createNavItemData(item, level, parentGroupId) {
   />
 </label>
 
+<!-- Same "nav" namespace as the desktop Bar: the two render the same links, so
+     content-as-key collapses them onto one translation each. -->
 <nav
   class:list={["mobile", className]}
   data-toggle-id={toggleId}
+  data-rosey-ns="nav"
   {...htmlAttributes}
 >
   <div class="mobile-header">
@@ -118,6 +123,7 @@ function createNavItemData(item, level, parentGroupId) {
                 <a
                   href={itemData.path}
                   aria-current={itemData.isCurrent ? "page" : undefined}
+                  data-rosey={slugifyLabel(itemData.name)}
                 >
                   {itemData.name}
                 </a>
@@ -143,9 +149,11 @@ function createNavItemData(item, level, parentGroupId) {
                     href={itemData.path}
                     class="nav-item-link"
                     aria-current={itemData.isCurrent ? "page" : undefined}
+                    data-rosey={slugifyLabel(itemData.name)}
                   >
                     {itemData.name}
                   </a>
+                  {/* Icon-only toggle — its text lives in aria-label, so no key here. */}
                   <label
                     for={itemData.dropdownId}
                     class="nav-item-trigger nav-item-toggle-btn"
@@ -170,7 +178,8 @@ function createNavItemData(item, level, parentGroupId) {
                   tabindex="0"
                   aria-current={itemData.isCurrent ? "page" : undefined}
                 >
-                  {itemData.name}
+                  {/* Chevron sibling below, so the key goes on the name span. */}
+                  <span data-rosey={slugifyLabel(itemData.name)}>{itemData.name}</span>
                   <span class="nav-item-icon">
                     <Icon
                       name="chevron-right"
@@ -187,7 +196,10 @@ function createNavItemData(item, level, parentGroupId) {
                 aria-label={`${itemData.name} submenu`}
                 aria-hidden={!itemData.hasCurrent}
               >
-                <ul class="nav-list">
+                <ul
+                  class="nav-list"
+                  data-rosey-ns={slugifyLabel(itemData.name)}
+                >
                   {itemData.children!.map((child) => {
                     const childData = createNavItemData(child, "child", itemData.parentGroupId);
 
@@ -197,6 +209,7 @@ function createNavItemData(item, level, parentGroupId) {
                           <a
                             href={childData.path}
                             aria-current={childData.isCurrent ? "page" : undefined}
+                            data-rosey={slugifyLabel(childData.name)}
                           >
                             {childData.name}
                           </a>
@@ -222,6 +235,7 @@ function createNavItemData(item, level, parentGroupId) {
                               href={childData.path}
                               class="nav-item-link"
                               aria-current={childData.isCurrent ? "page" : undefined}
+                              data-rosey={slugifyLabel(childData.name)}
                             >
                               {childData.name}
                             </a>
@@ -249,7 +263,7 @@ function createNavItemData(item, level, parentGroupId) {
                             tabindex="0"
                             aria-current={childData.isCurrent ? "page" : undefined}
                           >
-                            {childData.name}
+                            <span data-rosey={slugifyLabel(childData.name)}>{childData.name}</span>
                             <span class="nav-item-icon">
                               <Icon
                                 name="chevron-right"
@@ -266,7 +280,10 @@ function createNavItemData(item, level, parentGroupId) {
                           aria-label={`${childData.name} submenu`}
                           aria-hidden={!childData.hasCurrent}
                         >
-                          <ul class="nav-list">
+                          <ul
+                            class="nav-list"
+                            data-rosey-ns={slugifyLabel(childData.name)}
+                          >
                             {childData.children!.map((grandChild) => {
                               const grandChildData = createNavItemData(
                                 grandChild,
@@ -279,6 +296,7 @@ function createNavItemData(item, level, parentGroupId) {
                                   <a
                                     href={grandChildData.path}
                                     aria-current={grandChildData.isCurrent ? "page" : undefined}
+                                    data-rosey={slugifyLabel(grandChildData.name)}
                                   >
                                     {grandChildData.name}
                                   </a>
@@ -297,6 +315,7 @@ function createNavItemData(item, level, parentGroupId) {
         })
       }
     </ul>
+    <LocalePicker class="mobile-locale-picker" />
   </div>
 </nav>
 

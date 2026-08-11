@@ -3,6 +3,7 @@ icon: variables
 description: Clickable button for calls-to-action and navigation.
 value:
   _component: building-blocks/core-elements/button
+  _uuid:
   text: My Button
   hideText: false
   link: ""

@@ -25,6 +25,7 @@ const {
   rounded = false,
   class: className,
   useDefaultEditableBinding = false,
+  _uuid,
   ...htmlAttributes
 } = Astro.props;
 
@@ -67,6 +68,7 @@ if (useCollection) {
   rounded={rounded}
   id={id}
   useDefaultEditableBinding={useDefaultEditableBinding}
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <Icon
@@ -111,7 +113,10 @@ if (useCollection) {
           class="team-grid-item"
           data-index={index}
           data-editable={useCollection ? undefined : "array-item"}
-          data-id={useCollection ? undefined : "page-sections/people/team-grid/team-item"}
+          data-component={useCollection ? undefined : "page-sections/people/team-grid/team-item"}
+          data-id={
+            useCollection ? undefined : (member._uuid ?? "page-sections/people/team-grid/team-item")
+          }
           editable={useCollection ? false : true}
         />
       ))

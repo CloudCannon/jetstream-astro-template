@@ -30,6 +30,7 @@ const {
   },
   rounded = false,
   class: className,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -51,6 +52,7 @@ const snakePath =
   verticalOffset={verticalOffset}
   contentClass={`section-height-${sectionHeight}`}
   useDefaultEditableBinding={true}
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <CustomSection

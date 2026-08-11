@@ -3,6 +3,7 @@ import { ClientRouter } from "astro:transitions";
 import { fade } from "astro:transitions";
 import SeoHead from "@components/utils/SeoHead.astro";
 import StructuredData from "@components/utils/StructuredData.astro";
+import { defaultLocale, localeCodes } from "@component-utils/locales";
 import seoData from "@data/seo.json";
 import "@styles/style.css";
 import SiteFonts from "@layouts/SiteFonts.astro";
@@ -22,14 +23,32 @@ export interface Props {
     tags?: string[] | null;
   } | null;
   noindex?: boolean;
+  roseyRoot?: string;
+  // Opt-in per page, never a default: pages whose head comes from translated content
+  // must not have head keys, since a Rosey value would override it.
+  roseySeo?: boolean;
+  // For routes serving many pages from one template, where the derived root would
+  // collapse every page onto a single key.
+  roseyTitleKey?: string;
+  roseyDescriptionKey?: string;
+  hideLocaleSwitcher?: boolean;
 }
 
 const props = Astro.props;
+const pageRoseyRoot = props.roseyRoot ?? (Astro.url.pathname.replace(/^\/|\/$/g, "") || "index");
+const titleKey =
+  props.roseyTitleKey ?? (props.roseySeo ? `${pageRoseyRoot}:page_title` : undefined);
+const descriptionKey =
+  props.roseyDescriptionKey ?? (props.roseySeo ? `${pageRoseyRoot}:page_description` : undefined);
+
+// Excluding every locale is how the connector is told to hide its locale switcher.
+// Astro drops the attribute when this is undefined, so other pages are untouched.
+const rccExclude = props.hideLocaleSwitcher ? localeCodes.join(",") : undefined;
 ---
 
 <!doctype html>
 <html
-  lang="en"
+  lang={defaultLocale}
   data-theme="light"
 >
   <head>
@@ -85,6 +104,11 @@ const props = Astro.props;
       }
     </script>
 
+    {
+      /* SeoHead renders the only <title> and meta description, so the Rosey keys go on
+        its own tags rather than a second copy emitted here. OG and Twitter text stays
+        in the default language. */
+    }
     <SeoHead
       site={seoData}
       title={props.title}
@@ -95,6 +119,8 @@ const props = Astro.props;
       type={props.type}
       article={props.article}
       noindex={props.noindex}
+      roseyTitleKey={titleKey}
+      roseyDescriptionKey={descriptionKey}
     />
 
     <StructuredData site={seoData} />
@@ -110,9 +136,28 @@ const props = Astro.props;
     <ClientRouter />
   </head>
   <body>
-    <div transition:animate={fade({ duration: "0.2s" })}>
+    {
+      /* The connector's snapshot boundary. It wraps the nav and footer as well as <main>
+        so they take part in locale switching — the default boundary is <main> alone.
+        Shares the element with the view-transition wrapper: a nested div would put the
+        transition scope inside the boundary the connector clones on locale switch. */
+    }
+    <div
+      data-rcc
+      data-rcc-exclude={rccExclude}
+      transition:animate={fade({ duration: "0.2s" })}
+    >
       <slot />
     </div>
     <VideoElements />
+    {
+      /* Loaded only in the editor — outside it the connector has nothing to do, and its
+        UI would show up on the live site. */
+    }
+    <script>
+      if (window?.inEditorMode) {
+        import("rosey-cloudcannon-connector");
+      }
+    </script>
   </body>
 </html>

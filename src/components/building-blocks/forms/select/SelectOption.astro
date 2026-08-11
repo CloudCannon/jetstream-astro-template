@@ -5,6 +5,7 @@ const {
   selected = false,
   disabled = false,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
+  "data-rosey": roseyId,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -14,6 +15,7 @@ const {
   value={value}
   selected={selected}
   disabled={disabled}
+  data-rosey={roseyId}
   {...htmlAttributes}
 >
   {label}

@@ -3,6 +3,7 @@ icon: play_circle
 description: Dialog overlay with an embedded video that autoplays on open and pauses on close.
 value:
   _component: building-blocks/wrappers/video-modal
+  _uuid:
   label: null
   type: youtube
   videoId: ""

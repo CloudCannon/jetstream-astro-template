@@ -1,3 +1,15 @@
 #!/bin/bash
 
+# Rosey
+npx rosey generate --source dist
+npx rosey-cloudcannon-connector write-locales --source rosey --dest dist --locales fr,de
+
+# --exclusions overrides Rosey's default (which also excludes JSON) so that
+# dist/_rcc/locales.json survives into the translated output. Without it the
+# connector 404s on its locale manifest in the Visual Editor.
+mv ./dist ./_untranslated_site
+npx rosey build --source _untranslated_site --dest dist --default-language en --default-language-at-root --exclusions "\.(html?)$"
+
+# After Rosey, not before: Pagefind indexes per `<html lang>`, which Rosey sets on
+# the generated pages, so this gives each locale its own search index.
 npx pagefind --site dist

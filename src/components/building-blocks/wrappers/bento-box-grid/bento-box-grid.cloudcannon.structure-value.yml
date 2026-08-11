@@ -3,6 +3,7 @@ icon: grid_on
 description: Arranges content into a grid that adapts to screen size, with items of varying widths.
 value:
   _component: building-blocks/wrappers/bento-box-grid
+  _uuid:
   label: ""
   layout: center
   minItemWidth: 280
@@ -26,6 +27,7 @@ _structures:
       - label: Grid Item
         value:
           _component: building-blocks/wrappers/bento-box-grid/bento-box-grid-item
+          _uuid:
           contentSections: []
         preview:
           icon: grid_view

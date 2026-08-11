@@ -15,6 +15,7 @@ const {
   useDefaultEditableBinding = false,
   class: className,
   "data-children-prop": childrenDataProp,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -41,6 +42,7 @@ if (!_component && !hasContentSections && !hasSlotContent) return;
 
 <div
   class:list={["modal", className]}
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   {
@@ -52,6 +54,7 @@ if (!_component && !hasContentSections && !hasSlotContent) return;
         iconName={triggerIconName}
         link={`^${popoverId}`}
         class="modal-trigger"
+        data-rosey="trigger_text"
       />
     )
   }
@@ -71,6 +74,7 @@ if (!_component && !hasContentSections && !hasSlotContent) return;
             id={`${popoverId}-header`}
             class="modal-title"
             {...headingDataAttributes}
+            data-rosey="heading"
           >
             {heading}
           </h2>

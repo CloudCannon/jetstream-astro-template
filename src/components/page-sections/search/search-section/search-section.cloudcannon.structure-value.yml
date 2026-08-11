@@ -5,6 +5,7 @@ description: >-
   client-side results.
 value:
   _component: page-sections/search/search-section
+  _uuid:
   id:
   heading: How can we help?
   headingSize: 2xl

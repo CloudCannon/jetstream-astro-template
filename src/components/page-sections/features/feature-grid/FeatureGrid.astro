@@ -29,6 +29,7 @@ const {
   verticalOffset = {},
   rounded = false,
   class: className,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -45,6 +46,7 @@ const {
   rounded={rounded}
   verticalOffset={verticalOffset}
   id={id}
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <CustomSection

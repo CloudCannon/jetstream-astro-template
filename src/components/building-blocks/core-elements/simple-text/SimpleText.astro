@@ -1,4 +1,5 @@
 ---
+import { resolveRosey } from "@component-utils/roseyKey";
 import MarkdownIt from "markdown-it";
 
 const {
@@ -8,6 +9,9 @@ const {
   class: className,
   useDefaultEditableBinding = false,
   "data-prop": customDataProp,
+  // Destructured so it can't reach the outer wrapper via htmlAttributes — the key
+  // belongs on the inner span, or Rosey captures the surrounding <p> too.
+  "data-rosey": roseyId,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -18,9 +22,12 @@ let MarkdownText = text ? md.renderInline(text) : "";
 MarkdownText = MarkdownText.replace(/\n/g, "<br />");
 
 const effectiveDataProp = customDataProp ?? (useDefaultEditableBinding ? "text" : null);
+// renderInline() output is inline-rich, so data-type is "text". Without it the
+// region defaults to plain "span" and markdown fields read as perpetually stale.
 const textDataAttributes = effectiveDataProp
-  ? { "data-editable": "text", "data-prop": effectiveDataProp }
+  ? { "data-editable": "text", "data-type": "text", "data-prop": effectiveDataProp }
   : {};
+const roseyAttributes = resolveRosey(roseyId, effectiveDataProp);
 
 const hasText = text?.trim().length > 0;
 const hasSlotContent = Astro.slots.has("default");
@@ -36,6 +43,7 @@ if (!_component && !hasText && !hasSlotContent) return;
     <span
       class="simple-text-inner"
       {...textDataAttributes}
+      {...roseyAttributes}
     >
       <slot>
         {text && <Fragment set:html={MarkdownText} />}

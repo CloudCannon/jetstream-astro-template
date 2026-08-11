@@ -3,6 +3,7 @@ icon: rectangle
 description: Single text input form field.
 value:
   _component: building-blocks/forms/input
+  _uuid:
   label: My input
   name: my_input
   type: text

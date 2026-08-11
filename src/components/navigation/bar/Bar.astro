@@ -1,11 +1,15 @@
 ---
 import Icon from "@core-elements/icon/Icon.astro";
 import { itemHasSplitNavLink } from "@component-utils/navSplitLink";
+import { slugifyLabel } from "@component-utils/slugify";
 
+// Nav items come from a JSON data file with no _uuid, so the link text is the key.
+// roseyNs is passed in because Bar renders both the main nav and the footer links.
 const {
   navData = [],
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
+  roseyNs,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -42,6 +46,7 @@ function createNavItemData(item, level, parentGroupId) {
 
 <nav
   class:list={["bar", className]}
+  data-rosey-ns={roseyNs}
   {...htmlAttributes}
 >
   <ul class="bar-list">
@@ -55,6 +60,7 @@ function createNavItemData(item, level, parentGroupId) {
               <a
                 href={itemData.path}
                 aria-current={itemData.isCurrent ? "page" : undefined}
+                data-rosey={slugifyLabel(itemData.name)}
               >
                 {itemData.name}
               </a>
@@ -79,9 +85,11 @@ function createNavItemData(item, level, parentGroupId) {
                   href={itemData.path}
                   class="nav-item-link"
                   aria-current={itemData.isCurrent ? "page" : undefined}
+                  data-rosey={slugifyLabel(itemData.name)}
                 >
                   {itemData.name}
                 </a>
+                {/* Icon-only toggle — its text lives in aria-label, so no key here. */}
                 <label
                   for={itemData.dropdownId}
                   class="nav-item-trigger nav-item-toggle-btn"
@@ -106,7 +114,9 @@ function createNavItemData(item, level, parentGroupId) {
                 tabindex="0"
                 aria-current={itemData.isCurrent ? "page" : undefined}
               >
-                {itemData.name}
+                {/* The chevron span below is a non-text child, so the key goes on the
+                    name rather than the whole label. */}
+                <span data-rosey={slugifyLabel(itemData.name)}>{itemData.name}</span>
                 <span class="nav-item-icon">
                   <Icon
                     name="chevron-right"
@@ -123,7 +133,13 @@ function createNavItemData(item, level, parentGroupId) {
               aria-label={`${itemData.name} submenu`}
               aria-hidden="true"
             >
-              <ul class="nav-list">
+              {/* Namespace on the child list, not the parent <li> — the trigger label
+                  above sits outside it, so it keeps the plain `nav:features` key while
+                  its children become `nav:features:<child>`. */}
+              <ul
+                class="nav-list"
+                data-rosey-ns={slugifyLabel(itemData.name)}
+              >
                 {itemData.children!.map((child) => {
                   const childData = createNavItemData(child, "child", itemData.parentGroupId);
 
@@ -133,6 +149,7 @@ function createNavItemData(item, level, parentGroupId) {
                         <a
                           href={childData.path}
                           aria-current={childData.isCurrent ? "page" : undefined}
+                          data-rosey={slugifyLabel(childData.name)}
                         >
                           {childData.name}
                         </a>
@@ -157,6 +174,7 @@ function createNavItemData(item, level, parentGroupId) {
                             href={childData.path}
                             class="nav-item-link"
                             aria-current={childData.isCurrent ? "page" : undefined}
+                            data-rosey={slugifyLabel(childData.name)}
                           >
                             {childData.name}
                           </a>
@@ -184,7 +202,7 @@ function createNavItemData(item, level, parentGroupId) {
                           tabindex="0"
                           aria-current={childData.isCurrent ? "page" : undefined}
                         >
-                          {childData.name}
+                          <span data-rosey={slugifyLabel(childData.name)}>{childData.name}</span>
                           <span class="nav-item-icon">
                             <Icon
                               name="chevron-right"
@@ -201,7 +219,10 @@ function createNavItemData(item, level, parentGroupId) {
                         aria-label={`${childData.name} submenu`}
                         aria-hidden="true"
                       >
-                        <ul class="nav-list">
+                        <ul
+                          class="nav-list"
+                          data-rosey-ns={slugifyLabel(childData.name)}
+                        >
                           {childData.children!.map((grandChild) => {
                             const grandChildData = createNavItemData(
                               grandChild,
@@ -214,6 +235,7 @@ function createNavItemData(item, level, parentGroupId) {
                                 <a
                                   href={grandChildData.path}
                                   aria-current={grandChildData.isCurrent ? "page" : undefined}
+                                  data-rosey={slugifyLabel(grandChildData.name)}
                                 >
                                   {grandChildData.name}
                                 </a>

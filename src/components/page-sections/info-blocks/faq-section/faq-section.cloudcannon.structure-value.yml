@@ -4,6 +4,7 @@ description: Section displaying frequently asked questions in an accordion forma
 value:
   _component: page-sections/info-blocks/faq-section
   sectionLabel: ""
+  _uuid:
   heading: Frequently Asked Questions
   items: []
   maxContentWidth: xl
@@ -223,8 +224,10 @@ _structures:
         icon: help_outline
         value:
           title: Question text
+          _uuid:
           contentSections:
             - _component: building-blocks/core-elements/text
+              _uuid:
               text: Answer text goes here.
               size: md
         preview:

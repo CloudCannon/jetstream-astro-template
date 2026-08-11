@@ -9,6 +9,7 @@ const {
   label,
   gap = "md",
   useDefaultEditableBinding = false,
+  _uuid,
   _component,
   "data-children-prop": childrenDataProp,
   ...htmlAttributes
@@ -33,6 +34,8 @@ const arrayDataAttributes = effectiveChildrenProp
       "data-editable": "array",
       "data-prop": effectiveChildrenProp,
       "data-direction": "row",
+      "data-component-key": "_component",
+      "data-id-key": "_uuid",
     }
   : {};
 
@@ -56,7 +59,8 @@ if (!_component && !hasItems && !hasSlotContent) return;
       {
         items?.map((item: any) => (
           <BentoBoxGridItem
-            data-id="building-blocks/wrappers/bento-box-grid/bento-box-grid-item"
+            data-component="building-blocks/wrappers/bento-box-grid/bento-box-grid-item"
+            data-id={item._uuid ?? "building-blocks/wrappers/bento-box-grid/bento-box-grid-item"}
             data-editable="array-item"
             class:list={`layout-${layout}`}
             useDefaultEditableBinding={!!effectiveChildrenProp}

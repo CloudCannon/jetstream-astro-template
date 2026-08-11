@@ -1,6 +1,7 @@
 ---
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Icon from "@components/building-blocks/core-elements/icon/Icon.astro";
+import { slugifyLabel } from "@component-utils/slugify";
 import Heading from "@core-elements/heading/Heading.astro";
 import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import Text from "@core-elements/text/Text.astro";
@@ -24,6 +25,7 @@ const {
   rounded = false,
   class: className,
   useDefaultEditableBinding = false,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -43,6 +45,7 @@ const snakePath =
   verticalOffset={verticalOffset}
   rounded={rounded}
   id={id}
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <div class="background-decoration-container">
@@ -150,8 +153,24 @@ const snakePath =
               data-prop="table.headers"
             >
               {
+                /* Cells are plain strings in the data, so there is nowhere to hang a
+                  _uuid — the visible text is the key instead. Index-based keys would
+                  remap every translation the first time a row is inserted, and repeated
+                  values ("Yes", "Unlimited") get to share one translation this way.
+                  Trade-off: renaming a cell orphans its key rather than flagging it. */
+              }
+              {
                 table.headers?.map((header: any) => (
-                  <th data-editable="array-item">{!header.hideText && header.text}</th>
+                  <th
+                    data-editable="array-item"
+                    data-rosey={
+                      !header.hideText && header.text
+                        ? `header_${slugifyLabel(header.text)}`
+                        : undefined
+                    }
+                  >
+                    {!header.hideText && header.text}
+                  </th>
                 ))
               }
             </tr>
@@ -166,6 +185,11 @@ const snakePath =
                         <th
                           data-editable="text"
                           data-prop={`table.sections.${index}.sectionName`}
+                          data-rosey={
+                            section.sectionName
+                              ? `section_${slugifyLabel(section.sectionName)}`
+                              : undefined
+                          }
                           rowspan={section.rows.length}
                           class="section-header"
                         >
@@ -176,6 +200,7 @@ const snakePath =
                         <td
                           data-editable="text"
                           data-prop={`table.sections.${index}.rows.${rowIndex}.cells.${cellIndex}`}
+                          data-rosey={cell ? `cell_${slugifyLabel(cell)}` : undefined}
                         >
                           {cell}
                         </td>

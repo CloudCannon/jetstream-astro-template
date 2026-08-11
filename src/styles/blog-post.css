@@ -1,0 +1,195 @@
+/* Imported per-route, not from style.css, so it isn't inlined into every page.
+   Shared by the English and [locale] post routes. */
+@layer page-sections {
+  .hero-feature {
+    .breadcrumb {
+      color: var(--color-text-brand);
+      font-weight: var(--font-weight-bold);
+    }
+    .blog-link {
+      color: var(--color-text-brand);
+      text-decoration: none;
+    }
+    .tag {
+      color: var(--color-text-brand);
+      text-decoration: none;
+    }
+
+    .description {
+      font-weight: var(--font-weight-bold);
+    }
+
+    .author {
+      color: var(--color-text-muted);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
+    }
+
+    .counters {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-xl);
+
+      @container (max-width: 700px) {
+        flex-flow: row wrap;
+        margin-top: 0;
+      }
+
+      .counter-container {
+        @container (max-width: 700px) {
+          flex: 1 1 150px;
+        }
+
+        .counter {
+          color: var(--color-text);
+          margin-top: 0;
+        }
+
+        .simple-text {
+          margin: 0;
+
+          .simple-text-content {
+            font-weight: var(--font-weight-bold);
+            margin: var(--spacing-xs) 0 0;
+            text-wrap: wrap;
+          }
+        }
+      }
+    }
+
+    .split:has(.counters):not(:has(.counter-container)) {
+      > .split-inner {
+        --split-columns-desktop: 1fr;
+        row-gap: 0;
+      }
+
+      .hero-image {
+        margin-inline: auto;
+      }
+    }
+
+    .hero-image {
+      height: 450px;
+      margin-top: var(--spacing-xl);
+      max-width: min(100%, var(--content-width-xl));
+      position: relative;
+
+      &::before {
+        --angle: 0deg;
+        animation: rotate-angle 2s linear infinite;
+        background: conic-gradient(
+          from var(--angle),
+          var(--color-bg-brand),
+          var(--color-bg-inverse),
+          var(--color-bg-brand)
+        );
+        border-radius: calc(var(--radius-lg) + 4px);
+        content: "";
+        inset: 0;
+        margin: -4px;
+        position: absolute;
+        z-index: -1;
+      }
+
+      .image {
+        height: 100%;
+        margin: 0;
+
+        .image-inner {
+          height: 100%;
+          max-height: 450px;
+          overflow: hidden;
+        }
+
+        picture {
+          height: 100%;
+        }
+
+        img {
+          height: 100%;
+          max-height: 450px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .share-section {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin: var(--spacing-xl) 0;
+
+    .share-section-text {
+      flex: 0 0 auto;
+    }
+
+    .button-group {
+      flex: 0 1 50%;
+    }
+  }
+
+  .post-layout {
+    position: relative;
+    > .pane.second {
+      margin-bottom: var(--spacing-xl);
+      position: sticky;
+      top: calc(var(--spacing-nav-height) + var(--spacing-md));
+    }
+  }
+
+  .post-container.custom-section > .outer-content > .content {
+    padding-bottom: 0 !important;
+  }
+
+  .post {
+    display: grid;
+    margin-inline: auto;
+    margin-top: var(--spacing-xl);
+  }
+
+  .post > h1,
+  .post > h2,
+  .post > h3,
+  .post > h4,
+  .post > h5,
+  .post > h6 {
+    margin-bottom: 0;
+    margin-top: 1rem;
+  }
+
+  .post > h1:first-child,
+  .post > h2:first-child,
+  .post > h3:first-child,
+  .post > h4:first-child,
+  .post > h5:first-child,
+  .post > h6:first-child {
+    margin-top: 0;
+  }
+
+  .post > .astro-code {
+    margin-block: var(--spacing-xl);
+  }
+
+  .post-image {
+    margin-top: var(--spacing-xl);
+  }
+  .sidebar .card .image .image-inner {
+    max-height: 150px;
+    width: 100%;
+  }
+}
+
+.post-tags .post-tag-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+.post-tags .post-tag-link:hover {
+  color: var(--color-text-strong);
+  text-decoration-thickness: 2px;
+}

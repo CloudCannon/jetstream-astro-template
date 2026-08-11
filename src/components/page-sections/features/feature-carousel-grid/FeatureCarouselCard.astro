@@ -15,15 +15,26 @@ const {
   text = "",
   columnSpan,
   rowSpan,
+  _uuid,
   _component,
   useDefaultEditableBinding = false,
+  // Read by the parent, not here. Destructured to keep them off the DOM —
+  // `style` is a colour name, not a CSS declaration.
+  decorative,
+  style,
   ...htmlAttributes
 } = Astro.props;
 ---
 
+{
+  /* htmlAttributes carries the caller's data-editable/data-component, which belong on
+    the root element: CloudCannon's re-render nests the component inside the region,
+    doubling every data-rosey-ns below it and breaking translation lookups. */
+}
 <BentoBoxGridItem
   columnSpan={columnSpan}
   rowSpan={rowSpan}
+  {...htmlAttributes}
 >
   <Card
     class:list={["feature-carousel-card"]}
@@ -32,7 +43,7 @@ const {
     rounded
     border={border}
     backgroundColor={backgroundColor}
-    {...htmlAttributes}
+    data-rosey-ns={_uuid}
   >
     {
       eyebrowIcon?.name && (

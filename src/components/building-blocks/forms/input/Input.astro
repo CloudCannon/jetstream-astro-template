@@ -14,6 +14,7 @@ const {
   id: customId,
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -22,6 +23,12 @@ const fieldId = customId || `input-${crypto.randomUUID()}`;
 const hasIcon = iconName?.trim().length > 0;
 ---
 
+{
+  /* htmlAttributes carries the caller's data-editable/data-component. CloudCannon's
+    re-render replaces this element's children with a fresh copy of the component, so
+    data-rosey-ns has to sit strictly inside it — on the root it would be re-emitted by
+    the copy, doubling the namespace on every key below. */
+}
 <div
   class:list={["input", className]}
   {...htmlAttributes}
@@ -31,8 +38,11 @@ const hasIcon = iconName?.trim().length > 0;
       <label
         for={fieldId}
         class="label"
+        data-rosey-ns={_uuid}
       >
-        {label}
+        {/* The key goes on this span, not the <label>: the required marker below is a
+            non-text child and would otherwise be captured and injected twice. */}
+        <span data-rosey="label">{label}</span>
         {required && (
           <span
             class="input-required"
@@ -64,6 +74,10 @@ const hasIcon = iconName?.trim().length > 0;
           aria-required={required}
           value={value}
           class="field"
+          data-rosey-ns={_uuid}
+          data-rosey-attrs-explicit={
+            placeholder ? JSON.stringify({ placeholder: "placeholder" }) : undefined
+          }
         />
       </span>
     ) : (
@@ -76,6 +90,10 @@ const hasIcon = iconName?.trim().length > 0;
         aria-required={required}
         value={value}
         class="field"
+        data-rosey-ns={_uuid}
+        data-rosey-attrs-explicit={
+          placeholder ? JSON.stringify({ placeholder: "placeholder" }) : undefined
+        }
       />
     )
   }

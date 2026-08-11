@@ -21,6 +21,7 @@ const {
   rowSpan,
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -30,6 +31,7 @@ const {
   columnSpan={columnSpan}
   rowSpan={rowSpan}
   class="feature-grid-item"
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <Card

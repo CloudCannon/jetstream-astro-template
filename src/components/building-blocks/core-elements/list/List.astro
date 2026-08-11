@@ -12,6 +12,7 @@ const {
   class: className,
   "data-children-prop": childrenDataProp,
   useDefaultEditableBinding = false,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -26,12 +27,18 @@ if (!_component && !hasItems && !hasSlotContent) return;
 
 const effectiveChildrenProp = childrenDataProp ?? (useDefaultEditableBinding ? "items" : null);
 const arrayDataAttributes = effectiveChildrenProp
-  ? { "data-editable": "array", "data-prop": effectiveChildrenProp }
+  ? {
+      "data-editable": "array",
+      "data-prop": effectiveChildrenProp,
+      "data-component-key": "_component",
+      "data-id-key": "_uuid",
+    }
   : {};
 ---
 
 <div
   class:list={["list", className]}
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <ListTag
@@ -48,7 +55,8 @@ const arrayDataAttributes = effectiveChildrenProp
       {
         items?.map((item: ItemProps) => (
           <ListItem
-            data-id="building-blocks/core-elements/list/list-item"
+            data-component="building-blocks/core-elements/list/list-item"
+            data-id={item._uuid ?? "building-blocks/core-elements/list/list-item"}
             data-editable="array-item"
             useDefaultEditableBinding={!!effectiveChildrenProp}
             showIcon={showIcons}

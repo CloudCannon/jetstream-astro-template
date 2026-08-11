@@ -9,6 +9,7 @@ const {
   class: className,
   "data-children-prop": childrenDataProp,
   useDefaultEditableBinding = false,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -35,7 +36,10 @@ if (!_component && !hasItems && !hasSlotContent) return;
       {
         items?.map((item: ItemProps) => (
           <DefinitionListItem
-            data-id="building-blocks/core-elements/definition-list/definition-list-item"
+            data-component="building-blocks/core-elements/definition-list/definition-list-item"
+            data-id={
+              item._uuid ?? "building-blocks/core-elements/definition-list/definition-list-item"
+            }
             data-editable="array-item"
             useDefaultEditableBinding={!!effectiveChildrenProp}
             {...item}

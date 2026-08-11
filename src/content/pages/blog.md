@@ -8,9 +8,11 @@ description: >-
 keywords: []
 heroSections:
   - _component: page-sections/heroes/hero-card
+    _uuid: 2f9ee893-ba32-4a0a-b063-4f7dd07a38d7
     id:
     eyebrowIcon:
       _component: building-blocks/core-elements/icon
+      _uuid: ff6799dc-4c45-4874-ba8e-d04bdfe4f742
       name: newspaper
       size: 3xl
       color: brand-gradient
@@ -34,6 +36,7 @@ heroSections:
       metaText:
       buttonSections:
         - _component: building-blocks/core-elements/button
+          _uuid: d353cfdf-967b-447d-85af-1bcfdb391d8d
           text: Learn why we did it
           hideText: false
           link: /blog/why-we-rebuilt-our-dns-resolver-from-scratch-again
@@ -79,6 +82,7 @@ heroSections:
     rounded: false
 ctaSections:
   - _component: page-sections/ctas/cta-center
+    _uuid: 7db52143-7dee-4ca3-9015-4531e5614fc9
     id:
     eyebrowIcon: {}
     eyebrowText:
@@ -86,6 +90,7 @@ ctaSections:
     subtext:
     buttonSections:
       - _component: building-blocks/core-elements/button
+        _uuid: 02cd2bbb-bf93-447c-8ad1-7906f73ade56
         text: Or talk to us about fiber optics instead
         hideText: false
         link: ''

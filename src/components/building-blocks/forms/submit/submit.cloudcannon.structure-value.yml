@@ -3,6 +3,7 @@ icon: check
 description: Button for submitting a form.
 value:
   _component: building-blocks/forms/submit
+  _uuid:
   text: Submit
   variant: primary
   size: md

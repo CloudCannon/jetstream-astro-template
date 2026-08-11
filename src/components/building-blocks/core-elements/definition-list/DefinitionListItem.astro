@@ -1,4 +1,6 @@
 ---
+import { resolveRosey } from "@component-utils/roseyKey";
+
 const {
   title,
   text,
@@ -6,6 +8,9 @@ const {
   useDefaultEditableBinding = false,
   "data-prop-title": customDataPropTitle,
   "data-prop-content": customDataPropContent,
+  "data-rosey-title": roseyTitle,
+  "data-rosey-content": roseyContent,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -14,11 +19,13 @@ const effectiveTitleProp = customDataPropTitle ?? (useDefaultEditableBinding ? "
 const titleDataAttributes = effectiveTitleProp
   ? { "data-editable": "text", "data-prop": effectiveTitleProp }
   : {};
+const titleRoseyAttributes = resolveRosey(roseyTitle, effectiveTitleProp);
 
 const effectiveContentProp = customDataPropContent ?? (useDefaultEditableBinding ? "text" : null);
 const contentDataAttributes = effectiveContentProp
   ? { "data-editable": "text", "data-prop": effectiveContentProp }
   : {};
+const contentRoseyAttributes = resolveRosey(roseyContent, effectiveContentProp);
 
 const hasTitle = title?.trim().length > 0;
 const hasTitleSlotContent = Astro.slots.has("title");
@@ -30,14 +37,17 @@ if (!_component && ((!hasTitle && !hasTitleSlotContent) || (!hasText && !hasSlot
 
 <div
   class="definition-list-item"
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <dt
     class:list={["title", className]}
     role="term"
-    {...titleDataAttributes}
   >
-    <span {...titleDataAttributes}>
+    <span
+      {...titleDataAttributes}
+      {...titleRoseyAttributes}
+    >
       <slot name="title">
         {title}
       </slot>
@@ -47,7 +57,10 @@ if (!_component && ((!hasTitle && !hasTitleSlotContent) || (!hasText && !hasSlot
     class:list={["content", className]}
     role="definition"
   >
-    <span {...contentDataAttributes}>
+    <span
+      {...contentDataAttributes}
+      {...contentRoseyAttributes}
+    >
       <slot>
         {text}
       </slot>

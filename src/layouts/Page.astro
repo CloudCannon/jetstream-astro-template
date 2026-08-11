@@ -42,6 +42,13 @@ type Props = {
   disablePagefind?: boolean;
   mainNav?: Record<string, unknown>;
   footer?: Record<string, unknown>;
+  // Rosey/RCC props. These have to be listed and forwarded explicitly — this layout
+  // destructures rather than spreading, so anything missing here silently no-ops.
+  roseyRoot?: string;
+  roseySeo?: boolean;
+  roseyTitleKey?: string;
+  roseyDescriptionKey?: string;
+  hideLocaleSwitcher?: boolean;
 };
 
 const {
@@ -57,6 +64,11 @@ const {
   disablePagefind = false,
   mainNav = mainNavData,
   footer = footerData,
+  roseyRoot,
+  roseySeo,
+  roseyTitleKey,
+  roseyDescriptionKey,
+  hideLocaleSwitcher,
 } = Astro.props as Props;
 
 const title = frontmatter?.title ?? titleProp;
@@ -68,6 +80,11 @@ const type = frontmatter?.type ?? typeProp;
 const article = frontmatter?.article ?? articleProp;
 const noindex = frontmatter?.noindex ?? noindexProp ?? false;
 const sections = frontmatter?.pageSections ?? [];
+
+// Derived from the URL rather than Astro.params.slug, which is undefined on /blog/,
+// /blog/2/, /blog/tag/*/ and 404 — those would all collapse onto the "index" root and
+// collide with the home page. Routes serving many pages pass roseyRoot to share one.
+const derivedRoseyRoot = Astro.url.pathname.replace(/^\/|\/$/g, "") || "index";
 ---
 
 <Layout
@@ -79,11 +96,23 @@ const sections = frontmatter?.pageSections ?? [];
   type={type}
   article={article}
   noindex={noindex}
+  roseyRoot={roseyRoot ?? derivedRoseyRoot}
+  roseySeo={roseySeo}
+  roseyTitleKey={roseyTitleKey}
+  roseyDescriptionKey={roseyDescriptionKey}
+  hideLocaleSwitcher={hideLocaleSwitcher}
 >
   {mainNav.themeToggle && <ThemeToggleScript slot="head" />}
   <MainNavigation {...mainNav} />
 
-  <main {...disablePagefind ? { "data-pagefind-ignore": "all" } : {}}>
+  {
+    /* The root sits on <main> so slotted content — blog routes, 404, MDX — is inside it
+      too. On the inner wrapper it covered only page-builder sections. */
+  }
+  <main
+    data-rosey-root={roseyRoot ?? derivedRoseyRoot}
+    {...disablePagefind ? { "data-pagefind-ignore": "all" } : {}}
+  >
     {
       sections.length > 0 && (
         <div

@@ -1,0 +1,94 @@
+---
+import {
+  defaultLanguageAtRoot,
+  defaultLocale,
+  localeCodes,
+  locales,
+} from "@component-utils/locales";
+
+const { class: className, _component, ...htmlAttributes } = Astro.props;
+
+const options = [
+  { code: defaultLocale, label: defaultLocale.toUpperCase() },
+  ...localeCodes.map((code) => ({ code, label: locales[code].label })),
+];
+const allCodes = options.map((option) => option.code);
+
+// Strip any locale prefix to get the path all languages share, then re-prefix per
+// language. These links carry data-rosey-ignore, so Rosey never rewrites them and the
+// prefix has to be emitted here.
+const segments = Astro.url.pathname.split("/").filter(Boolean);
+const rest = allCodes.includes(segments[0] as (typeof allCodes)[number])
+  ? segments.slice(1)
+  : segments;
+const basePath = `/${rest.join("/")}${rest.length ? "/" : ""}`;
+
+function buildPath(code: string) {
+  if (code === defaultLocale && defaultLanguageAtRoot) return basePath;
+  return `/${code}${basePath}`;
+}
+---
+
+<nav
+  aria-label="Language"
+  class:list={["locale-picker", className]}
+  {...htmlAttributes}
+>
+  {
+    options.map(({ code, label }) => (
+      <a
+        href={buildPath(code)}
+        data-rosey-ignore
+        hreflang={code}
+      >
+        {label}
+      </a>
+    ))
+  }
+</nav>
+
+<style>
+  @layer components {
+    .locale-picker {
+      align-items: center;
+      display: flex;
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
+      gap: var(--spacing-2xs);
+
+      a {
+        border-radius: var(--radius-sm);
+        color: var(--color-text);
+        padding: var(--spacing-2xs) var(--spacing-xs);
+        text-decoration: none;
+        transition: color var(--animation-normal) ease-in-out;
+
+        &:hover {
+          color: var(--color-text-brand);
+        }
+
+        &.active {
+          color: var(--color-text-brand);
+        }
+      }
+    }
+  }
+</style>
+
+<script>
+  if (window.inEditorMode) {
+    // The connector injects its own floating locale switcher in the Visual Editor.
+    // Hiding this one avoids two competing switchers.
+    document
+      .querySelectorAll("nav[aria-label='Language']")
+      .forEach((nav) => ((nav as HTMLElement).style.display = "none"));
+  } else {
+    // Rosey clones this markup to every locale, so the build-time HTML always reflects
+    // the default language. The active state has to be resolved on the client.
+    document.querySelectorAll<HTMLAnchorElement>("nav[aria-label='Language'] a").forEach((link) => {
+      const active = link.pathname === window.location.pathname;
+      link.classList.toggle("active", active);
+      if (active) link.setAttribute("aria-current", "true");
+    });
+  }
+</script>

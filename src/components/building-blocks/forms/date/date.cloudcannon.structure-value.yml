@@ -3,6 +3,7 @@ icon: calendar
 description: Form field for selecting a date.
 value:
   _component: building-blocks/forms/date
+  _uuid:
   label: My date
   name: my_date
   required: false

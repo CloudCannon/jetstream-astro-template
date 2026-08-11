@@ -1,0 +1,92 @@
+---
+_schema: default
+title: Pourquoi nous avons reconstruit notre résolveur DNS de zéro (encore une fois)
+description: >-
+  Parfois, « suffisamment bien » ne suffit pas — surtout quand nos ingénieurs
+  ont des avis très arrêtés sur l'optimisation des requêtes.
+date: 2026-02-19T00:00:00Z
+author: 470d9a38-a9ab-4112-b222-8e10e7d5ac7d
+image: /src/assets/images/blog-dns-resolver.png
+image_alt: Macro shot of a circuit board's chips, resistors and solder joints lit in orange and blue
+tag: Performance
+---
+
+Notre résolveur DNS fonctionnait parfaitement bien. Les temps de réponse tournaient autour de 47 millisecondes à l'échelle mondiale. Le taux de succès du cache oscillait autour de 94 %. Les réclamations clients étaient inexistantes. Selon n'importe quel critère raisonnable, nous avions construit un système solide et fiable qui faisait exactement ce qu'un résolveur DNS est censé faire.
+
+Notre équipe d'ingénierie n'était pas d'accord avec le mot « raisonnable ».
+
+## Le problème que personne d'autre ne voyait
+
+Les requêtes DNS sont censées être rapides. Elles sont la première étape de presque chaque interaction sur internet — avant que votre navigateur puisse charger un site, avant qu'un appel d'API puisse aboutir, avant que quoi que ce soit d'utile ne se produise, il y a une résolution DNS. La plupart des fournisseurs considèrent que 50 millisecondes, c'est acceptable. Les standards du secteur suggèrent que tout ce qui reste sous les 100 millisecondes convient.
+
+Nous avons trouvé cela philosophiquement inacceptable.
+
+Quand vous traitez 400 milliards de requêtes DNS par jour sur 847 nœuds périphériques, même de petites optimisations se cumulent de façon spectaculaire. Un gain de 10 millisecondes par requête représente 46 jours de temps cumulé économisé pour nos clients, chaque jour. Notre ingénieur DNS principal a présenté ce calcul lors d'une revue trimestrielle, puis l'a fait suivre d'une seule question : « Pourquoi laissons-nous 46 jours sur la table ? »
+
+Personne n'avait de bonne réponse.
+
+## Six mois de conception
+
+Nous n'avons pas écrit une ligne de code pendant six mois. Cela a rendu notre équipe produit légèrement folle, mais notre CTO y tenait. Nous devions comprendre exactement pourquoi notre résolveur actuel se comportait comme il le faisait avant de pouvoir construire quelque chose de meilleur.
+
+Notre équipe a analysé les schémas de requêtes, mesuré l'efficacité du cache sous différentes charges et étudié la façon dont les requêtes se propageaient dans notre réseau. Nous avons découvert que notre résolveur était optimisé pour la performance moyenne : il traitait brillamment les requêtes typiques et correctement les cas limites.
+
+Les cas limites, avons-nous réalisé, n'étaient pas si limites. Ils représentaient 18 % de notre trafic.
+
+La percée est venue au cours d'une séance de tableau blanc particulièrement longue, quand quelqu'un a suggéré d'arrêter de penser le DNS comme un service de consultation et de commencer à le traiter comme un problème de prédiction.
+
+Et si notre résolveur pouvait anticiper les requêtes avant leur arrivée ?
+
+La salle est restée silencieuse pendant une trentaine de secondes. Puis quelqu'un a dit : « C'est soit génial, soit impossible », et nous avons passé les quatre mois suivants à prouver que c'était la première option.
+
+## Construire un résolveur qui prédit l'avenir
+
+Notre nouvelle architecture repose sur ce que nous appelons la « résolution spéculative ». Le système analyse les schémas de trafic sur l'ensemble de notre réseau et pré-calcule les réponses aux requêtes qu'il s'attend à recevoir. Quand une requête arrive vraiment, la réponse attend déjà en mémoire.
+
+Cela a exigé de reconstruire entièrement notre couche de cache. Les caches DNS traditionnels stockent les réponses à des requêtes déjà posées. Notre cache stocke les réponses à des requêtes qui seront probablement posées, en s'appuyant sur des schémas temporels, des corrélations géographiques et ce que nos modèles d'apprentissage automatique ont déterminé du comportement normal du trafic.
+
+Nous avons aussi tout parallélisé. Notre ancien résolveur traitait les requêtes séquentiellement — consultation, validation, mise en cache, réponse. La nouvelle version fait tout cela simultanément sur plusieurs cœurs, avec différents fils d'exécution qui prennent en charge différentes parties de la résolution. La validation d'une requête se déroule pendant que nous préparons déjà la réponse.
+
+Le résultat ? Les temps de réponse moyens sont passés de 47 millisecondes à 1,2 milliseconde.
+
+## Les 840 000 lignes de code supprimées
+
+Nous avons écrit beaucoup de code pendant la phase d'implémentation. La plupart était mauvais.
+
+Notre premier prototype fonctionnel atteignait 8 millisecondes de temps de réponse, soit mieux que l'ancien système, mais pas assez bien. Nous l'avons jeté. La deuxième version est descendue à 3 millisecondes mais s'écroulait sous forte charge. Nous l'avons jetée aussi.
+
+La version trois était proche. La quatre l'était davantage. La cinq a introduit un bug de cache qu'il a fallu trois jours pour localiser. À la version sept, nous avions quelque chose de constant, de brillamment performant, et derrière lui environ 840 000 lignes de code écrites puis supprimées en chemin.
+
+L'historique de notre gestion de versions sur cette période est un monument à l'itération. Chaque approche ratée nous a appris quelque chose sur ce qui ne fonctionnerait pas, ce qui a réduit l'espace de ce qui fonctionnerait. Au moment du déploiement en production, nous avions éliminé la plupart des erreurs possibles par le simple expédient de les avoir toutes commises d'abord.
+
+## Convaincre la direction que c'était nécessaire
+
+Nous avons tenu trois réunions plénières pour expliquer pourquoi il fallait remplacer un résolveur DNS parfaitement fonctionnel. La première s'est mal passée. Notre directeur financier a demandé pourquoi nous consacrions des ressources d'ingénierie à quelque chose dont les clients ne se plaignaient pas.
+
+Notre CTO a affiché l'analyse des coûts. Le gain de performance réduirait les coûts serveur de 23 % par an. L'amélioration du taux de succès du cache ferait baisser les dépenses de bande passante. La fiabilité accrue éviterait le genre de panne DNS qui génère des e-mails clients paniqués et des appels d'urgence.
+
+Le directeur financier a cessé d'objecter et s'est mis à demander un calendrier.
+
+La deuxième réunion portait sur le risque technique. Remplacer une infrastructure centrale est dangereux. Le DNS est critique. Si la migration se passait mal, tous les clients le remarqueraient immédiatement. Notre VP Ingénierie a présenté le plan de déploiement : déploiement progressif sur les nœuds périphériques, déclencheurs de retour arrière automatiques, tableaux de bord de supervision en temps réel, et un coupe-circuit capable de revenir à l'ancien système en moins de 10 secondes.
+
+La troisième réunion a été plus courte. La direction a approuvé le projet, et notre équipe d'ingénierie a lancé le déploiement.
+
+## Ce que nous avons appris
+
+Construire un résolveur DNS deux fois vous apprend des choses que vous n'apprenez pas la première fois. Nous avons appris que l'optimisation des performances relève autant de la prédiction du comportement que de sa mesure. Nous avons appris que l'efficacité du cache compte plus que sa taille. Nous avons appris que le traitement parallèle est difficile à implémenter correctement, mais que l'effort en vaut la peine.
+
+Surtout, nous avons appris que « suffisamment bien » est l'ennemi de « vraiment bien ».
+
+Notre nouveau résolveur traite désormais 99,99 % des requêtes en moins de 2 millisecondes. Le taux de succès du cache a atteint 99,97 %. Les réclamations clients restent inexistantes, mais nos métriques internes nous rendent heureux, maintenant, elles aussi.
+
+Le reconstruirions-nous encore ? Probablement. Notre équipe discute déjà d'une version trois, même si la direction a demandé que nous attendions au moins un an avant de la proposer. Nous appelons cela de la « retenue offensive » et considérons que c'est un compromis raisonnable.
+
+## Spécifications techniques pour les curieux :
+
+- 47 ms de temps de requête moyen (ancien résolveur)
+- 1,2 ms de temps de requête moyen (nouveau résolveur)
+- 6 mois de conception avant la première ligne de code
+- 840 000 lignes de code écrites puis supprimées
+- 3 réunions plénières nécessaires pour obtenir l'accord
+- 99,99 % des requêtes résolues en moins de 2 ms
+- 99,97 % de taux de succès du cache atteint

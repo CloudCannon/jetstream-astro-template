@@ -21,6 +21,7 @@ const {
   "data-prop-src": customDataPropSrc,
   "data-prop-alt": customDataPropAlt,
   imageElementAttributes = {},
+  "data-rosey-alt": roseyAlt,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -42,6 +43,13 @@ const dataAttributes = isEditable
       "data-prop-alt": customDataPropAlt || "alt",
     }
   : {};
+
+// Opt-in rather than derived: most alt text here is decorative or repeats an
+// adjacent heading, and alt is an attribute so it needs the explicit form.
+const altRoseyAttributes =
+  typeof roseyAlt === "string" && roseyAlt
+    ? { "data-rosey-attrs-explicit": JSON.stringify({ alt: roseyAlt }) }
+    : {};
 
 const positionClass = `position-${positionVertical}-${positionHorizontal}`;
 const preparedImage = prepareImageData({
@@ -119,6 +127,7 @@ if (hasAlternate) {
               decoding={priority ? "sync" : "async"}
               fetchpriority={priority ? "high" : undefined}
               {...attrs}
+              {...altRoseyAttributes}
             />
           ) : (
             <picture>
@@ -131,6 +140,7 @@ if (hasAlternate) {
                 width={prepared.imageWidth}
                 height={prepared.imageHeight}
                 {...attrs}
+                {...altRoseyAttributes}
               />
             </picture>
           );

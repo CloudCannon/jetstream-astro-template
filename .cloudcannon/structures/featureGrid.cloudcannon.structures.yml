@@ -91,6 +91,7 @@ featureGridItems:
       icon: star
       value:
         _component: page-sections/features/feature-grid/feature-item
+        _uuid:
         link: ""
         image:
           source: ""
@@ -178,6 +179,7 @@ featureGridItems:
       icon: attach_money
       value:
         _component: page-sections/features/feature-grid/pricing-item
+        _uuid:
         title: Tier
         price:
           prefix: $
@@ -186,16 +188,20 @@ featureGridItems:
         subtext: Best for growing agencies (up to 100 staff).
         list:
           _component: building-blocks/core-elements/list
+          _uuid:
           items:
-            - text: List item 1
+            - _uuid:
+              text: List item 1
               iconName: heart
               iconColor: default
               link:
-            - text: List item 2
+            - _uuid:
+              text: List item 2
               iconName: heart
               iconColor: default
               link:
-            - text: List item 3
+            - _uuid:
+              text: List item 3
               iconName: heart
               iconColor: default
               link:
@@ -205,6 +211,7 @@ featureGridItems:
           listType: icon
         button:
           _component: building-blocks/core-elements/button
+          _uuid:
           text: Get started
           hideText: false
           link: /
@@ -238,7 +245,12 @@ featureGridItems:
                     amount: "599"
                     suffix: /mo
         subtext:
-          type: textarea
+          # markdown, not textarea — rendered through <Text> as block HTML.
+          type: markdown
+          options:
+            bold: true
+            italic: true
+            link: true
         list:
           type: object
           options:

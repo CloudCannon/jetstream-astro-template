@@ -23,6 +23,7 @@ const {
   verticalOffset = {},
   rounded = false,
   class: className,
+  _uuid,
   _component,
   useDefaultEditableBinding = false,
   ...htmlAttributes
@@ -51,6 +52,7 @@ const mobileSlides = slides.flatMap(
   verticalOffset={verticalOffset}
   id={id}
   backgroundColor={backgroundColorHeight === "full" ? backgroundColor : ""}
+  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <CustomSection
@@ -114,7 +116,10 @@ const mobileSlides = slides.flatMap(
           <FeatureCarouselSlide
             aria-label={`Slide ${index + 1} of ${slides.length}`}
             data-editable="array-item"
-            data-id="page-sections/features/feature-carousel-grid/feature-carousel-slide"
+            data-component="page-sections/features/feature-carousel-grid/feature-carousel-slide"
+            data-id={
+              slide._uuid ?? "page-sections/features/feature-carousel-grid/feature-carousel-slide"
+            }
             {...slide}
             class="feature-carousel-grid-slide"
           />

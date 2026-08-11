@@ -15,8 +15,13 @@ tabs:
               type: text
               comment: The heading for the tab.
             subtext:
-              type: textarea
+              # markdown, not textarea — rendered through <Text> as block HTML.
+              type: markdown
               comment: The subtext for the tab.
+              options:
+                bold: true
+                italic: true
+                link: true
             contentSections:
               type: array
               options:

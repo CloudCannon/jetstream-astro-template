@@ -3,6 +3,7 @@ icon: apps
 description: Responsive grid layout for highlighting multiple features.
 value:
   _component: page-sections/features/feature-grid
+  _uuid:
   id:
   eyebrowIcon: {}
   eyebrowText: Eyebrow placeholder
