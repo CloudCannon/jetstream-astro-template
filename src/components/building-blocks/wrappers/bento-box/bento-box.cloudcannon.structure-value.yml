@@ -1,8 +1,8 @@
-label: Bento Box Grid
+label: Bento Box
 icon: grid_on
 description: Arranges content into a grid that adapts to screen size, with items of varying widths.
 value:
-  _component: building-blocks/wrappers/bento-box-grid
+  _component: building-blocks/wrappers/bento-box
   label: ""
   layout: center
   minItemWidth: 280
@@ -11,21 +11,21 @@ value:
   gap: md
 preview:
   text:
-    - Bento Box Grid
+    - Bento Box
   subtext:
     - key: label
   icon: grid_on
 picker_preview:
-  text: Bento Box Grid
+  text: Bento Box
   subtext: Arranges content into a grid that adapts to screen size, with items of varying widths.
 _inputs_from_glob:
-  - /src/components/building-blocks/wrappers/bento-box-grid/bento-box-grid.cloudcannon.inputs.yml
+  - /src/components/building-blocks/wrappers/bento-box/bento-box.cloudcannon.inputs.yml
 _structures:
-  bentoBoxGridItems:
+  bentoBoxItems:
     values:
       - label: Grid Item
         value:
-          _component: building-blocks/wrappers/bento-box-grid/bento-box-grid-item
+          _component: building-blocks/wrappers/bento-box/bento-box-item
           contentSections: []
         preview:
           icon: grid_view

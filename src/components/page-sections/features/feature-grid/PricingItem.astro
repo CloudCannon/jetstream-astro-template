@@ -3,7 +3,7 @@ import Button from "@core-elements/button/Button.astro";
 import Heading from "@core-elements/heading/Heading.astro";
 import List from "@core-elements/list/List.astro";
 import Text from "@core-elements/text/Text.astro";
-import BentoBoxGridItem from "@wrappers/bento-box-grid/BentoBoxGridItem.astro";
+import BentoBoxItem from "@wrappers/bento-box/BentoBoxItem.astro";
 import Card from "@wrappers/card/Card.astro";
 
 const {
@@ -25,7 +25,7 @@ const {
 } = Astro.props;
 ---
 
-<BentoBoxGridItem
+<BentoBoxItem
   columnSpan={columnSpan}
   rowSpan={rowSpan}
   data-prop-columnSpan="columnSpan"
@@ -102,7 +102,7 @@ const {
       data-prop="button.text"
     />
   </Card>
-</BentoBoxGridItem>
+</BentoBoxItem>
 
 <style is:global>
   @layer page-sections {

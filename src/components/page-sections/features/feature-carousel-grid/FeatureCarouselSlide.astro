@@ -1,6 +1,6 @@
 ---
 import FeatureCarouselCard from "@features/feature-carousel-grid/FeatureCarouselCard.astro";
-import BentoBoxGrid from "@wrappers/bento-box-grid/BentoBoxGrid.astro";
+import BentoBox from "@wrappers/bento-box/BentoBox.astro";
 import CarouselSlide from "@wrappers/carousel/CarouselSlide.astro";
 
 const {
@@ -13,7 +13,7 @@ const {
 ---
 
 <CarouselSlide {...htmlAttributes}>
-  <BentoBoxGrid
+  <BentoBox
     class:list={["feature-carousel-slide-grid", className]}
     gap="xs"
     data-children-prop="cards"
@@ -27,7 +27,7 @@ const {
             backgroundColor={card.style}
             border={false}
             data-editable="array-item"
-            data-id="building-blocks/wrappers/bento-box-grid/bento-box-grid-item"
+            data-id="building-blocks/wrappers/bento-box/bento-box-item"
           />
         ) : (
           <FeatureCarouselCard
@@ -35,12 +35,12 @@ const {
             backgroundColor="base"
             border={true}
             data-editable="array-item"
-            data-id="building-blocks/wrappers/bento-box-grid/bento-box-grid-item"
+            data-id="building-blocks/wrappers/bento-box/bento-box-item"
           />
         )
       )
     }
-  </BentoBoxGrid>
+  </BentoBox>
 </CarouselSlide>
 
 <style is:global>

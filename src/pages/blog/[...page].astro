@@ -7,8 +7,8 @@ import Pagination from "@core-elements/pagination/Pagination.astro";
 import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import Page from "@layouts/Page.astro";
 import CustomSection from "@page-sections/builders/custom-section/CustomSection.astro";
-import BentoBoxGrid from "@wrappers/bento-box-grid/BentoBoxGrid.astro";
-import BentoBoxGridItem from "@wrappers/bento-box-grid/BentoBoxGridItem.astro";
+import BentoBox from "@wrappers/bento-box/BentoBox.astro";
+import BentoBoxItem from "@wrappers/bento-box/BentoBoxItem.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import Card from "@wrappers/card/Card.astro";
 import { getCollection } from "astro:content";
@@ -95,7 +95,7 @@ const team = await getCollection("team");
               ))}
             </ButtonGroup>
           )}
-          <BentoBoxGrid
+          <BentoBox
             gap="sm"
             layout="start"
             minItemWidth="320"
@@ -121,7 +121,7 @@ const team = await getCollection("team");
               const author = team.find((m: any) => m.data.uuid === post.data.author);
 
               return (
-                <BentoBoxGridItem
+                <BentoBoxItem
                   columnSpan={columnSpan}
                   editable={false}
                 >
@@ -173,10 +173,10 @@ const team = await getCollection("team");
                       By {author?.data.name || "Anonymous"} | {pubDate}
                     </SimpleText>
                   </Card>
-                </BentoBoxGridItem>
+                </BentoBoxItem>
               );
             })}
-          </BentoBoxGrid>
+          </BentoBox>
           <Pagination
             page={page}
             showArrows={true}

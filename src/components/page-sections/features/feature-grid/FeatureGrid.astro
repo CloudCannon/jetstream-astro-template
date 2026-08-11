@@ -4,7 +4,7 @@ import Heading from "@core-elements/heading/Heading.astro";
 import Icon from "@core-elements/icon/Icon.astro";
 import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import Text from "@core-elements/text/Text.astro";
-import BentoBoxGrid from "@wrappers/bento-box-grid/BentoBoxGrid.astro";
+import BentoBox from "@wrappers/bento-box/BentoBox.astro";
 import RenderBlock from "@components/utils/renderBlock.astro";
 
 const {
@@ -97,7 +97,7 @@ const {
       backgroundColor={featureGrid.backgroundColor}
       rounded={featureGrid.rounded}
     >
-      <BentoBoxGrid
+      <BentoBox
         gap="md"
         data-children-prop="featureGrid.features"
         class="feature-grid-grid"
@@ -110,7 +110,7 @@ const {
             />
           )
         }
-      </BentoBoxGrid>
+      </BentoBox>
     </CustomSection>
   </CustomSection>
 </CustomSection>

@@ -3,7 +3,7 @@ import Heading from "@core-elements/heading/Heading.astro";
 import Icon from "@core-elements/icon/Icon.astro";
 import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import Text from "@core-elements/text/Text.astro";
-import BentoBoxGridItem from "@wrappers/bento-box-grid/BentoBoxGridItem.astro";
+import BentoBoxItem from "@wrappers/bento-box/BentoBoxItem.astro";
 import Card from "@wrappers/card/Card.astro";
 
 const {
@@ -21,7 +21,7 @@ const {
 } = Astro.props;
 ---
 
-<BentoBoxGridItem
+<BentoBoxItem
   columnSpan={columnSpan}
   rowSpan={rowSpan}
 >
@@ -76,7 +76,7 @@ const {
       )
     }
   </Card>
-</BentoBoxGridItem>
+</BentoBoxItem>
 
 <style is:global>
   @layer page-sections {

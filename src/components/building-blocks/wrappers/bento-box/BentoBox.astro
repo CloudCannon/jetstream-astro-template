@@ -1,5 +1,5 @@
 ---
-import BentoBoxGridItem from "./BentoBoxGridItem.astro";
+import BentoBoxItem from "./BentoBoxItem.astro";
 
 const {
   layout = "center",
@@ -43,19 +43,19 @@ if (!_component && !hasItems && !hasSlotContent) return;
 ---
 
 <div
-  class:list={["bento-box-grid", className]}
+  class:list={["bento-box", className]}
   {...htmlAttributes}
 >
   <div
     {...arrayDataAttributes}
-    class:list={["bento-box-grid-inner", `layout-${layout}`]}
+    class:list={["bento-box-inner", `layout-${layout}`]}
     style={gridStyles}
   >
     <slot>
       {
         items?.map((item: any) => (
-          <BentoBoxGridItem
-            data-id="building-blocks/wrappers/bento-box-grid/bento-box-grid-item"
+          <BentoBoxItem
+            data-id="building-blocks/wrappers/bento-box/bento-box-item"
             data-editable="array-item"
             class:list={`layout-${layout}`}
             useDefaultEditableBinding={!!effectiveChildrenProp}
@@ -69,12 +69,12 @@ if (!_component && !hasItems && !hasSlotContent) return;
 
 <style>
   @layer components {
-    .bento-box-grid {
+    .bento-box {
       margin-top: var(--spacing-lg);
       width: 100%;
     }
 
-    .bento-box-grid > .bento-box-grid-inner {
+    .bento-box > .bento-box-inner {
       display: grid;
       gap: var(--grid-spacing, var(--spacing-md));
       grid-template-columns: repeat(12, 1fr);
