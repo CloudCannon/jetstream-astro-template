@@ -83,11 +83,11 @@ const team = await getCollection("team");
       page.data.length > 0 ? (
         <>
           {allTags.length > 0 && (
-            <ButtonGroup>
+            <ButtonGroup class="blog-filters">
               <Button
                 link="/blog#posts"
                 variant={selectedTag === "all" ? "secondary" : "base"}
-                text="All"
+                text="All posts"
                 editable={false}
               />
               {allTags.map((tag: string) => (

@@ -78,11 +78,11 @@ const team = await getCollection("team");
       page.data.length > 0 ? (
         <>
           {allTags.length > 0 && (
-            <ButtonGroup>
+            <ButtonGroup class="blog-filters">
               <Button
                 link="/blog#posts"
                 variant={selectedTag === "all" ? "secondary" : "base"}
-                text="All"
+                text="All posts"
                 editable={false}
               />
               {allTags.map((tag: string) => (
@@ -211,6 +211,10 @@ const team = await getCollection("team");
     .blog-grid .card .image .image-inner {
       max-height: 230px;
       width: 100%;
+    }
+
+    .blog-filters .button > .button-inner {
+      border-radius: var(--radius-3xl);
     }
   }
 </style>
