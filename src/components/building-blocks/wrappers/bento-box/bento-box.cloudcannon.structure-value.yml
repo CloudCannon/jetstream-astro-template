@@ -24,6 +24,8 @@ _structures:
         value:
           _component: building-blocks/wrappers/bento-box/bento-box-item
           contentSections: []
+          columnSpan: 4
+          rowSpan: 1
         preview:
           icon: grid_view
           text: Grid Item
@@ -36,3 +38,19 @@ _structures:
             comment: Content sections to render within this grid item.
             options:
               structures: _structures.gridItemSections
+          columnSpan:
+            type: range
+            comment: The number of columns the item should span, each row has 12 columns.
+            options:
+              min: 1
+              max: 12
+              step: 1
+              default: 4
+          rowSpan:
+            type: range
+            comment: The number of rows the item should span.
+            options:
+              min: 1
+              max: 4
+              step: 1
+              default: 1
