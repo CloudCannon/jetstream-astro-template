@@ -6,35 +6,18 @@ import ThemeToggle from "@components/navigation/theme-toggle/ThemeToggle.astro";
 import Image from "@core-elements/image/Image.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 
-type NavButton = {
-  text?: string;
-  /** Button schema uses `link`; legacy entries may use `href`. */
-  link?: string;
-  href?: string;
-  [key: string]: unknown;
-};
-
 const {
   logoSource,
   logoAlternateSource,
   logoAlt = "logo",
   navData = [],
-  buttonSections = [] as NavButton[],
+  buttonSections = [],
   themeToggle = false,
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
   _component,
   ...htmlAttributes
 } = Astro.props;
-
-const mobileNavData = [
-  ...navData,
-  ...buttonSections.map((button: any) => ({
-    name: button.text || "Button",
-    path: button.link || button.href || "#",
-    children: [],
-  })),
-];
 ---
 
 <CustomSection
@@ -79,7 +62,8 @@ const mobileNavData = [
     logoSource={logoSource}
     logoAlternateSource={logoAlternateSource}
     logoAlt={logoAlt}
-    navData={mobileNavData}
+    navData={navData}
+    buttonSections={buttonSections}
     class="mobile-main-nav"
     useDefaultEditableBinding={false}
   />

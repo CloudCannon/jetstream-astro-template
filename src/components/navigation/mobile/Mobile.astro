@@ -2,13 +2,17 @@
 import Button from "@core-elements/button/Button.astro";
 import Icon from "@core-elements/icon/Icon.astro";
 import Image from "@core-elements/image/Image.astro";
+import NavItemLabel from "@component-utils/NavItemLabel.astro";
+import { navItemHasLabelExtras } from "@component-utils/navItem";
 import { itemHasSplitNavLink } from "@component-utils/navSplitLink";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 
 const {
   logoSource,
   logoAlternateSource,
   logoAlt,
   navData = [],
+  buttonSections = [],
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
   _component,
@@ -37,6 +41,7 @@ function createNavItemData(item, level, parentGroupId) {
     ...item,
     hasChildren,
     hasSplitLink: itemHasSplitNavLink(item),
+    hasLabelExtras: navItemHasLabelExtras(item),
     level,
     dropdownId: `dropdown-toggle-${crypto.randomUUID()}`,
     contentId: `dropdown-content-${crypto.randomUUID()}`,
@@ -61,7 +66,7 @@ function createNavItemData(item, level, parentGroupId) {
   tabindex="0"
 >
   <Button
-    variant="tertiary"
+    variant="primary"
     size="lg"
     element="div"
     iconName="bars-3"
@@ -95,7 +100,7 @@ function createNavItemData(item, level, parentGroupId) {
         tabindex="0"
       >
         <Button
-          variant="tertiary"
+          variant="primary"
           size="lg"
           element="span"
           iconName="x-mark"
@@ -117,9 +122,10 @@ function createNavItemData(item, level, parentGroupId) {
               <li class="nav-item">
                 <a
                   href={itemData.path}
+                  class:list={[itemData.hasLabelExtras && "has-label-extras"]}
                   aria-current={itemData.isCurrent ? "page" : undefined}
                 >
-                  {itemData.name}
+                  <NavItemLabel item={itemData} />
                 </a>
               </li>
             );
@@ -141,10 +147,10 @@ function createNavItemData(item, level, parentGroupId) {
                 <div class="nav-item-split">
                   <a
                     href={itemData.path}
-                    class="nav-item-link"
+                    class:list={["nav-item-link", itemData.hasLabelExtras && "has-label-extras"]}
                     aria-current={itemData.isCurrent ? "page" : undefined}
                   >
-                    {itemData.name}
+                    <NavItemLabel item={itemData} />
                   </a>
                   <label
                     for={itemData.dropdownId}
@@ -165,12 +171,12 @@ function createNavItemData(item, level, parentGroupId) {
               ) : (
                 <label
                   for={itemData.dropdownId}
-                  class="nav-item-trigger"
+                  class:list={["nav-item-trigger", itemData.hasLabelExtras && "has-label-extras"]}
                   aria-controls={itemData.contentId}
                   tabindex="0"
                   aria-current={itemData.isCurrent ? "page" : undefined}
                 >
-                  {itemData.name}
+                  <NavItemLabel item={itemData} />
                   <span class="nav-item-icon">
                     <Icon
                       name="chevron-right"
@@ -196,9 +202,10 @@ function createNavItemData(item, level, parentGroupId) {
                         <li class="nav-item">
                           <a
                             href={childData.path}
+                            class:list={[childData.hasLabelExtras && "has-label-extras"]}
                             aria-current={childData.isCurrent ? "page" : undefined}
                           >
-                            {childData.name}
+                            <NavItemLabel item={childData} />
                           </a>
                         </li>
                       );
@@ -220,10 +227,13 @@ function createNavItemData(item, level, parentGroupId) {
                           <div class="nav-item-split">
                             <a
                               href={childData.path}
-                              class="nav-item-link"
+                              class:list={[
+                                "nav-item-link",
+                                childData.hasLabelExtras && "has-label-extras",
+                              ]}
                               aria-current={childData.isCurrent ? "page" : undefined}
                             >
-                              {childData.name}
+                              <NavItemLabel item={childData} />
                             </a>
                             <label
                               for={childData.dropdownId}
@@ -244,12 +254,15 @@ function createNavItemData(item, level, parentGroupId) {
                         ) : (
                           <label
                             for={childData.dropdownId}
-                            class="nav-item-trigger"
+                            class:list={[
+                              "nav-item-trigger",
+                              childData.hasLabelExtras && "has-label-extras",
+                            ]}
                             aria-controls={childData.contentId}
                             tabindex="0"
                             aria-current={childData.isCurrent ? "page" : undefined}
                           >
-                            {childData.name}
+                            <NavItemLabel item={childData} />
                             <span class="nav-item-icon">
                               <Icon
                                 name="chevron-right"
@@ -278,9 +291,10 @@ function createNavItemData(item, level, parentGroupId) {
                                 <li class="nav-item">
                                   <a
                                     href={grandChildData.path}
+                                    class:list={[grandChildData.hasLabelExtras && "has-label-extras"]}
                                     aria-current={grandChildData.isCurrent ? "page" : undefined}
                                   >
-                                    {grandChildData.name}
+                                    <NavItemLabel item={grandChildData} />
                                   </a>
                                 </li>
                               );
@@ -298,6 +312,20 @@ function createNavItemData(item, level, parentGroupId) {
       }
     </ul>
   </div>
+
+  {
+    buttonSections?.length > 0 && (
+      <div class="mobile-actions">
+        <ButtonGroup
+          direction="row"
+          alignmentHorizontal="start"
+          buttonSections={buttonSections}
+          class="mobile-button-group"
+          useDefaultEditableBinding={false}
+        />
+      </div>
+    )
+  }
 </nav>
 
 <script>
@@ -340,12 +368,12 @@ function createNavItemData(item, level, parentGroupId) {
       function handleNavToggle(isOpen, returnFocus = true) {
         if (isOpen) {
           nav.setAttribute("aria-hidden", "false");
-          nav.style.transform = "translateX(0)";
+          nav.classList.add("open");
           document.body.style.overflow = "hidden";
           nav.querySelector(".mobile-close")?.focus();
         } else {
           nav.setAttribute("aria-hidden", "true");
-          nav.style.transform = "translateX(-100%)";
+          nav.classList.remove("open");
           document.body.style.overflow = "";
           if (returnFocus) hamburger?.focus();
         }
@@ -456,8 +484,13 @@ function createNavItemData(item, level, parentGroupId) {
       display: none;
     }
 
-    .nav-toggle:checked ~ .mobile {
+    .nav-toggle:checked ~ .mobile,
+    .mobile.open {
       transform: translateX(0);
+      transition:
+        transform var(--animation-fast) ease-in-out,
+        visibility 0s;
+      visibility: visible;
     }
 
     .mobile-button {
@@ -466,15 +499,41 @@ function createNavItemData(item, level, parentGroupId) {
       outline-offset: -2px;
     }
 
+    /*
+     * Icon-only buttons default to a circle; square off the hamburger and close
+     * buttons so they read as the same shape as the nav's other primary buttons.
+     */
+    .nav-hamburger .button > .button-inner,
+    .mobile .mobile-header-actions .button > .button-inner {
+      border-radius: var(--radius-sm);
+    }
+
     .mobile {
       background: var(--color-bg);
+      border: 2px solid var(--color-border-subtle);
+      border-top-left-radius: calc(var(--radius-3xl) - 6px);
+      border-bottom-left-radius: calc(var(--radius-md) - 6px);
+      border-top-right-radius: calc(var(--radius-md) - 6px);
+      border-bottom-right-radius: calc(var(--radius-md) - 6px);
+      box-shadow: 10px 10px 29px 10px var(--color-shadow);
       display: flex;
       flex-direction: column;
-      height: 100vh;
-      inset: 0;
+      left: var(--spacing-sm);
+      max-height: calc(100dvh - (2 * var(--spacing-sm)));
+      overflow: hidden;
       position: fixed;
-      transform: translateX(-100%);
-      transition: transform var(--animation-fast) ease-in-out;
+      right: var(--spacing-sm);
+      top: var(--spacing-md);
+      /* Clear the left inset as well so no sliver of the panel stays on screen. */
+      transform: translateX(calc(-100% - var(--spacing-sm)));
+      /*
+       * Hiding the closed panel keeps its shadow off screen and its links out
+       * of the tab order; the delay lets the slide-out finish first.
+       */
+      transition:
+        transform var(--animation-fast) ease-in-out,
+        visibility 0s linear var(--animation-fast);
+      visibility: hidden;
       z-index: var(--layer-5);
 
       .mobile-header {
@@ -482,9 +541,8 @@ function createNavItemData(item, level, parentGroupId) {
         border-bottom: 1px solid var(--color-border-subtle);
         display: flex;
         flex-shrink: 0;
-        height: 5rem;
         justify-content: space-between;
-        padding: 0 var(--spacing-lg);
+                padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) var(--spacing-2xl);
 
         .mobile-logo {
           svg {
@@ -509,8 +567,45 @@ function createNavItemData(item, level, parentGroupId) {
       }
 
       .mobile-content {
-        flex: 1;
+        flex: 1 1 auto;
+        min-height: 0;
         overflow-y: auto;
+      }
+
+      /* The actions' top border already separates them from the last row. */
+      .mobile-content:has(+ .mobile-actions) .mobile-list > .nav-item:last-child {
+        border-bottom: none;
+      }
+
+      /* Actions stay pinned below the scrolling list. */
+      .mobile-actions {
+        border-top: 1px solid var(--color-border-subtle);
+        flex: 0 0 auto;
+        padding: var(--spacing-md);
+
+        .button-group {
+          margin-top: 0;
+
+          > .button-group__items {
+            flex-wrap: nowrap;
+            gap: var(--spacing-sm);
+          }
+        }
+
+        .button {
+          flex: 1 1 auto;
+          min-width: 0;
+
+          &:has(> .button-inner.icon-only) {
+            flex: 0 0 auto;
+          }
+
+          > .button-inner {
+            border-radius: var(--radius-sm);
+            justify-content: center;
+            width: 100%;
+          }
+        }
       }
 
       .mobile-list {
@@ -525,8 +620,12 @@ function createNavItemData(item, level, parentGroupId) {
       }
 
       .nav-item {
-        border-bottom: 1px solid var(--color-border-subtle);
         position: relative;
+      }
+
+      /* Only top-level rows are separated; dropdown rows sit flush together. */
+      .mobile-list > .nav-item {
+        border-bottom: 1px solid var(--color-border-subtle);
       }
 
       /*
@@ -710,10 +809,6 @@ function createNavItemData(item, level, parentGroupId) {
        * weight / size; level three drops to body-sm + regular.
        */
       .nav-list {
-        & > .nav-item:last-child {
-          border-bottom: none;
-        }
-
         & > .nav-item > a,
         & > .nav-item > .nav-item-trigger:not(.nav-item-toggle-btn) {
           padding-inline: var(--spacing-xl);
@@ -745,6 +840,30 @@ function createNavItemData(item, level, parentGroupId) {
           font-weight: var(--font-weight-regular);
         }
       }
+
+      /*
+       * Rows with an icon and/or subtext: drop the nested indent (the icon
+       * column takes its place) and keep the name at full weight.
+       */
+      .nav-list > .nav-item > a.has-label-extras,
+      .nav-list > .nav-item > .nav-item-trigger.has-label-extras,
+      .nav-list > .nav-item > .nav-item-split .nav-item-link.has-label-extras,
+      .nav-list .nav-list > .nav-item > a.has-label-extras,
+      .nav-list .nav-list > .nav-item > .nav-item-trigger.has-label-extras {
+        padding-inline: var(--spacing-md);
+      }
+
+      .nav-item > a.has-label-extras,
+      .nav-item > .nav-item-trigger.has-label-extras,
+      .nav-item > .nav-item-split .nav-item-link.has-label-extras {
+        align-items: flex-start;
+        white-space: normal;
+      }
+
+      .has-label-extras .nav-item-label-name {
+        font-size: var(--font-size-md);
+        font-weight: var(--font-weight-semibold);
+      }
     }
 
     .mobile .mobile-header .mobile-logo .mobile-logo-image {
@@ -763,12 +882,13 @@ function createNavItemData(item, level, parentGroupId) {
       width: 100%;
     }
 
+    /* Matches the logo in the collapsed nav bar so it doesn't jump on open. */
     .mobile .mobile-header .mobile-logo .mobile-logo-image img,
     .mobile .mobile-header .mobile-logo .mobile-logo-image svg,
     .mobile .mobile-header .mobile-logo svg {
       display: block;
-      height: 2rem;
-      max-width: 100%;
+      height: 1.25em;
+      max-width: 150px;
       width: auto;
     }
 

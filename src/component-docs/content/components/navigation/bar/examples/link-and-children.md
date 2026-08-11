@@ -12,9 +12,15 @@ blocks:
       children:
         - name: 'Project tour'
           path: '/component-docs/project-tour/'
+          subtext: 'Find your way around the starter.'
+          iconName: 'rocket-launch'
+          iconPosition: 'before'
           children: []
         - name: 'Customizing your brand'
           path: '/component-docs/customizing-your-brand/'
+          subtext: 'Swap colors, fonts, and spacing.'
+          iconName: 'swatch'
+          iconPosition: 'before'
           children: []
     - name: 'Support hub'
       path: '/why/'

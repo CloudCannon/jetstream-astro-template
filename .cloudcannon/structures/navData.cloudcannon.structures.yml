@@ -37,14 +37,21 @@ navData:
                 value:
                   name: ""
                   path: ""
+                  subtext: ""
+                  iconName: ""
+                  iconPosition: before
                   children: []
                 preview:
                   text:
                     - key: name
                     - Navigation Item
                   subtext:
+                    - key: subtext
                     - key: path
                     - Add path
+                  icon:
+                    - key: iconName
+                    - link
                 _inputs:
                   name:
                     type: text
@@ -52,6 +59,29 @@ navData:
                   path:
                     type: text
                     comment: URL path for the child navigation item.
+                  subtext:
+                    type: text
+                    comment: Optional description shown beneath the name in the dropdown.
+                  iconName:
+                    type: select
+                    comment: Optional icon shown alongside the name. Sourced from [Heroicons](https://heroicons.com/).
+                    options:
+                      values: _select_data.icons
+                      preview:
+                        text:
+                          - key: name
+                        image:
+                          - template: src/icons/{id}.svg
+                  iconPosition:
+                    type: select
+                    comment: Whether the icon sits before or after the name.
+                    hidden: "!iconName"
+                    options:
+                      values:
+                        - id: before
+                          name: Before
+                        - id: after
+                          name: After
                   children:
                     type: array
                     label: Grandchild Navigation Items
@@ -63,13 +93,20 @@ navData:
                           value:
                             name: ""
                             path: ""
+                            subtext: ""
+                            iconName: ""
+                            iconPosition: before
                           preview:
                             text:
                               - key: name
                               - Navigation Item
                             subtext:
+                              - key: subtext
                               - key: path
                               - Add path
+                            icon:
+                              - key: iconName
+                              - link
                           _inputs:
                             name:
                               type: text
@@ -77,3 +114,26 @@ navData:
                             path:
                               type: text
                               comment: URL path for the grandchild navigation item.
+                            subtext:
+                              type: text
+                              comment: Optional description shown beneath the name in the dropdown.
+                            iconName:
+                              type: select
+                              comment: Optional icon shown alongside the name. Sourced from [Heroicons](https://heroicons.com/).
+                              options:
+                                values: _select_data.icons
+                                preview:
+                                  text:
+                                    - key: name
+                                  image:
+                                    - template: src/icons/{id}.svg
+                            iconPosition:
+                              type: select
+                              comment: Whether the icon sits before or after the name.
+                              hidden: "!iconName"
+                              options:
+                                values:
+                                  - id: before
+                                    name: Before
+                                  - id: after
+                                    name: After

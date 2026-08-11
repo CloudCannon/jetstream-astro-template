@@ -6,6 +6,7 @@ value:
   logoSource: null
   logoAlt: null
   navData: []
+  buttonSections: []
 preview:
   text:
     - Mobile Navigation

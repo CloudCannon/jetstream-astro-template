@@ -1,5 +1,7 @@
 ---
 import Icon from "@core-elements/icon/Icon.astro";
+import NavItemLabel from "@component-utils/NavItemLabel.astro";
+import { navItemHasLabelExtras } from "@component-utils/navItem";
 import { itemHasSplitNavLink } from "@component-utils/navSplitLink";
 
 const {
@@ -29,6 +31,7 @@ function createNavItemData(item, level, parentGroupId) {
     ...item,
     hasChildren,
     hasSplitLink: itemHasSplitNavLink(item),
+    hasLabelExtras: navItemHasLabelExtras(item),
     level,
     dropdownId: `dropdown-toggle-${crypto.randomUUID()}`,
     contentId: `dropdown-content-${crypto.randomUUID()}`,
@@ -54,9 +57,10 @@ function createNavItemData(item, level, parentGroupId) {
             <li class="nav-item">
               <a
                 href={itemData.path}
+                class:list={[itemData.hasLabelExtras && "has-label-extras"]}
                 aria-current={itemData.isCurrent ? "page" : undefined}
               >
-                {itemData.name}
+                <NavItemLabel item={itemData} />
               </a>
             </li>
           );
@@ -77,10 +81,10 @@ function createNavItemData(item, level, parentGroupId) {
               <div class="nav-item-split">
                 <a
                   href={itemData.path}
-                  class="nav-item-link"
+                  class:list={["nav-item-link", itemData.hasLabelExtras && "has-label-extras"]}
                   aria-current={itemData.isCurrent ? "page" : undefined}
                 >
-                  {itemData.name}
+                  <NavItemLabel item={itemData} />
                 </a>
                 <label
                   for={itemData.dropdownId}
@@ -101,12 +105,12 @@ function createNavItemData(item, level, parentGroupId) {
             ) : (
               <label
                 for={itemData.dropdownId}
-                class="nav-item-trigger"
+                class:list={["nav-item-trigger", itemData.hasLabelExtras && "has-label-extras"]}
                 aria-controls={itemData.contentId}
                 tabindex="0"
                 aria-current={itemData.isCurrent ? "page" : undefined}
               >
-                {itemData.name}
+                <NavItemLabel item={itemData} />
                 <span class="nav-item-icon">
                   <Icon
                     name="chevron-right"
@@ -132,9 +136,10 @@ function createNavItemData(item, level, parentGroupId) {
                       <li class="nav-item">
                         <a
                           href={childData.path}
+                          class:list={[childData.hasLabelExtras && "has-label-extras"]}
                           aria-current={childData.isCurrent ? "page" : undefined}
                         >
-                          {childData.name}
+                          <NavItemLabel item={childData} />
                         </a>
                       </li>
                     );
@@ -155,10 +160,10 @@ function createNavItemData(item, level, parentGroupId) {
                         <div class="nav-item-split">
                           <a
                             href={childData.path}
-                            class="nav-item-link"
+                            class:list={["nav-item-link", childData.hasLabelExtras && "has-label-extras"]}
                             aria-current={childData.isCurrent ? "page" : undefined}
                           >
-                            {childData.name}
+                            <NavItemLabel item={childData} />
                           </a>
                           <label
                             for={childData.dropdownId}
@@ -179,12 +184,12 @@ function createNavItemData(item, level, parentGroupId) {
                       ) : (
                         <label
                           for={childData.dropdownId}
-                          class="nav-item-trigger"
+                          class:list={["nav-item-trigger", childData.hasLabelExtras && "has-label-extras"]}
                           aria-controls={childData.contentId}
                           tabindex="0"
                           aria-current={childData.isCurrent ? "page" : undefined}
                         >
-                          {childData.name}
+                          <NavItemLabel item={childData} />
                           <span class="nav-item-icon">
                             <Icon
                               name="chevron-right"
@@ -213,9 +218,10 @@ function createNavItemData(item, level, parentGroupId) {
                               <li class="nav-item">
                                 <a
                                   href={grandChildData.path}
+                                  class:list={[grandChildData.hasLabelExtras && "has-label-extras"]}
                                   aria-current={grandChildData.isCurrent ? "page" : undefined}
                                 >
-                                  {grandChildData.name}
+                                  <NavItemLabel item={grandChildData} />
                                 </a>
                               </li>
                             );
@@ -588,6 +594,25 @@ function createNavItemData(item, level, parentGroupId) {
       .nav-item-nested .nav-item > .nav-item-trigger,
       .nav-item-nested .nav-item-split .nav-item-link {
         font-weight: var(--font-weight-normal);
+      }
+
+      /* Dropdown rows carrying an icon and/or subtext need room to breathe. */
+      .nav-item-content .nav-item > a.has-label-extras,
+      .nav-item-content .nav-item > .nav-item-trigger.has-label-extras,
+      .nav-item-content .nav-item-split .nav-item-link.has-label-extras,
+      .nav-item-nested .nav-item > a.has-label-extras {
+        padding: var(--spacing-md);
+        white-space: normal;
+      }
+
+      .nav-item-content .nav-item-label,
+      .nav-item-nested .nav-item-label {
+        max-width: 20rem;
+      }
+
+      .nav-item-content .nav-item-label-name,
+      .nav-item-nested .nav-item-label-name {
+        font-weight: var(--font-weight-semibold);
       }
     }
   }
