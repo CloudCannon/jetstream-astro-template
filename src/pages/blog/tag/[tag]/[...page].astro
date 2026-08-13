@@ -11,6 +11,7 @@ import BentoBox from "@wrappers/bento-box/BentoBox.astro";
 import BentoBoxItem from "@wrappers/bento-box/BentoBoxItem.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import Card from "@wrappers/card/Card.astro";
+import { getTagIcon } from "@utils/blog";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths({ paginate }) {
@@ -95,6 +96,7 @@ const team = await getCollection("team");
                   link={`/blog/tag/${tag}#posts`}
                   variant={selectedTag === tag ? "secondary" : "base"}
                   text={tag}
+                  iconName={getTagIcon(tag)}
                   editable={false}
                 />
               ))}

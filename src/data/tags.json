@@ -1,0 +1,41 @@
+{
+  "defaultIcon": "tag",
+  "tags": [
+    {
+      "name": "CDN",
+      "icon": "globe-alt"
+    },
+    {
+      "name": "Caching",
+      "icon": "circle-stack"
+    },
+    {
+      "name": "Downtime",
+      "icon": "exclamation-triangle"
+    },
+    {
+      "name": "Example",
+      "icon": "beaker"
+    },
+    {
+      "name": "Performance",
+      "icon": "bolt"
+    },
+    {
+      "name": "Photons",
+      "icon": "sparkles"
+    },
+    {
+      "name": "Prediction",
+      "icon": "chart-bar"
+    },
+    {
+      "name": "Security",
+      "icon": "lock-closed"
+    },
+    {
+      "name": "Uptime",
+      "icon": "shield-check"
+    }
+  ]
+}

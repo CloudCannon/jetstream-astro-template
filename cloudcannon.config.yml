@@ -126,16 +126,17 @@ collections_config:
         options:
           required: true
           allow_create: true
-          values:
-            - Caching
-            - Uptime
-            - Downtime
-            - Example
-            - Security
-            - Performance
-            - CDN
-            - Prediction
-        comment: Tag relevant to this post's content.
+          values: data.tags.tags
+          value_key: name
+          preview:
+            text:
+              - key: name
+            image:
+              - template: src/icons/{icon}.svg
+        comment: >-
+          Tag relevant to this post's content. Each tag's icon is set in the
+          *Tags* data file — type a new tag here to create one, and it will use
+          the default icon until you give it its own.
         cascade: true
       counters:
         type: array
@@ -1061,6 +1062,9 @@ _select_data:
       name: X Circle
     - id: x-mark
       name: X Mark
+data_config:
+  tags:
+    path: src/data/tags.json
 _snippets_imports:
   mdx: true
 file_config:
@@ -1116,6 +1120,56 @@ file_config:
           underline: true
         comment: Optional subtext displayed beneath the heading.
         cascade: true
+  - glob: src/data/tags.json
+    _inputs:
+      defaultIcon:
+        type: select
+        options:
+          required: true
+          values: _select_data.icons
+          preview:
+            text:
+              - key: name
+            image:
+              - template: src/icons/{id}.svg
+        comment: >-
+          Icon used for any blog tag that has not been given its own icon below,
+          including new tags created while writing a post.
+      tags:
+        type: array
+        comment: >-
+          The tags available to blog posts, and the icon shown alongside each
+          one. Removing a tag here does not remove it from posts already using
+          it — those posts fall back to the default icon.
+        options:
+          structures:
+            style: select
+            values:
+              - label: Tag
+                icon: sell
+                value:
+                  name: New Tag
+                  icon: tag
+                _inputs:
+                  name:
+                    type: text
+                    options:
+                      required: true
+                    comment: >-
+                      The tag as it appears on posts. Must match the tag saved
+                      on a post exactly, ignoring capitalisation.
+                  icon:
+                    type: select
+                    options:
+                      values: _select_data.icons
+                      preview:
+                        text:
+                          - key: name
+                        image:
+                          - template: src/icons/{id}.svg
+                    comment: >-
+                      Icon displayed alongside this tag. Sourced from
+                      [Heroicons](https://heroicons.com/).
   - glob: src/content/blog/index.md
     _inputs:
       pageSections:
