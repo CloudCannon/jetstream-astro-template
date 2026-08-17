@@ -141,8 +141,23 @@ const snakePath =
       text={subtext}
     />
 
-    <div class="table-wrapper">
-      <div class="table-container">
+    <div
+      class="table-scroll-progress"
+      hidden
+    >
+      <div
+        class="table-scroll-progress-track"
+        aria-hidden="true"
+      >
+        <span class="table-scroll-progress-thumb"></span>
+      </div>
+    </div>
+
+    <div
+      class="table-container"
+      tabindex="0"
+    >
+      <div class="table-wrapper">
         <table class="comparison-table">
           <thead>
             <tr
@@ -192,11 +207,25 @@ const snakePath =
   </CustomSection>
 </CustomSection>
 
+<script>
+  import { onPageLoad } from "@component-utils/onPageLoad";
+  import { setupAllTableScrolls } from "./setup";
+
+  onPageLoad(() => setupAllTableScrolls());
+</script>
+
 <style is:global>
   @layer page-sections {
+    .table .content .table-container {
+      margin-top: var(--spacing-2xl);
+    }
+
+    .table .content .table-scroll-progress:not([hidden]) + .table-container {
+      margin-top: var(--spacing-md);
+    }
+
     .table .content .table-wrapper {
       position: relative;
-      margin-top: var(--spacing-2xl);
       border-radius: var(--radius-md);
 
       &::before {
@@ -220,11 +249,68 @@ const snakePath =
       container-name: table;
       container-type: inline-size;
 
-      .table-container {
-        overflow-x: auto;
+      .table-scroll-progress {
         margin-top: var(--spacing-2xl);
+      }
+
+      .table-scroll-progress-track {
         position: relative;
-        border-radius: var(--radius-md);
+        width: 100%;
+        height: 10px;
+        border-radius: 9999px;
+        background: var(--color-bg-brand-muted);
+        cursor: grab;
+        touch-action: none;
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
+
+      .table-scroll-progress-thumb {
+        position: absolute;
+        inset-block: 0;
+        left: 0;
+        display: block;
+        width: 0;
+        border-radius: 9999px;
+        background: var(--color-bg-brand);
+      }
+
+      /*
+       * The scroller is widened by `--bleed` on each side and gives that space
+       * back as padding, so the bordered box below sits in the section padding
+       * at either end of the scroll. `--bleed` is only wide enough for the
+       * animated border here; the mobile rules below widen it to the section
+       * padding so the box runs off both edges of the screen in between.
+       */
+      .table-container {
+        --bleed: var(--spacing-sm);
+        overflow-x: auto;
+        overflow-y: hidden;
+        overscroll-behavior-x: contain;
+        margin-inline: calc(var(--bleed) * -1);
+        padding-block: var(--spacing-sm);
+        padding-inline: var(--bleed);
+
+        /* Native scrollbar is only hidden once the custom indicator is live. */
+        &[data-scroll-custom="true"] {
+          scrollbar-width: none;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      }
+
+      /*
+       * The box is part of the scrolled content, so native scrolling moves its
+       * edges — nothing is repositioned per frame. `fit-content` keeps it as
+       * wide as the table when that overflows, and as wide as the scroller when
+       * it doesn't.
+       */
+      .table-wrapper {
+        width: fit-content;
         padding: var(--spacing-md);
         background: var(--color-bg);
       }
@@ -277,6 +363,50 @@ const snakePath =
           vertical-align: top;
           background: var(--color-bg);
           z-index: var(--layer-1);
+        }
+      }
+
+      /*
+       * Below the desktop breakpoint the columns keep a legible floor width
+       * instead of squashing, so the table overflows and is scrolled with the
+       * indicator above it.
+       */
+      @container table (max-width: 1023px) {
+        .table-container {
+          /* Cancels the outer + inner CustomSection `pad-x-lg`. */
+          --bleed: calc(var(--spacing-lg) * 2);
+
+          /*
+           * Fades an edge out once the box has passed it — `--scroll-start` and
+           * `--scroll-end` are the distance scrolled from each end, set by the
+           * script, so the fade only starts once the border has left the
+           * screen and never sits over it.
+           */
+          --fade-start: clamp(0px, calc(var(--scroll-start, 0px) - var(--bleed)), var(--spacing-3xl));
+          --fade-end: clamp(0px, calc(var(--scroll-end, 0px) - var(--bleed)), var(--spacing-3xl));
+
+          mask-image: linear-gradient(
+            to right,
+            transparent 0,
+            #000 var(--fade-start),
+            #000 calc(100% - var(--fade-end)),
+            transparent 100%
+          );
+        }
+
+        .comparison-table {
+          th,
+          td {
+            min-width: 8.5rem;
+          }
+
+          thead th:empty {
+            min-width: 0;
+          }
+
+          .section-header {
+            min-width: 7rem;
+          }
         }
       }
 
