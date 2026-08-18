@@ -10,6 +10,7 @@ const {
   useDefaultEditableBinding = false,
   _component,
   "data-children-prop": childrenDataProp,
+  "data-children-component-key": childrenComponentKey,
   ...htmlAttributes
 } = Astro.props;
 
@@ -27,11 +28,16 @@ if (!htmlAttributes.id && label) {
 const gridStyles = [`--grid-spacing: var(--spacing-${gap})`, userStyle].filter(Boolean).join("; ");
 
 const effectiveChildrenProp = childrenDataProp ?? (useDefaultEditableBinding ? "items" : null);
+// `data-component-key` names the field in each item that says which component renders it.
+// Without it CloudCannon can only build a newly added item by cloning an existing sibling,
+// which fails outright when the grid is empty and produces the wrong markup when the grid
+// mixes item types. With it, new items render from their own registered component.
 const arrayDataAttributes = effectiveChildrenProp
   ? {
       "data-editable": "array",
       "data-prop": effectiveChildrenProp,
       "data-direction": "row",
+      ...(childrenComponentKey ? { "data-component-key": childrenComponentKey } : {}),
     }
   : {};
 

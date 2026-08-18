@@ -62,51 +62,77 @@ const arrayDataAttributes = effectiveChildrenProp
       height: 100%;
     }
 
-    .bento-box-item:has(> [data-row-span="2"]) {
+    /*
+      An item added in the visual editor is rendered from its own component inside an
+      `<editable-array-item>` wrapper, so that wrapper — not `.bento-box-item` — becomes the
+      grid child. The span rules below match both shapes, otherwise a newly added card sits
+      full width until the next save and rebuild.
+    */
+    .bento-box-inner > editable-array-item {
+      grid-column: 1 / -1;
+      height: 100%;
+    }
+
+    .bento-box-item:has(> [data-row-span="2"]),
+    .bento-box-inner > editable-array-item:has(> .bento-box-item > [data-row-span="2"]) {
       grid-row: span 2;
     }
-    .bento-box-item:has(> [data-row-span="3"]) {
+    .bento-box-item:has(> [data-row-span="3"]),
+    .bento-box-inner > editable-array-item:has(> .bento-box-item > [data-row-span="3"]) {
       grid-row: span 3;
     }
-    .bento-box-item:has(> [data-row-span="4"]) {
+    .bento-box-item:has(> [data-row-span="4"]),
+    .bento-box-inner > editable-array-item:has(> .bento-box-item > [data-row-span="4"]) {
       grid-row: span 4;
     }
 
     @media (width >= 768px) {
-      .bento-box-item:has(> [data-column-span="1"]) {
+      .bento-box-item:has(> [data-column-span="1"]),
+      .bento-box-inner > editable-array-item:has(> .bento-box-item > [data-column-span="1"]) {
         grid-column: span 1;
       }
-      .bento-box-item:has(> [data-column-span="2"]) {
+      .bento-box-item:has(> [data-column-span="2"]),
+      .bento-box-inner > editable-array-item:has(> .bento-box-item > [data-column-span="2"]) {
         grid-column: span 2;
       }
-      .bento-box-item:has(> [data-column-span="3"]) {
+      .bento-box-item:has(> [data-column-span="3"]),
+      .bento-box-inner > editable-array-item:has(> .bento-box-item > [data-column-span="3"]) {
         grid-column: span 3;
       }
-      .bento-box-item:has(> [data-column-span="4"]) {
+      .bento-box-item:has(> [data-column-span="4"]),
+      .bento-box-inner > editable-array-item:has(> .bento-box-item > [data-column-span="4"]) {
         grid-column: span 4;
       }
-      .bento-box-item:has(> [data-column-span="5"]) {
+      .bento-box-item:has(> [data-column-span="5"]),
+      .bento-box-inner > editable-array-item:has(> .bento-box-item > [data-column-span="5"]) {
         grid-column: span 5;
       }
-      .bento-box-item:has(> [data-column-span="6"]) {
+      .bento-box-item:has(> [data-column-span="6"]),
+      .bento-box-inner > editable-array-item:has(> .bento-box-item > [data-column-span="6"]) {
         grid-column: span 6;
       }
-      .bento-box-item:has(> [data-column-span="7"]) {
+      .bento-box-item:has(> [data-column-span="7"]),
+      .bento-box-inner > editable-array-item:has(> .bento-box-item > [data-column-span="7"]) {
         grid-column: span 7;
       }
-      .bento-box-item:has(> [data-column-span="8"]) {
+      .bento-box-item:has(> [data-column-span="8"]),
+      .bento-box-inner > editable-array-item:has(> .bento-box-item > [data-column-span="8"]) {
         grid-column: span 8;
       }
-      .bento-box-item:has(> [data-column-span="9"]) {
+      .bento-box-item:has(> [data-column-span="9"]),
+      .bento-box-inner > editable-array-item:has(> .bento-box-item > [data-column-span="9"]) {
         grid-column: span 9;
       }
-      .bento-box-item:has(> [data-column-span="10"]) {
+      .bento-box-item:has(> [data-column-span="10"]),
+      .bento-box-inner > editable-array-item:has(> .bento-box-item > [data-column-span="10"]) {
         grid-column: span 10;
       }
-      .bento-box-item:has(> [data-column-span="11"]) {
+      .bento-box-item:has(> [data-column-span="11"]),
+      .bento-box-inner > editable-array-item:has(> .bento-box-item > [data-column-span="11"]) {
         grid-column: span 11;
       }
-      .bento-box-item:has(> [data-column-span="12"]) {
+      .bento-box-item:has(> [data-column-span="12"]),
+      .bento-box-inner > editable-array-item:has(> .bento-box-item > [data-column-span="12"]) {
         grid-column: span 12;
       }
     }
