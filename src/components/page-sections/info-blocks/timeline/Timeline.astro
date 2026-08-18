@@ -27,6 +27,14 @@ const {
   useDefaultEditableBinding = false,
   ...htmlAttributes
 } = Astro.props;
+
+// Distance from the section's content edge to the edge of the viewport, so the
+// carousel can bleed past the container without exceeding the screen width.
+const timelineContentWidth =
+  maxContentWidth && maxContentWidth !== "none"
+    ? `var(--content-width-${maxContentWidth})`
+    : "100vw";
+const timelineBleed = `calc((100vw - min(${timelineContentWidth}, 100vw)) / 2 + var(--spacing-lg))`;
 ---
 
 <CustomSection
@@ -64,7 +72,10 @@ const {
     text={subtext}
   />
 
-  <div class="timeline-wrapper">
+  <div
+    class="timeline-wrapper"
+    style={`--timeline-bleed: ${timelineBleed}`}
+  >
     <div
       class="timeline-carousel-container"
       data-prop="items"
@@ -171,6 +182,9 @@ const {
         scrollbar-width: thin;
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
+        margin-inline: calc(var(--timeline-bleed) * -1);
+        padding-inline: var(--timeline-bleed);
+        scroll-padding-inline-start: var(--timeline-bleed);
       }
 
       .timeline-carousel {
@@ -251,19 +265,37 @@ const {
     const scroller = root.querySelector(".timeline-carousel-container");
     const prevBtn = root.querySelector(".timeline-nav-button.prev");
     const nextBtn = root.querySelector(".timeline-nav-button.next");
+    const carousel = root.querySelector(".timeline-carousel");
     const items = Array.from(root.querySelectorAll(".timeline-item"));
 
-    if (!scroller || !prevBtn || !nextBtn || items.length === 0) return;
+    if (!scroller || !prevBtn || !nextBtn || !carousel || items.length === 0) return;
     if (root.dataset.timelineInit === "true") return;
     root.dataset.timelineInit = "true";
 
     const clamp = (n, a, b) => Math.min(b, Math.max(a, n));
     let rafId = 0;
 
+    // The scroller bleeds past the container, so its content edge is inset by its padding.
+    function getScrollPaddingStart() {
+      return parseFloat(getComputedStyle(scroller).paddingInlineStart) || 0;
+    }
+
+    // Prev/next pages by however many whole cards are on screen, rather than
+    // nudging the carousel along one card at a time.
+    function getStep() {
+      const itemWidth = items[0]?.getBoundingClientRect().width || 0;
+      if (!itemWidth) return 1;
+
+      const gap = parseFloat(getComputedStyle(carousel).columnGap) || 0;
+      const visible = scroller.clientWidth - getScrollPaddingStart();
+
+      return Math.max(1, Math.floor((visible + gap) / (itemWidth + gap)));
+    }
+
     // Find the card that is "current" by comparing left edges relative to the scroller viewport.
-    // This aligns with scroll-snap-align: start and ensures prev/next moves exactly one card.
+    // This aligns with scroll-snap-align: start, so paging always lands on a card boundary.
     function getCurrentIndex() {
-      const viewportLeft = scroller.getBoundingClientRect().left;
+      const viewportLeft = scroller.getBoundingClientRect().left + getScrollPaddingStart();
 
       let best = 0;
       let bestDist = Infinity;
@@ -281,8 +313,6 @@ const {
     }
 
     function updateButtons() {
-      console.log("updateButtons");
-      console.log("scroller.scrollLeft", scroller.scrollLeft);
       const atStart = scroller.scrollLeft <= 2;
       const atEnd = scroller.scrollLeft + scroller.clientWidth >= scroller.scrollWidth - 2;
 
@@ -301,7 +331,8 @@ const {
       // Calculate the scroll position relative to the scroller
       const scrollerRect = scroller.getBoundingClientRect();
       const targetRect = target.getBoundingClientRect();
-      const scrollOffset = targetRect.left - scrollerRect.left + scroller.scrollLeft;
+      const scrollOffset =
+        targetRect.left - scrollerRect.left + scroller.scrollLeft - getScrollPaddingStart();
 
       scroller.scrollTo({
         left: scrollOffset,
@@ -310,17 +341,15 @@ const {
     }
 
     prevBtn.addEventListener("click", (e) => {
-      console.log("prevBtn clicked");
       e.preventDefault();
       const current = getCurrentIndex();
-      scrollToIndex(current - 1);
+      scrollToIndex(current - getStep());
     });
 
     nextBtn.addEventListener("click", (e) => {
-      console.log("nextBtn clicked");
       e.preventDefault();
       const current = getCurrentIndex();
-      scrollToIndex(current + 1);
+      scrollToIndex(current + getStep());
     });
 
     function onScroll() {
