@@ -93,7 +93,7 @@ const mobileSlides = slides.flatMap(
   <CustomSection
     class:list={["feature-carousel-grid-container"]}
     maxContentWidth={maxContentWidth}
-    paddingHorizontal="xs"
+    paddingHorizontal="3xl"
     paddingVertical={paddingVertical}
     rounded={false}
     colorScheme={colorScheme}
@@ -145,6 +145,12 @@ const mobileSlides = slides.flatMap(
 
 <style is:global>
   @layer page-sections {
+    .feature-carousel-grid {
+      /* The desktop slides spill past the container to reveal the previous and
+         next slides, so clip them at the section rather than the page. */
+      overflow-x: clip;
+    }
+
     .feature-carousel-grid-content .content {
       padding-bottom: var(--spacing-md);
     }
@@ -153,10 +159,44 @@ const mobileSlides = slides.flatMap(
         padding-top: 0;
       }
       .desktop-carousel {
+        /* Embla only moves the looping slide to the other end when the viewport
+           has room beside the active slide, so the viewport is stretched past
+           the container by this much on each side. Without it, the last slide
+           is never placed before the first one and nothing peeks in on the left
+           while the first slide is selected. */
+        --carousel-peek: var(--spacing-md);
+
         display: none;
 
         @media (width >= 768px) {
           display: block;
+        }
+
+        /* Two slides can never fill both sides of the active one, so Embla
+           turns looping off entirely if we ask for room on both sides. */
+        > .carousel-inner:not(:has(.slide:nth-child(3))) {
+          --carousel-peek: 0px;
+        }
+
+        /* Slides stay at the container width; letting the viewport overflow is
+           what makes the previous/next slides peek in from either side. */
+        > .carousel-inner > .viewport {
+          margin-inline: calc(var(--carousel-peek) * -1);
+          overflow: visible;
+          /* Auto, so the negative margins widen the viewport rather than
+             shifting it sideways against the base `width: 100%`. */
+          width: auto;
+        }
+
+        .slide {
+          /* Cancels out the widened viewport above. */
+          --slide-width: calc(100% - var(--carousel-peek) * 2);
+
+          transition: opacity var(--animation-normal) ease;
+        }
+
+        .slide[data-selected="false"] {
+          opacity: 0.35;
         }
       }
 

@@ -95,7 +95,21 @@ export function setupCarousel(carousel: CarouselElement): void {
     if (nextButton) nextButton.disabled = !embla.canScrollNext();
   };
 
+  // Flag the active slide so peek-style carousels can de-emphasise the
+  // neighbouring slides. Only ever sets "false" once Embla is running, so
+  // slides render at full strength before/without JS.
+  const updateSelectedSlide = () => {
+    const selected = embla.selectedScrollSnap();
+
+    embla.slideNodes().forEach((slideNode, index) => {
+      slideNode.setAttribute("data-selected", (index === selected).toString());
+    });
+  };
+
   updateButtons();
+  updateSelectedSlide();
+  embla.on("select", updateSelectedSlide);
+  embla.on("reInit", updateSelectedSlide);
   embla.on("select", updateButtons);
   if (prevButton) prevButton.addEventListener("click", () => embla.scrollPrev());
   if (nextButton) nextButton.addEventListener("click", () => embla.scrollNext());
