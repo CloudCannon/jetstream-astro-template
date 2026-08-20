@@ -1,13 +1,17 @@
 ---
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Heading from "@core-elements/heading/Heading.astro";
+import Icon from "@core-elements/icon/Icon.astro";
 import Image from "@core-elements/image/Image.astro";
+import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import Text from "@core-elements/text/Text.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import Split from "@wrappers/split/Split.astro";
 
 const {
   id = "",
+  eyebrowIcon = {},
+  eyebrowText = "",
   heading = "",
   subtext = "",
   buttonSections = [],
@@ -20,6 +24,9 @@ const {
   paddingVertical = "4xl",
   colorScheme = "inherit",
   backgroundColor,
+  contentBackground = false,
+  background,
+  verticalOffset = {},
   class: className,
   _component,
   ...htmlAttributes
@@ -34,6 +41,9 @@ const {
   paddingVertical={paddingVertical}
   colorScheme={colorScheme}
   backgroundColor={backgroundColor}
+  contentBackground={contentBackground}
+  background={background}
+  verticalOffset={verticalOffset}
   rounded={rounded}
   id={id}
   {...htmlAttributes}
@@ -47,6 +57,12 @@ const {
     minSplitWidth={640}
   >
     <Fragment slot="first">
+      <Icon {...eyebrowIcon} />
+      <SimpleText
+        class="eyebrow"
+        data-prop="eyebrowText"
+        text={eyebrowText}
+      />
       <Heading
         level="h2"
         size="xl"

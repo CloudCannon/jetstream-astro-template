@@ -3,7 +3,7 @@ title: Feature Split
 spacing: all
 blocks:
   _component: 'page-sections/features/feature-split'
-  eyebrow: 'Launch playbook'
+  eyebrowText: 'Launch playbook'
   heading: 'Guide every release with accountable workflows'
   subtext: 'Pair the story of your launch with concrete capabilities—so execs get the narrative while implementers see the proof.'
   reverse: true

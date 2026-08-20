@@ -35,6 +35,7 @@ value:
   backgroundDecoration: true
   sectionHeight: full
   maxContentWidth: xl
+  paddingVertical: 4xl
   colorScheme: inherit
   backgroundColor: base
   contentBackground: false

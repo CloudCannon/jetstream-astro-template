@@ -4,6 +4,8 @@ description: Side-by-side CTA with copy on one side and stacked buttons on the o
 value:
   _component: page-sections/ctas/cta-split
   id:
+  eyebrowIcon: {}
+  eyebrowText: Eyebrow placeholder
   heading: Heading text
   subtext: Subtext placeholder text that will be replaced with actual content.
   imageSource: /src/assets/images/component-docs/dunedin-cliff.jpg
@@ -19,8 +21,11 @@ value:
       variant: primary
       size: md
   reverse: false
+  maxContentWidth: 2xl
+  paddingVertical: 4xl
   colorScheme: light
   backgroundColor: base
+  contentBackground: false
   background:
     type: image
     positionVertical: top
@@ -30,6 +35,8 @@ value:
     imageAlt: ""
     videoSource: null
     overlay: 0
+  verticalOffset: {}
+  rounded: false
 preview:
   text:
     - CTA Split

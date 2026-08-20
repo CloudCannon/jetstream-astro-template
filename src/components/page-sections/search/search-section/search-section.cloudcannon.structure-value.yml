@@ -6,6 +6,8 @@ description: >-
 value:
   _component: page-sections/search/search-section
   id:
+  eyebrowIcon: {}
+  eyebrowText: Eyebrow placeholder
   heading: How can we help?
   headingSize: 2xl
   subtext: Search every page and post on this website.
@@ -23,6 +25,7 @@ value:
   colorScheme: inherit
   backgroundColor: base
   contentBackground: false
+  verticalOffset: {}
   rounded: false
 preview:
   text:

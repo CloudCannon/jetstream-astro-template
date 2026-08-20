@@ -1,6 +1,14 @@
 id:
   type: text
   comment: Unique identifier for the section which can be used as an anchor link.
+eyebrowIcon:
+  type: object
+  comment: Optional icon displayed above the eyebrow.
+  options:
+    structures: _structures.eyebrowIcon
+eyebrowText:
+  type: text
+  comment: Optional label displayed above the heading.
 heading:
   type: text
   comment: Headline for the CTA.
@@ -37,6 +45,48 @@ buttonSections:
 reverse:
   type: switch
   comment: Reverse the order so buttons appear before the copy.
+maxContentWidth:
+  type: select
+  comment: Maximum width constraint for the content.
+  options:
+    values:
+      - id: xs
+        name: Extra Small
+      - id: sm
+        name: Small
+      - id: md
+        name: Medium
+      - id: lg
+        name: Large
+      - id: xl
+        name: Extra Large
+      - id: 2xl
+        name: 2xl
+      - id: 3xl
+        name: 3xl
+paddingVertical:
+  type: select
+  comment: Vertical padding applied to the section content.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: xs
+        name: Extra Small
+      - id: sm
+        name: Small
+      - id: md
+        name: Medium
+      - id: lg
+        name: Large
+      - id: xl
+        name: Extra Large
+      - id: 2xl
+        name: 2xl
+      - id: 3xl
+        name: 3xl
+      - id: 4xl
+        name: 4xl
 colorScheme:
   type: select
   comment: Color scheme theme for the CTA.
@@ -77,6 +127,61 @@ backgroundColor:
         name: Highlight Linear Gradient
       - id: highlight-radial-gradient
         name: Highlight Radial Gradient
+contentBackground:
+  type: switch
+  comment: Add a radial background in the base color behind the content.
+verticalOffset:
+  type: object
+  comment: Offset section up above or below the previous section.
+  options:
+    empty_type: object
+    preview:
+      icon: arrow_upward
+    structures:
+      - label: Vertical Offset
+        icon: arrow-upward
+        value:
+          size: "xl"
+          direction: "front"
+        _inputs:
+          size:
+            type: select
+            comment: Size of the vertical offset.
+            options:
+              values:
+                - id: none
+                  name: None
+                - id: xs
+                  name: Extra Small
+                - id: sm
+                  name: Small
+                - id: md
+                  name: Medium
+                - id: lg
+                  name: Large
+                - id: xl
+                  name: Extra Large
+                - id: 2xl
+                  name: 2xl
+                - id: 3xl
+                  name: 3xl
+                - id: 4xl
+                  name: 4xl
+                - id: 5xl
+                  name: 5xl
+                - id: 6xl
+                  name: 6xl
+                - id: nav-height
+                  name: Navigation Height
+          direction:
+            type: select
+            comment: "Direction of the offset - in front or behind the previous component. Note: this will have no effect with some components such as the navigaton bar."
+            options:
+              values:
+                - id: front
+                  name: Front
+                - id: back
+                  name: Back
 rounded:
   type: switch
   comment: Add rounded corners to the CTA section.

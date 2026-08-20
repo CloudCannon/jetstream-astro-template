@@ -51,6 +51,10 @@ ctaCenter:
             type: boolean
             optional: true
             remove_empty: false
+          - editor_key: verticalOffset
+            type: object
+            optional: true
+            remove_empty: true
           - editor_key: rounded
             type: boolean
             optional: true

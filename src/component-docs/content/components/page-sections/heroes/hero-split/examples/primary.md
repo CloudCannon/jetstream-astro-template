@@ -3,7 +3,7 @@ title: 'Primary Split Hero'
 spacing: 'all'
 blocks:
   _component: 'page-sections/heroes/hero-split'
-  eyebrow: 'Destination guide'
+  eyebrowText: 'Destination guide'
   heading: 'Discover Dunedin'
   subtext: 'A city of students, heritage, and natural wonder at the edge of the Pacific.'
   reverse: true

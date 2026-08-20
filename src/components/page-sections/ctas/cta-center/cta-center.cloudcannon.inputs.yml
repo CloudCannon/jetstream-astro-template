@@ -111,6 +111,58 @@ backgroundColor:
 contentBackground:
   type: switch
   comment: Add a radial background in the base color behind the content.
+verticalOffset:
+  type: object
+  comment: Offset section up above or below the previous section.
+  options:
+    empty_type: object
+    preview:
+      icon: arrow_upward
+    structures:
+      - label: Vertical Offset
+        icon: arrow-upward
+        value:
+          size: "xl"
+          direction: "front"
+        _inputs:
+          size:
+            type: select
+            comment: Size of the vertical offset.
+            options:
+              values:
+                - id: none
+                  name: None
+                - id: xs
+                  name: Extra Small
+                - id: sm
+                  name: Small
+                - id: md
+                  name: Medium
+                - id: lg
+                  name: Large
+                - id: xl
+                  name: Extra Large
+                - id: 2xl
+                  name: 2xl
+                - id: 3xl
+                  name: 3xl
+                - id: 4xl
+                  name: 4xl
+                - id: 5xl
+                  name: 5xl
+                - id: 6xl
+                  name: 6xl
+                - id: nav-height
+                  name: Navigation Height
+          direction:
+            type: select
+            comment: "Direction of the offset - in front or behind the previous component. Note: this will have no effect with some components such as the navigaton bar."
+            options:
+              values:
+                - id: front
+                  name: Front
+                - id: back
+                  name: Back
 rounded:
   type: switch
   comment: Whether to apply rounded corners to the section.

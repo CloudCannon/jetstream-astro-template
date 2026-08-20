@@ -1,11 +1,20 @@
 ---
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Heading from "@core-elements/heading/Heading.astro";
+import Icon from "@core-elements/icon/Icon.astro";
+import SimpleText from "@core-elements/simple-text/SimpleText.astro";
+import Text from "@core-elements/text/Text.astro";
 import Accordion from "@wrappers/accordion/Accordion.astro";
 
 const {
+  id = "",
+  eyebrowIcon = {},
+  eyebrowText = "",
   heading = "Frequently Asked Questions",
+  subtext = "",
   items = [],
+  singleOpen = true,
+  openFirst = false,
   label = "About FAQ",
   sectionLabel,
   maxContentWidth = "xl",
@@ -13,7 +22,10 @@ const {
   paddingVertical = "4xl",
   colorScheme = "inherit",
   backgroundColor,
+  contentBackground = false,
   background,
+  verticalOffset = {},
+  rounded = false,
   class: className,
   _component,
   ...htmlAttributes
@@ -29,8 +41,22 @@ const {
   paddingVertical={paddingVertical}
   colorScheme={colorScheme}
   backgroundColor={backgroundColor}
+  contentBackground={contentBackground}
   background={background}
+  verticalOffset={verticalOffset}
+  rounded={rounded}
+  id={id}
 >
+  <Icon
+    alignmentHorizontal="center"
+    {...eyebrowIcon}
+  />
+  <SimpleText
+    class="eyebrow"
+    alignmentHorizontal="center"
+    text={eyebrowText}
+    data-prop="eyebrowText"
+  />
   <Heading
     level="h2"
     size="lg"
@@ -38,11 +64,17 @@ const {
     text={heading}
     data-prop="heading"
   />
+  <Text
+    class="faq-section-subtext"
+    alignmentHorizontal="center"
+    text={subtext}
+    data-prop="subtext"
+  />
 
   <Accordion
     label={label}
-    singleOpen={true}
-    openFirst={false}
+    singleOpen={singleOpen}
+    openFirst={openFirst}
     items={items}
     data-children-prop="items"
   />

@@ -5,6 +5,7 @@ value:
   _component: page-sections/heroes/hero-card
   id:
   eyebrowIcon: {}
+  eyebrowText: Eyebrow placeholder
   heading: "Card Hero Heading"
   subtext: "Card Hero Subtext"
   card: {}
@@ -12,6 +13,7 @@ value:
   paddingVertical: "4xl"
   colorScheme: light
   backgroundColor: base
+  contentBackground: false
   verticalOffset: {}
   rounded: false
 _inputs_from_glob:

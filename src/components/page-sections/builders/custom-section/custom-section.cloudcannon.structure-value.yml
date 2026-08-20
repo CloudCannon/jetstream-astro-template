@@ -19,6 +19,7 @@ value:
     imageAlt: ""
     videoSource: null
     overlay: 0
+  verticalOffset: {}
   rounded: false
   contentBackground: false
   useDefaultEditableBinding: true

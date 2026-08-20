@@ -1,6 +1,7 @@
 ---
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Heading from "@core-elements/heading/Heading.astro";
+import Icon from "@core-elements/icon/Icon.astro";
 import Image from "@core-elements/image/Image.astro";
 import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import Text from "@core-elements/text/Text.astro";
@@ -9,7 +10,8 @@ import Split from "@wrappers/split/Split.astro";
 
 const {
   id = "",
-  eyebrow = "",
+  eyebrowIcon = {},
+  eyebrowText = "",
   heading = "",
   subtext = "",
   buttonSections = [],
@@ -23,7 +25,10 @@ const {
   paddingHorizontal = "lg",
   colorScheme = "inherit",
   backgroundColor,
+  contentBackground = false,
+  background,
   paddingVertical = "4xl",
+  verticalOffset = {},
   rounded = false,
   class: className,
   _component,
@@ -42,6 +47,9 @@ const featureSplitId = `feature-split-${crypto.randomUUID()}`;
   paddingVertical={paddingVertical}
   colorScheme={colorScheme}
   backgroundColor={backgroundColor}
+  contentBackground={contentBackground}
+  background={background}
+  verticalOffset={verticalOffset}
   rounded={rounded}
   data-feature-split-id={featureSplitId}
   id={id}
@@ -58,10 +66,11 @@ const featureSplitId = `feature-split-${crypto.randomUUID()}`;
     reverseOrderOnMobile={true}
   >
     <Fragment slot="first">
+      <Icon {...eyebrowIcon} />
       <SimpleText
         class="eyebrow"
-        data-prop="eyebrow"
-        text={eyebrow}
+        data-prop="eyebrowText"
+        text={eyebrowText}
       />
       <Heading
         level="h2"

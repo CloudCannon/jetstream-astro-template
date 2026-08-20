@@ -2,6 +2,8 @@
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Button from "@core-elements/button/Button.astro";
 import Heading from "@core-elements/heading/Heading.astro";
+import Icon from "@core-elements/icon/Icon.astro";
+import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import Text from "@core-elements/text/Text.astro";
 import Input from "@forms/input/Input.astro";
 import Split from "@wrappers/split/Split.astro";
@@ -15,6 +17,8 @@ interface SearchFilter {
 
 const {
   id = "",
+  eyebrowIcon = {},
+  eyebrowText = "",
   heading = "",
   headingSize = "2xl",
   subtext = "",
@@ -29,6 +33,7 @@ const {
   colorScheme = "inherit",
   backgroundColor = "base",
   contentBackground = false,
+  verticalOffset = {},
   rounded = false,
   class: className,
   _component,
@@ -49,6 +54,7 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
   colorScheme={colorScheme}
   backgroundColor={backgroundColor}
   contentBackground={contentBackground}
+  verticalOffset={verticalOffset}
   rounded={rounded}
   class:list={["search-section", className]}
   data-results-per-page={resultsPerPage}
@@ -64,6 +70,12 @@ const filterOptions = filters.filter((filter: SearchFilter) => filter?.label);
     minSplitWidth={800}
   >
     <Fragment slot="first">
+      <Icon {...eyebrowIcon} />
+      <SimpleText
+        class="eyebrow"
+        text={eyebrowText}
+        data-prop="eyebrowText"
+      />
       <Heading
         level="h1"
         size={headingSize}

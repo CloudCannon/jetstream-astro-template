@@ -126,6 +126,9 @@ eyebrowIcon:
   comment: Optional icon displayed above the eyebrow.
   options:
     structures: _structures.eyebrowIcon
+eyebrowText:
+  type: text
+  comment: Optional label displayed above the heading.
 heading:
   type: html
   comment: Main heading text for the section.
@@ -219,6 +222,9 @@ backgroundColor:
         name: Highlight Linear Gradient
       - id: highlight-radial-gradient
         name: Highlight Radial Gradient
+contentBackground:
+  type: switch
+  comment: Add a radial background in the base color behind the content.
 verticalOffset:
   type: object
   comment: Offset section up above or below the previous section.

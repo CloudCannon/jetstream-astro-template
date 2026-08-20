@@ -1,5 +1,9 @@
 ---
 import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Icon from "@core-elements/icon/Icon.astro";
+import SimpleText from "@core-elements/simple-text/SimpleText.astro";
+import Text from "@core-elements/text/Text.astro";
 import FeatureSliderItem from "@features/feature-slider/FeatureSliderItem.astro";
 import Carousel from "@wrappers/carousel/Carousel.astro";
 
@@ -7,12 +11,19 @@ type SlideProps = Record<string, unknown>;
 
 const {
   sectionLabel,
+  eyebrowIcon = {},
+  eyebrowText = "",
+  heading = "",
+  subtext = "",
   maxContentWidth = "xl",
   paddingHorizontal = "lg",
   paddingVertical = "4xl",
   colorScheme = "inherit",
   backgroundColor,
+  contentBackground = false,
   background,
+  verticalOffset = {},
+  rounded = false,
   class: className,
   slides = [],
   useDefaultEditableBinding = false,
@@ -29,10 +40,34 @@ const {
   paddingVertical={paddingVertical}
   colorScheme={colorScheme}
   backgroundColor={backgroundColor}
+  contentBackground={contentBackground}
   background={background}
+  verticalOffset={verticalOffset}
+  rounded={rounded}
   useDefaultEditableBinding={useDefaultEditableBinding}
   {...htmlAttributes}
 >
+  <Icon {...eyebrowIcon} />
+  <SimpleText
+    alignmentHorizontal="start"
+    class="eyebrow"
+    data-prop="eyebrowText"
+    text={eyebrowText}
+  />
+  <Heading
+    level="h2"
+    size="lg"
+    alignmentHorizontal="start"
+    data-prop="heading"
+    text={heading}
+  />
+  <Text
+    class="feature-slider-subtext"
+    alignmentHorizontal="start"
+    data-prop="subtext"
+    text={subtext}
+  />
+
   <Carousel
     label="Feature slider"
     slideWidthPercent={100}

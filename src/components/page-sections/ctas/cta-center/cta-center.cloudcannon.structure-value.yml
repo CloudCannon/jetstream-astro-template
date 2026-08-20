@@ -23,6 +23,7 @@ value:
   colorScheme: inherit
   backgroundColor: base
   contentBackground: false
+  verticalOffset: {}
   rounded: false
 preview:
   text:
