@@ -79,14 +79,21 @@ const {
 
         {
           items.map((item: any, index: number) => (
-            <TimelineItem
-              {...item}
-              useDefaultEditableBinding={true}
-              data-index={index}
+            /* The region host wraps the item rather than being its root: a re-render diffs
+            the rendered component's children into the host's children, so region attrs on
+            the item's own root would nest it one level deeper on every restore. Safe as a
+            plain div here — `.timeline-item` has no sizing of its own and the carousel JS
+            queries it as a descendant. */
+            <div
               data-editable="array-item"
               data-component="page-sections/info-blocks/timeline/timeline-item"
               data-id={item._uuid ?? "page-sections/info-blocks/timeline/timeline-item"}
-            />
+            >
+              <TimelineItem
+                {...item}
+                data-index={index}
+              />
+            </div>
           ))
         }
       </div>

@@ -11,44 +11,34 @@ const {
   useDefaultEditableBinding = false,
   ...htmlAttributes
 } = Astro.props;
+
+// The grid cell below carries the card's region attributes and the card renders inside it,
+// rather than the card marking its own root. CloudCannon replaces a component region's
+// children with the re-rendered component, so a region element that is also the component
+// root gets the render merged a level too deep — that stripped `data-column-span` off the
+// cell content and collapsed the grid into a single column in the visual editor.
+const cardComponent = "page-sections/features/feature-carousel-grid/feature-carousel-card";
 ---
 
-<CarouselSlide
-  data-rosey-ns={_uuid}
-  {...htmlAttributes}
->
+{/* Namespace stays inside the root, which a re-render copies into the region element. */}
+<CarouselSlide {...htmlAttributes}>
   <BentoBoxGrid
+    data-rosey-ns={_uuid}
     class:list={["feature-carousel-slide-grid", className]}
     gap="xs"
     data-children-prop="cards"
   >
     {
-      cards.map((card: any) =>
-        card.decorative ? (
-          <FeatureCarouselCard
-            columnSpan={card.columnSpan}
-            rowSpan={card.rowSpan}
-            backgroundColor={card.style}
-            border={false}
-            data-editable="array-item"
-            data-component="page-sections/features/feature-carousel-grid/feature-carousel-card"
-            data-id={
-              card._uuid ?? "page-sections/features/feature-carousel-grid/feature-carousel-card"
-            }
-          />
-        ) : (
-          <FeatureCarouselCard
-            {...card}
-            backgroundColor="base"
-            border={true}
-            data-editable="array-item"
-            data-component="page-sections/features/feature-carousel-grid/feature-carousel-card"
-            data-id={
-              card._uuid ?? "page-sections/features/feature-carousel-grid/feature-carousel-card"
-            }
-          />
-        )
-      )
+      cards.map((card: any) => (
+        <div
+          class="bento-box-grid-item"
+          data-editable="array-item"
+          data-component={cardComponent}
+          data-id={card._uuid ?? cardComponent}
+        >
+          <FeatureCarouselCard {...card} />
+        </div>
+      ))
     }
   </BentoBoxGrid>
 </CarouselSlide>

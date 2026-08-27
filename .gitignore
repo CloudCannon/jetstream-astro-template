@@ -34,3 +34,6 @@ yarn-error.log*
 # temporary files
 *.tmp
 *.temp
+
+# Downloaded reference schemas, not project artefacts
+.cloudcannon/migration/*.schema.json

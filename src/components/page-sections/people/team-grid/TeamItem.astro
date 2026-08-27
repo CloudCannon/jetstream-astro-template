@@ -21,11 +21,7 @@ const {
 const cardClasses = ["team-item", className].filter(Boolean).join(" ");
 ---
 
-{
-  /* htmlAttributes carries the caller's data-editable/data-component, which belong on
-    the root element: CloudCannon's re-render nests the component inside the region,
-    doubling every data-rosey-ns below it and breaking translation lookups. */
-}
+{/* Namespace stays inside the root, which a re-render copies into the region element. */}
 <GridItem {...htmlAttributes}>
   <Card
     data-rosey-ns={_uuid}
@@ -48,12 +44,17 @@ const cardClasses = ["team-item", className].filter(Boolean).join(" ");
       >
         {name}
       </Heading>
+      {
+        /* Explicit rather than derived from data-prop: collection-driven items carry no
+        data-prop, and translation shouldn't depend on whether editing is wired up. */
+      }
       <SimpleText
         class="team-role"
         size="sm"
         alignmentHorizontal="start"
         style="font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-sm);margin-top: 0;"
         data-prop={editable ? "role" : undefined}
+        data-rosey="role"
       >
         {role}
       </SimpleText>

@@ -5,15 +5,18 @@ value:
   _component: building-blocks/core-elements/list
   _uuid:
   items:
-    - text: List item 1
+    - _uuid:
+      text: List item 1
       iconName: check
       iconColor: default
       link:
-    - text: List item 2
+    - _uuid:
+      text: List item 2
       iconName: lock-closed
       iconColor: default
       link:
-    - text: List item 3
+    - _uuid:
+      text: List item 3
       iconName: briefcase
       iconColor: default
       link:

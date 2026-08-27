@@ -1,11 +1,12 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import RenderBlock from "@components/utils/renderBlock.astro";
 import Icon from "@core-elements/icon/Icon.astro";
 
 const {
   title,
   contentSections,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   isOpen = false,
   accordionName,
   _uuid,
@@ -14,8 +15,8 @@ const {
   ...htmlAttributes
 } = Astro.props;
 
-const effectiveChildrenProp =
-  childrenDataProp ?? (useDefaultEditableBinding ? "contentSections" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveChildrenProp = childrenDataProp ?? (isContentBlock ? "contentSections" : null);
 const arrayDataAttributes = effectiveChildrenProp
   ? {
       "data-editable": "array",
@@ -26,19 +27,25 @@ const arrayDataAttributes = effectiveChildrenProp
   : {};
 ---
 
+{
+  /* Namespace stays inside the root, which a re-render copies into the region element.
+  The summary and the detail each carry it. */
+}
 <details
   class="accordion-item"
   open={isOpen}
   name={accordionName}
-  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
-  <summary class="accordion-item-title">
+  <summary
+    class="accordion-item-title"
+    data-rosey-ns={_uuid}
+  >
     {/* The chevron is a sibling, not a child, so the key stays on the text span. */}
     <span
       class="accordion-item-title-text"
-      data-editable={useDefaultEditableBinding ? "text" : undefined}
-      data-prop={useDefaultEditableBinding ? "title" : undefined}
+      data-editable={isContentBlock ? "text" : undefined}
+      data-prop={isContentBlock ? "title" : undefined}
       data-rosey="title"
       >{title}</span
     >
@@ -50,6 +57,7 @@ const arrayDataAttributes = effectiveChildrenProp
   </summary>
   <div
     class="accordion-item-detail"
+    data-rosey-ns={_uuid}
     {...arrayDataAttributes}
   >
     <slot>

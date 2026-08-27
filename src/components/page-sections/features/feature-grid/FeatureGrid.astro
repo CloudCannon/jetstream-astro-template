@@ -104,14 +104,7 @@ const {
         data-children-prop="featureGrid.features"
         class="feature-grid-grid"
       >
-        {
-          featureGrid.features && (
-            <RenderBlock
-              contentSections={featureGrid.features}
-              useDefaultEditableBinding={true}
-            />
-          )
-        }
+        {featureGrid.features && <RenderBlock contentSections={featureGrid.features} />}
       </BentoBoxGrid>
     </CustomSection>
   </CustomSection>

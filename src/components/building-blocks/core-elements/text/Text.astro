@@ -1,4 +1,5 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import { resolveRosey } from "@component-utils/roseyKey";
 import markdownit from "markdown-it";
 
@@ -9,16 +10,18 @@ const {
   size,
   alignmentHorizontal = "start",
   class: className,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   "data-prop": customDataProp,
   "data-rosey": roseyId,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
 
 const markdownContent = text ? md.render(text) : "";
 
-const effectiveDataProp = customDataProp ?? (useDefaultEditableBinding ? "text" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveDataProp = customDataProp ?? (isContentBlock ? "text" : null);
 // data-type must match the rendered richness — md.render() emits block-level HTML.
 // Omitting it defaults to "span", so CloudCannon would edit the raw markdown source
 // while Rosey captured the rendered HTML, flagging every field permanently stale.
@@ -35,18 +38,28 @@ const hasSlotContent = Astro.slots.has("default");
 if (!_component && !hasText && !hasSlotContent) return;
 ---
 
+{
+  /* Without this, sibling blocks share one "text" key. It needs a holder of its own: the
+  root is the region element, which a re-render copies into, and .text-inner is the
+  tagged element. */
+}
 <div
   class:list={["text", className]}
   {...htmlAttributes}
 >
   <div
-    class:list={["text-inner", size && `size-${size}`, `align-${alignmentHorizontal}`]}
-    {...textDataAttributes}
-    {...roseyAttributes}
+    class="text-ns"
+    data-rosey-ns={_uuid}
   >
-    <slot>
-      {text && <Fragment set:html={markdownContent} />}
-    </slot>
+    <div
+      class:list={["text-inner", size && `size-${size}`, `align-${alignmentHorizontal}`]}
+      {...textDataAttributes}
+      {...roseyAttributes}
+    >
+      <slot>
+        {text && <Fragment set:html={markdownContent} />}
+      </slot>
+    </div>
   </div>
 </div>
 
@@ -55,7 +68,12 @@ if (!_component && !hasText && !hasSlotContent) return;
     .text {
       margin-top: var(--spacing-lg);
 
-      > .text-inner {
+      /* Namespace holder — must not add a box. */
+      > .text-ns {
+        display: contents;
+      }
+
+      .text-inner {
         &.size-xs {
           --text-size: var(--font-size-xs);
         }

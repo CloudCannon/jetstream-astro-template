@@ -7,6 +7,9 @@ npx rosey-cloudcannon-connector write-locales --source rosey --dest dist --local
 # --exclusions overrides Rosey's default (which also excludes JSON) so that
 # dist/_rcc/locales.json survives into the translated output. Without it the
 # connector 404s on its locale manifest in the Visual Editor.
+# mv nests rather than renames when the target exists, which would carry a stale
+# tree through into dist/dist.
+rm -rf ./_untranslated_site
 mv ./dist ./_untranslated_site
 npx rosey build --source _untranslated_site --dest dist --default-language en --default-language-at-root --exclusions "\.(html?)$"
 

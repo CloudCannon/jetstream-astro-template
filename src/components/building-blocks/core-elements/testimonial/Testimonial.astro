@@ -1,5 +1,6 @@
 ---
 import Image from "@core-elements/image/Image.astro";
+import { isEditable } from "@component-utils/editable";
 import { resolveRosey } from "@component-utils/roseyKey";
 import MarkdownIt from "markdown-it";
 const {
@@ -9,7 +10,7 @@ const {
   alignmentHorizontal = "center",
   authorImage = "",
   class: className,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   "data-prop": customDataProp,
   "data-prop-author-name": customDataPropAuthorName,
   "data-prop-author-description": customDataPropAuthorDescription,
@@ -24,15 +25,16 @@ const {
 const md = MarkdownIt({ html: true });
 const MarkdownText = text ? md.render(text) : "";
 
-const effectiveDataProp = customDataProp ?? (useDefaultEditableBinding ? "text" : null);
+const isContentBlock = isEditable(Astro.props);
+
+const effectiveDataProp = customDataProp ?? (isContentBlock ? "text" : null);
 // md.render() output is block-level; see Text.astro for why data-type matters.
 const textDataAttributes = effectiveDataProp
   ? { "data-editable": "text", "data-type": "block", "data-prop": effectiveDataProp }
   : {};
 const roseyAttributes = resolveRosey(roseyId, effectiveDataProp);
 
-const effectiveAuthorNameProp =
-  customDataPropAuthorName ?? (useDefaultEditableBinding ? "authorName" : null);
+const effectiveAuthorNameProp = customDataPropAuthorName ?? (isContentBlock ? "authorName" : null);
 const authorNameDataAttributes = effectiveAuthorNameProp
   ? { "data-editable": "text", "data-prop": effectiveAuthorNameProp }
   : {};
@@ -40,7 +42,7 @@ const authorNameDataAttributes = effectiveAuthorNameProp
 const authorNameRoseyAttributes = resolveRosey(roseyAuthorName, effectiveAuthorNameProp);
 
 const effectiveAuthorDescProp =
-  customDataPropAuthorDescription ?? (useDefaultEditableBinding ? "authorDescription" : null);
+  customDataPropAuthorDescription ?? (isContentBlock ? "authorDescription" : null);
 const authorDescriptionDataAttributes = effectiveAuthorDescProp
   ? { "data-editable": "text", "data-prop": effectiveAuthorDescProp }
   : {};
@@ -50,21 +52,32 @@ const authorDescriptionRoseyAttributes = resolveRosey(
 );
 ---
 
+{
+  /* The namespace needs a holder of its own: the root is the region element, which a
+  re-render copies into, and .quote is the tagged element. */
+}
 <blockquote
   class:list={["testimonial", `alignment-${alignmentHorizontal}`, className]}
-  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <div
-    class="quote"
-    {...textDataAttributes}
-    {...roseyAttributes}
+    class="quote-ns"
+    data-rosey-ns={_uuid}
   >
-    <slot>
-      {text && <Fragment set:html={MarkdownText} />}
-    </slot>
+    <div
+      class="quote"
+      {...textDataAttributes}
+      {...roseyAttributes}
+    >
+      <slot>
+        {text && <Fragment set:html={MarkdownText} />}
+      </slot>
+    </div>
   </div>
-  <div class="author">
+  <div
+    class="author"
+    data-rosey-ns={_uuid}
+  >
     <Image
       source={authorImage}
       alt={authorName}
@@ -122,7 +135,12 @@ const authorDescriptionRoseyAttributes = resolveRosey(
         text-align: center;
       }
 
-      > .quote {
+      /* Namespace holder — must not add a box. */
+      > .quote-ns {
+        display: contents;
+      }
+
+      .quote {
         align-content: center;
         flex: 1 1 var(--content-width-sm);
         font-size: var(--font-size-3xl);

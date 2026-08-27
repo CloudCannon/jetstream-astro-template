@@ -25,12 +25,15 @@ const prefixRoseyAttributes = resolveRosey(roseyPrefix, "prefix");
 const suffixRoseyAttributes = resolveRosey(roseySuffix, "suffix");
 ---
 
+{/* Namespace stays inside the root, which a re-render copies into the region element. */}
 <div
   class:list={["counter", size && `size-${size}`, className]}
-  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
-  <span class:list={["counter-inner", `alignment-${alignmentHorizontal}`, size && `size-${size}`]}>
+  <span
+    class:list={["counter-inner", `alignment-${alignmentHorizontal}`, size && `size-${size}`]}
+    data-rosey-ns={_uuid}
+  >
     {
       prefix && (
         <span

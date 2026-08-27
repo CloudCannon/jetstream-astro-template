@@ -24,6 +24,10 @@ const {
   useDefaultEditableBinding = false,
   ...htmlAttributes
 } = Astro.props;
+
+// "49" is a figure and shouldn't be translated; "Custom to your needs" is a
+// sentence and should. A letter anywhere is what separates the two.
+const amountIsProse = /\p{L}/u.test(String(price?.amount ?? ""));
 ---
 
 <BentoBoxGridItem
@@ -59,8 +63,7 @@ const {
     >
       {
         /* Keys are written out rather than derived from data-prop, because a dot in a
-          Rosey key is read as a nested path when the connector saves an edit. The
-          amount is a number and gets no key at all. */
+          Rosey key is read as a nested path when the connector saves an edit. */
       }
       {
         price?.prefix && (
@@ -78,6 +81,7 @@ const {
           <span
             data-editable="text"
             data-prop="price.amount"
+            data-rosey={amountIsProse ? "price_amount" : undefined}
           >
             {price?.amount}
           </span>

@@ -1,6 +1,7 @@
 ---
 import Image from "@core-elements/image/Image.astro";
 import Button from "@core-elements/button/Button.astro";
+import { isEditable } from "@component-utils/editable";
 import { slugifyLabel } from "@components/utils/slugify";
 
 type ImageItem = {
@@ -19,7 +20,7 @@ const {
   widths = [640, 1280, 2560],
   label,
   "data-children-prop": childrenDataProp,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   class: className,
   _component,
   ...htmlAttributes
@@ -29,7 +30,8 @@ if (!htmlAttributes.id && label) {
   htmlAttributes.id = slugifyLabel(label);
 }
 
-const effectiveChildrenProp = childrenDataProp ?? (useDefaultEditableBinding ? "images" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveChildrenProp = childrenDataProp ?? (isContentBlock ? "images" : null);
 const arrayDataAttributes = effectiveChildrenProp
   ? { "data-editable": "array", "data-prop": effectiveChildrenProp }
   : {};

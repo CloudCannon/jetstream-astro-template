@@ -21,11 +21,10 @@ const {
 } = Astro.props;
 ---
 
-<CarouselSlide
-  data-rosey-ns={_uuid}
-  {...htmlAttributes}
->
+{/* Namespace stays inside the root, which a re-render copies into the region element. */}
+<CarouselSlide {...htmlAttributes}>
   <Card
+    data-rosey-ns={_uuid}
     class:list={["feature-slider-item", className]}
     paddingHorizontal="xs"
     paddingVertical="none"

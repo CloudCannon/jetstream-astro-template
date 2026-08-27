@@ -26,14 +26,18 @@ const inputType = multiple ? "checkbox" : "radio";
   class:list={["segments", className]}
   role={multiple ? "group" : "radiogroup"}
   aria-labelledby={title ? `${groupId}-legend` : undefined}
-  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
+  {
+    /* Namespace stays inside the root, which a re-render copies into the region element.
+    The legend and the options list each carry it. */
+  }
   {
     title && (
       <legend
         id={`${groupId}-legend`}
         class="legend"
+        data-rosey-ns={_uuid}
       >
         {/* Key on the span, not the <legend> — the required marker is a non-text child. */}
         <span data-rosey="title">{title}</span>
@@ -51,6 +55,7 @@ const inputType = multiple ? "checkbox" : "radio";
   <div
     class:list={["segments-options", iconOnly && "icon-only", multiple && "multiple"]}
     role="presentation"
+    data-rosey-ns={_uuid}
   >
     {
       options.map((option, index: number) => (

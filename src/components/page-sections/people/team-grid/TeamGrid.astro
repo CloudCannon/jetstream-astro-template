@@ -32,6 +32,8 @@ const {
 // Get team members from collection if useCollection is true, otherwise use teamMembers array
 let members = useCollection
   ? (await getCollection("team")).map((entry) => ({
+      // The collection schema calls it `uuid`; TeamItem namespaces its keys off _uuid.
+      _uuid: entry.data.uuid,
       name: entry.data.name,
       role: entry.data.role,
       imageSource: entry.data.imageSource,

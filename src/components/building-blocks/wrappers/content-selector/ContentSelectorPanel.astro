@@ -1,4 +1,5 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import RenderBlock from "@components/utils/renderBlock.astro";
 import Heading from "@core-elements/heading/Heading.astro";
 import Icon from "@core-elements/icon/Icon.astro";
@@ -7,7 +8,7 @@ const {
   title,
   subtext,
   contentSections,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   checked = false,
   groupName = "content-selector-tabs",
   _uuid,
@@ -21,8 +22,8 @@ const tabId = `tab-${uniqueId}`;
 const panelId = `panel-${uniqueId}`;
 const tabLabelId = `tablabel-${uniqueId}`;
 
-const effectiveChildrenProp =
-  childrenDataProp ?? (useDefaultEditableBinding ? "contentSections" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveChildrenProp = childrenDataProp ?? (isContentBlock ? "contentSections" : null);
 const arrayDataAttributes = effectiveChildrenProp
   ? { "data-editable": "array", "data-prop": effectiveChildrenProp }
   : {};

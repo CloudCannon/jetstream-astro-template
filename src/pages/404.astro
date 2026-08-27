@@ -105,12 +105,12 @@ const page = pageData?.data || {
             data-component="building-blocks/core-elements/button"
             data-astro-cid-fbdz35ol
           >
+            {/* No data-rosey-ns on the wrapper — Button namespaces itself by _uuid. */}
             {
               page.cta.buttonSections.map((button: any) => (
                 <span
                   class="button"
                   data-editable="array-item"
-                  data-rosey-ns={button._uuid}
                   data-astro-cid-fb4wagyx
                 >
                   <Button

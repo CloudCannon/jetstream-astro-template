@@ -24,11 +24,6 @@ collections_config:
         type: text
         comment: Controls the metadata title for the page.
         cascade: true
-      keywords:
-        type: array
-        comment: Optional meta keywords for this page.
-      keywords[*]:
-        type: text
     add_options:
       - name: Add New Page
         icon: pages
@@ -74,121 +69,8 @@ collections_config:
     _enabled_editors:
       - content
       - visual
-    _inputs:
-      title:
-        type: html
-        options:
-          required: true
-          initial_height: 135
-          styles: .cloudcannon/styles/editor.css
-        comment: The title of the blog post.
-        cascade: false
-      keywords:
-        type: array
-        comment: Optional meta keywords for this page.
-      keywords[*]:
-        type: text
-      description:
-        type: textarea
-        options:
-          required: true
-        comment: A brief description of the blog post.
-        cascade: true
-      date:
-        type: date
-        options:
-          required: true
-        comment: The publication date.
-        cascade: true
-      author:
-        type: select
-        options:
-          allow_empty: true
-          values: collections.team
-          value_key: uuid
-          preview:
-            text:
-              - key: name
-        comment: >-
-          The author of the blog post. Note that author details in the post will
-          not live update, you will need to save and rebuild.
-        cascade: true
-      image:
-        type: image
-        options:
-          paths:
-            uploads: src/assets/images
-          required: true
-        comment: Image path for the blog post.
-        cascade: true
-      tag:
-        type: select
-        options:
-          required: true
-          allow_create: true
-          values:
-            - Caching
-            - Uptime
-            - Downtime
-            - Example
-            - Security
-            - Performance
-            - CDN
-            - Prediction
-        comment: Tag relevant to this post's content.
-        cascade: true
-      counters:
-        type: array
-        comment: >-
-          Optional statistics displayed alongside the image in the post hero.
-        options:
-          structures:
-            style: select
-            values:
-              - label: Counter
-                icon:
-                value:
-                  counter: {}
-                  subtext: Counter Subtext
-                _inputs:
-                  counter:
-                    options:
-                      structures:
-                        style: select
-                        values:
-                          - label: Counter
-                            icon: speed
-                            value:
-                              number: 100
-                              prefix: $
-                              suffix: M
-                            _inputs:
-                              number:
-                                type: number
-                                comment: The number to count to.
-                                cascade: true
-                              prefix:
-                                comment: Text immediately before the number.
-                                cascade: true
-                              suffix:
-                                comment: Text immediately after the number.
-                                cascade: true
-                    cascade: true
-                  subtext:
-                    type: markdown
-                    options:
-                      allow_resize: true
-                      allow_custom_markup: false
-                      remove_custom_markup: false
-                      initial_height: 320
-                      bold: true
-                      image_size_attributes: true
-                      italic: true
-                      link: true
-                      underline: true
-                    comment: Optional subtext displayed beneath the counter.
-                    cascade: true
-        cascade: true
+    _inputs_from_glob:
+      - /.cloudcannon/inputs/blog-post.cloudcannon.inputs.yml
     add_options:
       - name: Add New Blog Post
         icon: article
@@ -225,6 +107,8 @@ collections_config:
     _enabled_editors:
       - content
       - visual
+    _inputs_from_glob:
+      - /.cloudcannon/inputs/blog-post.cloudcannon.inputs.yml
     disable_add: true
     disable_add_folder: true
     disable_file_actions: false
@@ -255,6 +139,8 @@ collections_config:
     _enabled_editors:
       - content
       - visual
+    _inputs_from_glob:
+      - /.cloudcannon/inputs/blog-post.cloudcannon.inputs.yml
     disable_add: true
     disable_add_folder: true
     disable_file_actions: false
@@ -457,6 +343,13 @@ _inputs:
     comment: Stable per-block ID used as the Rosey translation namespace.
     hidden: true
     cascade: true
+  # Same meaning wherever it appears (pages and all three blog collections), and
+  # nothing needs to narrow it, so it lives here rather than in each collection.
+  keywords:
+    type: array
+    comment: Optional meta keywords for this page.
+  keywords[*]:
+    type: text
   pageSections:
     comment: The main sections of the page.
     cascade: true

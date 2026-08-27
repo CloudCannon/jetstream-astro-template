@@ -264,13 +264,17 @@ const snakePath =
               class="counter-container"
               {...(!card.usePost && { "data-editable": "array-item" })}
             >
+              {/* Each child needs the item's _uuid to namespace its own keys: `subtext`
+                is also the section's key, so unnamespaced counters alias onto it. */}
               <Counter
                 {...counter.counter}
+                _uuid={counter._uuid}
                 alignmentHorizontal="left"
                 size="2xl"
               />
               <Text
                 text={counter.subtext}
+                _uuid={counter._uuid}
                 alignmentHorizontal="left"
                 {...(!card.usePost && { "data-prop": `subtext` })}
               />

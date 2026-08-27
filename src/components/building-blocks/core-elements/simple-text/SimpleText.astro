@@ -1,4 +1,5 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import { resolveRosey } from "@component-utils/roseyKey";
 import MarkdownIt from "markdown-it";
 
@@ -7,11 +8,12 @@ const {
   size = "md",
   alignmentHorizontal = "start",
   class: className,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   "data-prop": customDataProp,
   // Destructured so it can't reach the outer wrapper via htmlAttributes — the key
   // belongs on the inner span, or Rosey captures the surrounding <p> too.
   "data-rosey": roseyId,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -21,7 +23,8 @@ let MarkdownText = text ? md.renderInline(text) : "";
 
 MarkdownText = MarkdownText.replace(/\n/g, "<br />");
 
-const effectiveDataProp = customDataProp ?? (useDefaultEditableBinding ? "text" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveDataProp = customDataProp ?? (isContentBlock ? "text" : null);
 // renderInline() output is inline-rich, so data-type is "text". Without it the
 // region defaults to plain "span" and markdown fields read as perpetually stale.
 const textDataAttributes = effectiveDataProp
@@ -39,7 +42,14 @@ if (!_component && !hasText && !hasSlotContent) return;
   class:list={["simple-text", className]}
   {...htmlAttributes}
 >
-  <p class:list={["simple-text-content", size && `size-${size}`, `align-${alignmentHorizontal}`]}>
+  {
+    /* Without this, sibling blocks share one "text" key. It sits inside the root, which
+    a re-render copies into the region element. */
+  }
+  <p
+    class:list={["simple-text-content", size && `size-${size}`, `align-${alignmentHorizontal}`]}
+    data-rosey-ns={_uuid}
+  >
     <span
       class="simple-text-inner"
       {...textDataAttributes}

@@ -89,6 +89,7 @@ card:
                     - label: Counter
                       icon:
                       value:
+                        _uuid:
                         counter: {}
                         subtext: "Counter Subtext"
                       _inputs:

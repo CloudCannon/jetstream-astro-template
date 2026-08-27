@@ -1,9 +1,10 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import RenderBlock from "@components/utils/renderBlock.astro";
 
 const {
   contentSections,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   class: className,
   _uuid,
   _component,
@@ -11,8 +12,8 @@ const {
   ...htmlAttributes
 } = Astro.props;
 
-const effectiveChildrenProp =
-  childrenDataProp ?? (useDefaultEditableBinding ? "contentSections" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveChildrenProp = childrenDataProp ?? (isContentBlock ? "contentSections" : null);
 const arrayDataAttributes = effectiveChildrenProp
   ? { "data-editable": "array", "data-prop": effectiveChildrenProp }
   : {};

@@ -1,4 +1,5 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import { slugifyLabel } from "@components/utils/slugify";
 import GridItem from "./GridItem.astro";
 
@@ -13,7 +14,7 @@ const {
   items = [],
   label,
   gap = "md",
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   _uuid,
   _component,
   "data-children-prop": childrenDataProp,
@@ -33,7 +34,8 @@ const gridStyles = [
   .filter(Boolean)
   .join("; ");
 
-const effectiveChildrenProp = childrenDataProp ?? (useDefaultEditableBinding ? "items" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveChildrenProp = childrenDataProp ?? (isContentBlock ? "items" : null);
 const arrayDataAttributes = effectiveChildrenProp
   ? {
       "data-editable": "array",

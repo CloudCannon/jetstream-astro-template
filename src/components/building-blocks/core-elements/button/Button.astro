@@ -1,5 +1,6 @@
 ---
 import Icon from "@core-elements/icon/Icon.astro";
+import { isEditable } from "@component-utils/editable";
 import { resolveRosey } from "@component-utils/roseyKey";
 
 const {
@@ -13,14 +14,16 @@ const {
   link,
   element,
   class: className,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   "data-prop": customDataProp,
   "data-rosey": roseyId,
+  _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
 
-const effectiveDataProp = customDataProp ?? (useDefaultEditableBinding ? "text" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveDataProp = customDataProp ?? (isContentBlock ? "text" : null);
 const textDataAttributes = effectiveDataProp
   ? { "data-editable": "text", "data-prop": effectiveDataProp }
   : {};
@@ -95,6 +98,10 @@ if (!_component && !hasText && !hasSlotContent && !hasIcon) return;
   class:list={["button", className]}
   {...htmlAttributes}
 >
+  {
+    /* Without this, sibling buttons share one "text" key. It sits inside the root, which
+    a re-render copies into the region element. */
+  }
   <Tag
     class:list={[
       "button-inner",
@@ -103,6 +110,7 @@ if (!_component && !hasText && !hasSlotContent && !hasIcon) return;
       iconPosition === "after" && "icon-after",
       hideText && "icon-only",
     ]}
+    data-rosey-ns={_uuid}
     {...tagProps}
   >
     {

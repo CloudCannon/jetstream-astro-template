@@ -7,157 +7,48 @@ description: >-
 date: 2026-02-18T00:00:00Z
 author: Anonymous
 image: /src/assets/images/blog-snippets.png
-image_alt: Streaks of pink and purple light falling across a dark, dust-speckled pane of glass
+image_alt: >-
+  Streaks of pink and purple light falling across a dark, dust-speckled pane of
+  glass
 tag: Example
+keywords: []
+counters: []
 ---
-
 Bloggen auf CloudCannon unterstützt **Snippets**: reichhaltige, interaktive Komponenten jenseits von Standard-Markdown. Diese MDX-Komponenten ermöglichen anspruchsvolle Layouts, eingebettete Funktionen und mehr Beteiligung der Leserschaft — ohne dass für jeden Beitrag eigens entwickelt werden muss.
 
 Dieser Beitrag zeigt eine Auswahl von Beispiel-Snippets, jeweils mit Platzhaltertext. Sie können auch <a href="https://cloudcannon.com/documentation/developer-articles/snippets-using-mdx-components/" target="_blank" rel="noopener">eigene Snippets mit MDX-Komponenten bauen</a>.
 
-- [CTA Center](#cta-center)
-- [CTA Form](#cta-form)
-- [CTA Split](#cta-split)
-- [Embed](#embed)
-- [FAQ Section](#faq-section)
-- [Feature Grid](#feature-grid)
-- [Feature Slider](#feature-slider)
-- [Feature Split](#feature-split)
-- [Form](#form)
-- [Image](#image)
-- [Table](#table)
-- [Testimonial Section](#testimonial-section)
-- [Video](#video)
+* [CTA Center](#cta-center)
+* [CTA Form](#cta-form)
+* [CTA Split](#cta-split)
+* [Embed](#embed)
+* [FAQ Section](#faq-section)
+* [Feature Grid](#feature-grid)
+* [Feature Slider](#feature-slider)
+* [Feature Split](#feature-split)
+* [Form](#form)
+* [Image](#image)
+* [Table](#table)
+* [Testimonial Section](#testimonial-section)
+* [Video](#video)
 
 ## CTA Center
 
 Das Snippet CTA Center erzeugt mitten im Inhalt einen optisch abgesetzten Handlungsaufruf, mit vielen Optionen für Farbe, Hintergrund und Darstellung.
 
-<CtaCenter
-  heading={"<p>Main heading text for the CTA Center section.</p>"}
-  id="cta-center"
-  eyebrowIcon={{
-    _component: "building-blocks/core-elements/icon",
-    name: "eye",
-    size: "lg",
-    color: "default",
-    background: true,
-    alignmentHorizontal: "center",
-  }}
-  eyebrowText="Optional label displayed above the CTA Center heading."
-  subtext="Optional subtext displayed beneath the CTA Center heading."
-  buttonSections={[
-    {
-      _component: "building-blocks/core-elements/button",
-      text: "Button text with optional icon",
-      hideText: null,
-      link: "",
-      iconName: "chat-bubble-bottom-center",
-      iconPosition: "after",
-      variant: "primary",
-      size: "md",
-    },
-  ]}
-  maxContentWidth="xl"
-  paddingVertical="2xl"
-  colorScheme="light"
-  backgroundColor="brand-linear-gradient-reverse"
-  contentBackground={true}
-  rounded={true}
-/>
+<CtaCenter heading={"<p>Hauptüberschrift des Abschnitts CTA Center.</p>"} id="cta-center" eyebrowIcon={{ _component: "building-blocks/core-elements/icon", name: "eye", size: "lg", color: "default", background: true, alignmentHorizontal: "center" }} eyebrowText="Optionale Beschriftung über der Überschrift des Abschnitts CTA Center." subtext="Optionaler Untertext unter der Überschrift des Abschnitts CTA Center." buttonSections={[{ _component: "building-blocks/core-elements/button", text: "Button-Text mit optionalem Icon", hideText: null, link: "", iconName: "chat-bubble-bottom-center", iconPosition: "after", variant: "primary", size: "md" }]} maxContentWidth="xl" paddingVertical="2xl" colorScheme="light" backgroundColor="brand-linear-gradient-reverse" contentBackground={true} rounded={true} />
 
 ## CTA Form
 
 Das Snippet CTA Form bettet ein Formular zur Lead-Erfassung direkt in den Fließtext ein. Nutzen Sie es, wenn Lesende gezielt Informationen zum Thema des Beitrags anfordern sollen.
 
-<CtaForm
-  heading={"<p>Main heading text for the CTA Form section.</p>"}
-  id="cta-form"
-  eyebrowIcon={{
-    _component: "building-blocks/core-elements/icon",
-    name: "bolt",
-    size: "lg",
-    color: "default",
-    background: true,
-    alignmentHorizontal: "center",
-  }}
-  eyebrowText="Optional label displayed above the CTA Form heading."
-  formBlocks={[
-    {
-      _component: "building-blocks/forms/input",
-      label: "My input",
-      name: "my_input",
-      type: "text",
-      placeholder: null,
-      required: false,
-      value: null,
-    },
-    {
-      _component: "building-blocks/forms/input",
-      label: "My input",
-      name: "my_input",
-      type: "text",
-      placeholder: null,
-      required: false,
-      value: null,
-    },
-    {
-      _component: "building-blocks/forms/submit",
-      text: "Submit",
-      variant: "primary",
-      size: "md",
-      iconName: null,
-      iconPosition: "before",
-      hideText: false,
-      disabled: false,
-    },
-  ]}
-  buttonSections={[
-    {
-      _component: "building-blocks/core-elements/button",
-      text: "Optional button with optional icon",
-      iconName: "briefcase",
-      iconPosition: "after",
-      variant: "primary",
-      size: "md",
-    },
-  ]}
-  maxContentWidth="xl"
-  paddingVertical="2xl"
-  colorScheme="inherit"
-  backgroundColor="accent"
-  contentBackground={true}
-  verticalOffset={{ size: "none", direction: "front" }}
-  rounded={true}
-  subtext="Optional subtext displayed beneath the CTA Form heading."
-/>
+<CtaForm heading={"<p>Hauptüberschrift des Abschnitts CTA Form.</p>"} id="cta-form" eyebrowIcon={{ _component: "building-blocks/core-elements/icon", name: "bolt", size: "lg", color: "default", background: true, alignmentHorizontal: "center" }} eyebrowText="Optionale Beschriftung über der Überschrift des Abschnitts CTA Form." formBlocks={[{ _component: "building-blocks/forms/input", label: "Meine Eingabe", name: "my_input", type: "text", placeholder: null, required: false, value: null }, { _component: "building-blocks/forms/input", label: "Meine Eingabe", name: "my_input", type: "text", placeholder: null, required: false, value: null }, { _component: "building-blocks/forms/submit", text: "Senden", variant: "primary", size: "md", iconName: null, iconPosition: "before", hideText: false, disabled: false }]} buttonSections={[{ _component: "building-blocks/core-elements/button", text: "Optionaler Button mit optionalem Icon", iconName: "briefcase", iconPosition: "after", variant: "primary", size: "md" }]} maxContentWidth="xl" paddingVertical="2xl" colorScheme="inherit" backgroundColor="accent" contentBackground={true} verticalOffset={{ size: "none", direction: "front" }} rounded={true} subtext="Optionaler Untertext unter der Überschrift des Abschnitts CTA Form." />
 
 ## CTA Split
 
 Das Snippet CTA Split stellt zwei getrennte Optionen nebeneinander, ähnlich wie das Snippet Feature Split. (Sie können durchaus sehr ähnliche Snippets unter verschiedenen Namen anlegen, einfach um es Ihrer Redaktion leichter zu machen.)
 
-<CtaSplit
-  heading={"Headline for the CTA Split"}
-  id="cta-split"
-  subtext="Supporting copy beneath the headline."
-  imageSource="/src/assets/images/blog-edge-nodes.png"
-  imageAlt="Alt text describing the CTA image."
-  buttonSections={[
-    {
-      _component: "building-blocks/core-elements/button",
-      text: "Button text with optional icon",
-      hideText: null,
-      link: "",
-      iconName: "chart-bar-square",
-      iconPosition: "after",
-      variant: "primary",
-      size: "md",
-    },
-  ]}
-  colorScheme="inherit"
-  backgroundColor="accent"
-  rounded={true}
-/>
+<CtaSplit heading={"Überschrift für den Abschnitt CTA Split"} id="cta-split" subtext="Begleittext unter der Überschrift." imageSource="/src/assets/images/blog-edge-nodes.png" imageAlt="Alternativtext zur Beschreibung des CTA-Bildes." buttonSections={[{ _component: "building-blocks/core-elements/button", text: "Button-Text mit optionalem Icon", hideText: null, link: "", iconName: "chart-bar-square", iconPosition: "after", variant: "primary", size: "md" }]} colorScheme="inherit" backgroundColor="accent" rounded={true} />
 
 ## Embed
 
@@ -169,434 +60,52 @@ Das Snippet Embed erlaubt es, externe Inhalte — Videos, Dashboards, interaktiv
 
 Das Snippet FAQ Section zeigt häufige Fragen als aufklappbares Akkordeon, mit Optionen für das Öffnungsverhalten, das Farbschema und die Hintergrundfarbe.
 
-<FaqSection
-  heading={"<p>Main heading text for the FAQ section.</p>"}
-  id="faq-section"
-  eyebrowIcon={{
-    _component: "building-blocks/core-elements/icon",
-    name: "question-mark-circle",
-    size: "lg",
-    color: "default",
-    background: true,
-    alignmentHorizontal: "center",
-  }}
-  eyebrowText="Optional label displayed above the FAQ heading."
-  subtext="Optional subtext displayed beneath the FAQ heading."
-  items={[
-    {
-      _component: "building-blocks/wrappers/accordion/accordion-item",
-      title: "Question text 1",
-      contentSections: [
-        {
-          _component: "building-blocks/core-elements/text",
-          text: "Answer text goes here.",
-          alignmentHorizontal: "start",
-        },
-      ],
-    },
-    {
-      _component: "building-blocks/wrappers/accordion/accordion-item",
-      title: "Question text 2",
-      contentSections: [
-        {
-          _component: "building-blocks/core-elements/text",
-          text: "Answer text goes here.",
-          alignmentHorizontal: "start",
-        },
-      ],
-    },
-    {
-      _component: "building-blocks/wrappers/accordion/accordion-item",
-      title: "Question text 3",
-      contentSections: [
-        {
-          _component: "building-blocks/core-elements/text",
-          text: "Answer text goes here.",
-          alignmentHorizontal: "start",
-        },
-      ],
-    },
-  ]}
-  singleOpen={true}
-  openFirst={true}
-  maxContentWidth="xl"
-  paddingVertical="2xl"
-  colorScheme="inherit"
-  backgroundColor="highlight-grid"
-  contentBackground={true}
-  verticalOffset={{ size: "none", direction: "front" }}
-  rounded={true}
-/>
+<FaqSection heading={"<p>Hauptüberschrift des FAQ-Abschnitts.</p>"} id="faq-section" eyebrowIcon={{ _component: "building-blocks/core-elements/icon", name: "question-mark-circle", size: "lg", color: "default", background: true, alignmentHorizontal: "center" }} eyebrowText="Optionale Beschriftung über der FAQ-Überschrift." subtext="Optionaler Untertext unter der FAQ-Überschrift." items={[{ _component: "building-blocks/wrappers/accordion/accordion-item", title: "Fragetext 1", contentSections: [{ _component: "building-blocks/core-elements/text", text: "Hier steht der Antworttext.", alignmentHorizontal: "start" }] }, { _component: "building-blocks/wrappers/accordion/accordion-item", title: "Fragetext 2", contentSections: [{ _component: "building-blocks/core-elements/text", text: "Hier steht der Antworttext.", alignmentHorizontal: "start" }] }, { _component: "building-blocks/wrappers/accordion/accordion-item", title: "Fragetext 3", contentSections: [{ _component: "building-blocks/core-elements/text", text: "Hier steht der Antworttext.", alignmentHorizontal: "start" }] }]} singleOpen={true} openFirst={true} maxContentWidth="xl" paddingVertical="2xl" colorScheme="inherit" backgroundColor="highlight-grid" contentBackground={true} verticalOffset={{ size: "none", direction: "front" }} rounded={true} />
 
 ## Feature Grid
 
 Das Snippet Feature Grid zeigt mehrere zusammengehörige Karten in einem strukturierten Layout, etwa für Funktionen oder Preisoptionen. Innerhalb des Rasters lassen sich für diese Karten eigene Breiten und Höhen festlegen.
 
-<FeatureGrid
-  heading={"<p>Main heading text for the Feature Grid section.</p>"}
-  id="feature-grid"
-  eyebrowIcon={{
-    _component: "building-blocks/core-elements/icon",
-    name: "bolt",
-    size: "lg",
-    color: "default",
-    background: true,
-    alignmentHorizontal: "center",
-  }}
-  eyebrowText="Optional label displayed above the Feature Grid heading."
-  subtext="Optional subtext displayed beneath the Feature Grid heading."
-  featureGrid={{
-    features: [
-      {
-        _component: "page-sections/features/feature-grid/feature-item",
-        link: "",
-        image: { source: "", alt: "", rounded: false },
-        eyebrowIcon: {
-          _component: "building-blocks/core-elements/icon",
-          name: "bolt",
-          size: "lg",
-          color: "default",
-          background: true,
-          iconOffset: false,
-          alignmentHorizontal: "start",
-        },
-        eyebrowText: "Eyebrow placeholder",
-        title: "Feature title",
-        description:
-          "Feature description placeholder text that will be replaced with actual content. This placeholder text is slightly longer, because this card is set to take up two rows in the grid rather than one.",
-        columnSpan: 4,
-        rowSpan: 2,
-      },
-      {
-        _component: "page-sections/features/feature-grid/feature-item",
-        link: "",
-        image: { source: "", alt: "", rounded: false },
-        eyebrowIcon: {
-          _component: "building-blocks/core-elements/icon",
-          name: "bolt",
-          size: "lg",
-          color: "default",
-          background: true,
-          iconOffset: false,
-          alignmentHorizontal: "start",
-        },
-        eyebrowText: "Eyebrow placeholder",
-        title: "Feature title",
-        description:
-          "Feature description placeholder text that will be replaced with actual content.",
-        columnSpan: 8,
-        rowSpan: 1,
-      },
-      {
-        _component: "page-sections/features/feature-grid/pricing-item",
-        title: "Pricing heading",
-        price: { prefix: "$", amount: "1", suffix: "/mo" },
-        subtext: "Optional subtext displayed beneath the heading.",
-        list: {
-          _component: "building-blocks/core-elements/list",
-          items: [
-            {
-              _component: "building-blocks/core-elements/list/list-item",
-              text: "List item 1",
-              iconName: "heart",
-              iconColor: "default",
-            },
-            {
-              _component: "building-blocks/core-elements/list/list-item",
-              text: "List item 2",
-              iconName: "heart",
-              iconColor: "default",
-            },
-            {
-              _component: "building-blocks/core-elements/list/list-item",
-              text: "List item 3",
-              iconName: "heart",
-              iconColor: "default",
-            },
-          ],
-          direction: "vertical",
-          alignmentHorizontal: "start",
-          size: "md",
-          listType: "icon",
-        },
-        button: {
-          _component: "building-blocks/core-elements/button",
-          text: "Get started",
-          hideText: false,
-          link: "https://cloudcannon.com/templates/jetstream/",
-          iconName: "arrow-right",
-          iconPosition: "after",
-          variant: "secondary",
-          size: "md",
-        },
-        columnSpan: 4,
-        rowSpan: 1,
-      },
-      {
-        _component: "page-sections/features/feature-grid/feature-item",
-        link: "",
-        image: { source: "", alt: "", rounded: false },
-        eyebrowIcon: {
-          _component: "building-blocks/core-elements/icon",
-          name: "bolt",
-          size: "lg",
-          color: "default",
-          background: true,
-          iconOffset: false,
-          alignmentHorizontal: "start",
-        },
-        eyebrowText: "Eyebrow placeholder",
-        title: "Feature title",
-        description:
-          "Feature description placeholder text that will be replaced with actual content.",
-        columnSpan: 4,
-        rowSpan: 1,
-      },
-    ],
-    backgroundColor: "accent",
-    gridBackgroundMaxWidth: "none",
-    gridMaxWidth: "2xl",
-    rounded: true,
-    overhang: false,
-  }}
-  maxContentWidth="xl"
-  paddingVertical="2xl"
-  colorScheme="inherit"
-  backgroundColor="accent"
-  verticalOffset={{ size: "none", direction: "front" }}
-  rounded={true}
-/>
+<FeatureGrid heading={"<p>Hauptüberschrift des Abschnitts Feature Grid.</p>"} id="feature-grid" eyebrowIcon={{ _component: "building-blocks/core-elements/icon", name: "bolt", size: "lg", color: "default", background: true, alignmentHorizontal: "center" }} eyebrowText="Optionale Beschriftung über der Überschrift des Abschnitts Feature Grid." subtext="Optionaler Untertext unter der Überschrift des Abschnitts Feature Grid." featureGrid={{ features: [{ _component: "page-sections/features/feature-grid/feature-item", link: "", image: { source: "", alt: "", rounded: false }, eyebrowIcon: { _component: "building-blocks/core-elements/icon", name: "bolt", size: "lg", color: "default", background: true, iconOffset: false, alignmentHorizontal: "start" }, eyebrowText: "Übertitel-Platzhalter", title: "Titel der Funktion", description: "Platzhaltertext für die Beschreibung einer Funktion, der durch echte Inhalte ersetzt wird. Dieser Platzhalter ist etwas länger, weil diese Karte im Raster zwei Zeilen statt einer einnimmt.", columnSpan: 4, rowSpan: 2 }, { _component: "page-sections/features/feature-grid/feature-item", link: "", image: { source: "", alt: "", rounded: false }, eyebrowIcon: { _component: "building-blocks/core-elements/icon", name: "bolt", size: "lg", color: "default", background: true, iconOffset: false, alignmentHorizontal: "start" }, eyebrowText: "Übertitel-Platzhalter", title: "Titel der Funktion", description: "Platzhaltertext für die Beschreibung einer Funktion, der durch echte Inhalte ersetzt wird.", columnSpan: 8, rowSpan: 1 }, { _component: "page-sections/features/feature-grid/pricing-item", title: "Überschrift des Preisangebots", price: { prefix: "$", amount: "1", suffix: "/Monat" }, subtext: "Optionaler Untertext unter der Überschrift.", list: { _component: "building-blocks/core-elements/list", items: [{ _component: "building-blocks/core-elements/list/list-item", text: "Listenpunkt 1", iconName: "heart", iconColor: "default" }, { _component: "building-blocks/core-elements/list/list-item", text: "Listenpunkt 2", iconName: "heart", iconColor: "default" }, { _component: "building-blocks/core-elements/list/list-item", text: "Listenpunkt 3", iconName: "heart", iconColor: "default" }], direction: "vertical", alignmentHorizontal: "start", size: "md", listType: "icon" }, button: { _component: "building-blocks/core-elements/button", text: "Jetzt starten", hideText: false, link: "https://cloudcannon.com/templates/jetstream/", iconName: "arrow-right", iconPosition: "after", variant: "secondary", size: "md" }, columnSpan: 4, rowSpan: 1 }, { _component: "page-sections/features/feature-grid/feature-item", link: "", image: { source: "", alt: "", rounded: false }, eyebrowIcon: { _component: "building-blocks/core-elements/icon", name: "bolt", size: "lg", color: "default", background: true, iconOffset: false, alignmentHorizontal: "start" }, eyebrowText: "Übertitel-Platzhalter", title: "Titel der Funktion", description: "Platzhaltertext für die Beschreibung einer Funktion, der durch echte Inhalte ersetzt wird.", columnSpan: 4, rowSpan: 1 }], backgroundColor: "accent", gridBackgroundMaxWidth: "none", gridMaxWidth: "2xl", rounded: true, overhang: false }} maxContentWidth="xl" paddingVertical="2xl" colorScheme="inherit" backgroundColor="accent" verticalOffset={{ size: "none", direction: "front" }} rounded={true} />
 
 ## Feature Slider
 
 Das Snippet Feature Slider zeigt Funktionen in einem interaktiven Karussell. Geeignet für aufeinanderfolgende Funktionen oder wenn der Platz knapp ist.
 
-<FeatureSlider
-  id="feature-slider"
-  slides={[
-    {
-      _component: "page-sections/features/feature-slider/feature-slider-item",
-      eyebrow: "Optional eyebrow text displayed above the title",
-      title: "Slide title 1",
-      description: "Short description for this slide.",
-      imageSource: "/src/assets/images/blog-edge-nodes.png",
-      imageAlt: "Slide image alt text",
-      minSplitWidth: 0,
-    },
-    {
-      _component: "page-sections/features/feature-slider/feature-slider-item",
-      eyebrow: "Optional eyebrow text displayed above the title",
-      title: "Slide title 2",
-      description: "Short description for this slide.",
-      imageSource: "/src/assets/images/blog-edge-nodes.png",
-      imageAlt: "Slide image alt text",
-      minSplitWidth: 0,
-    },
-    {
-      _component: "page-sections/features/feature-slider/feature-slider-item",
-      eyebrow: "Optional eyebrow text displayed above the title",
-      title: "Slide title 3",
-      description: "Short description for this slide.",
-      imageSource: "/src/assets/images/blog-edge-nodes.png",
-      imageAlt: "Slide image alt text",
-      minSplitWidth: 0,
-    },
-  ]}
-  colorScheme="light"
-  backgroundColor="brand-linear-gradient-muted"
-  rounded={true}
-  heading={""}
-/>
+<FeatureSlider slides={[{ _component: "page-sections/features/feature-slider/feature-slider-item", eyebrow: "Optionaler Übertitel über dem Titel", title: "Titel von Folie 1", description: "Kurze Beschreibung dieser Folie.", imageSource: "/src/assets/images/blog-edge-nodes.png", imageAlt: "Alternativtext des Folienbildes", minSplitWidth: 0 }, { _component: "page-sections/features/feature-slider/feature-slider-item", eyebrow: "Optionaler Übertitel über dem Titel", title: "Titel von Folie 2", description: "Kurze Beschreibung dieser Folie.", imageSource: "/src/assets/images/blog-edge-nodes.png", imageAlt: "Alternativtext des Folienbildes", minSplitWidth: 0 }, { _component: "page-sections/features/feature-slider/feature-slider-item", eyebrow: "Optionaler Übertitel über dem Titel", title: "Titel von Folie 3", description: "Kurze Beschreibung dieser Folie.", imageSource: "/src/assets/images/blog-edge-nodes.png", imageAlt: "Alternativtext des Folienbildes", minSplitWidth: 0 }]} colorScheme="light" backgroundColor="brand-linear-gradient-muted" id="feature-slider" rounded={true} heading={""}/>
 
 ## Feature Split
 
 Das Snippet Feature Split stellt eine einzelne Überschrift samt Textbereich neben ein Bild — mit der Wahl, was zuerst erscheint.
 
-<FeatureSplit
-  heading={"Main heading for the split section"}
-  id="feature-split"
-  eyebrow="Optional eyebrow text displayed above the heading"
-  subtext="Supporting body copy beneath the heading."
-  buttonSections={[
-    {
-      _component: "building-blocks/core-elements/button",
-      text: "Button text with optional icon",
-      hideText: null,
-      link: "",
-      iconName: "",
-      iconPosition: "before",
-      variant: "primary",
-      size: "md",
-    },
-  ]}
-  imageSource="/src/assets/images/blog-edge-nodes.png"
-  imageAspectRatio="landscape"
-  imageRounded={true}
-  reverse={true}
-  colorScheme="light"
-  backgroundColor="brand-linear-gradient-muted"
-  rounded={true}
-/>
+<FeatureSplit eyebrow="Optionaler Übertitel über der Überschrift" heading={"Hauptüberschrift des Abschnitts Feature Split"} subtext="Begleittext unter der Überschrift." buttonSections={[{ _component: "building-blocks/core-elements/button", text: "Button-Text mit optionalem Icon", hideText: null, link: "", iconName: "", iconPosition: "before", variant: "primary", size: "md" }]} imageSource="/src/assets/images/blog-edge-nodes.png" imageAspectRatio="landscape" imageRounded={true} reverse={true} colorScheme="light" backgroundColor="brand-linear-gradient-muted" id="feature-split" rounded={true}/>
 
 ## Form
 
 Das eigenständige Snippet Form erzeugt eigene Formulare, fertig zur Anbindung an <a href="https://cloudcannon.com/documentation/developer-articles/what-is-a-form/" target="_blank" rel="noopener">CloudCannon Forms</a>.
 
-<Form
-  id="form"
-  formBlocks={[
-    {
-      _component: "building-blocks/forms/input",
-      label: "My email",
-      name: "my_email",
-      type: "email",
-      placeholder: "name@example.com",
-      required: true,
-      value: null,
-    },
-    {
-      _component: "building-blocks/forms/select",
-      label: "Choose an option",
-      name: "option",
-      required: true,
-      options: [
-        { value: "option1", label: "Option 1" },
-        { value: "option2", label: "Option 2" },
-        { value: "option3", label: "Option 3" },
-      ],
-      placeholder: "Set an optional default choice",
-      value: "option2",
-    },
-    {
-      _component: "building-blocks/forms/date",
-      label: "Choose a date",
-      name: "my_date",
-      required: false,
-      value: "2026-01-01T15:30:00Z",
-      min: null,
-      max: null,
-    },
-    {
-      _component: "building-blocks/forms/file-upload",
-      label: "Upload a file",
-      name: "upload",
-      required: false,
-      accept: ".webp",
-      multiple: false,
-    },
-    {
-      _component: "building-blocks/forms/input",
-      label: "Name",
-      name: "my_input",
-      type: "text",
-      placeholder: "Name",
-      required: false,
-      value: null,
-    },
-    {
-      _component: "building-blocks/forms/textarea",
-      label: "Add a comment",
-      name: "my_comment",
-      required: false,
-      placeholder: "Tell us all of your secrets",
-      value: null,
-    },
-    {
-      _component: "building-blocks/forms/submit",
-      text: "Submit",
-      variant: "primary",
-      size: "md",
-      iconName: null,
-      iconPosition: "before",
-      hideText: false,
-      disabled: false,
-    },
-  ]}
-/>
+<Form formBlocks={[{ _component: "building-blocks/forms/input", label: "Meine E-Mail-Adresse", name: "my_email", type: "email", placeholder: "name@example.com", required: true, value: null }, { _component: "building-blocks/forms/select", label: "Option auswählen", name: "option", required: true, options: [{ value: "option1", label: "Option 1" }, { value: "option2", label: "Option 2" }, { value: "option3", label: "Option 3" }], placeholder: "Optionale Standardauswahl festlegen", value: "option2" }, { _component: "building-blocks/forms/date", label: "Datum auswählen", name: "my_date", required: false, value: "2026-01-01T15:30:00Z", min: null, max: null }, { _component: "building-blocks/forms/file-upload", label: "Datei hochladen", name: "upload", required: false, accept: ".webp", multiple: false }, { _component: "building-blocks/forms/input", label: "Name", name: "my_input", type: "text", placeholder: "Name", required: false, value: null }, { _component: "building-blocks/forms/textarea", label: "Kommentar hinzufügen", name: "my_comment", required: false, placeholder: "Verraten Sie uns alle Ihre Geheimnisse", value: null }, { _component: "building-blocks/forms/submit", text: "Senden", variant: "primary", size: "md", iconName: null, iconPosition: "before", hideText: false, disabled: false }]} id="form"/>
 
 ## Image
 
 Das erweiterte Snippet Image bietet mehr Kontrolle als Markdown-Bilder: abgerundete Ecken, festgelegtes Seitenverhältnis sowie Layoutoptionen für horizontale und vertikale Ausrichtung.
 
-<Image
-  id="image"
-  source="/src/assets/images/blog-edge-nodes.png"
-  alt="Sample image Snippet, set to 16:5 aspect ratio with rounded corners."
-  rounded={true}
-  aspectRatio="horizontal-strip"
-/>
+<Image source="/src/assets/images/blog-edge-nodes.png" alt="Beispiel für ein Bild-Snippet im Seitenverhältnis 16:5 mit abgerundeten Ecken." rounded={true} aspectRatio="horizontal-strip" id="image"/>
 
 ## Table
 
 Das erweiterte Snippet Table liefert eine gestaltete Tabelle, mit Spaltenköpfen, Abschnittsbezeichnungen für Zeilengruppen und so vielen Zeilen und Spalten, wie auf Ihre Seite passen.
 
-<Table
-  heading={"<p>Table heading</p>"}
-  id="table"
-  eyebrowIcon={{
-    _component: "building-blocks/core-elements/icon",
-    name: "table-cells",
-    size: "lg",
-    color: "brand-gradient",
-    background: true,
-    alignmentHorizontal: "center",
-  }}
-  eyebrowText="Optional label displayed above the table's heading."
-  subtext="Optional subtext displayed beneath the table's heading."
-  table={{
-    headers: [
-      { hideText: true, text: "Header" },
-      { text: "Header One" },
-      { text: "Header Two" },
-      { text: "Header Three" },
-    ],
-    sections: [
-      {
-        sectionName: "Section One",
-        rows: [
-          { cells: ["Cell one", "Cell two", "Cell three"] },
-          { cells: ["Cell one", "Cell two", "Cell three"] },
-        ],
-      },
-      {
-        sectionName: "Section Two",
-        rows: [
-          { cells: ["Cell one", "Cell two", "Cell three"] },
-          { cells: ["Cell one", "Cell two", "Cell three"] },
-        ],
-      },
-      { sectionName: "Section Three", rows: [{ cells: ["Cell one", "Cell two", "Cell three"] }] },
-    ],
-  }}
-  maxContentWidth="xl"
-  paddingVertical="md"
-  colorScheme="inherit"
-  backgroundColor="none"
-  verticalOffset={{ size: "none", direction: "front" }}
-/>
+<Table heading={"<p>Tabellenüberschrift</p>"} id="table" eyebrowIcon={{ _component: "building-blocks/core-elements/icon", name: "table-cells", size: "lg", color: "brand-gradient", background: true, alignmentHorizontal: "center" }} eyebrowText="Optionale Beschriftung über der Tabellenüberschrift." subtext="Optionaler Untertext unter der Tabellenüberschrift." table={{ headers: [{ hideText: true, text: "Spaltenkopf" }, { text: "Spaltenkopf eins" }, { text: "Spaltenkopf zwei" }, { text: "Spaltenkopf drei" }], sections: [{ sectionName: "Abschnitt eins", rows: [{ cells: ["Zelle eins", "Zelle zwei", "Zelle drei"] }, { cells: ["Zelle eins", "Zelle zwei", "Zelle drei"] }] }, { sectionName: "Abschnitt zwei", rows: [{ cells: ["Zelle eins", "Zelle zwei", "Zelle drei"] }, { cells: ["Zelle eins", "Zelle zwei", "Zelle drei"] }] }, { sectionName: "Abschnitt drei", rows: [{ cells: ["Zelle eins", "Zelle zwei", "Zelle drei"] }] }] }} maxContentWidth="xl" paddingVertical="md" colorScheme="inherit" backgroundColor="none" verticalOffset={{ size: "none", direction: "front" }} />
 
 ## Testimonial Section
 
 Das Snippet Testimonial Section zeigt Zitate mit Quellenangabe, mit den üblichen Optionen für Farbschema und Hintergrundfarbe.
 
-<TestimonialSection
-  id="testimonial-section"
-  text="Testimonial sections are my favorite way to build trust, and validate sales claims across my marketing channels."
-  authorName="Robin Poynter"
-  authorDescription="Placeholder Copywriter, Jetstream"
-  authorImage="/src/assets/images/testimonial.png"
-  paddingVertical="md"
-  colorScheme="dark"
-  backgroundColor="brand-linear-gradient-muted"
-/>
+<TestimonialSection id="testimonial-section" text="Testimonial-Abschnitte sind für mich der beste Weg, Vertrauen aufzubauen und Verkaufsargumente über alle Marketingkanäle hinweg zu belegen." authorName="Robin Poynter" authorDescription="Werbetexte (Beispiel), Jetstream" authorImage="/src/assets/images/testimonial.png" paddingVertical="md" colorScheme="dark" backgroundColor="brand-linear-gradient-muted"/>
 
 ## Video
 
 Das Snippet Video bettet Videoinhalte aus externen Quellen (Vimeo, YouTube) oder von lokal gehosteten Dateien ein.
 
-<Video
-  id="video"
-  type="youtube"
-  title="Rick Astley - Never Gonna Give You Up (Official Video)"
-  videoId="dQw4w9WgXcQ"
-/>
+<Video id="video" type="youtube" title="Rick Astley - Never Gonna Give You Up (Official Video)" videoId="dQw4w9WgXcQ"/>

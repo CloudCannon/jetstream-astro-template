@@ -101,7 +101,6 @@ const team = await getCollection("team");
                 link={`/${locale}/blog#posts`}
                 variant={selectedTag === "all" ? "secondary" : "base"}
                 text="All"
-                editable={false}
                 data-rosey="all"
               />
               {allTags.map((tag: string) => (
@@ -109,7 +108,6 @@ const team = await getCollection("team");
                   link={`/${locale}/blog/tag/${tag}#posts`}
                   variant={selectedTag === tag ? "secondary" : "base"}
                   text={tag}
-                  editable={false}
                   data-rosey={slugifyLabel(tag)}
                 />
               ))}
@@ -121,7 +119,6 @@ const team = await getCollection("team");
             minItemWidth="320"
             maxItemWidth="400"
             style="margin-top: var(--spacing-2xl)"
-            editable={false}
             class="blog-grid"
           >
             {page.data.map((post: any, index: number) => {
@@ -142,10 +139,7 @@ const team = await getCollection("team");
               const author = team.find((m: any) => m.data.uuid === post.data.author);
 
               return (
-                <BentoBoxGridItem
-                  columnSpan={columnSpan}
-                  editable={false}
-                >
+                <BentoBoxGridItem columnSpan={columnSpan}>
                   <Card
                     link={`/${locale}/blog/${slug}`}
                     rounded={true}
@@ -153,14 +147,12 @@ const team = await getCollection("team");
                     backgroundColor="accent"
                     paddingVertical="md"
                     paddingHorizontal="md"
-                    editable={false}
                   >
                     {post.data.image && (
                       <Image
                         source={post.data.image}
                         alt={post.data.image_alt}
                         aspectRatio="landscape"
-                        editable={false}
                         rounded={true}
                         style="max-height: 230px; width: 100%;"
                       />
@@ -170,7 +162,6 @@ const team = await getCollection("team");
                     <SimpleText
                       size="sm"
                       style="color: var(--color-text-brand); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-xs);"
-                      editable={false}
                       data-rosey-root="tags"
                       data-rosey={slugifyLabel(post.data.tag ?? "")}
                     >
@@ -182,14 +173,12 @@ const team = await getCollection("team");
                       level="h3"
                       size="md"
                       style="margin-bottom: var(--spacing-md); margin-top: var(--spacing-sm);"
-                      editable={false}
                       text={post.data.title.replace(/<[^>]*>/g, "")}
                       data-rosey={false}
                     />
                     <SimpleText
                       size="md"
                       style="margin-top: 0;"
-                      editable={false}
                       data-rosey={false}
                     >
                       {post.data.description}
@@ -197,7 +186,6 @@ const team = await getCollection("team");
                     <SimpleText
                       size="sm"
                       style="font-weight: var(--font-weight-bold); color: var(--color-text-muted); margin-bottom: var(--spacing-xs);"
-                      editable={false}
                       data-rosey={false}
                     >
                       By {author?.data.name || "Anonymous"} | {pubDate}
@@ -218,7 +206,6 @@ const team = await getCollection("team");
         <SimpleText
           alignmentHorizontal="center"
           style="margin-top: var(--spacing-2xl);"
-          editable={false}
           data-rosey="empty"
         >
           No blog posts yet. Check back soon!

@@ -1,5 +1,6 @@
 ---
 import { mdxComponents } from "@component-utils/mdxComponents";
+import RoseyUntagged from "@component-utils/RoseyUntagged.astro";
 import { slugifyLabel } from "@component-utils/slugify";
 import Button from "@core-elements/button/Button.astro";
 import Counter from "@core-elements/counter/Counter.astro";
@@ -234,7 +235,9 @@ const article = {
         slot="first"
       >
         <editable-text data-prop="@content">
-          <Content components={mdxComponents} />
+          <RoseyUntagged>
+            <Content components={mdxComponents} />
+          </RoseyUntagged>
         </editable-text>
 
         {
@@ -245,7 +248,6 @@ const article = {
               backgroundColor="accent"
               paddingVertical="md"
               paddingHorizontal="md"
-              editable={false}
               class="author-card"
             >
               <Split
@@ -260,7 +262,6 @@ const article = {
                   alt={author.data.name}
                   aspectRatio="square"
                   rounded={true}
-                  editable={false}
                   style="border-radius: var(--radius-full);"
                 />
                 <div slot="second">
@@ -268,14 +269,12 @@ const article = {
                     level="h3"
                     size="sm"
                     style="margin-bottom: var(--spacing-md); margin-top: 0;"
-                    editable={false}
                   >
                     {author.data.name}
                   </Heading>
                   <SimpleText
                     size="sm"
                     style="margin-top: 0; color: var(--color-text-muted); font-weight: var(--font-weight-bold);"
-                    editable={false}
                   >
                     {author.data.role}
                   </SimpleText>
@@ -357,20 +356,17 @@ const article = {
                 backgroundColor="accent"
                 paddingVertical="sm"
                 paddingHorizontal="sm"
-                editable={false}
               >
                 <Image
                   source={recentPost.data.image}
                   alt={recentPost.data.image_alt}
                   aspectRatio="landscape"
-                  editable={false}
                   rounded={true}
                   style="max-height: 150px; width: 100%;"
                 />
                 <SimpleText
                   size="xs"
                   style="color: var(--color-text-brand); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-xs); margin-top: var(--spacing-sm);"
-                  editable={false}
                 >
                   {recentPost.data.tag}
                 </SimpleText>
@@ -378,13 +374,11 @@ const article = {
                   level="h3"
                   size="xs"
                   style="margin-bottom: var(--spacing-xs); margin-top: 0;"
-                  editable={false}
                   text={recentPost.data.title.replace(/<[^>]*>/g, "")}
                 />
                 <SimpleText
                   size="sm"
                   style="color: var(--color-text-muted); margin-top: 0; font-weight: var(--font-weight-bold);"
-                  editable={false}
                 >
                   By {author?.data.name || "Anonymous"} | {postDate}
                 </SimpleText>

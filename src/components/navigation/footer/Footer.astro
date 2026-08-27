@@ -28,7 +28,6 @@ const {
     maxContentWidth="2xl"
     paddingHorizontal="md"
     paddingVertical="2xl"
-    useDefaultEditableBinding={false}
   >
     <div class="footer-content">
       <div class="content-container">
@@ -37,13 +36,11 @@ const {
           alternateSource={logoAlternateSource}
           alt={logoAlt}
           class="footer-logo"
-          useDefaultEditableBinding={false}
         />
       </div>
       <div class="content-container">
         <Bar
           navData={links}
-          useDefaultEditableBinding={false}
           roseyNs="footer"
         />
       </div>
@@ -60,16 +57,12 @@ const {
         <Text
           class="footer-legal-text"
           text={footerText || ""}
-          useDefaultEditableBinding={false}
           data-rosey-root="footer"
           data-rosey="legal"
         />
       </div>
       <div class="content-container">
-        <ButtonGroup
-          alignmentHorizontal="end"
-          useDefaultEditableBinding={false}
-        >
+        <ButtonGroup alignmentHorizontal="end">
           {
             socials.map((social: any) => (
               <Button
@@ -81,7 +74,6 @@ const {
                 aria-label={`Visit our ${social.icon} page`}
                 target="_blank"
                 rel="noopener noreferrer"
-                useDefaultEditableBinding={false}
               />
             ))
           }

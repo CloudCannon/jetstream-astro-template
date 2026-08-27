@@ -1,4 +1,5 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import DefinitionListItem from "./DefinitionListItem.astro";
 
 type ItemProps = Record<string, unknown>;
@@ -8,13 +9,14 @@ const {
   alignmentHorizontal = "start",
   class: className,
   "data-children-prop": childrenDataProp,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
 
-const effectiveChildrenProp = childrenDataProp ?? (useDefaultEditableBinding ? "items" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveChildrenProp = childrenDataProp ?? (isContentBlock ? "items" : null);
 const arrayDataAttributes = effectiveChildrenProp
   ? { "data-editable": "array", "data-prop": effectiveChildrenProp }
   : {};

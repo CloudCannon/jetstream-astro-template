@@ -24,12 +24,7 @@ const fieldId = id || `select-${crypto.randomUUID()}`;
 const hasLeadingIcon = iconName?.trim().length > 0;
 ---
 
-{
-  /* htmlAttributes carries the caller's data-editable/data-component. CloudCannon's
-    re-render replaces this element's children with a fresh copy of the component, so
-    data-rosey-ns has to sit strictly inside it — on the root it would be re-emitted by
-    the copy, doubling the namespace on every key below. */
-}
+{/* Namespace stays inside the root, which a re-render copies into the region element. */}
 <div
   class:list={["select", className]}
   {...htmlAttributes}

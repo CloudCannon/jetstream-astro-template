@@ -1,4 +1,5 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import { slugifyLabel } from "@components/utils/slugify";
 import AccordionItem from "./AccordionItem.astro";
 
@@ -9,7 +10,7 @@ const {
   openFirst,
   singleOpen = false,
   label,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   "data-children-prop": childrenDataProp,
   _uuid,
   _component,
@@ -24,7 +25,8 @@ if (!htmlAttributes.id) {
 
 const accordionName = singleOpen ? `accordion-${crypto.randomUUID()}` : undefined;
 
-const effectiveChildrenProp = childrenDataProp ?? (useDefaultEditableBinding ? "items" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveChildrenProp = childrenDataProp ?? (isContentBlock ? "items" : null);
 const arrayDataAttributes = effectiveChildrenProp
   ? {
       "data-editable": "array",
@@ -33,6 +35,8 @@ const arrayDataAttributes = effectiveChildrenProp
       "data-id-key": "_uuid",
     }
   : {};
+
+const itemComponent = "building-blocks/wrappers/accordion/accordion-item";
 
 const hasItems = items?.length > 0;
 const hasSlotContent = Astro.slots.has("default");
@@ -51,15 +55,21 @@ if (!_component && !hasItems && !hasSlotContent) return;
           const isFirst = index === 0 && openFirst;
 
           return (
-            <AccordionItem
-              isOpen={isFirst}
-              accordionName={accordionName}
-              useDefaultEditableBinding={!!effectiveChildrenProp}
+            /* The region host must wrap the item, never be its root: a re-render diffs the
+            rendered component's children into the host's children, so region attrs on
+            `<details>` itself nest the whole item one level deeper each restore. */
+            <div
               data-editable="array-item"
-              data-component="building-blocks/wrappers/accordion/accordion-item"
-              data-id={item._uuid ?? "building-blocks/wrappers/accordion/accordion-item"}
-              {...item}
-            />
+              data-component={itemComponent}
+              data-id={item._uuid ?? itemComponent}
+            >
+              <AccordionItem
+                isOpen={isFirst}
+                accordionName={accordionName}
+                useDefaultEditableBinding={!!effectiveChildrenProp}
+                {...item}
+              />
+            </div>
           );
         })
       }

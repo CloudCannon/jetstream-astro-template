@@ -109,15 +109,15 @@
     "value": "<p>Aus Architekturdebatten in einem schlecht gelüfteten Büro wurde ein lauffähiger Prototyp, dann ein funktionierendes Netzwerk, dann ein Unternehmen, das die globale Internet-Infrastruktur vielleicht ernster nimmt als unbedingt nötig.</p>",
     "_base_original": "<p>Architecture discussions in a poorly-ventilated office became a working prototype, then a functioning network, then a company that takes global internet infrastructure perhaps more seriously than is strictly necessary.</p>"
   },
+  "about:55fedd0c-553a-4d27-9c2d-be1112a71a30:2319280a-29a5-43c0-9128-666703efa37c:text": {
+    "original": "View open positions",
+    "value": "Offene Stellen ansehen",
+    "_base_original": "View open positions"
+  },
   "about:55fedd0c-553a-4d27-9c2d-be1112a71a30:heading": {
     "original": "Join the team that takes infrastructure personally",
     "value": "Kommen Sie zum Team, das Infrastruktur persönlich nimmt",
     "_base_original": "Join the team that takes infrastructure personally"
-  },
-  "about:55fedd0c-553a-4d27-9c2d-be1112a71a30:text": {
-    "original": "View open positions",
-    "value": "Offene Stellen ansehen",
-    "_base_original": "View open positions"
   },
   "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:37a00608-28a6-4d93-bbf2-e1b8c175d0b2:eyebrowText": {
     "original": "Obsessive redundancy",
@@ -196,32 +196,32 @@
   },
   "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:9416c5a1-6a2e-4c88-b585-4c3b9e0fca67:37a00608-28a6-4d93-bbf2-e1b8c175d0b2:eyebrowText": {
     "original": "Obsessive redundancy",
-    "value": "Obsessive redundancy",
+    "value": "Zwanghafte Redundanz",
     "_base_original": "Obsessive redundancy"
   },
   "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:9416c5a1-6a2e-4c88-b585-4c3b9e0fca67:37a00608-28a6-4d93-bbf2-e1b8c175d0b2:heading": {
     "original": "Multiple backups for our backups",
-    "value": "Multiple backups for our backups",
+    "value": "Mehrere Backups für unsere Backups",
     "_base_original": "Multiple backups for our backups"
   },
   "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:9416c5a1-6a2e-4c88-b585-4c3b9e0fca67:37a00608-28a6-4d93-bbf2-e1b8c175d0b2:text": {
     "original": "<p>Single points of failure are design flaws we've engineered out of existence through redundant systems, diverse routing, and healthy paranoia.</p>",
-    "value": "<p>Single points of failure are design flaws we've engineered out of existence through redundant systems, diverse routing, and healthy paranoia.</p>",
+    "value": "<p>Single Points of Failure sind Konstruktionsfehler, die wir mit redundanten Systemen, vielfältigem Routing und gesunder Paranoia aus der Welt geschafft haben.</p>",
     "_base_original": "<p>Single points of failure are design flaws we've engineered out of existence through redundant systems, diverse routing, and healthy paranoia.</p>"
   },
   "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:9416c5a1-6a2e-4c88-b585-4c3b9e0fca67:52435d45-4807-4ed7-a3da-f0194170e5f8:eyebrowText": {
     "original": "Zero-trust security",
-    "value": "Zero-trust security",
+    "value": "Zero-Trust-Sicherheit",
     "_base_original": "Zero-trust security"
   },
   "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:9416c5a1-6a2e-4c88-b585-4c3b9e0fca67:52435d45-4807-4ed7-a3da-f0194170e5f8:heading": {
     "original": "Assume everything is a threat",
-    "value": "Assume everything is a threat",
+    "value": "Alles als Bedrohung behandeln",
     "_base_original": "Assume everything is a threat"
   },
   "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:9416c5a1-6a2e-4c88-b585-4c3b9e0fca67:52435d45-4807-4ed7-a3da-f0194170e5f8:text": {
     "original": "<p>Every request gets verified, every connection gets encrypted, every login attempt gets scrutinized by systems that never get tired or complacent.</p>",
-    "value": "<p>Every request gets verified, every connection gets encrypted, every login attempt gets scrutinized by systems that never get tired or complacent.</p>",
+    "value": "<p>Jede Anfrage wird geprüft, jede Verbindung verschlüsselt, jeder Anmeldeversuch von Systemen durchleuchtet, die nie müde und nie nachlässig werden.</p>",
     "_base_original": "<p>Every request gets verified, every connection gets encrypted, every login attempt gets scrutinized by systems that never get tired or complacent.</p>"
   },
   "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:b5cef602-5f1e-497a-9dbc-26b8a705d80f:443a202c-180b-430a-98d7-0d7d8f8f2449:eyebrowText": {
@@ -271,32 +271,32 @@
   },
   "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:c4edfb9e-95fa-4e00-812d-64acd0022b19:68f6be7e-47b4-42f0-abf7-0900dbe9e726:eyebrowText": {
     "original": "Obsessive redundancy",
-    "value": "Obsessive redundancy",
+    "value": "Zwanghafte Redundanz",
     "_base_original": "Obsessive redundancy"
   },
   "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:c4edfb9e-95fa-4e00-812d-64acd0022b19:68f6be7e-47b4-42f0-abf7-0900dbe9e726:heading": {
     "original": "Redundancy layers all the way down",
-    "value": "Redundancy layers all the way down",
+    "value": "Redundanzschichten bis ganz nach unten",
     "_base_original": "Redundancy layers all the way down"
   },
   "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:c4edfb9e-95fa-4e00-812d-64acd0022b19:68f6be7e-47b4-42f0-abf7-0900dbe9e726:text": {
     "original": "<p>Every critical system has a backup. Every backup has a backup. We stopped counting after layer five but they're definitely there.</p>",
-    "value": "<p>Every critical system has a backup. Every backup has a backup. We stopped counting after layer five but they're definitely there.</p>",
+    "value": "<p>Jedes kritische System hat ein Backup. Jedes Backup hat ein Backup. Nach der fünften Schicht haben wir aufgehört zu zählen, aber es gibt sie ganz sicher.</p>",
     "_base_original": "<p>Every critical system has a backup. Every backup has a backup. We stopped counting after layer five but they're definitely there.</p>"
   },
   "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:c4edfb9e-95fa-4e00-812d-64acd0022b19:c89f3881-bcad-4f96-a6de-7843af565b47:eyebrowText": {
     "original": "Obsessive redundancy",
-    "value": "Obsessive redundancy",
+    "value": "Zwanghafte Redundanz",
     "_base_original": "Obsessive redundancy"
   },
   "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:c4edfb9e-95fa-4e00-812d-64acd0022b19:c89f3881-bcad-4f96-a6de-7843af565b47:heading": {
     "original": "Trust nothing, backup everything",
-    "value": "Trust nothing, backup everything",
+    "value": "Nichts vertrauen, alles sichern",
     "_base_original": "Trust nothing, backup everything"
   },
   "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:c4edfb9e-95fa-4e00-812d-64acd0022b19:c89f3881-bcad-4f96-a6de-7843af565b47:text": {
     "original": "<p>If it's critical, it's redundant. If it's redundant, it has a backup. Our infrastructure assumes failure is always one misconfiguration away from happening.</p>",
-    "value": "<p>If it's critical, it's redundant. If it's redundant, it has a backup. Our infrastructure assumes failure is always one misconfiguration away from happening.</p>",
+    "value": "<p>Was kritisch ist, ist redundant. Was redundant ist, hat ein Backup. Unsere Infrastruktur geht davon aus, dass ein Ausfall immer nur eine Fehlkonfiguration entfernt ist.</p>",
     "_base_original": "<p>If it's critical, it's redundant. If it's redundant, it has a backup. Our infrastructure assumes failure is always one misconfiguration away from happening.</p>"
   },
   "about:aba7a0ca-5950-4ad5-9367-7c3f9e25098e:c89f3881-bcad-4f96-a6de-7843af565b47:eyebrowText": {
@@ -334,6 +334,36 @@
     "value": "Unsere Grundversprechen",
     "_base_original": "Our core commitments"
   },
+  "about:b66c659a-82db-4a57-a878-548cedd2d782:2137f543-e0e7-4113-878f-d83e8cbcad3b:role": {
+    "original": "VP of Customer Success",
+    "value": "Bereichsleitung Customer Success",
+    "_base_original": "VP of Customer Success"
+  },
+  "about:b66c659a-82db-4a57-a878-548cedd2d782:470d9a38-a9ab-4112-b222-8e10e7d5ac7d:role": {
+    "original": "VP of Engineering",
+    "value": "Bereichsleitung Engineering",
+    "_base_original": "VP of Engineering"
+  },
+  "about:b66c659a-82db-4a57-a878-548cedd2d782:6c4b5141-d659-4153-b8f9-aa2f93feaa7c:role": {
+    "original": "Chief Security Officer",
+    "value": "Leitung Sicherheit",
+    "_base_original": "Chief Security Officer"
+  },
+  "about:b66c659a-82db-4a57-a878-548cedd2d782:abd48cd0-7d1e-43e4-ba1c-5921e60cc87a:role": {
+    "original": "Co-founder &amp; Chief Technology Officer",
+    "value": "Mitgründung &amp; Technische Leitung",
+    "_base_original": "Co-founder &amp; Chief Technology Officer"
+  },
+  "about:b66c659a-82db-4a57-a878-548cedd2d782:c63acdd1-33d5-4366-a000-34f0c17ca88b:role": {
+    "original": "Vice President of Network Operations",
+    "value": "Bereichsleitung Netzbetrieb",
+    "_base_original": "Vice President of Network Operations"
+  },
+  "about:b66c659a-82db-4a57-a878-548cedd2d782:da880cd2-4b1f-435b-a763-5363c1f95b82:role": {
+    "original": "Co-founder &amp; Chief Executive Officer",
+    "value": "Mitgründung &amp; Geschäftsführung",
+    "_base_original": "Co-founder &amp; Chief Executive Officer"
+  },
   "about:b66c659a-82db-4a57-a878-548cedd2d782:heading": {
     "original": "The team behind the network",
     "value": "Das Team hinter dem Netzwerk",
@@ -345,9 +375,9 @@
     "_base_original": "Engineers, optimists, and people who refuse to accept that anything is impossible until proven otherwise."
   },
   "about:c73c8ec5-28cc-42b5-b229-b1487c595074:heading": {
-    "original": "<p><span class=\"highlight-text\">We exist to make the internet work</span> the way people assume it already does.</p>",
-    "value": "<p><span class=\"highlight-text\">Wir sind da, damit das Internet so funktioniert</span>, wie die Leute glauben, dass es längst funktioniert.</p>",
-    "_base_original": "<p><span class=\"highlight-text\">We exist to make the internet work</span> the way people assume it already does.</p>"
+    "original": "<span class=\"highlight-text\">We exist to make the internet work</span> the way people assume it already does.",
+    "value": "<span class=\"highlight-text\">Wir sind da, damit das Internet so funktioniert</span>, wie die Leute glauben, dass es längst funktioniert.",
+    "_base_original": "<span class=\"highlight-text\">We exist to make the internet work</span> the way people assume it already does."
   },
   "about:c73c8ec5-28cc-42b5-b229-b1487c595074:title": {
     "original": "Our mission",
@@ -364,15 +394,55 @@
     "value": "Über uns | Jetstream Astro-Template für CloudCannon",
     "_base_original": "About | Jetstream Astro Template for CloudCannon"
   },
+  "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:1506a3cd-18f6-40ff-a7b8-f83a5fb7e52a:subtext": {
+    "original": "<p>New resolver response time (acceptable)</p>",
+    "value": "<p>Antwortzeit des neuen Resolvers (akzeptabel)</p>",
+    "_base_original": "<p>New resolver response time (acceptable)</p>"
+  },
+  "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:1506a3cd-18f6-40ff-a7b8-f83a5fb7e52a:suffix": {
+    "original": "ms",
+    "value": "ms",
+    "_base_original": "ms"
+  },
+  "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:35b75e81-d5f8-4e6a-9468-dddb3682756d:subtext": {
+    "original": "<p>Previous resolver response time (unacceptable)</p>",
+    "value": "<p>Antwortzeit des alten Resolvers (unakzeptabel)</p>",
+    "_base_original": "<p>Previous resolver response time (unacceptable)</p>"
+  },
+  "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:35b75e81-d5f8-4e6a-9468-dddb3682756d:suffix": {
+    "original": "ms",
+    "value": "ms",
+    "_base_original": "ms"
+  },
+  "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:5497f7b6-25c3-49e2-a4d8-d97ee323b103:subtext": {
+    "original": "<p>Lines of code written, deleted, rewritten</p>",
+    "value": "<p>Zeilen Code geschrieben, gelöscht, neu geschrieben</p>",
+    "_base_original": "<p>Lines of code written, deleted, rewritten</p>"
+  },
+  "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:5497f7b6-25c3-49e2-a4d8-d97ee323b103:suffix": {
+    "original": "K+",
+    "value": "K+",
+    "_base_original": "K+"
+  },
   "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:card_heading": {
-    "original": "<h1><strong>Why we rebuilt our DNS resolver from scratch (</strong><span class=\"highlight-text\"><strong>again</strong></span><strong>)</strong> </h1>",
-    "value": "<h1><strong>Warum wir unseren DNS-Resolver von Grund auf neu gebaut haben (</strong><span class=\"highlight-text\"><strong>wieder</strong></span><strong>)</strong> </h1>",
+    "original": "Why we rebuilt our DNS resolver from scratch (<span class=\"highlight-text\">again</span>)",
+    "value": "Warum wir unseren DNS-Resolver von Grund auf neu gebaut haben (<span class=\"highlight-text\">wieder</span>)",
     "_base_original": "Why we rebuilt our DNS resolver from scratch (<span class=\"highlight-text\">again</span>)"
   },
   "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:card_subtext": {
-    "original": "Sometimes good enough isn't good enough, especially when our engineers have strong opinions about query optimization.",
-    "value": "Manchmal ist „gut genug“ nicht gut genug — besonders dann, wenn unsere Ingenieurinnen und Ingenieure klare Meinungen zur Optimierung von Abfragen haben.",
+    "original": "<p>Sometimes good enough isn't good enough, especially when our engineers have strong opinions about query optimization.</p>",
+    "value": "<p>Manchmal ist „gut genug“ nicht gut genug — besonders dann, wenn unsere Ingenieurinnen und Ingenieure klare Meinungen zur Optimierung von Abfragen haben.</p>",
     "_base_original": "<p>Sometimes good enough isn't good enough, especially when our engineers have strong opinions about query optimization.</p>"
+  },
+  "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:d353cfdf-967b-447d-85af-1bcfdb391d8d:text": {
+    "original": "Learn why we did it",
+    "value": "Erfahren Sie, warum",
+    "_base_original": "Learn why we did it"
+  },
+  "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:e6eed8a1-1695-478b-9f4c-a02cd5088362:subtext": {
+    "original": "<p>All-hands meetings to convince management</p>",
+    "value": "<p>Vollversammlungen, um das Management zu überzeugen</p>",
+    "_base_original": "<p>All-hands meetings to convince management</p>"
   },
   "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:heading": {
     "original": "The engineering journal",
@@ -384,25 +454,15 @@
     "value": "<p>Einblicke, Neuigkeiten und gelegentliche technische Tiefenbohrungen vom Team, das das Internet am Laufen hält.</p>",
     "_base_original": "<p>Insights, updates, and occasional technical deep-dives from the team that keeps the internet running.</p>"
   },
-  "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:suffix": {
-    "original": "ms",
-    "value": "ms",
-    "_base_original": "ms"
-  },
-  "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:text": {
-    "original": "Learn why we did it",
-    "value": "Erfahren Sie, warum",
-    "_base_original": "Learn why we did it"
+  "blog:7db52143-7dee-4ca3-9015-4531e5614fc9:02cd2bbb-bf93-447c-8ad1-7906f73ade56:text": {
+    "original": "Or talk to us about fiber optics instead",
+    "value": "Oder reden Sie mit uns lieber über Glasfaser",
+    "_base_original": "Or talk to us about fiber optics instead"
   },
   "blog:7db52143-7dee-4ca3-9015-4531e5614fc9:heading": {
     "original": "Let's build your next tech breakthough together",
     "value": "Bauen wir Ihren nächsten technischen Durchbruch gemeinsam",
     "_base_original": "Let's build your next tech breakthough together"
-  },
-  "blog:7db52143-7dee-4ca3-9015-4531e5614fc9:text": {
-    "original": "Or talk to us about fiber optics instead",
-    "value": "Oder reden Sie mit uns lieber über Glasfaser",
-    "_base_original": "Or talk to us about fiber optics instead"
   },
   "blog:page_description": {
     "original": "Read our latest articles and insights on web development, design, and technology.",
@@ -413,136 +473,6 @@
     "original": "Blog | Jetstream Astro Template for CloudCannon",
     "value": "Blog | Jetstream Astro-Template für CloudCannon",
     "_base_original": "Blog | Jetstream Astro Template for CloudCannon"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:authorDescription": {
-    "original": "Placeholder Copywriter, Jetstream",
-    "value": "Werbetexte (Beispiel), Jetstream",
-    "_base_original": "Placeholder Copywriter, Jetstream"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:authorName": {
-    "original": "Robin Poynter",
-    "value": "Robin Poynter",
-    "_base_original": "Robin Poynter"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:button_text": {
-    "original": "Get started",
-    "value": "Jetzt starten",
-    "_base_original": "Get started"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:cell_cell-one": {
-    "original": "Cell one",
-    "value": "Zelle eins",
-    "_base_original": "Cell one"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:cell_cell-three": {
-    "original": "Cell three",
-    "value": "Zelle drei",
-    "_base_original": "Cell three"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:cell_cell-two": {
-    "original": "Cell two",
-    "value": "Zelle zwei",
-    "_base_original": "Cell two"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:description": {
-    "original": "<p>Feature description placeholder text that will be replaced with actual content. This placeholder text is slightly longer, because this card is set to take up two rows in the grid rather than one.</p>",
-    "value": "<p>Platzhaltertext für die Beschreibung einer Funktion, der durch echte Inhalte ersetzt wird. Dieser Platzhalter ist etwas länger, weil diese Karte im Raster zwei Zeilen statt einer einnimmt.</p>",
-    "_base_original": "<p>Feature description placeholder text that will be replaced with actual content. This placeholder text is slightly longer, because this card is set to take up two rows in the grid rather than one.</p>"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:eyebrow": {
-    "original": "Optional eyebrow text displayed above the title",
-    "value": "Optionaler Übertitel über dem Titel",
-    "_base_original": "Optional eyebrow text displayed above the title"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:eyebrowText": {
-    "original": "Optional label displayed above the CTA Center heading.",
-    "value": "Optionale Beschriftung über der Überschrift des Snippets CTA Center.",
-    "_base_original": "Optional label displayed above the CTA Center heading."
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:header_header-one": {
-    "original": "Header One",
-    "value": "Spaltenkopf eins",
-    "_base_original": "Header One"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:header_header-three": {
-    "original": "Header Three",
-    "value": "Spaltenkopf drei",
-    "_base_original": "Header Three"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:header_header-two": {
-    "original": "Header Two",
-    "value": "Spaltenkopf zwei",
-    "_base_original": "Header Two"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:heading": {
-    "original": "<p>Main heading text for the CTA Center section.</p>",
-    "value": "<p>Hauptüberschrift des Abschnitts CTA Center.</p>",
-    "_base_original": "<p>Main heading text for the CTA Center section.</p>"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:label": {
-    "original": "My input",
-    "value": "Meine Eingabe",
-    "_base_original": "My input"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:option_option-1": {
-    "original": "Option 1",
-    "value": "Option 1",
-    "_base_original": "Option 1"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:option_option-2": {
-    "original": "Option 2",
-    "value": "Option 2",
-    "_base_original": "Option 2"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:option_option-3": {
-    "original": "Option 3",
-    "value": "Option 3",
-    "_base_original": "Option 3"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:placeholder": {
-    "original": "name@example.com",
-    "value": "name@example.com",
-    "_base_original": "name@example.com"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:price_prefix": {
-    "original": "$",
-    "value": "$",
-    "_base_original": "$"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:price_suffix": {
-    "original": "/mo",
-    "value": "/Monat",
-    "_base_original": "/mo"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:section_section-one": {
-    "original": "Section One",
-    "value": "Abschnitt eins",
-    "_base_original": "Section One"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:section_section-three": {
-    "original": "Section Three",
-    "value": "Abschnitt drei",
-    "_base_original": "Section Three"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:section_section-two": {
-    "original": "Section Two",
-    "value": "Abschnitt zwei",
-    "_base_original": "Section Two"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:subtext": {
-    "original": "<p>Optional subtext displayed beneath the CTA Center heading.</p>",
-    "value": "<p>Optionaler Untertext unter der Überschrift des Snippets CTA Center.</p>",
-    "_base_original": "<p>Optional subtext displayed beneath the CTA Center heading.</p>"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:text": {
-    "original": "Button text with optional icon",
-    "value": "Button-Text mit optionalem Icon",
-    "_base_original": "Button text with optional icon"
-  },
-  "blog/sample-blog-post-with-a-range-of-snippets:title": {
-    "original": "Question text 1",
-    "value": "Fragetext 1",
-    "_base_original": "Question text 1"
   },
   "contact:91088337-2ba5-4f01-b226-49fcbdc83792:4e431881-7f7f-476b-9324-62be7c2adce8:label": {
     "original": "Name",
@@ -559,6 +489,11 @@
     "value": "E-Mail",
     "_base_original": "Email"
   },
+  "contact:91088337-2ba5-4f01-b226-49fcbdc83792:ec2d7566-31bd-4bbf-89eb-19ee325a3561:text": {
+    "original": "Send message",
+    "value": "Nachricht senden",
+    "_base_original": "Send message"
+  },
   "contact:91088337-2ba5-4f01-b226-49fcbdc83792:heading": {
     "original": "Need more info?<br><span class=\"highlight-text\">Contact us</span>",
     "value": "Mehr Informationen nötig?<br><span class=\"highlight-text\">Kontaktieren Sie uns</span>",
@@ -568,11 +503,6 @@
     "original": "<p>Our solutions team stands ready with answers and an appropriate level of enthusiasm.</p>",
     "value": "<p>Unser Solutions-Team steht bereit — mit Antworten und einem angemessenen Maß an Begeisterung.</p>",
     "_base_original": "<p>Our solutions team stands ready with answers and an appropriate level of enthusiasm.</p>"
-  },
-  "contact:91088337-2ba5-4f01-b226-49fcbdc83792:text": {
-    "original": "Send message",
-    "value": "Nachricht senden",
-    "_base_original": "Send message"
   },
   "contact:page_description": {
     "original": "Contact our solutions team, which is standing ready with answers you'd ever need.",
@@ -614,15 +544,25 @@
     "value": "Preise",
     "_base_original": "Pricing"
   },
-  "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:button_text": {
+  "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:006f5d70-9ed2-4114-9193-928bb0a9d45e:button_text": {
     "original": "Get started",
     "value": "Jetzt starten",
     "_base_original": "Get started"
   },
-  "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:f1609a2e-0fcc-43f8-944a-e6761ca2d8c9:text": {
+  "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:f1609a2e-0fcc-43f8-944a-e6761ca2d8c9:bda68c43-f0bd-4515-8033-fae35627d188:text": {
+    "original": "Dedicated customer success specialist",
+    "value": "Dedizierte Ansprechperson für Customer Success",
+    "_base_original": "Dedicated customer success specialist"
+  },
+  "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:f1609a2e-0fcc-43f8-944a-e6761ca2d8c9:c24dec5f-ed28-4212-9674-809c93f1056a:text": {
     "original": "Priority traffic routing",
-    "value": "Priority traffic routing",
+    "value": "Priorisiertes Traffic-Routing",
     "_base_original": "Priority traffic routing"
+  },
+  "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:f1609a2e-0fcc-43f8-944a-e6761ca2d8c9:ed537ea8-3f1e-4779-8a14-1ea5b8b1c64c:text": {
+    "original": "Annual infrastructure health assessment conducted by our senior architects, complete with a 40-page report bound in a collectible presentation folder",
+    "value": "Jährliche Analyse Ihrer Infrastruktur durch unsere Senior-Architektinnen und -Architekten, inklusive eines 40-seitigen Berichts in einer sammelwürdigen Präsentationsmappe",
+    "_base_original": "Annual infrastructure health assessment conducted by our senior architects, complete with a 40-page report bound in a collectible presentation folder"
   },
   "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:price_prefix": {
     "original": "$",
@@ -644,15 +584,25 @@
     "value": "Team",
     "_base_original": "Team"
   },
-  "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:51714e17-4b62-460c-8719-77b8bf487f48:text": {
-    "original": "Global CDN with 800+ edge nodes",
-    "value": "Global CDN with 800+ edge nodes",
-    "_base_original": "Global CDN with 800+ edge nodes"
-  },
-  "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:button_text": {
+  "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:4ab8503c-947b-4072-8f89-8da99e6a3bcd:button_text": {
     "original": "Get started",
     "value": "Jetzt starten",
     "_base_original": "Get started"
+  },
+  "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:51714e17-4b62-460c-8719-77b8bf487f48:00831e84-3da0-45f6-9582-3f3a9b0d9748:text": {
+    "original": "Complimentary network topology consult with our most artistic engineer",
+    "value": "Kostenlose Beratung zur Netzwerktopologie mit dem kreativsten Kopf unseres Engineering-Teams",
+    "_base_original": "Complimentary network topology consult with our most artistic engineer"
+  },
+  "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:51714e17-4b62-460c-8719-77b8bf487f48:74c7e04d-af6f-4742-9964-f780567b38bd:text": {
+    "original": "Global CDN with 800+ edge nodes",
+    "value": "Globales CDN mit über 800 Edge-Knoten",
+    "_base_original": "Global CDN with 800+ edge nodes"
+  },
+  "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:51714e17-4b62-460c-8719-77b8bf487f48:fb1fd775-33d3-42ab-92ee-d40c6450a058:text": {
+    "original": "Automated SSL certificate management",
+    "value": "Automatisierte Verwaltung von SSL-Zertifikaten",
+    "_base_original": "Automated SSL certificate management"
   },
   "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:price_prefix": {
     "original": "$",
@@ -749,9 +699,19 @@
     "value": "<p>Alles, was Sie brauchen, um vom kleinen Team zum globalen Konzern zu wachsen — ohne operative Reibung&nbsp;und ohne Science-Fiction.</p>",
     "_base_original": "<p>Everything you need to scale from boutique team to a global enterprise without the operational friction —&nbsp;or the science fiction.</p>"
   },
+  "index:55923a16-4468-45e1-83dc-e18a8169bb02:c0d5daba-9f4a-4f89-9a52-bfa90214e36a:text": {
+    "original": "Deploy Jetstream on CloudCannon",
+    "value": "Jetstream auf CloudCannon deployen",
+    "_base_original": "Deploy Jetstream on CloudCannon"
+  },
+  "index:55923a16-4468-45e1-83dc-e18a8169bb02:d24821f2-8b41-414f-bc2a-e701806c4d88:text": {
+    "original": "Check out the Component Starter",
+    "value": "Schau dir den Component Starter an",
+    "_base_original": "Check out the Component Starter"
+  },
   "index:55923a16-4468-45e1-83dc-e18a8169bb02:heading": {
     "original": "Introducing<br><span class=\"highlight-text\">Jetstream</span>",
-    "value": "Das ist<br><span class=\"highlight-text\">Jetstream</span>",
+    "value": "Das ist<br /><span class=\"highlight-text\">Jetstream</span>",
     "_base_original": "Introducing<br><span class=\"highlight-text\">Jetstream</span>"
   },
   "index:55923a16-4468-45e1-83dc-e18a8169bb02:subtext": {
@@ -759,14 +719,9 @@
     "value": "<p>Ein neues Astro-Template von CloudCannon, gebaut mit unserem <a href=\"https://lemon-pear.cloudvent.net/\">Astro Component Starter</a> für Spitzenleistung, echte visuelle Bearbeitung und eine ideale Developer Experience.</p>",
     "_base_original": "<p>A new Astro template by CloudCannon, built with our <a href=\"https://lemon-pear.cloudvent.net/\">Astro Component Starter</a> for top performance, true visual editing, and an ideal developer experience.</p>"
   },
-  "index:55923a16-4468-45e1-83dc-e18a8169bb02:text": {
-    "original": "Deploy Jetstream on CloudCannon",
-    "value": "Jetstream auf CloudCannon deployen",
-    "_base_original": "Deploy Jetstream on CloudCannon"
-  },
   "index:6900a886-16f8-4c52-aa87-a0ca5d55c247:authorDescription": {
     "original": "CTO, MediConnect Healthcare",
-    "value": "CTO, MediConnect Healthcare",
+    "value": "Technische Leitung, MediConnect Healthcare",
     "_base_original": "CTO, MediConnect Healthcare"
   },
   "index:6900a886-16f8-4c52-aa87-a0ca5d55c247:authorName": {
@@ -779,25 +734,50 @@
     "value": "<p>Ausfallzeit war früher eine wöchentliche Krise. Heute ist sie ein theoretisches Konzept, an das wir uns vage erinnern.</p>",
     "_base_original": "<p>Downtime used to be a weekly crisis. Now it's a theoretical concept we vaguely remember.</p>"
   },
+  "index:69076c96-2f59-46c6-95e2-bc1d35b1f8dd:47ca39d1-d7d7-4ee5-bf46-4fe3dc9649e7:text": {
+    "original": "Book a strategy session",
+    "value": "Strategiegespräch buchen",
+    "_base_original": "Book a strategy session"
+  },
   "index:69076c96-2f59-46c6-95e2-bc1d35b1f8dd:heading": {
     "original": "Ready for performance that defies conventional wisdom?",
     "value": "Bereit für Leistung, die gängigen Annahmen widerspricht?",
     "_base_original": "Ready for performance that defies conventional wisdom?"
-  },
-  "index:69076c96-2f59-46c6-95e2-bc1d35b1f8dd:text": {
-    "original": "Book a strategy session",
-    "value": "Strategiegespräch buchen",
-    "_base_original": "Book a strategy session"
   },
   "index:bf10aca8-2465-4dae-adab-96e1e6b88a69:heading": {
     "original": "We’ve solved the internet for the world’s most ambitious engineering teams.",
     "value": "Wir haben das Internet für die ambitioniertesten Engineering-Teams der Welt gelöst.",
     "_base_original": "We’ve solved the internet for the world’s most ambitious engineering teams."
   },
+  "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:41d8c1ca-cc3c-483d-8fdb-a55e14a02657:text": {
+    "original": "<p><strong>More numbers than other companies</strong></p>",
+    "value": "<p><strong>Mehr Zahlen als andere Unternehmen</strong></p>",
+    "_base_original": "<p><strong>More numbers than other companies</strong></p>"
+  },
   "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:4d8a8b67-7da8-4850-88cc-60abf671e42e:suffix": {
     "original": "%",
     "value": "%",
     "_base_original": "%"
+  },
+  "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:69a6d9aa-a6a2-4f91-a04e-e3b0ebc9bafd:text": {
+    "original": "<p><strong>Reduction in connection quality complaints</strong></p>",
+    "value": "<p><strong>Rückgang der Beschwerden über die Verbindungsqualität</strong></p>",
+    "_base_original": "<p><strong>Reduction in connection quality complaints</strong></p>"
+  },
+  "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:8f0cf7c6-0035-4695-a05f-5e23a013c19c:text": {
+    "original": "<p><strong>Average transaction completion time</strong></p>",
+    "value": "<p><strong>Durchschnittliche Dauer einer Transaktion</strong></p>",
+    "_base_original": "<p><strong>Average transaction completion time</strong></p>"
+  },
+  "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:95d06cdc-baf8-4e74-bd71-144f167a1ac8:text": {
+    "original": "<p><strong>Mitigation rate against 12,000+ daily attack attempts</strong></p>",
+    "value": "<p><strong>Abwehrquote bei über 12.000 Angriffsversuchen pro Tag</strong></p>",
+    "_base_original": "<p><strong>Mitigation rate against 12,000+ daily attack attempts</strong></p>"
+  },
+  "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:b3940bab-473b-427f-bc06-93077c3cee52:text": {
+    "original": "We implemented our low-latency routing protocol and deployed dedicated health sector edge nodes with HIPAA-compliant encryption that doesn't slow things down.<br>Doctors can read patient expressions in real-time, and medical care is delivered at the speed of actual conversation — which, our research indicates, is how medical care should work.",
+    "value": "Wir haben unser Routing-Protokoll mit niedriger Latenz eingeführt und eigene Edge-Knoten für das Gesundheitswesen bereitgestellt, mit HIPAA-konformer Verschlüsselung, die nichts ausbremst.<br>Ärztinnen und Ärzte können die Mimik ihrer Patienten in Echtzeit lesen, und medizinische Versorgung findet im Tempo eines echten Gesprächs statt — was, wie unsere Untersuchungen zeigen, genau so sein sollte.",
+    "_base_original": "We implemented our low-latency routing protocol and deployed dedicated health sector edge nodes with HIPAA-compliant encryption that doesn't slow things down.<br>Doctors can read patient expressions in real-time, and medical care is delivered at the speed of actual conversation — which, our research indicates, is how medical care should work."
   },
   "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:c339bedd-58c0-44a2-8be0-f985ee463f05:suffix": {
     "original": "s",
@@ -808,6 +788,11 @@
     "original": "x",
     "value": "x",
     "_base_original": "x"
+  },
+  "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:f39bcacf-81db-4aa3-97e1-a77d28c3016f:text": {
+    "original": "FinTrust needed transaction speeds that matched customer expectations and security that exceeded regulatory paranoia. Their customers now experience instantaneous transfers while attempted attacks are neutralized before they even realize they've failed. Banking infrastructure that's faster than fraud and more reliable than gravity.",
+    "value": "FinTrust brauchte Transaktionsgeschwindigkeiten, die den Erwartungen der Kundschaft entsprechen, und eine Sicherheit, die über die Paranoia der Regulierung hinausgeht. Die Kundschaft erlebt heute sofortige Überweisungen, während Angriffsversuche neutralisiert werden, noch bevor die Angreifer ihr Scheitern bemerken. Eine Bankinfrastruktur, die schneller ist als Betrug und zuverlässiger als die Schwerkraft.",
+    "_base_original": "FinTrust needed transaction speeds that matched customer expectations and security that exceeded regulatory paranoia. Their customers now experience instantaneous transfers while attempted attacks are neutralized before they even realize they've failed. Banking infrastructure that's faster than fraud and more reliable than gravity."
   },
   "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:f7c19cc3-f480-4e45-81c2-9d4f5637b507:suffix": {
     "original": "%",
@@ -824,19 +809,14 @@
     "value": "<p>Wir liefern nicht einfach Infrastruktur — wir liefern Infrastruktur, die Ihr Geschäft versteht. Und Ihr Herz.</p>",
     "_base_original": "<p>We don't just provide infrastructure — we provide infrastructure that understands your business. And your heart.</p>"
   },
-  "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:text": {
-    "original": "We implemented our low-latency routing protocol and deployed dedicated health sector edge nodes with HIPAA-compliant encryption that doesn't slow things down.<br>Doctors can read patient expressions in real-time, and medical care is delivered at the speed of actual conversation — which, our research indicates, is how medical care should work.",
-    "value": "Wir haben unser Routing-Protokoll mit niedriger Latenz eingeführt und eigene Edge-Knoten für das Gesundheitswesen bereitgestellt, mit HIPAA-konformer Verschlüsselung, die nichts ausbremst.<br>Ärztinnen und Ärzte können die Mimik ihrer Patienten in Echtzeit lesen, und medizinische Versorgung findet im Tempo eines echten Gesprächs statt — was, wie unsere Untersuchungen zeigen, genau so sein sollte.",
-    "_base_original": "We implemented our low-latency routing protocol and deployed dedicated health sector edge nodes with HIPAA-compliant encryption that doesn't slow things down.<br>Doctors can read patient expressions in real-time, and medical care is delivered at the speed of actual conversation — which, our research indicates, is how medical care should work."
-  },
   "index:page_description": {
     "original": "An Astro template built for CloudCannon with visual editing, flexible components, and an exceptional developer experience. Deploy your next project with speed and style.",
     "value": "Ein Astro-Template für CloudCannon mit visueller Bearbeitung, flexiblen Komponenten und einer herausragenden Developer Experience. Bringen Sie Ihr nächstes Projekt schnell und mit Stil online.",
     "_base_original": "An Astro template built for CloudCannon with visual editing, flexible components, and an exceptional developer experience. Deploy your next project with speed and style."
   },
   "index:page_title": {
-    "original": "Jetstream | Astro Template for CloudCannon | Jetstream Astro Template for CloudCannon",
-    "value": "Jetstream | Astro-Template für CloudCannon | Jetstream Astro-Template für CloudCannon",
+    "original": "Jetstream Astro Template for CloudCannon",
+    "value": "Jetstream Astro-Template für CloudCannon",
     "_base_original": "Jetstream Astro Template for CloudCannon"
   },
   "nav:about": {
@@ -846,7 +826,7 @@
   },
   "nav:back-to-site": {
     "original": "← Back to site",
-    "value": "← Back to site",
+    "value": "← Zurück zur Website",
     "_base_original": "← Back to site"
   },
   "nav:blog": {
@@ -856,77 +836,77 @@
   },
   "nav:building-blocks": {
     "original": "Building Blocks",
-    "value": "Building Blocks",
+    "value": "Bausteine",
     "_base_original": "Building Blocks"
   },
   "nav:building-blocks:core-elements": {
     "original": "Core Elements",
-    "value": "Core Elements",
+    "value": "Basiselemente",
     "_base_original": "Core Elements"
   },
   "nav:building-blocks:core-elements:button": {
     "original": "Button",
-    "value": "Button",
+    "value": "Schaltfläche",
     "_base_original": "Button"
   },
   "nav:building-blocks:core-elements:counter": {
     "original": "Counter",
-    "value": "Counter",
+    "value": "Zähler",
     "_base_original": "Counter"
   },
   "nav:building-blocks:core-elements:definition-list": {
     "original": "Definition List",
-    "value": "Definition List",
+    "value": "Definitionsliste",
     "_base_original": "Definition List"
   },
   "nav:building-blocks:core-elements:divider": {
     "original": "Divider",
-    "value": "Divider",
+    "value": "Trennlinie",
     "_base_original": "Divider"
   },
   "nav:building-blocks:core-elements:embed": {
     "original": "Embed",
-    "value": "Embed",
+    "value": "Einbettung",
     "_base_original": "Embed"
   },
   "nav:building-blocks:core-elements:heading": {
     "original": "Heading",
-    "value": "Heading",
+    "value": "Überschrift",
     "_base_original": "Heading"
   },
   "nav:building-blocks:core-elements:icon": {
     "original": "Icon",
-    "value": "Icon",
+    "value": "Symbol",
     "_base_original": "Icon"
   },
   "nav:building-blocks:core-elements:image": {
     "original": "Image",
-    "value": "Image",
+    "value": "Bild",
     "_base_original": "Image"
   },
   "nav:building-blocks:core-elements:list": {
     "original": "List",
-    "value": "List",
+    "value": "Liste",
     "_base_original": "List"
   },
   "nav:building-blocks:core-elements:pagination": {
     "original": "Pagination",
-    "value": "Pagination",
+    "value": "Seitennummerierung",
     "_base_original": "Pagination"
   },
   "nav:building-blocks:core-elements:simple-text": {
     "original": "Simple Text",
-    "value": "Simple Text",
+    "value": "Einfacher Text",
     "_base_original": "Simple Text"
   },
   "nav:building-blocks:core-elements:spacer": {
     "original": "Spacer",
-    "value": "Spacer",
+    "value": "Abstandhalter",
     "_base_original": "Spacer"
   },
   "nav:building-blocks:core-elements:testimonial": {
     "original": "Testimonial",
-    "value": "Testimonial",
+    "value": "Kundenstimme",
     "_base_original": "Testimonial"
   },
   "nav:building-blocks:core-elements:text": {
@@ -941,137 +921,137 @@
   },
   "nav:building-blocks:forms": {
     "original": "Forms",
-    "value": "Forms",
+    "value": "Formulare",
     "_base_original": "Forms"
   },
   "nav:building-blocks:forms:choice-group": {
     "original": "Choice Group",
-    "value": "Choice Group",
+    "value": "Auswahlgruppe",
     "_base_original": "Choice Group"
   },
   "nav:building-blocks:forms:date": {
     "original": "Date",
-    "value": "Date",
+    "value": "Datum",
     "_base_original": "Date"
   },
   "nav:building-blocks:forms:file-upload": {
     "original": "File Upload",
-    "value": "File Upload",
+    "value": "Datei-Upload",
     "_base_original": "File Upload"
   },
   "nav:building-blocks:forms:form": {
     "original": "Form",
-    "value": "Form",
+    "value": "Formular",
     "_base_original": "Form"
   },
   "nav:building-blocks:forms:hidden": {
     "original": "Hidden",
-    "value": "Hidden",
+    "value": "Verstecktes Feld",
     "_base_original": "Hidden"
   },
   "nav:building-blocks:forms:input": {
     "original": "Input",
-    "value": "Input",
+    "value": "Eingabefeld",
     "_base_original": "Input"
   },
   "nav:building-blocks:forms:range": {
     "original": "Range",
-    "value": "Range",
+    "value": "Schieberegler",
     "_base_original": "Range"
   },
   "nav:building-blocks:forms:segments": {
     "original": "Segments",
-    "value": "Segments",
+    "value": "Segmente",
     "_base_original": "Segments"
   },
   "nav:building-blocks:forms:select": {
     "original": "Select",
-    "value": "Select",
+    "value": "Auswahlliste",
     "_base_original": "Select"
   },
   "nav:building-blocks:forms:submit": {
     "original": "Submit",
-    "value": "Submit",
+    "value": "Senden",
     "_base_original": "Submit"
   },
   "nav:building-blocks:forms:textarea": {
     "original": "Textarea",
-    "value": "Textarea",
+    "value": "Textbereich",
     "_base_original": "Textarea"
   },
   "nav:building-blocks:forms:toggle": {
     "original": "Toggle",
-    "value": "Toggle",
+    "value": "Umschalter",
     "_base_original": "Toggle"
   },
   "nav:building-blocks:wrappers": {
     "original": "Wrappers",
-    "value": "Wrappers",
+    "value": "Container",
     "_base_original": "Wrappers"
   },
   "nav:building-blocks:wrappers:accordion": {
     "original": "Accordion",
-    "value": "Accordion",
+    "value": "Akkordeon",
     "_base_original": "Accordion"
   },
   "nav:building-blocks:wrappers:bento-box": {
     "original": "Bento Box",
-    "value": "Bento Box",
+    "value": "Bento-Box",
     "_base_original": "Bento Box"
   },
   "nav:building-blocks:wrappers:bento-box-grid": {
     "original": "Bento Box Grid",
-    "value": "Bento Box Grid",
+    "value": "Bento-Box-Raster",
     "_base_original": "Bento Box Grid"
   },
   "nav:building-blocks:wrappers:button-group": {
     "original": "Button Group",
-    "value": "Button Group",
+    "value": "Schaltflächengruppe",
     "_base_original": "Button Group"
   },
   "nav:building-blocks:wrappers:card": {
     "original": "Card",
-    "value": "Card",
+    "value": "Karte",
     "_base_original": "Card"
   },
   "nav:building-blocks:wrappers:carousel": {
     "original": "Carousel",
-    "value": "Carousel",
+    "value": "Karussell",
     "_base_original": "Carousel"
   },
   "nav:building-blocks:wrappers:content-selector": {
     "original": "Content Selector",
-    "value": "Content Selector",
+    "value": "Inhaltsauswahl",
     "_base_original": "Content Selector"
   },
   "nav:building-blocks:wrappers:grid": {
     "original": "Grid",
-    "value": "Grid",
+    "value": "Raster",
     "_base_original": "Grid"
   },
   "nav:building-blocks:wrappers:image-carousel": {
     "original": "Image Carousel",
-    "value": "Image Carousel",
+    "value": "Bildkarussell",
     "_base_original": "Image Carousel"
   },
   "nav:building-blocks:wrappers:modal": {
     "original": "Modal",
-    "value": "Modal",
+    "value": "Modales Fenster",
     "_base_original": "Modal"
   },
   "nav:building-blocks:wrappers:split": {
     "original": "Split",
-    "value": "Split",
+    "value": "Zweispaltig",
     "_base_original": "Split"
   },
   "nav:building-blocks:wrappers:video-modal": {
     "original": "Video Modal",
-    "value": "Video Modal",
+    "value": "Modales Videofenster",
     "_base_original": "Video Modal"
   },
   "nav:component-builder": {
     "original": "Component Builder",
-    "value": "Component Builder",
+    "value": "Komponenten-Baukasten",
     "_base_original": "Component Builder"
   },
   "nav:contact": {
@@ -1101,42 +1081,42 @@
   },
   "nav:getting-started": {
     "original": "Getting Started",
-    "value": "Getting Started",
+    "value": "Erste Schritte",
     "_base_original": "Getting Started"
   },
   "nav:getting-started:building-a-page-section": {
     "original": "Building a Page Section",
-    "value": "Building a Page Section",
+    "value": "Eine Seitensektion erstellen",
     "_base_original": "Building a Page Section"
   },
   "nav:getting-started:customizing-your-brand": {
     "original": "Customizing Your Brand",
-    "value": "Customizing Your Brand",
+    "value": "Ihre Marke anpassen",
     "_base_original": "Customizing Your Brand"
   },
   "nav:getting-started:editing-a-page": {
     "original": "Editing a Page",
-    "value": "Editing a Page",
+    "value": "Eine Seite bearbeiten",
     "_base_original": "Editing a Page"
   },
   "nav:getting-started:editing-the-blog": {
     "original": "Editing the Blog",
-    "value": "Editing the Blog",
+    "value": "Den Blog bearbeiten",
     "_base_original": "Editing the Blog"
   },
   "nav:getting-started:how-visual-editing-works": {
     "original": "How Visual Editing Works",
-    "value": "How Visual Editing Works",
+    "value": "So funktioniert visuelles Bearbeiten",
     "_base_original": "How Visual Editing Works"
   },
   "nav:getting-started:project-tour": {
     "original": "Project Tour",
-    "value": "Project Tour",
+    "value": "Rundgang durch das Projekt",
     "_base_original": "Project Tour"
   },
   "nav:home": {
     "original": "Home",
-    "value": "Home",
+    "value": "Startseite",
     "_base_original": "Home"
   },
   "nav:navigation": {
@@ -1146,42 +1126,42 @@
   },
   "nav:navigation:bar": {
     "original": "Bar",
-    "value": "Bar",
+    "value": "Leiste",
     "_base_original": "Bar"
   },
   "nav:navigation:footer": {
     "original": "Footer",
-    "value": "Footer",
+    "value": "Fußzeile",
     "_base_original": "Footer"
   },
   "nav:navigation:main-nav": {
     "original": "Main Nav",
-    "value": "Main Nav",
+    "value": "Hauptnavigation",
     "_base_original": "Main Nav"
   },
   "nav:navigation:mobile": {
     "original": "Mobile",
-    "value": "Mobile",
+    "value": "Mobil",
     "_base_original": "Mobile"
   },
   "nav:navigation:side": {
     "original": "Side",
-    "value": "Side",
+    "value": "Seitlich",
     "_base_original": "Side"
   },
   "nav:page-sections": {
     "original": "Page Sections",
-    "value": "Page Sections",
+    "value": "Seitensektionen",
     "_base_original": "Page Sections"
   },
   "nav:page-sections:builders": {
     "original": "Builders",
-    "value": "Builders",
+    "value": "Baukästen",
     "_base_original": "Builders"
   },
   "nav:page-sections:builders:custom-section": {
     "original": "Custom Section",
-    "value": "Custom Section",
+    "value": "Benutzerdefinierte Sektion",
     "_base_original": "Custom Section"
   },
   "nav:page-sections:ctas": {
@@ -1191,107 +1171,107 @@
   },
   "nav:page-sections:ctas:cta-center": {
     "original": "CTA Center",
-    "value": "CTA Center",
+    "value": "CTA zentriert",
     "_base_original": "CTA Center"
   },
   "nav:page-sections:ctas:cta-form": {
     "original": "CTA Form",
-    "value": "CTA Form",
+    "value": "CTA mit Formular",
     "_base_original": "CTA Form"
   },
   "nav:page-sections:ctas:cta-split": {
     "original": "CTA Split",
-    "value": "CTA Split",
+    "value": "CTA zweispaltig",
     "_base_original": "CTA Split"
   },
   "nav:page-sections:features": {
     "original": "Features",
-    "value": "Features",
+    "value": "Funktionen",
     "_base_original": "Features"
   },
   "nav:page-sections:features:feature-carousel-grid": {
     "original": "Feature Carousel Grid",
-    "value": "Feature Carousel Grid",
+    "value": "Funktions-Karussell-Raster",
     "_base_original": "Feature Carousel Grid"
   },
   "nav:page-sections:features:feature-grid": {
     "original": "Feature Grid",
-    "value": "Feature Grid",
+    "value": "Funktionsraster",
     "_base_original": "Feature Grid"
   },
   "nav:page-sections:features:feature-slider": {
     "original": "Feature Slider",
-    "value": "Feature Slider",
+    "value": "Funktions-Slider",
     "_base_original": "Feature Slider"
   },
   "nav:page-sections:features:feature-split": {
     "original": "Feature Split",
-    "value": "Feature Split",
+    "value": "Funktion zweispaltig",
     "_base_original": "Feature Split"
   },
   "nav:page-sections:features:logo-strip": {
     "original": "Logo Strip",
-    "value": "Logo Strip",
+    "value": "Logo-Leiste",
     "_base_original": "Logo Strip"
   },
   "nav:page-sections:heroes": {
     "original": "Heroes",
-    "value": "Heroes",
+    "value": "Hero-Bereiche",
     "_base_original": "Heroes"
   },
   "nav:page-sections:heroes:hero-card": {
     "original": "Hero Card",
-    "value": "Hero Card",
+    "value": "Hero-Karte",
     "_base_original": "Hero Card"
   },
   "nav:page-sections:heroes:hero-center": {
     "original": "Hero Center",
-    "value": "Hero Center",
+    "value": "Hero zentriert",
     "_base_original": "Hero Center"
   },
   "nav:page-sections:heroes:hero-split": {
     "original": "Hero Split",
-    "value": "Hero Split",
+    "value": "Hero zweispaltig",
     "_base_original": "Hero Split"
   },
   "nav:page-sections:info-blocks": {
     "original": "Info Blocks",
-    "value": "Info Blocks",
+    "value": "Infoblöcke",
     "_base_original": "Info Blocks"
   },
   "nav:page-sections:info-blocks:faq-section": {
     "original": "FAQ Section",
-    "value": "FAQ Section",
+    "value": "FAQ-Sektion",
     "_base_original": "FAQ Section"
   },
   "nav:page-sections:info-blocks:tabbed-content": {
     "original": "Tabbed Content",
-    "value": "Tabbed Content",
+    "value": "Inhalt mit Tabs",
     "_base_original": "Tabbed Content"
   },
   "nav:page-sections:info-blocks:table": {
     "original": "Table",
-    "value": "Table",
+    "value": "Tabelle",
     "_base_original": "Table"
   },
   "nav:page-sections:info-blocks:timeline": {
     "original": "Timeline",
-    "value": "Timeline",
+    "value": "Zeitleiste",
     "_base_original": "Timeline"
   },
   "nav:page-sections:people": {
     "original": "People",
-    "value": "People",
+    "value": "Personen",
     "_base_original": "People"
   },
   "nav:page-sections:people:team-grid": {
     "original": "Team Grid",
-    "value": "Team Grid",
+    "value": "Team-Raster",
     "_base_original": "Team Grid"
   },
   "nav:page-sections:people:testimonial-section": {
     "original": "Testimonial Section",
-    "value": "Testimonial Section",
+    "value": "Kundenstimmen-Sektion",
     "_base_original": "Testimonial Section"
   },
   "nav:pricing": {
@@ -1334,6 +1314,11 @@
     "value": "Diesen Artikel teilen:",
     "_base_original": "Share this article:"
   },
+  "pricing:7a77bb8e-fe69-401a-86e4-2216b8322d07:1bfbcada-3882-4c71-ac19-29b62a075d00:text": {
+    "original": "Send message",
+    "value": "Nachricht senden",
+    "_base_original": "Send message"
+  },
   "pricing:7a77bb8e-fe69-401a-86e4-2216b8322d07:9c3edb61-c4cf-47b8-8107-eae212ca56a5:label": {
     "original": "Email",
     "value": "E-Mail",
@@ -1359,22 +1344,27 @@
     "value": "<p>Unser Solutions-Team steht bereit — mit Antworten und einem angemessenen Maß an Begeisterung.</p>",
     "_base_original": "<p>Our solutions team stands ready with answers and an appropriate level of enthusiasm.</p>"
   },
-  "pricing:7a77bb8e-fe69-401a-86e4-2216b8322d07:text": {
-    "original": "Send message",
-    "value": "Nachricht senden",
-    "_base_original": "Send message"
-  },
-  "pricing:865c667b-da57-47d5-9288-6021835371cb:1171b6c3-bdbe-47e1-bf75-5b9a59d765f4:text": {
+  "pricing:865c667b-da57-47d5-9288-6021835371cb:1171b6c3-bdbe-47e1-bf75-5b9a59d765f4:51d96ae9-31d0-4176-a494-d6ab25557af1:text": {
     "original": "<p>Approximately seven minutes for basic setup, assuming you can type reasonably fast and don't get distracted.</p>\n<p>Our onboarding process involves pointing your DNS at our nameservers and letting our automation handle the rest.</p>\n<p>For more complex migrations requiring custom configurations, our team can have you operational within 24 hours.</p>\n<p>We've timed it. Multiple times. With stopwatches.</p>",
     "value": "<p>Etwa sieben Minuten für die Grundeinrichtung — vorausgesetzt, Sie tippen einigermaßen schnell und lassen sich nicht ablenken.</p>\n<p>Unser Onboarding besteht darin, Ihr DNS auf unsere Nameserver zu richten und den Rest unserer Automatisierung zu überlassen.</p>\n<p>Bei komplexeren Migrationen mit eigenen Konfigurationen bringt unser Team Sie innerhalb von 24 Stunden in den Betrieb.</p>\n<p>Wir haben es gemessen. Mehrfach. Mit echten Stoppuhren.</p>",
     "_base_original": "<p>Approximately seven minutes for basic setup, assuming you can type reasonably fast and don't get distracted.</p>\n<p>Our onboarding process involves pointing your DNS at our nameservers and letting our automation handle the rest.</p>\n<p>For more complex migrations requiring custom configurations, our team can have you operational within 24 hours.</p>\n<p>We've timed it. Multiple times. With stopwatches.</p>"
+  },
+  "pricing:865c667b-da57-47d5-9288-6021835371cb:1171b6c3-bdbe-47e1-bf75-5b9a59d765f4:9df4a772-d7a3-491c-8d20-d44509dff41a:text": {
+    "original": "Get started",
+    "value": "Jetzt starten",
+    "_base_original": "Get started"
   },
   "pricing:865c667b-da57-47d5-9288-6021835371cb:1171b6c3-bdbe-47e1-bf75-5b9a59d765f4:title": {
     "original": "How quickly can I get started?",
     "value": "Wie schnell kann ich starten?",
     "_base_original": "How quickly can I get started?"
   },
-  "pricing:865c667b-da57-47d5-9288-6021835371cb:31154b29-6cad-4ba9-9d64-87ab542472ab:text": {
+  "pricing:865c667b-da57-47d5-9288-6021835371cb:31154b29-6cad-4ba9-9d64-87ab542472ab:843c9101-4111-42fe-a6e3-f07ea642ed03:text": {
+    "original": "Get started",
+    "value": "Jetzt starten",
+    "_base_original": "Get started"
+  },
+  "pricing:865c667b-da57-47d5-9288-6021835371cb:31154b29-6cad-4ba9-9d64-87ab542472ab:87fefb94-3562-463c-af6c-9d94c746d329:text": {
     "original": "<p>You can cancel anytime from your dashboard without talking to a retention specialist who's been trained to make you feel guilty.</p>\n<p>We'll continue service through the end of your billing period, provide export tools for your configuration data, and part ways professionally.</p>\n<p>Our cancellation process takes approximately 90 seconds, which our legal team insists is still too generous but our engineering team considers appropriately respectful of people's time.</p>",
     "value": "<p>Sie können jederzeit über Ihr Dashboard kündigen, ohne mit einem Kundenbindungsspezialisten zu sprechen, der darauf geschult ist, Ihnen ein schlechtes Gewissen zu machen.</p>\n<p>Wir führen den Dienst bis zum Ende Ihres Abrechnungszeitraums fort, stellen Export-Tools für Ihre Konfigurationsdaten bereit und gehen professionell auseinander.</p>\n<p>Unsere Kündigung dauert rund 90 Sekunden — was unsere Rechtsabteilung noch für zu großzügig hält, unser Engineering-Team aber als angemessenen Respekt für die Zeit anderer Menschen ansieht.</p>",
     "_base_original": "<p>You can cancel anytime from your dashboard without talking to a retention specialist who's been trained to make you feel guilty.</p>\n<p>We'll continue service through the end of your billing period, provide export tools for your configuration data, and part ways professionally.</p>\n<p>Our cancellation process takes approximately 90 seconds, which our legal team insists is still too generous but our engineering team considers appropriately respectful of people's time.</p>"
@@ -1384,7 +1374,12 @@
     "value": "Was, wenn ich meinen Dienst kündigen muss?",
     "_base_original": "What if I need to cancel my service?"
   },
-  "pricing:865c667b-da57-47d5-9288-6021835371cb:ecbff5cb-8457-4cf4-97ad-b5874fa08620:text": {
+  "pricing:865c667b-da57-47d5-9288-6021835371cb:ecbff5cb-8457-4cf4-97ad-b5874fa08620:0f00e308-402f-483c-bb49-b06714a101d7:text": {
+    "original": "Get started",
+    "value": "Jetzt starten",
+    "_base_original": "Get started"
+  },
+  "pricing:865c667b-da57-47d5-9288-6021835371cb:ecbff5cb-8457-4cf4-97ad-b5874fa08620:f87d5b92-f9be-4300-a25b-c1979936d37b:text": {
     "original": "<p>We'll send you a polite notification and continue serving your traffic without interruption, because throttling your users mid-session seems counterproductive to everyone involved.</p>\n<p>You'll be billed for overage at a reasonable per-GB rate that we've listed clearly in our documentation.</p>\n<p>If you're consistently exceeding your plan limits, we'll suggest upgrading to a tier that matches your actual usage — our billing team considers surprises a sign of poor communication.</p>",
     "value": "<p>Wir schicken Ihnen eine höfliche Benachrichtigung und liefern Ihren Traffic ohne Unterbrechung weiter aus — Ihre Nutzer mitten in der Sitzung zu drosseln erscheint uns für alle Beteiligten kontraproduktiv.</p>\n<p>Das Mehrvolumen berechnen wir zu einem angemessenen Preis pro GB, den wir in unserer Dokumentation klar aufführen.</p>\n<p>Wenn Sie die Grenzen Ihres Tarifs dauerhaft überschreiten, schlagen wir einen Wechsel zu einer Stufe vor, die Ihrer tatsächlichen Nutzung entspricht — unser Abrechnungsteam hält Überraschungen für ein Zeichen schlechter Kommunikation.</p>",
     "_base_original": "<p>We'll send you a polite notification and continue serving your traffic without interruption, because throttling your users mid-session seems counterproductive to everyone involved.</p>\n<p>You'll be billed for overage at a reasonable per-GB rate that we've listed clearly in our documentation.</p>\n<p>If you're consistently exceeding your plan limits, we'll suggest upgrading to a tier that matches your actual usage — our billing team considers surprises a sign of poor communication.</p>"
@@ -1399,15 +1394,60 @@
     "value": "Häufige Fragen",
     "_base_original": "Common questions"
   },
-  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:text": {
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:23e52bd0-8ffb-47bb-99ec-379b4d256c66:text": {
+    "original": "Contractual response times",
+    "value": "Vertraglich zugesicherte Reaktionszeiten",
+    "_base_original": "Contractual response times"
+  },
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:3437e017-5c2f-477a-9ee6-00e3e133f31e:text": {
+    "original": "Quarterly capacity planning sessions",
+    "value": "Vierteljährliche Sitzungen zur Kapazitätsplanung",
+    "_base_original": "Quarterly capacity planning sessions"
+  },
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:585f49b6-c514-4ef1-9190-ab71f22621db:text": {
+    "original": "Custom security rules",
+    "value": "Individuelle Sicherheitsregeln",
+    "_base_original": "Custom security rules"
+  },
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:6fdc9f89-5e13-4138-bf56-f42cc693e464:text": {
     "original": "Custom API rate limits",
-    "value": "Custom API rate limits",
+    "value": "Individuelle API-Ratenbegrenzungen",
     "_base_original": "Custom API rate limits"
   },
-  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:button_text": {
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:760010d8-c373-4e6f-80f2-65ad1e09be4b:text": {
+    "original": "Priority feature requests",
+    "value": "Priorisierte Funktionswünsche",
+    "_base_original": "Priority feature requests"
+  },
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:905de601-64d5-4424-8b47-8241cd2f56e1:text": {
+    "original": "Private peering arrangements",
+    "value": "Private Peering-Vereinbarungen",
+    "_base_original": "Private peering arrangements"
+  },
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:b7eddd84-8f0f-44a3-bfb7-eb7c4c557b5a:text": {
+    "original": "Dedicated Slack channel with our operations team",
+    "value": "Eigener Slack-Kanal mit unserem Operations-Team",
+    "_base_original": "Dedicated Slack channel with our operations team"
+  },
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:c2c7648b-b670-42a1-96db-a54ee80560bd:text": {
+    "original": "Access to ‘experimental’ features",
+    "value": "Zugang zu „experimentellen“ Funktionen",
+    "_base_original": "Access to ‘experimental’ features"
+  },
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:f879d853-fe8b-43bd-9a07-de15b3a3487a:text": {
+    "original": "Daily infrastructure audits",
+    "value": "Tägliche Infrastruktur-Audits",
+    "_base_original": "Daily infrastructure audits"
+  },
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:e5c214bf-5b73-4490-9496-70d279cc55d6:button_text": {
     "original": "Get started",
     "value": "Jetzt starten",
     "_base_original": "Get started"
+  },
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:price_amount": {
+    "original": "Custom to your needs",
+    "value": "Individuell nach Ihrem Bedarf",
+    "_base_original": "Custom to your needs"
   },
   "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:subtext": {
     "original": "<p>For organizations that consider infrastructure a competitive advantage</p>",
@@ -1419,12 +1459,22 @@
     "value": "Enterprise",
     "_base_original": "Enterprise"
   },
-  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:9cf82f02-01bd-463a-8009-7b30fc5fe14e:text": {
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:9cf82f02-01bd-463a-8009-7b30fc5fe14e:d42d04dc-078d-4aba-a75a-b5d4688770ed:text": {
+    "original": "Automated SSL certificate management",
+    "value": "Automatisierte Verwaltung von SSL-Zertifikaten",
+    "_base_original": "Automated SSL certificate management"
+  },
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:9cf82f02-01bd-463a-8009-7b30fc5fe14e:d5d9a7cd-0d95-4fb0-b91d-6436cbe101ba:text": {
+    "original": "Complimentary network topology consult with our most artistic engineer",
+    "value": "Kostenlose Beratung zur Netzwerktopologie mit dem kreativsten Kopf unseres Engineering-Teams",
+    "_base_original": "Complimentary network topology consult with our most artistic engineer"
+  },
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:9cf82f02-01bd-463a-8009-7b30fc5fe14e:e8b1319e-6db6-4227-92ac-8c0565cea867:text": {
     "original": "Global CDN with 800+ edge nodes",
-    "value": "Global CDN with 800+ edge nodes",
+    "value": "Globales CDN mit über 800 Edge-Knoten",
     "_base_original": "Global CDN with 800+ edge nodes"
   },
-  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:button_text": {
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:fefb7ac1-e64f-4b2c-9f3d-078edeff9ae5:button_text": {
     "original": "Get started",
     "value": "Jetzt starten",
     "_base_original": "Get started"
@@ -1449,12 +1499,22 @@
     "value": "Standard",
     "_base_original": "Standard"
   },
-  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:2d5ed86e-98d8-4f05-ada6-f2cdf95e69ae:text": {
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:2d5ed86e-98d8-4f05-ada6-f2cdf95e69ae:046ac117-ec56-480b-951f-39a9e905a618:text": {
+    "original": "Dedicated customer success specialist",
+    "value": "Dedizierte Ansprechperson für Customer Success",
+    "_base_original": "Dedicated customer success specialist"
+  },
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:2d5ed86e-98d8-4f05-ada6-f2cdf95e69ae:6bc7b8df-0abf-4995-85ac-061ebe77856b:text": {
     "original": "Priority traffic routing",
-    "value": "Priority traffic routing",
+    "value": "Priorisiertes Traffic-Routing",
     "_base_original": "Priority traffic routing"
   },
-  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:button_text": {
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:2d5ed86e-98d8-4f05-ada6-f2cdf95e69ae:c0951914-45de-4b10-b194-03fcbc3f543a:text": {
+    "original": "Annual infrastructure health assessment conducted by our senior architects, complete with a 40-page report bound in a collectible presentation folder",
+    "value": "Jährliche Analyse Ihrer Infrastruktur durch unsere Senior-Architektinnen und -Architekten, inklusive eines 40-seitigen Berichts in einer sammelwürdigen Präsentationsmappe",
+    "_base_original": "Annual infrastructure health assessment conducted by our senior architects, complete with a 40-page report bound in a collectible presentation folder"
+  },
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:4e1e3ab0-e40b-4f16-9818-3327f2166a96:button_text": {
     "original": "Get started",
     "value": "Jetzt starten",
     "_base_original": "Get started"
@@ -1649,6 +1709,11 @@
     "value": "Sicherheit und Verlässlichkeit",
     "_base_original": "Security and reliability"
   },
+  "pricing:c791a404-7d89-4f00-a61a-33d122370996:3a522cae-eb54-4a08-ac14-55d33c03cd48:text": {
+    "original": "Book a demo",
+    "value": "Demo buchen",
+    "_base_original": "Book a demo"
+  },
   "pricing:c791a404-7d89-4f00-a61a-33d122370996:heading": {
     "original": "Pricing designed<br>by <span class=\"highlight-text\">engineers</span><br>who know value",
     "value": "Preise, gestaltet<br>von <span class=\"highlight-text\">Ingenieuren</span>,<br>die den Wert kennen",
@@ -1658,11 +1723,6 @@
     "original": "<p>We’ve eliminated the confusion typically associated with infrastructure pricing <br>through a strategy we call \"being straightforward about what things cost.\"</p>",
     "value": "<p>Wir haben die übliche Verwirrung rund um Infrastrukturpreise beseitigt <br>— mit einer Strategie, die wir „klar sagen, was die Dinge kosten“ nennen.</p>",
     "_base_original": "<p>We’ve eliminated the confusion typically associated with infrastructure pricing <br>through a strategy we call \"being straightforward about what things cost.\"</p>"
-  },
-  "pricing:c791a404-7d89-4f00-a61a-33d122370996:text": {
-    "original": "Book a demo",
-    "value": "Demo buchen",
-    "_base_original": "Book a demo"
   },
   "pricing:page_description": {
     "original": "A polished, high-performance marketing website template for Astro, with visual editing and multilingual translation on CloudCannon.",
@@ -1681,47 +1741,47 @@
   },
   "search:f1870518-3c20-4273-af16-bb3f5700e704:filter_by_type": {
     "original": "Filter results by type",
-    "value": "Filter results by type",
+    "value": "Ergebnisse nach Typ filtern",
     "_base_original": "Filter results by type"
   },
   "search:f1870518-3c20-4273-af16-bb3f5700e704:filter_website-all": {
     "original": "Website (All)",
-    "value": "Website (All)",
+    "value": "Website (alle)",
     "_base_original": "Website (All)"
   },
   "search:f1870518-3c20-4273-af16-bb3f5700e704:heading": {
     "original": "How can we help?",
-    "value": "How can we help?",
+    "value": "Wie können wir helfen?",
     "_base_original": "How can we help?"
   },
   "search:f1870518-3c20-4273-af16-bb3f5700e704:load_more": {
     "original": "Load more results",
-    "value": "Load more results",
+    "value": "Weitere Ergebnisse laden",
     "_base_original": "Load more results"
   },
   "search:f1870518-3c20-4273-af16-bb3f5700e704:placeholder": {
     "original": "Search",
-    "value": "Search",
+    "value": "Suche",
     "_base_original": "Search"
   },
   "search:f1870518-3c20-4273-af16-bb3f5700e704:search_label": {
     "original": "Search",
-    "value": "Search",
+    "value": "Suche",
     "_base_original": "Search"
   },
   "search:f1870518-3c20-4273-af16-bb3f5700e704:submit_text": {
     "original": "Search",
-    "value": "Search",
+    "value": "Suche",
     "_base_original": "Search"
   },
   "search:f1870518-3c20-4273-af16-bb3f5700e704:subtext": {
     "original": "<p>Deep dives into infrastructure, operational excellence, and the future of the edge-first web.</p>",
-    "value": "<p>Deep dives into infrastructure, operational excellence, and the future of the edge-first web.</p>",
+    "value": "<p>Tiefgehende Einblicke in Infrastruktur, operative Exzellenz und die Zukunft des Edge-First-Web.</p>",
     "_base_original": "<p>Deep dives into infrastructure, operational excellence, and the future of the edge-first web.</p>"
   },
   "search:page_description": {
-    "original": "A polished, high-performance marketing website template for Astro, with visual editing and multilingual translation on CloudCannon.",
-    "value": "Ein ausgefeiltes, performantes Marketing-Website-Template für Astro, mit visueller Bearbeitung und mehrsprachiger Übersetzung auf CloudCannon.",
+    "original": "Static Pagefind search across pages and posts—filter by type with no backend.",
+    "value": "Statische Pagefind-Suche über Seiten und Beiträge – nach Typ filtern, ohne Backend.",
     "_base_original": "Static Pagefind search across pages and posts—filter by type with no backend."
   },
   "search:page_title": {
@@ -1779,15 +1839,55 @@
     "value": "Blog - Verfügbarkeit | Jetstream Astro-Template für CloudCannon",
     "_base_original": "Blog - Uptime | Jetstream Astro Template for CloudCannon"
   },
+  "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:1506a3cd-18f6-40ff-a7b8-f83a5fb7e52a:subtext": {
+    "original": "<p>New resolver response time (acceptable)</p>",
+    "value": "<p>Antwortzeit des neuen Resolvers (akzeptabel)</p>",
+    "_base_original": "<p>New resolver response time (acceptable)</p>"
+  },
+  "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:1506a3cd-18f6-40ff-a7b8-f83a5fb7e52a:suffix": {
+    "original": "ms",
+    "value": "ms",
+    "_base_original": "ms"
+  },
+  "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:35b75e81-d5f8-4e6a-9468-dddb3682756d:subtext": {
+    "original": "<p>Previous resolver response time (unacceptable)</p>",
+    "value": "<p>Antwortzeit des alten Resolvers (unakzeptabel)</p>",
+    "_base_original": "<p>Previous resolver response time (unacceptable)</p>"
+  },
+  "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:35b75e81-d5f8-4e6a-9468-dddb3682756d:suffix": {
+    "original": "ms",
+    "value": "ms",
+    "_base_original": "ms"
+  },
+  "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:5497f7b6-25c3-49e2-a4d8-d97ee323b103:subtext": {
+    "original": "<p>Lines of code written, deleted, rewritten</p>",
+    "value": "<p>Zeilen Code geschrieben, gelöscht, neu geschrieben</p>",
+    "_base_original": "<p>Lines of code written, deleted, rewritten</p>"
+  },
+  "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:5497f7b6-25c3-49e2-a4d8-d97ee323b103:suffix": {
+    "original": "K+",
+    "value": "K+",
+    "_base_original": "K+"
+  },
   "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:card_heading": {
-    "original": "<h1><strong>Why we rebuilt our DNS resolver from scratch (</strong><span class=\"highlight-text\"><strong>again</strong></span><strong>)</strong> </h1>",
-    "value": "<h1><strong>Warum wir unseren DNS-Resolver von Grund auf neu gebaut haben (</strong><span class=\"highlight-text\"><strong>wieder</strong></span><strong>)</strong> </h1>",
+    "original": "Why we rebuilt our DNS resolver from scratch (<span class=\"highlight-text\">again</span>)",
+    "value": "Warum wir unseren DNS-Resolver von Grund auf neu gebaut haben (<span class=\"highlight-text\">wieder</span>)",
     "_base_original": "Why we rebuilt our DNS resolver from scratch (<span class=\"highlight-text\">again</span>)"
   },
   "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:card_subtext": {
-    "original": "Sometimes good enough isn't good enough, especially when our engineers have strong opinions about query optimization.",
-    "value": "Manchmal ist „gut genug“ nicht gut genug — besonders dann, wenn unsere Ingenieurinnen und Ingenieure klare Meinungen zur Optimierung von Abfragen haben.",
+    "original": "<p>Sometimes good enough isn't good enough, especially when our engineers have strong opinions about query optimization.</p>",
+    "value": "<p>Manchmal ist „gut genug“ nicht gut genug — besonders dann, wenn unsere Ingenieurinnen und Ingenieure klare Meinungen zur Optimierung von Abfragen haben.</p>",
     "_base_original": "<p>Sometimes good enough isn't good enough, especially when our engineers have strong opinions about query optimization.</p>"
+  },
+  "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:d353cfdf-967b-447d-85af-1bcfdb391d8d:text": {
+    "original": "Learn why we did it",
+    "value": "Erfahren Sie, warum",
+    "_base_original": "Learn why we did it"
+  },
+  "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:e6eed8a1-1695-478b-9f4c-a02cd5088362:subtext": {
+    "original": "<p>All-hands meetings to convince management</p>",
+    "value": "<p>Vollversammlungen, um das Management zu überzeugen</p>",
+    "_base_original": "<p>All-hands meetings to convince management</p>"
   },
   "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:heading": {
     "original": "The engineering journal",
@@ -1799,25 +1899,15 @@
     "value": "<p>Einblicke, Neuigkeiten und gelegentliche technische Tiefenbohrungen vom Team, das das Internet am Laufen hält.</p>",
     "_base_original": "<p>Insights, updates, and occasional technical deep-dives from the team that keeps the internet running.</p>"
   },
-  "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:suffix": {
-    "original": "ms",
-    "value": "ms",
-    "_base_original": "ms"
-  },
-  "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:text": {
-    "original": "Learn why we did it",
-    "value": "Erfahren Sie, warum",
-    "_base_original": "Learn why we did it"
+  "tags:7db52143-7dee-4ca3-9015-4531e5614fc9:02cd2bbb-bf93-447c-8ad1-7906f73ade56:text": {
+    "original": "Or talk to us about fiber optics instead",
+    "value": "Oder reden Sie mit uns lieber über Glasfaser",
+    "_base_original": "Or talk to us about fiber optics instead"
   },
   "tags:7db52143-7dee-4ca3-9015-4531e5614fc9:heading": {
     "original": "Let's build your next tech breakthough together",
     "value": "Bauen wir Ihren nächsten technischen Durchbruch gemeinsam",
     "_base_original": "Let's build your next tech breakthough together"
-  },
-  "tags:7db52143-7dee-4ca3-9015-4531e5614fc9:text": {
-    "original": "Or talk to us about fiber optics instead",
-    "value": "Oder reden Sie mit uns lieber über Glasfaser",
-    "_base_original": "Or talk to us about fiber optics instead"
   },
   "tags:all": {
     "original": "All",
@@ -1871,7 +1961,7 @@
   },
   "ui:theme_toggle": {
     "original": "Toggle dark mode",
-    "value": "Toggle dark mode",
+    "value": "Dunkelmodus umschalten",
     "_base_original": "Toggle dark mode"
   }
 }

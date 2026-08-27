@@ -1,11 +1,12 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import { resolveRosey } from "@component-utils/roseyKey";
 
 const {
   title,
   text,
   class: className,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   "data-prop-title": customDataPropTitle,
   "data-prop-content": customDataPropContent,
   "data-rosey-title": roseyTitle,
@@ -15,13 +16,14 @@ const {
   ...htmlAttributes
 } = Astro.props;
 
-const effectiveTitleProp = customDataPropTitle ?? (useDefaultEditableBinding ? "title" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveTitleProp = customDataPropTitle ?? (isContentBlock ? "title" : null);
 const titleDataAttributes = effectiveTitleProp
   ? { "data-editable": "text", "data-prop": effectiveTitleProp }
   : {};
 const titleRoseyAttributes = resolveRosey(roseyTitle, effectiveTitleProp);
 
-const effectiveContentProp = customDataPropContent ?? (useDefaultEditableBinding ? "text" : null);
+const effectiveContentProp = customDataPropContent ?? (isContentBlock ? "text" : null);
 const contentDataAttributes = effectiveContentProp
   ? { "data-editable": "text", "data-prop": effectiveContentProp }
   : {};
@@ -35,14 +37,18 @@ const hasSlotContent = Astro.slots.has("default");
 if (!_component && ((!hasTitle && !hasTitleSlotContent) || (!hasText && !hasSlotContent))) return;
 ---
 
+{
+  /* Namespace stays inside the root, which a re-render copies into the region element.
+  The dt and dd each carry it — a shared wrapper is invalid inside a <dl>. */
+}
 <div
   class="definition-list-item"
-  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <dt
     class:list={["title", className]}
     role="term"
+    data-rosey-ns={_uuid}
   >
     <span
       {...titleDataAttributes}
@@ -56,6 +62,7 @@ if (!_component && ((!hasTitle && !hasTitleSlotContent) || (!hasText && !hasSlot
   <dd
     class:list={["content", className]}
     role="definition"
+    data-rosey-ns={_uuid}
   >
     <span
       {...contentDataAttributes}

@@ -1,4 +1,5 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import Heading from "@core-elements/heading/Heading.astro";
 import Icon from "@core-elements/icon/Icon.astro";
 import Text from "@core-elements/text/Text.astro";
@@ -12,17 +13,19 @@ const {
   date = "",
   heading = "",
   text = "",
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   class: className,
   _uuid,
   _component,
   ...htmlAttributes
 } = Astro.props;
+
+const isContentBlock = isEditable(Astro.props);
 ---
 
+{/* Namespace stays inside the root, which a re-render copies into the region element. */}
 <div
   class:list={["timeline-item", className]}
-  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <div class="timeline-marker">
@@ -36,6 +39,7 @@ const {
   </div>
   <Card
     class="timeline-card"
+    data-rosey-ns={_uuid}
     paddingHorizontal="lg"
     paddingVertical="xs"
     rounded={false}
@@ -49,7 +53,7 @@ const {
             class="timeline-date"
             text={date}
             alignmentHorizontal="start"
-            data-prop={useDefaultEditableBinding ? "date" : undefined}
+            data-prop={isContentBlock ? "date" : undefined}
           />
         )
       }
@@ -60,7 +64,7 @@ const {
             size="md"
             alignmentHorizontal="start"
             text={heading}
-            data-prop={useDefaultEditableBinding ? "heading" : undefined}
+            data-prop={isContentBlock ? "heading" : undefined}
           />
         )
       }
@@ -69,7 +73,7 @@ const {
           <Text
             text={text}
             alignmentHorizontal="start"
-            data-prop={useDefaultEditableBinding ? "text" : undefined}
+            data-prop={isContentBlock ? "text" : undefined}
           />
         )
       }

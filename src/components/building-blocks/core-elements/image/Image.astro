@@ -1,5 +1,6 @@
 ---
 import { Picture } from "astro:assets";
+import { isEditable } from "@component-utils/editable";
 import { prepareImageData } from "../../../utils/image";
 
 const {
@@ -16,7 +17,7 @@ const {
   positionVertical = "center",
   positionHorizontal = "center",
   background = false,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   class: className,
   "data-prop-src": customDataPropSrc,
   "data-prop-alt": customDataPropAlt,
@@ -34,9 +35,10 @@ const hasValidSrc = source && typeof source === "string" && source.trim() !== ""
 const shouldRender = Boolean(_component || hasValidSrc);
 
 const normalizedAlt = alt || "";
-const isEditable =
-  useDefaultEditableBinding || customDataPropSrc != null || customDataPropAlt != null;
-const dataAttributes = isEditable
+// A named data-prop is itself a request to bind, so it opts in on its own.
+const isImageEditable =
+  isEditable(Astro.props) || customDataPropSrc != null || customDataPropAlt != null;
+const dataAttributes = isImageEditable
   ? {
       "data-editable": "image",
       "data-prop-src": customDataPropSrc || "source",

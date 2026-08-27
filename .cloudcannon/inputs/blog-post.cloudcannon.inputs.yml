@@ -1,0 +1,118 @@
+# Shared by the blog, blog_fr and blog_de collections — all three hold the same
+# content shape (src/content.config.ts gives them one Zod schema), so the editor
+# config lives in one place rather than being copied per locale.
+#
+# Only fields that are blog-specific belong here. `keywords` means the same thing
+# on pages too, so it sits in the top-level _inputs instead.
+title:
+  type: html
+  options:
+    required: true
+    initial_height: 135
+    styles: .cloudcannon/styles/editor.css
+  comment: The title of the blog post.
+  cascade: false
+description:
+  type: textarea
+  options:
+    required: true
+  comment: A brief description of the blog post.
+  cascade: true
+date:
+  type: date
+  options:
+    required: true
+  comment: The publication date.
+  cascade: true
+author:
+  type: select
+  options:
+    allow_empty: true
+    values: collections.team
+    value_key: uuid
+    preview:
+      text:
+        - key: name
+  comment: >-
+    The author of the blog post. Note that author details in the post will
+    not live update, you will need to save and rebuild.
+  cascade: true
+image:
+  type: image
+  options:
+    paths:
+      uploads: src/assets/images
+    required: true
+  comment: Image path for the blog post.
+  cascade: true
+tag:
+  type: select
+  options:
+    required: true
+    allow_create: true
+    values:
+      - Caching
+      - Uptime
+      - Downtime
+      - Example
+      - Security
+      - Performance
+      - CDN
+      - Prediction
+  comment: Tag relevant to this post's content.
+  cascade: true
+counters:
+  type: array
+  comment: >-
+    Optional statistics displayed alongside the image in the post hero.
+  options:
+    structures:
+      style: select
+      values:
+        - label: Counter
+          icon:
+          value:
+            # Existing items carry a _uuid; without it in the value template new ones
+            # don't get one and their Rosey keys fall back to the array index.
+            _uuid:
+            counter: {}
+            subtext: Counter Subtext
+          _inputs:
+            counter:
+              options:
+                structures:
+                  style: select
+                  values:
+                    - label: Counter
+                      icon: speed
+                      value:
+                        number: 100
+                        prefix: $
+                        suffix: M
+                      _inputs:
+                        number:
+                          type: number
+                          comment: The number to count to.
+                          cascade: true
+                        prefix:
+                          comment: Text immediately before the number.
+                          cascade: true
+                        suffix:
+                          comment: Text immediately after the number.
+                          cascade: true
+              cascade: true
+            subtext:
+              type: markdown
+              options:
+                allow_resize: true
+                allow_custom_markup: false
+                remove_custom_markup: false
+                initial_height: 320
+                bold: true
+                image_size_attributes: true
+                italic: true
+                link: true
+                underline: true
+              comment: Optional subtext displayed beneath the counter.
+              cascade: true
+  cascade: true

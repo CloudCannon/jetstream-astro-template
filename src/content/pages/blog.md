@@ -52,22 +52,26 @@ heroSections:
           threshold of your understanding.
         rounded: true
       counters:
-        - counter:
+        - _uuid: 35b75e81-d5f8-4e6a-9468-dddb3682756d
+          counter:
             number: 47
             prefix:
             suffix: ms
           subtext: Previous resolver response time (unacceptable)
-        - counter:
+        - _uuid: 1506a3cd-18f6-40ff-a7b8-f83a5fb7e52a
+          counter:
             number: 1.2
             prefix:
             suffix: ms
           subtext: New resolver response time (acceptable)
-        - counter:
+        - _uuid: 5497f7b6-25c3-49e2-a4d8-d97ee323b103
+          counter:
             number: 840
             prefix:
             suffix: K+
           subtext: Lines of code written, deleted, rewritten
-        - counter:
+        - _uuid: e6eed8a1-1695-478b-9f4c-a02cd5088362
+          counter:
             number: 3
             prefix:
             suffix:

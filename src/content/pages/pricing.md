@@ -1,8 +1,8 @@
 ---
 _schema: default
-permalink:
 title: Pricing
 description: ''
+permalink:
 keywords: []
 pageSections:
   - _component: page-sections/heroes/hero-center
@@ -10,13 +10,13 @@ pageSections:
     id:
     eyebrowIcon:
       _component: building-blocks/core-elements/icon
-      _uuid: 13058c43-669e-4c8c-ae5e-414d7b810e47
       name: document-currency-dollar
       size: 3xl
       color: brand-gradient
       background: true
       iconOffset: true
       alignmentHorizontal: center
+      _uuid: 13058c43-669e-4c8c-ae5e-414d7b810e47
     eyebrowText:
     heading: >-
       Pricing designed<br />by <span class="highlight-text">engineers</span><br
@@ -24,7 +24,7 @@ pageSections:
     headingSize: 2xl
     subtext: >-
       We’ve eliminated the confusion typically associated with infrastructure
-      pricing <br>through a strategy we call "being straightforward about what
+      pricing <br />through a strategy we call "being straightforward about what
       things cost."
     buttonSections:
       - _component: building-blocks/core-elements/button
@@ -77,15 +77,18 @@ pageSections:
             _component: building-blocks/core-elements/list
             _uuid: 9cf82f02-01bd-463a-8009-7b30fc5fe14e
             items:
-              - text: Global CDN with 800+ edge nodes
+              - _uuid: e8b1319e-6db6-4227-92ac-8c0565cea867
+                text: Global CDN with 800+ edge nodes
                 iconName: globe-americas
                 iconColor: default
                 link: ''
-              - text: Automated SSL certificate management
+              - _uuid: d42d04dc-078d-4aba-a75a-b5d4688770ed
+                text: Automated SSL certificate management
                 iconName: shield-check
                 iconColor: default
                 link: ''
-              - text: "Complimentary network topology consult with\Lour most artistic engineer"
+              - _uuid: d5d9a7cd-0d95-4fb0-b91d-6436cbe101ba
+                text: "Complimentary network topology consult with\Lour most artistic engineer"
                 iconName: heart
                 iconColor: default
                 link: ''
@@ -118,15 +121,18 @@ pageSections:
             _component: building-blocks/core-elements/list
             _uuid: 2d5ed86e-98d8-4f05-ada6-f2cdf95e69ae
             items:
-              - text: Priority traffic routing
+              - _uuid: 6bc7b8df-0abf-4995-85ac-061ebe77856b
+                text: Priority traffic routing
                 iconName: adjustments-horizontal
                 iconColor: default
                 link: ''
-              - text: Dedicated customer success specialist
+              - _uuid: 046ac117-ec56-480b-951f-39a9e905a618
+                text: Dedicated customer success specialist
                 iconName: chat-bubble-left-right
                 iconColor: default
                 link: ''
-              - text: "Annual infrastructure health assessment conducted by our senior architects,\Lcomplete with a 40-page report bound in a collectible presentation folder"
+              - _uuid: c0951914-45de-4b10-b194-03fcbc3f543a
+                text: "Annual infrastructure health assessment conducted by our senior architects,\Lcomplete with a 40-page report bound in a collectible presentation folder"
                 iconName: heart
                 iconColor: default
                 link: ''
@@ -161,39 +167,48 @@ pageSections:
             _component: building-blocks/core-elements/list
             _uuid: 762c488b-8236-4c03-b1b9-8bb538ee9fe0
             items:
-              - text: Custom API rate limits
+              - _uuid: 6fdc9f89-5e13-4138-bf56-f42cc693e464
+                text: Custom API rate limits
                 iconName: chart-bar
                 iconColor: default
                 link: ''
-              - text: Dedicated Slack channel with our operations team
+              - _uuid: b7eddd84-8f0f-44a3-bfb7-eb7c4c557b5a
+                text: Dedicated Slack channel with our operations team
                 iconName: chat-bubble-bottom-center-text
                 iconColor: default
                 link: ''
-              - text: Quarterly capacity planning sessions
+              - _uuid: 3437e017-5c2f-477a-9ee6-00e3e133f31e
+                text: Quarterly capacity planning sessions
                 iconName: clipboard-document-list
                 iconColor: default
                 link: ''
-              - text: Custom security rules
+              - _uuid: 585f49b6-c514-4ef1-9190-ab71f22621db
+                text: Custom security rules
                 iconName: lock-closed
                 iconColor: default
                 link: ''
-              - text: Priority feature requests
+              - _uuid: 760010d8-c373-4e6f-80f2-65ad1e09be4b
+                text: Priority feature requests
                 iconName: question-mark-circle
                 iconColor: default
                 link: ''
-              - text: Private peering arrangements
+              - _uuid: 905de601-64d5-4424-8b47-8241cd2f56e1
+                text: Private peering arrangements
                 iconName: globe-alt
                 iconColor: default
                 link: ''
-              - text: Daily infrastructure audits
+              - _uuid: f879d853-fe8b-43bd-9a07-de15b3a3487a
+                text: Daily infrastructure audits
                 iconName: clipboard-document-check
                 iconColor: default
                 link: ''
-              - text: Contractual response times
+              - _uuid: 23e52bd0-8ffb-47bb-99ec-379b4d256c66
+                text: Contractual response times
                 iconName: clock
                 iconColor: default
                 link: ''
-              - text: Access to ‘experimental’ features
+              - _uuid: c2c7648b-b670-42a1-96db-a54ee80560bd
+                text: Access to ‘experimental’ features
                 iconName: heart
                 iconColor: default
                 link: ''
@@ -297,6 +312,7 @@ pageSections:
       direction: front
     rounded: false
   - _component: page-sections/info-blocks/faq-section
+    sectionLabel: ''
     _uuid: 865c667b-da57-47d5-9288-6021835371cb
     heading: Common questions
     items:
@@ -478,16 +494,25 @@ pageSections:
             reverse: false
             reverseOrderOnMobile: false
             gap: lg
+    maxContentWidth: xl
+    paddingHorizontal: lg
     paddingVertical: 4xl
     colorScheme: inherit
     backgroundColor: base
+    background:
+      type: image
+      positionVertical: top
+      positionHorizontal: center
+      priority: false
+      imageSource: ''
+      imageAlt: ''
+      overlay: 0
     id:
     eyebrowIcon: {}
     eyebrowText: ''
     subtext: ''
     singleOpen: true
     openFirst: false
-    maxContentWidth: xl
     contentBackground: false
     verticalOffset:
       size: xl

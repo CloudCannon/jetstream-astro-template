@@ -1,4 +1,5 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import ListItem from "./ListItem.astro";
 
 type ItemProps = Record<string, unknown>;
@@ -11,7 +12,7 @@ const {
   listType = "icon",
   class: className,
   "data-children-prop": childrenDataProp,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   _uuid,
   _component,
   ...htmlAttributes
@@ -25,7 +26,8 @@ const showIcons = listType === "icon";
 
 if (!_component && !hasItems && !hasSlotContent) return;
 
-const effectiveChildrenProp = childrenDataProp ?? (useDefaultEditableBinding ? "items" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveChildrenProp = childrenDataProp ?? (isContentBlock ? "items" : null);
 const arrayDataAttributes = effectiveChildrenProp
   ? {
       "data-editable": "array",
@@ -36,9 +38,9 @@ const arrayDataAttributes = effectiveChildrenProp
   : {};
 ---
 
+{/* Namespace stays inside the root, which a re-render copies into the region element. */}
 <div
   class:list={["list", className]}
-  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   <ListTag
@@ -49,6 +51,7 @@ const arrayDataAttributes = effectiveChildrenProp
       `alignment-${alignmentHorizontal}`,
       `type-${listType}`,
     ]}
+    data-rosey-ns={_uuid}
     {...arrayDataAttributes}
   >
     <slot>

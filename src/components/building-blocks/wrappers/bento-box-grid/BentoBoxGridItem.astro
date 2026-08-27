@@ -1,9 +1,10 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import RenderBlock from "@components/utils/renderBlock.astro";
 
 const {
   contentSections,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   class: className,
   style: userStyle,
   columnSpan = 4,
@@ -14,11 +15,13 @@ const {
   _uuid,
   _component,
   "data-children-prop": childrenDataProp,
+  // Pulled out of htmlAttributes so it lands inside the root — see the markup below.
+  "data-rosey-ns": roseyNs,
   ...htmlAttributes
 } = Astro.props;
 
-const effectiveChildrenProp =
-  childrenDataProp ?? (useDefaultEditableBinding ? "contentSections" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveChildrenProp = childrenDataProp ?? (isContentBlock ? "contentSections" : null);
 const arrayDataAttributes = effectiveChildrenProp
   ? {
       "data-editable": "array",
@@ -29,6 +32,7 @@ const arrayDataAttributes = effectiveChildrenProp
   : {};
 ---
 
+{/* Namespace stays inside the root, which a re-render copies into the region element. */}
 <div
   class:list={["bento-box-grid-item", className]}
   {...htmlAttributes}
@@ -38,6 +42,7 @@ const arrayDataAttributes = effectiveChildrenProp
     data-column-span={columnSpan}
     data-row-span={rowSpan}
     style={userStyle}
+    data-rosey-ns={roseyNs}
     {...arrayDataAttributes}
   >
     <slot>

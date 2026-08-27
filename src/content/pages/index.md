@@ -446,15 +446,18 @@ pageSections:
             _component: building-blocks/core-elements/list
             _uuid: 51714e17-4b62-460c-8719-77b8bf487f48
             items:
-              - text: Global CDN with 800+ edge nodes
+              - _uuid: 74c7e04d-af6f-4742-9964-f780567b38bd
+                text: Global CDN with 800+ edge nodes
                 iconName: check-circle
                 iconColor: purple
                 link: ''
-              - text: Automated SSL certificate management
+              - _uuid: fb1fd775-33d3-42ab-92ee-d40c6450a058
+                text: Automated SSL certificate management
                 iconName: check-circle
                 iconColor: purple
                 link: ''
-              - text: "Complimentary network topology consult with\Lour most artistic engineer"
+              - _uuid: 00831e84-3da0-45f6-9582-3f3a9b0d9748
+                text: "Complimentary network topology consult with\Lour most artistic engineer"
                 iconName: check-circle
                 iconColor: purple
                 link: ''
@@ -487,15 +490,18 @@ pageSections:
             _component: building-blocks/core-elements/list
             _uuid: f1609a2e-0fcc-43f8-944a-e6761ca2d8c9
             items:
-              - text: Priority traffic routing
+              - _uuid: c24dec5f-ed28-4212-9674-809c93f1056a
+                text: Priority traffic routing
                 iconName: check-circle
                 iconColor: purple
                 link: ''
-              - text: Dedicated customer success specialist
+              - _uuid: bda68c43-f0bd-4515-8033-fae35627d188
+                text: Dedicated customer success specialist
                 iconName: check-circle
                 iconColor: purple
                 link: ''
-              - text: "Annual infrastructure health assessment conducted by our senior architects,\Lcomplete with a 40-page report bound in a collectible presentation folder"
+              - _uuid: ed537ea8-3f1e-4779-8a14-1ea5b8b1c64c
+                text: "Annual infrastructure health assessment conducted by our senior architects,\Lcomplete with a 40-page report bound in a collectible presentation folder"
                 iconName: check-circle
                 iconColor: purple
                 link: ''

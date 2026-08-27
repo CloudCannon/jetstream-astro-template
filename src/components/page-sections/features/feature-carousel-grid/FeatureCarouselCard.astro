@@ -3,12 +3,19 @@ import Heading from "@core-elements/heading/Heading.astro";
 import Icon from "@core-elements/icon/Icon.astro";
 import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import Text from "@core-elements/text/Text.astro";
-import BentoBoxGridItem from "@wrappers/bento-box-grid/BentoBoxGridItem.astro";
 import Card from "@wrappers/card/Card.astro";
 
+// Every prop is derived from this card's own data, never handed down by the parent:
+// CloudCannon re-renders this component from the array item alone, so a parent-computed
+// prop would silently vanish in the visual editor.
 const {
-  backgroundColor = "base",
-  border = true,
+  // A decorative card is a styled blank space in the grid — it keeps its placeholder
+  // heading/text in the data (hidden in the sidebar) but must never render them.
+  decorative = false,
+  // A colour name, not a CSS declaration.
+  style = "surface-linear-gradient",
+  backgroundColor = decorative ? style : "base",
+  border = !decorative,
   eyebrowIcon = {},
   eyebrowText = "",
   heading = "",
@@ -18,22 +25,18 @@ const {
   _uuid,
   _component,
   useDefaultEditableBinding = false,
-  // Read by the parent, not here. Destructured to keep them off the DOM —
-  // `style` is a colour name, not a CSS declaration.
-  decorative,
-  style,
   ...htmlAttributes
 } = Astro.props;
+
+// The `.bento-box-grid-item` cell is rendered by FeatureCarouselSlide, not here — see the
+// comment there. `.bento-box-grid-item-content` is styled globally by BentoBoxGridItem,
+// which BentoBoxGrid always pulls in alongside this markup.
 ---
 
-{
-  /* htmlAttributes carries the caller's data-editable/data-component, which belong on
-    the root element: CloudCannon's re-render nests the component inside the region,
-    doubling every data-rosey-ns below it and breaking translation lookups. */
-}
-<BentoBoxGridItem
-  columnSpan={columnSpan}
-  rowSpan={rowSpan}
+<div
+  class="bento-box-grid-item-content"
+  data-column-span={columnSpan}
+  data-row-span={rowSpan}
   {...htmlAttributes}
 >
   <Card
@@ -46,48 +49,46 @@ const {
     data-rosey-ns={_uuid}
   >
     {
-      eyebrowIcon?.name && (
-        <Icon
-          {...eyebrowIcon}
-          alignmentHorizontal="start"
-        />
-      )
-    }
-    {
-      eyebrowText && (
-        <SimpleText
-          class="eyebrow"
-          data-prop="eyebrowText"
-        >
-          {eyebrowText}
-        </SimpleText>
-      )
-    }
-    {
-      heading && (
-        <Heading
-          class="feature-slide-heading"
-          level="h3"
-          size="md"
-          alignmentHorizontal="start"
-          data-prop="heading"
-        >
-          {heading}
-        </Heading>
-      )
-    }
-    {
-      text && (
-        <Text
-          class="feature-slide-text"
-          alignmentHorizontal="start"
-          data-prop="text"
-          text={text}
-        />
+      !decorative && (
+        <Fragment>
+          {eyebrowIcon?.name && (
+            <Icon
+              {...eyebrowIcon}
+              alignmentHorizontal="start"
+            />
+          )}
+          {eyebrowText && (
+            <SimpleText
+              class="eyebrow"
+              data-prop="eyebrowText"
+            >
+              {eyebrowText}
+            </SimpleText>
+          )}
+          {heading && (
+            <Heading
+              class="feature-slide-heading"
+              level="h3"
+              size="md"
+              alignmentHorizontal="start"
+              data-prop="heading"
+            >
+              {heading}
+            </Heading>
+          )}
+          {text && (
+            <Text
+              class="feature-slide-text"
+              alignmentHorizontal="start"
+              data-prop="text"
+              text={text}
+            />
+          )}
+        </Fragment>
       )
     }
   </Card>
-</BentoBoxGridItem>
+</div>
 
 <style is:global>
   @layer page-sections {

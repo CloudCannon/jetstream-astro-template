@@ -1,24 +1,26 @@
 ---
 _schema: default
 title: About
+description: ''
 permalink:
+keywords: []
 pageSections:
   - _component: page-sections/heroes/hero-split
     _uuid: c73c8ec5-28cc-42b5-b229-b1487c595074
     title: Our mission
     eyebrowIcon:
       _component: building-blocks/core-elements/icon
-      _uuid: 3c03c4aa-f7b0-411f-88d4-20f0cd8d3b51
       name: forward
       size: 3xl
       color: brand-gradient
       background: true
       iconOffset: true
       alignmentHorizontal: start
+      _uuid: 3c03c4aa-f7b0-411f-88d4-20f0cd8d3b51
     eyebrowText:
     heading: >-
-      <p><span class="highlight-text">We exist to make the internet work</span>
-      the way people assume it already does.</p>
+      <span class="highlight-text">We exist to make the internet work</span> the
+      way people assume it already does.
     subtext:
     buttonSections: []
     image:
@@ -39,13 +41,13 @@ pageSections:
     _uuid: aba7a0ca-5950-4ad5-9367-7c3f9e25098e
     eyebrowIcon:
       _component: building-blocks/core-elements/icon
-      _uuid: 3ded794f-b0ca-4328-9e79-62e95af820e9
       name: light-bulb
       size: 3xl
       color: brand-gradient
       background: true
       iconOffset: true
       alignmentHorizontal: start
+      _uuid: 3ded794f-b0ca-4328-9e79-62e95af820e9
     eyebrowText:
     heading: Our core commitments
     subtext:
@@ -59,13 +61,13 @@ pageSections:
             style: surface-linear-gradient
             eyebrowIcon:
               _component: building-blocks/core-elements/icon
-              _uuid: 36c005ac-8b7c-4739-b7f3-d10e72469efc
               name: globe-americas
               size: lg
               color: default
               background: true
               iconOffset: false
               alignmentHorizontal: start
+              _uuid: 36c005ac-8b7c-4739-b7f3-d10e72469efc
             eyebrowText: Global reach
             heading: 847 edge nodes, six continents
             text: >-
@@ -90,13 +92,13 @@ pageSections:
             style: surface-linear-gradient
             eyebrowIcon:
               _component: building-blocks/core-elements/icon
-              _uuid: 5e155d20-1838-4bae-9802-cf33eaa53d79
               name: cog-8-tooth
               size: lg
               color: default
               background: true
               iconOffset: false
               alignmentHorizontal: start
+              _uuid: 5e155d20-1838-4bae-9802-cf33eaa53d79
             eyebrowText: Automatic everything
             heading: Infrastructure that manages itself
             text: >-
@@ -121,13 +123,13 @@ pageSections:
             style: surface-linear-gradient
             eyebrowIcon:
               _component: building-blocks/core-elements/icon
-              _uuid: a4b4fd0c-5f97-479b-9285-12a8d85761fa
               name: eye
               size: lg
               color: default
               background: true
               iconOffset: false
               alignmentHorizontal: start
+              _uuid: a4b4fd0c-5f97-479b-9285-12a8d85761fa
             eyebrowText: Real-time visibility
             heading: Analytics that update in a snap
             text: >-
@@ -145,13 +147,13 @@ pageSections:
             style: surface-linear-gradient
             eyebrowIcon:
               _component: building-blocks/core-elements/icon
-              _uuid: 89ced11d-099a-46bf-8657-21f0f5ae60ee
               name: lock-closed
               size: lg
               color: default
               background: true
               iconOffset: false
               alignmentHorizontal: start
+              _uuid: 89ced11d-099a-46bf-8657-21f0f5ae60ee
             eyebrowText: Zero-trust security
             heading: Assume everything is a threat
             text: >-
@@ -186,13 +188,13 @@ pageSections:
             style: surface-linear-gradient
             eyebrowIcon:
               _component: building-blocks/core-elements/icon
-              _uuid: 44c5a65d-8d9c-4812-8fb2-8d82c086d5e3
               name: adjustments-vertical
               size: lg
               color: default
               background: true
               iconOffset: false
               alignmentHorizontal: start
+              _uuid: 44c5a65d-8d9c-4812-8fb2-8d82c086d5e3
             eyebrowText: Obsessive redundancy
             heading: Multiple backups for our backups
             text: >-
@@ -220,13 +222,13 @@ pageSections:
             style: surface-linear-gradient
             eyebrowIcon:
               _component: building-blocks/core-elements/icon
-              _uuid: 9325a912-6126-4b79-921f-7dbc5d5ba61e
               name: adjustments-horizontal
               size: lg
               color: default
               background: true
               iconOffset: false
               alignmentHorizontal: start
+              _uuid: 9325a912-6126-4b79-921f-7dbc5d5ba61e
             eyebrowText: Obsessive redundancy
             heading: Redundancy layers all the way down
             text: >-
@@ -260,13 +262,13 @@ pageSections:
             style: surface-linear-gradient
             eyebrowIcon:
               _component: building-blocks/core-elements/icon
-              _uuid: fb2af7df-c27a-4c6d-b9fe-c2947afed5d9
               name: adjustments-vertical
               size: lg
               color: default
               background: true
               iconOffset: false
               alignmentHorizontal: start
+              _uuid: fb2af7df-c27a-4c6d-b9fe-c2947afed5d9
             eyebrowText: Obsessive redundancy
             heading: Trust nothing, backup everything
             text: >-
@@ -470,6 +472,7 @@ pageSections:
         hideText: false
         link: ''
         iconName: calendar-days
+        iconColor: default
         iconPosition: before
         variant: primary
         size: md
@@ -479,5 +482,4 @@ pageSections:
     backgroundColor: highlight-radial-gradient
     contentBackground: false
     rounded: true
-description: ''
 ---

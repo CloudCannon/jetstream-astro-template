@@ -1,4 +1,5 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import ContentSelectorPanel from "./ContentSelectorPanel.astro";
 import { slugifyLabel } from "@components/utils/slugify";
 import type { ContentSelectorItem } from "../../../../types";
@@ -8,7 +9,7 @@ const {
   navigationPosition = "start",
   class: className,
   label,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   "data-children-prop": childrenDataProp,
   _uuid,
   _component,
@@ -22,7 +23,8 @@ if (!htmlAttributes.id && label) {
 const uniqueId = crypto.randomUUID();
 const groupName = `tabs-${uniqueId}`;
 
-const effectiveChildrenProp = childrenDataProp ?? (useDefaultEditableBinding ? "items" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveChildrenProp = childrenDataProp ?? (isContentBlock ? "items" : null);
 const arrayDataAttributes = effectiveChildrenProp
   ? {
       "data-editable": "array",

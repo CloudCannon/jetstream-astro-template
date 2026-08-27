@@ -1,4 +1,5 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import Component from "@components/utils/renderBlock.astro";
 import { slugifyLabel } from "@components/utils/slugify";
 import Image from "@core-elements/image/Image.astro";
@@ -20,7 +21,7 @@ const {
   },
   background,
   rounded = false,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   contentClass = "",
   class: className,
   style: userStyle,
@@ -51,8 +52,8 @@ if (!htmlAttributes.id && label) {
 }
 
 const hasContentSections = contentSections !== undefined;
-const effectiveChildrenProp =
-  childrenDataProp ?? (useDefaultEditableBinding ? "contentSections" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveChildrenProp = childrenDataProp ?? (isContentBlock ? "contentSections" : null);
 const arrayDataAttributes =
   effectiveChildrenProp && hasContentSections
     ? {
@@ -64,10 +65,13 @@ const arrayDataAttributes =
     : {};
 ---
 
+{
+  /* Namespace stays inside the root, which a re-render copies into the region element.
+  .outer-content still encloses the slot, so keys are unaffected. */
+}
 <section
   class:list={["custom-section", className]}
   style={userStyle || undefined}
-  data-rosey-ns={sectionRoseyNs}
   {...htmlAttributes}
 >
   <div
@@ -77,6 +81,7 @@ const arrayDataAttributes =
       rounded && "rounded",
       verticalOffset?.direction && `pull-up pull-up-${verticalOffset.direction}`,
     ]}
+    data-rosey-ns={sectionRoseyNs}
     data-theme={colorScheme && colorScheme !== "inherit" ? colorScheme : undefined}
     style={`--pull-up: var(--spacing-${verticalOffset.size})`}
     data-theme-lock={lockColorScheme || undefined}

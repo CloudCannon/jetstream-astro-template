@@ -1,4 +1,5 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import { slugifyLabel } from "@components/utils/slugify";
 import BentoBoxItem from "./BentoBoxItem.astro";
 
@@ -11,7 +12,7 @@ const {
   label,
   items = [],
   class: className,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   _component,
   "data-children-prop": childrenDataProp,
   ...htmlAttributes
@@ -23,7 +24,8 @@ if (!htmlAttributes.id && label) {
 
 const bentoStyles = `--min-row-height: ${minRowHeight}px`;
 
-const effectiveChildrenProp = childrenDataProp ?? (useDefaultEditableBinding ? "items" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveChildrenProp = childrenDataProp ?? (isContentBlock ? "items" : null);
 const arrayDataAttributes = effectiveChildrenProp
   ? { "data-editable": "array", "data-prop": effectiveChildrenProp, "data-direction": "row" }
   : {};

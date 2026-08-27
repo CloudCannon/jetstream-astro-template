@@ -1,0 +1,13 @@
+---
+// Strips Rosey tagging from a rendered subtree.
+//
+// Snippets in a post body are the same page-section components used for page building,
+// so they tag their own text with data-rosey. A post body is translated by its per-locale
+// content file instead, and the two systems can't share an element: every snippet on the
+// page would derive the same key from its `data-prop` (one `heading` for all of them,
+// since MDX props carry no `_uuid` to namespace with), and Rosey's substitution would
+// then overwrite whatever the locale's content file says.
+const html = await Astro.slots.render("default");
+---
+
+<Fragment set:html={html.replace(/ data-rosey(?:-[a-z-]+)?="[^"]*"/g, "")} />

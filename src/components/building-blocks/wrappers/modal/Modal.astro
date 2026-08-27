@@ -1,4 +1,5 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import Component from "@components/utils/renderBlock.astro";
 import { slugifyLabel } from "@components/utils/slugify";
 import Button from "@core-elements/button/Button.astro";
@@ -12,7 +13,7 @@ const {
   triggerIconName,
   size = "md",
   contentSections,
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   class: className,
   "data-children-prop": childrenDataProp,
   _uuid,
@@ -23,12 +24,12 @@ const {
 const generatedLabel = label || heading || `Modal-${crypto.randomUUID()}`;
 const popoverId = `modal-${slugifyLabel(generatedLabel)}`;
 
-const effectiveChildrenProp =
-  childrenDataProp ?? (useDefaultEditableBinding ? "contentSections" : null);
+const isContentBlock = isEditable(Astro.props);
+const effectiveChildrenProp = childrenDataProp ?? (isContentBlock ? "contentSections" : null);
 const arrayDataAttributes = effectiveChildrenProp
   ? { "data-editable": "array", "data-prop": effectiveChildrenProp }
   : {};
-const headingDataAttributes = useDefaultEditableBinding
+const headingDataAttributes = isContentBlock
   ? { "data-editable": "text", "data-prop": "heading" }
   : {};
 
@@ -40,9 +41,12 @@ const hasTrigger = triggerText?.trim().length > 0 || triggerIconName?.trim().len
 if (!_component && !hasContentSections && !hasSlotContent) return;
 ---
 
+{
+  /* Namespace stays inside the root, which a re-render copies into the region element.
+  The trigger namespaces itself from _uuid; the popover carries it for the rest. */
+}
 <div
   class:list={["modal", className]}
-  data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
   {
@@ -55,6 +59,7 @@ if (!_component && !hasContentSections && !hasSlotContent) return;
         link={`^${popoverId}`}
         class="modal-trigger"
         data-rosey="trigger_text"
+        _uuid={_uuid}
       />
     )
   }
@@ -62,6 +67,7 @@ if (!_component && !hasContentSections && !hasSlotContent) return;
   <div
     id={popoverId}
     popover="auto"
+    data-rosey-ns={_uuid}
     class:list={["modal-popover", `size-${size}`]}
     role="dialog"
     aria-label={hasHeading ? undefined : label}

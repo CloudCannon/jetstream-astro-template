@@ -1,4 +1,5 @@
 ---
+import { isEditable } from "@component-utils/editable";
 import Component from "@components/utils/renderBlock.astro";
 import { slugifyLabel } from "@components/utils/slugify";
 
@@ -12,7 +13,7 @@ const {
   fixedWidth,
   minSplitWidth = 700,
   gap = "lg",
-  useDefaultEditableBinding = false,
+  useDefaultEditableBinding,
   class: className,
   label,
   "data-first-prop": customFirstDataProp,
@@ -26,10 +27,12 @@ if (!htmlAttributes.id && label) {
   htmlAttributes.id = slugifyLabel(label);
 }
 
+const isContentBlock = isEditable(Astro.props);
+
 const effectiveFirstProp =
-  customFirstDataProp ?? (useDefaultEditableBinding ? "firstColumnContentSections" : null);
+  customFirstDataProp ?? (isContentBlock ? "firstColumnContentSections" : null);
 const effectiveSecondProp =
-  customSecondDataProp ?? (useDefaultEditableBinding ? "secondColumnContentSections" : null);
+  customSecondDataProp ?? (isContentBlock ? "secondColumnContentSections" : null);
 
 // Get content blocks and prop names based on reverse setting
 const firstSplitBlocks = reverse ? secondColumnContentSections : firstColumnContentSections;
