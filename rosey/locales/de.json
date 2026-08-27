@@ -1959,6 +1959,11 @@
     "value": "Verfügbarkeit",
     "_base_original": "Uptime"
   },
+  "ui:locale_picker": {
+    "original": "Change language",
+    "value": "Sprache wechseln",
+    "_base_original": "Change language"
+  },
   "ui:theme_toggle": {
     "original": "Toggle dark mode",
     "value": "Dunkelmodus umschalten",

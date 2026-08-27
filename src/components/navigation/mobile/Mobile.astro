@@ -314,7 +314,7 @@ function createNavItemData(item, level, parentGroupId) {
         })
       }
     </ul>
-    <LocalePicker class="mobile-locale-picker" />
+    <LocalePicker class="mobile-locale-picker locale-picker--block" />
   </div>
 </nav>
 
@@ -529,6 +529,12 @@ function createNavItemData(item, level, parentGroupId) {
       .mobile-content {
         flex: 1;
         overflow-y: auto;
+      }
+
+      /* Sits under the last (already bordered) nav row, so it needs breathing room
+         rather than another divider. */
+      .mobile-locale-picker {
+        padding: var(--spacing-md);
       }
 
       .mobile-list {
