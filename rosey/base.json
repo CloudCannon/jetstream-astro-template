@@ -193,6 +193,14 @@
       },
       "total": 1
     },
+    "about:55fedd0c-553a-4d27-9c2d-be1112a71a30:2319280a-29a5-43c0-9128-666703efa37c:text": {
+      "original": " View open positions ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
     "about:55fedd0c-553a-4d27-9c2d-be1112a71a30:eyebrowText": {
       "original": "  ",
       "value": null,
@@ -203,14 +211,6 @@
     },
     "about:55fedd0c-553a-4d27-9c2d-be1112a71a30:heading": {
       "original": "  Join the team that takes infrastructure personally  ",
-      "value": null,
-      "pages": {
-        "about/index.html": 1
-      },
-      "total": 1
-    },
-    "about:55fedd0c-553a-4d27-9c2d-be1112a71a30:text": {
-      "original": " View open positions ",
       "value": null,
       "pages": {
         "about/index.html": 1
@@ -569,6 +569,54 @@
       },
       "total": 1
     },
+    "about:b66c659a-82db-4a57-a878-548cedd2d782:2137f543-e0e7-4113-878f-d83e8cbcad3b:role": {
+      "original": " VP of Customer Success ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:b66c659a-82db-4a57-a878-548cedd2d782:470d9a38-a9ab-4112-b222-8e10e7d5ac7d:role": {
+      "original": " VP of Engineering ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:b66c659a-82db-4a57-a878-548cedd2d782:6c4b5141-d659-4153-b8f9-aa2f93feaa7c:role": {
+      "original": " Chief Security Officer ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:b66c659a-82db-4a57-a878-548cedd2d782:abd48cd0-7d1e-43e4-ba1c-5921e60cc87a:role": {
+      "original": " Co-founder &amp; Chief Technology Officer ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:b66c659a-82db-4a57-a878-548cedd2d782:c63acdd1-33d5-4366-a000-34f0c17ca88b:role": {
+      "original": " Vice President of Network Operations ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
+    "about:b66c659a-82db-4a57-a878-548cedd2d782:da880cd2-4b1f-435b-a763-5363c1f95b82:role": {
+      "original": " Co-founder &amp; Chief Executive Officer ",
+      "value": null,
+      "pages": {
+        "about/index.html": 1
+      },
+      "total": 1
+    },
     "about:b66c659a-82db-4a57-a878-548cedd2d782:eyebrowText": {
       "original": "  ",
       "value": null,
@@ -602,7 +650,7 @@
       "total": 1
     },
     "about:c73c8ec5-28cc-42b5-b229-b1487c595074:heading": {
-      "original": "  <p><span class=\"highlight-text\">We exist to make the internet work</span> the way people assume it already does.</p>  ",
+      "original": "  <span class=\"highlight-text\">We exist to make the internet work</span> the way people assume it already does.  ",
       "value": null,
       "pages": {
         "about/index.html": 1
@@ -633,265 +681,71 @@
       },
       "total": 1
     },
-    "blog/sample-blog-post-with-a-range-of-snippets:authorDescription": {
-      "original": " Placeholder Copywriter, Jetstream ",
+    "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:1506a3cd-18f6-40ff-a7b8-f83a5fb7e52a:subtext": {
+      "original": "  <p>New resolver response time (acceptable)</p>\n  ",
       "value": null,
       "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
       },
-      "total": 3
+      "total": 4
     },
-    "blog/sample-blog-post-with-a-range-of-snippets:authorName": {
-      "original": " Robin Poynter ",
+    "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:1506a3cd-18f6-40ff-a7b8-f83a5fb7e52a:suffix": {
+      "original": " ms ",
       "value": null,
       "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
       },
-      "total": 3
+      "total": 4
     },
-    "blog/sample-blog-post-with-a-range-of-snippets:button_text": {
-      "original": " Get started ",
+    "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:35b75e81-d5f8-4e6a-9468-dddb3682756d:subtext": {
+      "original": "  <p>Previous resolver response time (unacceptable)</p>\n  ",
       "value": null,
       "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
       },
-      "total": 3
+      "total": 4
     },
-    "blog/sample-blog-post-with-a-range-of-snippets:cell_cell-one": {
-      "original": " Cell one ",
+    "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:35b75e81-d5f8-4e6a-9468-dddb3682756d:suffix": {
+      "original": " ms ",
       "value": null,
       "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 5,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 5,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 5
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
       },
-      "total": 15
+      "total": 4
     },
-    "blog/sample-blog-post-with-a-range-of-snippets:cell_cell-three": {
-      "original": " Cell three ",
+    "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:5497f7b6-25c3-49e2-a4d8-d97ee323b103:subtext": {
+      "original": "  <p>Lines of code written, deleted, rewritten</p>\n  ",
       "value": null,
       "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 5,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 5,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 5
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
       },
-      "total": 15
+      "total": 4
     },
-    "blog/sample-blog-post-with-a-range-of-snippets:cell_cell-two": {
-      "original": " Cell two ",
+    "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:5497f7b6-25c3-49e2-a4d8-d97ee323b103:suffix": {
+      "original": " K+ ",
       "value": null,
       "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 5,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 5,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 5
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
       },
-      "total": 15
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:description": {
-      "original": "  <p>Feature description placeholder text that will be replaced with actual content. This placeholder text is slightly longer, because this card is set to take up two rows in the grid rather than one.</p>\n  ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 6,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 6,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 6
-      },
-      "total": 18
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:eyebrow": {
-      "original": "  Optional eyebrow text displayed above the title  ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 4,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 4,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 4
-      },
-      "total": 12
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:eyebrowText": {
-      "original": " Optional label displayed above the CTA Center heading. ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 7,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 7,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 7
-      },
-      "total": 21
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:header_header-one": {
-      "original": " Header One ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
-      },
-      "total": 3
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:header_header-three": {
-      "original": " Header Three ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
-      },
-      "total": 3
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:header_header-two": {
-      "original": " Header Two ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
-      },
-      "total": 3
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:heading": {
-      "original": "  <p>Main heading text for the CTA Center section.</p>  ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 7,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 7,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 7
-      },
-      "total": 21
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:label": {
-      "original": "My input",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 8,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 8,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 8
-      },
-      "total": 24
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:option_option-1": {
-      "original": " Option 1  ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
-      },
-      "total": 3
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:option_option-2": {
-      "original": " Option 2  ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
-      },
-      "total": 3
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:option_option-3": {
-      "original": " Option 3  ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
-      },
-      "total": 3
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:placeholder": {
-      "original": "name@example.com",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 4,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 4,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 4
-      },
-      "total": 12
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:price_prefix": {
-      "original": " $ ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
-      },
-      "total": 3
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:price_suffix": {
-      "original": " /mo ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
-      },
-      "total": 3
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:section_section-one": {
-      "original": " Section One ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
-      },
-      "total": 3
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:section_section-three": {
-      "original": " Section Three ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
-      },
-      "total": 3
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:section_section-two": {
-      "original": " Section Two ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 1
-      },
-      "total": 3
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:subtext": {
-      "original": "  <p>Optional subtext displayed beneath the CTA Center heading.</p>\n  ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 7,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 7,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 7
-      },
-      "total": 21
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:text": {
-      "original": " Button text with optional icon ",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 12,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 12,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 12
-      },
-      "total": 36
-    },
-    "blog/sample-blog-post-with-a-range-of-snippets:title": {
-      "original": "Question text 1",
-      "value": null,
-      "pages": {
-        "blog/sample-blog-post-with-a-range-of-snippets/index.html": 10,
-        "de/blog/sample-blog-post-with-a-range-of-snippets/index.html": 10,
-        "fr/blog/sample-blog-post-with-a-range-of-snippets/index.html": 10
-      },
-      "total": 30
+      "total": 4
     },
     "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:card_heading": {
       "original": "  Why we rebuilt our DNS resolver from scratch (<span class=\"highlight-text\">again</span>)  ",
@@ -906,6 +760,28 @@
     },
     "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:card_subtext": {
       "original": "  <p>Sometimes good enough isn't good enough, especially when our engineers have strong opinions about query optimization.</p>\n  ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
+      },
+      "total": 4
+    },
+    "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:d353cfdf-967b-447d-85af-1bcfdb391d8d:text": {
+      "original": " Learn why we did it ",
+      "value": null,
+      "pages": {
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
+      },
+      "total": 4
+    },
+    "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:e6eed8a1-1695-478b-9f4c-a02cd5088362:subtext": {
+      "original": "  <p>All-hands meetings to convince management</p>\n  ",
       "value": null,
       "pages": {
         "blog/2/index.html": 1,
@@ -930,26 +806,15 @@
       "original": "  <p>Insights, updates, and occasional technical deep-dives from the team that keeps the internet running.</p>\n  ",
       "value": null,
       "pages": {
-        "blog/2/index.html": 5,
-        "blog/index.html": 5,
-        "de/blog/index.html": 5,
-        "fr/blog/index.html": 5
+        "blog/2/index.html": 1,
+        "blog/index.html": 1,
+        "de/blog/index.html": 1,
+        "fr/blog/index.html": 1
       },
-      "total": 20
+      "total": 4
     },
-    "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:suffix": {
-      "original": " ms ",
-      "value": null,
-      "pages": {
-        "blog/2/index.html": 3,
-        "blog/index.html": 3,
-        "de/blog/index.html": 3,
-        "fr/blog/index.html": 3
-      },
-      "total": 12
-    },
-    "blog:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:text": {
-      "original": " Learn why we did it ",
+    "blog:7db52143-7dee-4ca3-9015-4531e5614fc9:02cd2bbb-bf93-447c-8ad1-7906f73ade56:text": {
+      "original": " Or talk to us about fiber optics instead ",
       "value": null,
       "pages": {
         "blog/2/index.html": 1,
@@ -972,17 +837,6 @@
     },
     "blog:7db52143-7dee-4ca3-9015-4531e5614fc9:heading": {
       "original": "  Let's build your next tech breakthough together  ",
-      "value": null,
-      "pages": {
-        "blog/2/index.html": 1,
-        "blog/index.html": 1,
-        "de/blog/index.html": 1,
-        "fr/blog/index.html": 1
-      },
-      "total": 4
-    },
-    "blog:7db52143-7dee-4ca3-9015-4531e5614fc9:text": {
-      "original": " Or talk to us about fiber optics instead ",
       "value": null,
       "pages": {
         "blog/2/index.html": 1,
@@ -1038,6 +892,14 @@
       },
       "total": 1
     },
+    "contact:91088337-2ba5-4f01-b226-49fcbdc83792:ec2d7566-31bd-4bbf-89eb-19ee325a3561:text": {
+      "original": " Send message ",
+      "value": null,
+      "pages": {
+        "contact/index.html": 1
+      },
+      "total": 1
+    },
     "contact:91088337-2ba5-4f01-b226-49fcbdc83792:eyebrowText": {
       "original": "  ",
       "value": null,
@@ -1056,14 +918,6 @@
     },
     "contact:91088337-2ba5-4f01-b226-49fcbdc83792:subtext": {
       "original": "  <p>Our solutions team stands ready with answers and an appropriate level of enthusiasm.</p>\n  ",
-      "value": null,
-      "pages": {
-        "contact/index.html": 1
-      },
-      "total": 1
-    },
-    "contact:91088337-2ba5-4f01-b226-49fcbdc83792:text": {
-      "original": " Send message ",
       "value": null,
       "pages": {
         "contact/index.html": 1
@@ -1380,7 +1234,7 @@
       },
       "total": 42
     },
-    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:button_text": {
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:006f5d70-9ed2-4114-9193-928bb0a9d45e:button_text": {
       "original": " Get started ",
       "value": null,
       "pages": {
@@ -1388,13 +1242,29 @@
       },
       "total": 1
     },
-    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:f1609a2e-0fcc-43f8-944a-e6761ca2d8c9:text": {
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:f1609a2e-0fcc-43f8-944a-e6761ca2d8c9:bda68c43-f0bd-4515-8033-fae35627d188:text": {
+      "original": " Dedicated customer success specialist ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:f1609a2e-0fcc-43f8-944a-e6761ca2d8c9:c24dec5f-ed28-4212-9674-809c93f1056a:text": {
       "original": " Priority traffic routing ",
       "value": null,
       "pages": {
-        "index.html": 3
+        "index.html": 1
       },
-      "total": 3
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:f1609a2e-0fcc-43f8-944a-e6761ca2d8c9:ed537ea8-3f1e-4779-8a14-1ea5b8b1c64c:text": {
+      "original": " Annual infrastructure health assessment conducted by our senior architects, complete with a 40-page report bound in a collectible presentation folder ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
     },
     "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:price_prefix": {
       "original": " $ ",
@@ -1428,16 +1298,32 @@
       },
       "total": 1
     },
-    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:51714e17-4b62-460c-8719-77b8bf487f48:text": {
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:4ab8503c-947b-4072-8f89-8da99e6a3bcd:button_text": {
+      "original": " Get started ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:51714e17-4b62-460c-8719-77b8bf487f48:00831e84-3da0-45f6-9582-3f3a9b0d9748:text": {
+      "original": " Complimentary network topology consult with our most artistic engineer ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:51714e17-4b62-460c-8719-77b8bf487f48:74c7e04d-af6f-4742-9964-f780567b38bd:text": {
       "original": " Global CDN with 800+ edge nodes ",
       "value": null,
       "pages": {
-        "index.html": 3
+        "index.html": 1
       },
-      "total": 3
+      "total": 1
     },
-    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:button_text": {
-      "original": " Get started ",
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:51714e17-4b62-460c-8719-77b8bf487f48:fb1fd775-33d3-42ab-92ee-d40c6450a058:text": {
+      "original": " Automated SSL certificate management ",
       "value": null,
       "pages": {
         "index.html": 1
@@ -1612,6 +1498,22 @@
       },
       "total": 1
     },
+    "index:55923a16-4468-45e1-83dc-e18a8169bb02:c0d5daba-9f4a-4f89-9a52-bfa90214e36a:text": {
+      "original": " Deploy Jetstream on CloudCannon ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:55923a16-4468-45e1-83dc-e18a8169bb02:d24821f2-8b41-414f-bc2a-e701806c4d88:text": {
+      "original": " Check out the Component Starter ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
     "index:55923a16-4468-45e1-83dc-e18a8169bb02:eyebrowText": {
       "original": "  ",
       "value": null,
@@ -1635,14 +1537,6 @@
         "index.html": 1
       },
       "total": 1
-    },
-    "index:55923a16-4468-45e1-83dc-e18a8169bb02:text": {
-      "original": " Deploy Jetstream on CloudCannon ",
-      "value": null,
-      "pages": {
-        "index.html": 2
-      },
-      "total": 2
     },
     "index:6900a886-16f8-4c52-aa87-a0ca5d55c247:authorDescription": {
       "original": " CTO, MediConnect Healthcare ",
@@ -1668,6 +1562,14 @@
       },
       "total": 1
     },
+    "index:69076c96-2f59-46c6-95e2-bc1d35b1f8dd:47ca39d1-d7d7-4ee5-bf46-4fe3dc9649e7:text": {
+      "original": " Book a strategy session ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
     "index:69076c96-2f59-46c6-95e2-bc1d35b1f8dd:eyebrowText": {
       "original": "  ",
       "value": null,
@@ -1684,14 +1586,6 @@
       },
       "total": 1
     },
-    "index:69076c96-2f59-46c6-95e2-bc1d35b1f8dd:text": {
-      "original": " Book a strategy session ",
-      "value": null,
-      "pages": {
-        "index.html": 1
-      },
-      "total": 1
-    },
     "index:bf10aca8-2465-4dae-adab-96e1e6b88a69:heading": {
       "original": "  We’ve solved the internet for the world’s most ambitious engineering teams.  ",
       "value": null,
@@ -1700,8 +1594,48 @@
       },
       "total": 1
     },
+    "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:41d8c1ca-cc3c-483d-8fdb-a55e14a02657:text": {
+      "original": "  <p><strong>More numbers than other companies</strong></p>\n  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
     "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:4d8a8b67-7da8-4850-88cc-60abf671e42e:suffix": {
       "original": " % ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:69a6d9aa-a6a2-4f91-a04e-e3b0ebc9bafd:text": {
+      "original": "  <p><strong>Reduction in connection quality complaints</strong></p>\n  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:8f0cf7c6-0035-4695-a05f-5e23a013c19c:text": {
+      "original": "  <p><strong>Average transaction completion time</strong></p>\n  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:95d06cdc-baf8-4e74-bd71-144f167a1ac8:text": {
+      "original": "  <p><strong>Mitigation rate against 12,000+ daily attack attempts</strong></p>\n  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:b3940bab-473b-427f-bc06-93077c3cee52:text": {
+      "original": "  We implemented our low-latency routing protocol and deployed dedicated health sector edge nodes with HIPAA-compliant encryption that doesn't slow things down.<br>Doctors can read patient expressions in real-time, and medical care is delivered at the speed of actual conversation — which, our research indicates, is how medical care should work.  ",
       "value": null,
       "pages": {
         "index.html": 1
@@ -1732,6 +1666,14 @@
       },
       "total": 1
     },
+    "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:f39bcacf-81db-4aa3-97e1-a77d28c3016f:text": {
+      "original": "  FinTrust needed transaction speeds that matched customer expectations and security that exceeded regulatory paranoia. Their customers now experience instantaneous transfers while attempted attacks are neutralized before they even realize they've failed. Banking infrastructure that's faster than fraud and more reliable than gravity.  ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
     "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:f7c19cc3-f480-4e45-81c2-9d4f5637b507:suffix": {
       "original": " % ",
       "value": null,
@@ -1755,14 +1697,6 @@
         "index.html": 1
       },
       "total": 1
-    },
-    "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:text": {
-      "original": "  We implemented our low-latency routing protocol and deployed dedicated health sector edge nodes with HIPAA-compliant encryption that doesn't slow things down.<br>Doctors can read patient expressions in real-time, and medical care is delivered at the speed of actual conversation — which, our research indicates, is how medical care should work.  ",
-      "value": null,
-      "pages": {
-        "index.html": 6
-      },
-      "total": 6
     },
     "index:page_description": {
       "original": "An Astro template built for CloudCannon with visual editing, flexible components, and an exceptional developer experience. Deploy your next project with speed and style.",
@@ -3668,6 +3602,14 @@
       },
       "total": 19
     },
+    "pricing:7a77bb8e-fe69-401a-86e4-2216b8322d07:1bfbcada-3882-4c71-ac19-29b62a075d00:text": {
+      "original": " Send message ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
     "pricing:7a77bb8e-fe69-401a-86e4-2216b8322d07:9c3edb61-c4cf-47b8-8107-eae212ca56a5:label": {
       "original": "Email",
       "value": null,
@@ -3716,21 +3658,21 @@
       },
       "total": 1
     },
-    "pricing:7a77bb8e-fe69-401a-86e4-2216b8322d07:text": {
-      "original": " Send message ",
+    "pricing:865c667b-da57-47d5-9288-6021835371cb:1171b6c3-bdbe-47e1-bf75-5b9a59d765f4:51d96ae9-31d0-4176-a494-d6ab25557af1:text": {
+      "original": "  <p>Approximately seven minutes for basic setup, assuming you can type reasonably fast and don't get distracted.</p>\n<p>Our onboarding process involves pointing your DNS at our nameservers and letting our automation handle the rest.</p>\n<p>For more complex migrations requiring custom configurations, our team can have you operational within 24 hours.</p>\n<p>We've timed it. Multiple times. With stopwatches.</p>\n  ",
       "value": null,
       "pages": {
         "pricing/index.html": 1
       },
       "total": 1
     },
-    "pricing:865c667b-da57-47d5-9288-6021835371cb:1171b6c3-bdbe-47e1-bf75-5b9a59d765f4:text": {
-      "original": "  <p>Approximately seven minutes for basic setup, assuming you can type reasonably fast and don't get distracted.</p>\n<p>Our onboarding process involves pointing your DNS at our nameservers and letting our automation handle the rest.</p>\n<p>For more complex migrations requiring custom configurations, our team can have you operational within 24 hours.</p>\n<p>We've timed it. Multiple times. With stopwatches.</p>\n  ",
+    "pricing:865c667b-da57-47d5-9288-6021835371cb:1171b6c3-bdbe-47e1-bf75-5b9a59d765f4:9df4a772-d7a3-491c-8d20-d44509dff41a:text": {
+      "original": " Get started ",
       "value": null,
       "pages": {
-        "pricing/index.html": 2
+        "pricing/index.html": 1
       },
-      "total": 2
+      "total": 1
     },
     "pricing:865c667b-da57-47d5-9288-6021835371cb:1171b6c3-bdbe-47e1-bf75-5b9a59d765f4:title": {
       "original": "How quickly can I get started?",
@@ -3740,13 +3682,21 @@
       },
       "total": 1
     },
-    "pricing:865c667b-da57-47d5-9288-6021835371cb:31154b29-6cad-4ba9-9d64-87ab542472ab:text": {
+    "pricing:865c667b-da57-47d5-9288-6021835371cb:31154b29-6cad-4ba9-9d64-87ab542472ab:843c9101-4111-42fe-a6e3-f07ea642ed03:text": {
+      "original": " Get started ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:865c667b-da57-47d5-9288-6021835371cb:31154b29-6cad-4ba9-9d64-87ab542472ab:87fefb94-3562-463c-af6c-9d94c746d329:text": {
       "original": "  <p>You can cancel anytime from your dashboard without talking to a retention specialist who's been trained to make you feel guilty.</p>\n<p>We'll continue service through the end of your billing period, provide export tools for your configuration data, and part ways professionally.</p>\n<p>Our cancellation process takes approximately 90 seconds, which our legal team insists is still too generous but our engineering team considers appropriately respectful of people's time.</p>\n  ",
       "value": null,
       "pages": {
-        "pricing/index.html": 2
+        "pricing/index.html": 1
       },
-      "total": 2
+      "total": 1
     },
     "pricing:865c667b-da57-47d5-9288-6021835371cb:31154b29-6cad-4ba9-9d64-87ab542472ab:title": {
       "original": "What if I need to cancel my service?",
@@ -3756,13 +3706,21 @@
       },
       "total": 1
     },
-    "pricing:865c667b-da57-47d5-9288-6021835371cb:ecbff5cb-8457-4cf4-97ad-b5874fa08620:text": {
+    "pricing:865c667b-da57-47d5-9288-6021835371cb:ecbff5cb-8457-4cf4-97ad-b5874fa08620:0f00e308-402f-483c-bb49-b06714a101d7:text": {
+      "original": " Get started ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:865c667b-da57-47d5-9288-6021835371cb:ecbff5cb-8457-4cf4-97ad-b5874fa08620:f87d5b92-f9be-4300-a25b-c1979936d37b:text": {
       "original": "  <p>We'll send you a polite notification and continue serving your traffic without interruption, because throttling your users mid-session seems counterproductive to everyone involved.</p>\n<p>You'll be billed for overage at a reasonable per-GB rate that we've listed clearly in our documentation.</p>\n<p>If you're consistently exceeding your plan limits, we'll suggest upgrading to a tier that matches your actual usage — our billing team considers surprises a sign of poor communication.</p>\n  ",
       "value": null,
       "pages": {
-        "pricing/index.html": 2
+        "pricing/index.html": 1
       },
-      "total": 2
+      "total": 1
     },
     "pricing:865c667b-da57-47d5-9288-6021835371cb:ecbff5cb-8457-4cf4-97ad-b5874fa08620:title": {
       "original": "What happens if I exceed my bandwidth limit?",
@@ -3780,16 +3738,88 @@
       },
       "total": 1
     },
-    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:text": {
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:23e52bd0-8ffb-47bb-99ec-379b4d256c66:text": {
+      "original": " Contractual response times ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:3437e017-5c2f-477a-9ee6-00e3e133f31e:text": {
+      "original": " Quarterly capacity planning sessions ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:585f49b6-c514-4ef1-9190-ab71f22621db:text": {
+      "original": " Custom security rules ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:6fdc9f89-5e13-4138-bf56-f42cc693e464:text": {
       "original": " Custom API rate limits ",
       "value": null,
       "pages": {
-        "pricing/index.html": 9
+        "pricing/index.html": 1
       },
-      "total": 9
+      "total": 1
     },
-    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:button_text": {
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:760010d8-c373-4e6f-80f2-65ad1e09be4b:text": {
+      "original": " Priority feature requests ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:905de601-64d5-4424-8b47-8241cd2f56e1:text": {
+      "original": " Private peering arrangements ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:b7eddd84-8f0f-44a3-bfb7-eb7c4c557b5a:text": {
+      "original": " Dedicated Slack channel with our operations team ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:c2c7648b-b670-42a1-96db-a54ee80560bd:text": {
+      "original": " Access to ‘experimental’ features ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:762c488b-8236-4c03-b1b9-8bb538ee9fe0:f879d853-fe8b-43bd-9a07-de15b3a3487a:text": {
+      "original": " Daily infrastructure audits ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:e5c214bf-5b73-4490-9496-70d279cc55d6:button_text": {
       "original": " Get started ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:29507459-313b-4562-8d0a-fede7ae607dd:price_amount": {
+      "original": " Custom to your needs ",
       "value": null,
       "pages": {
         "pricing/index.html": 1
@@ -3812,15 +3842,31 @@
       },
       "total": 1
     },
-    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:9cf82f02-01bd-463a-8009-7b30fc5fe14e:text": {
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:9cf82f02-01bd-463a-8009-7b30fc5fe14e:d42d04dc-078d-4aba-a75a-b5d4688770ed:text": {
+      "original": " Automated SSL certificate management ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:9cf82f02-01bd-463a-8009-7b30fc5fe14e:d5d9a7cd-0d95-4fb0-b91d-6436cbe101ba:text": {
+      "original": " Complimentary network topology consult with our most artistic engineer ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:9cf82f02-01bd-463a-8009-7b30fc5fe14e:e8b1319e-6db6-4227-92ac-8c0565cea867:text": {
       "original": " Global CDN with 800+ edge nodes ",
       "value": null,
       "pages": {
-        "pricing/index.html": 3
+        "pricing/index.html": 1
       },
-      "total": 3
+      "total": 1
     },
-    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:button_text": {
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:fefb7ac1-e64f-4b2c-9f3d-078edeff9ae5:button_text": {
       "original": " Get started ",
       "value": null,
       "pages": {
@@ -3860,15 +3906,31 @@
       },
       "total": 1
     },
-    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:2d5ed86e-98d8-4f05-ada6-f2cdf95e69ae:text": {
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:2d5ed86e-98d8-4f05-ada6-f2cdf95e69ae:046ac117-ec56-480b-951f-39a9e905a618:text": {
+      "original": " Dedicated customer success specialist ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:2d5ed86e-98d8-4f05-ada6-f2cdf95e69ae:6bc7b8df-0abf-4995-85ac-061ebe77856b:text": {
       "original": " Priority traffic routing ",
       "value": null,
       "pages": {
-        "pricing/index.html": 3
+        "pricing/index.html": 1
       },
-      "total": 3
+      "total": 1
     },
-    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:button_text": {
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:2d5ed86e-98d8-4f05-ada6-f2cdf95e69ae:c0951914-45de-4b10-b194-03fcbc3f543a:text": {
+      "original": " Annual infrastructure health assessment conducted by our senior architects, complete with a 40-page report bound in a collectible presentation folder ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:4e1e3ab0-e40b-4f16-9818-3327f2166a96:button_text": {
       "original": " Get started ",
       "value": null,
       "pages": {
@@ -4196,6 +4258,14 @@
       },
       "total": 2
     },
+    "pricing:c791a404-7d89-4f00-a61a-33d122370996:3a522cae-eb54-4a08-ac14-55d33c03cd48:text": {
+      "original": " Book a demo ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
     "pricing:c791a404-7d89-4f00-a61a-33d122370996:eyebrowText": {
       "original": "  ",
       "value": null,
@@ -4214,14 +4284,6 @@
     },
     "pricing:c791a404-7d89-4f00-a61a-33d122370996:subtext": {
       "original": "  <p>We’ve eliminated the confusion typically associated with infrastructure pricing <br>through a strategy we call \"being straightforward about what things cost.\"</p>\n  ",
-      "value": null,
-      "pages": {
-        "pricing/index.html": 1
-      },
-      "total": 1
-    },
-    "pricing:c791a404-7d89-4f00-a61a-33d122370996:text": {
-      "original": " Book a demo ",
       "value": null,
       "pages": {
         "pricing/index.html": 1
@@ -4428,6 +4490,126 @@
       },
       "total": 1
     },
+    "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:1506a3cd-18f6-40ff-a7b8-f83a5fb7e52a:subtext": {
+      "original": "  <p>New resolver response time (acceptable)</p>\n  ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 13
+    },
+    "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:1506a3cd-18f6-40ff-a7b8-f83a5fb7e52a:suffix": {
+      "original": " ms ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 13
+    },
+    "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:35b75e81-d5f8-4e6a-9468-dddb3682756d:subtext": {
+      "original": "  <p>Previous resolver response time (unacceptable)</p>\n  ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 13
+    },
+    "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:35b75e81-d5f8-4e6a-9468-dddb3682756d:suffix": {
+      "original": " ms ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 13
+    },
+    "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:5497f7b6-25c3-49e2-a4d8-d97ee323b103:subtext": {
+      "original": "  <p>Lines of code written, deleted, rewritten</p>\n  ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 13
+    },
+    "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:5497f7b6-25c3-49e2-a4d8-d97ee323b103:suffix": {
+      "original": " K+ ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 13
+    },
     "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:card_heading": {
       "original": "  Why we rebuilt our DNS resolver from scratch (<span class=\"highlight-text\">again</span>)  ",
       "value": null,
@@ -4450,6 +4632,46 @@
     },
     "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:card_subtext": {
       "original": "  <p>Sometimes good enough isn't good enough, especially when our engineers have strong opinions about query optimization.</p>\n  ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 13
+    },
+    "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:d353cfdf-967b-447d-85af-1bcfdb391d8d:text": {
+      "original": " Learn why we did it ",
+      "value": null,
+      "pages": {
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
+      },
+      "total": 13
+    },
+    "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:e6eed8a1-1695-478b-9f4c-a02cd5088362:subtext": {
+      "original": "  <p>All-hands meetings to convince management</p>\n  ",
       "value": null,
       "pages": {
         "blog/tag/CDN/index.html": 1,
@@ -4492,44 +4714,24 @@
       "original": "  <p>Insights, updates, and occasional technical deep-dives from the team that keeps the internet running.</p>\n  ",
       "value": null,
       "pages": {
-        "blog/tag/CDN/index.html": 5,
-        "blog/tag/Caching/index.html": 5,
-        "blog/tag/Downtime/index.html": 5,
-        "blog/tag/Example/index.html": 5,
-        "blog/tag/Performance/index.html": 5,
-        "blog/tag/Photons/index.html": 5,
-        "blog/tag/Prediction/index.html": 5,
-        "blog/tag/Security/index.html": 5,
-        "blog/tag/Uptime/index.html": 5,
-        "de/blog/tag/Example/index.html": 5,
-        "de/blog/tag/Performance/index.html": 5,
-        "fr/blog/tag/Example/index.html": 5,
-        "fr/blog/tag/Performance/index.html": 5
+        "blog/tag/CDN/index.html": 1,
+        "blog/tag/Caching/index.html": 1,
+        "blog/tag/Downtime/index.html": 1,
+        "blog/tag/Example/index.html": 1,
+        "blog/tag/Performance/index.html": 1,
+        "blog/tag/Photons/index.html": 1,
+        "blog/tag/Prediction/index.html": 1,
+        "blog/tag/Security/index.html": 1,
+        "blog/tag/Uptime/index.html": 1,
+        "de/blog/tag/Example/index.html": 1,
+        "de/blog/tag/Performance/index.html": 1,
+        "fr/blog/tag/Example/index.html": 1,
+        "fr/blog/tag/Performance/index.html": 1
       },
-      "total": 65
+      "total": 13
     },
-    "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:suffix": {
-      "original": " ms ",
-      "value": null,
-      "pages": {
-        "blog/tag/CDN/index.html": 3,
-        "blog/tag/Caching/index.html": 3,
-        "blog/tag/Downtime/index.html": 3,
-        "blog/tag/Example/index.html": 3,
-        "blog/tag/Performance/index.html": 3,
-        "blog/tag/Photons/index.html": 3,
-        "blog/tag/Prediction/index.html": 3,
-        "blog/tag/Security/index.html": 3,
-        "blog/tag/Uptime/index.html": 3,
-        "de/blog/tag/Example/index.html": 3,
-        "de/blog/tag/Performance/index.html": 3,
-        "fr/blog/tag/Example/index.html": 3,
-        "fr/blog/tag/Performance/index.html": 3
-      },
-      "total": 39
-    },
-    "tags:2f9ee893-ba32-4a0a-b063-4f7dd07a38d7:text": {
-      "original": " Learn why we did it ",
+    "tags:7db52143-7dee-4ca3-9015-4531e5614fc9:02cd2bbb-bf93-447c-8ad1-7906f73ade56:text": {
+      "original": " Or talk to us about fiber optics instead ",
       "value": null,
       "pages": {
         "blog/tag/CDN/index.html": 1,
@@ -4570,26 +4772,6 @@
     },
     "tags:7db52143-7dee-4ca3-9015-4531e5614fc9:heading": {
       "original": "  Let's build your next tech breakthough together  ",
-      "value": null,
-      "pages": {
-        "blog/tag/CDN/index.html": 1,
-        "blog/tag/Caching/index.html": 1,
-        "blog/tag/Downtime/index.html": 1,
-        "blog/tag/Example/index.html": 1,
-        "blog/tag/Performance/index.html": 1,
-        "blog/tag/Photons/index.html": 1,
-        "blog/tag/Prediction/index.html": 1,
-        "blog/tag/Security/index.html": 1,
-        "blog/tag/Uptime/index.html": 1,
-        "de/blog/tag/Example/index.html": 1,
-        "de/blog/tag/Performance/index.html": 1,
-        "fr/blog/tag/Example/index.html": 1,
-        "fr/blog/tag/Performance/index.html": 1
-      },
-      "total": 13
-    },
-    "tags:7db52143-7dee-4ca3-9015-4531e5614fc9:text": {
-      "original": " Or talk to us about fiber optics instead ",
       "value": null,
       "pages": {
         "blog/tag/CDN/index.html": 1,
