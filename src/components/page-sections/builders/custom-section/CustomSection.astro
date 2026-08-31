@@ -70,6 +70,11 @@ const arrayDataAttributes =
     data-theme-lock={lockColorScheme || undefined}
   >
     {
+      backgroundColor && (
+        <div class:list={["background", backgroundColor && `bg-${backgroundColor}`]} />
+      )
+    }
+    {
       bgType === "image" && (
         <Image
           class:list={["background-image"]}
@@ -101,11 +106,6 @@ const arrayDataAttributes =
             backgroundColor: `rgba(${overlay < 0 ? "0, 0, 0" : "255, 255, 255"}, ${Math.abs(overlay)})`,
           }}
         />
-      )
-    }
-    {
-      backgroundColor && (
-        <div class:list={["background", backgroundColor && `bg-${backgroundColor}`]} />
       )
     }
     {
@@ -375,23 +375,29 @@ const arrayDataAttributes =
           }
         }
 
+        /*
+          None of the background layers may carry a positive z-index. This
+          element is `position: relative` with z-index auto, so it is NOT a
+          stacking context — a z-index here escapes the section and competes
+          page-wide, where it lands above the PREVIOUS section's `.content`
+          (also `--layer-1`) by being later in the DOM. That is what stopped a
+          `verticalOffset` of "back" going behind the previous component
+          whenever a background image was set.
+
+          So they all stay at auto and paint in DOM order instead, which is why
+          the colour is emitted before the image above. Order, bottom to top:
+          colour, image/video, overlay, radial glow, then `.content` on
+          `--layer-1`. That also puts the glow above the image, rather than the
+          image covering the glow.
+        */
         > .background-overlay {
           inset: 0;
           position: absolute;
-          z-index: var(--layer-1);
         }
 
         > .background {
           inset: 0;
           position: absolute;
-        }
-
-        > .background-image {
-          z-index: var(--layer-1);
-        }
-
-        > .background-video {
-          z-index: var(--layer-1);
         }
 
         > .bg-base {
