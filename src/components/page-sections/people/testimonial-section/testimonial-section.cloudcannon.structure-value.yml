@@ -12,15 +12,6 @@ value:
   paddingVertical: sm
   colorScheme: inherit
   backgroundColor: surface
-  background:
-    type: image
-    positionVertical: top
-    positionHorizontal: center
-    priority: false
-    imageSource: ""
-    imageAlt: ""
-    videoSource: null
-    overlay: 0
 preview:
   text:
     - Testimonial Section

@@ -13,6 +13,15 @@ value:
   paddingVertical: "4xl"
   colorScheme: light
   backgroundColor: base
+  background:
+    type: image
+    positionVertical: top
+    positionHorizontal: center
+    priority: false
+    imageSource: ""
+    imageAlt: ""
+    videoSource: null
+    overlay: 0
   verticalOffset: {}
   rounded: false
 _inputs_from_glob:
