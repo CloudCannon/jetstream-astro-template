@@ -121,7 +121,7 @@ const blogPostSchema = z.object({
   image: z.string().optional(),
   image_alt: z.string().optional(),
   tag: z.string().default("Uncategorized"),
-  counters: z.array(z.any()).optional(),
+  counters: z.array(z.any()).default([]),
   keywords: z.array(z.string()).optional(),
 });
 

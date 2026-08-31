@@ -86,6 +86,7 @@ featureGridItem:
         overhang:
           comment: Whether the cards overhang the grid background.
 featureGridItems:
+  id_key: _component
   values:
     - label: Feature Item
       icon: star
