@@ -39,9 +39,17 @@ preview:
     - CTA Center
   subtext:
     - key: heading
+  image: public/component-previews/page-sections/ctas/cta-center.svg
   icon: hero
+  gallery:
+    image: public/component-previews/page-sections/ctas/cta-center.svg
+    fit: cover
 picker_preview:
   text: CTA Center
   subtext: Centered CTA with stacked text and buttons.
+  image: public/component-previews/page-sections/ctas/cta-center.svg
+  gallery:
+    image: public/component-previews/page-sections/ctas/cta-center.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/page-sections/ctas/cta-center/cta-center.cloudcannon.inputs.yml

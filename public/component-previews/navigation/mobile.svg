@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="t-mobile">
+  <title id="t-mobile">Mobile navigation component preview</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --pv-paper: #151515;
+        --pv-panel: #1D1D1B;
+        --pv-surface: #232320;
+        --pv-line: #2E2D29;
+        --pv-glyph: #45443E;
+        --pv-body: #3A3934;
+        --pv-subject: #6E6A62;
+        --pv-ink: #F5F3EE;
+        --pv-on-ink: #6B6B6B;
+      }
+    }
+  </style>
+  <rect x="0" y="0" width="1280" height="720" fill="var(--pv-paper, #FFFFFF)"/>
+  <g transform="translate(0 40)">
+    <rect x="380" y="0" width="520" height="640" fill="var(--pv-panel, #F7F6F3)"/>
+    <rect x="416" y="40" width="48" height="48" rx="10" fill="var(--pv-surface, #EBE9E3)"/>
+    <rect x="816" y="46" width="36" height="36" rx="18" fill="var(--pv-glyph, #CFCBC2)"/>
+    <rect x="416" y="150" width="250" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="416" y="204" width="448" height="2" rx="1" fill="var(--pv-line, #E4E1DA)"/>
+    <rect x="416" y="234" width="300" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="416" y="288" width="448" height="2" rx="1" fill="var(--pv-line, #E4E1DA)"/>
+    <rect x="416" y="318" width="250" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="416" y="372" width="448" height="2" rx="1" fill="var(--pv-line, #E4E1DA)"/>
+    <rect x="416" y="402" width="300" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="416" y="456" width="448" height="2" rx="1" fill="var(--pv-line, #E4E1DA)"/>
+    <rect x="416" y="520" width="448" height="72" rx="10" fill="var(--pv-ink, #151515)"/>
+    <rect x="580" y="550" width="120" height="12" rx="6" fill="var(--pv-on-ink, #9A9A9A)"/>
+  </g>
+</svg>

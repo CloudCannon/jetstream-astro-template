@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="t-timeline">
+  <title id="t-timeline">Timeline component preview</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --pv-paper: #151515;
+        --pv-panel: #1D1D1B;
+        --pv-surface: #232320;
+        --pv-line: #2E2D29;
+        --pv-glyph: #45443E;
+        --pv-body: #3A3934;
+        --pv-subject: #6E6A62;
+        --pv-ink: #F5F3EE;
+        --pv-on-ink: #6B6B6B;
+      }
+    }
+  </style>
+  <rect x="0" y="0" width="1280" height="720" fill="var(--pv-paper, #FFFFFF)"/>
+  <g transform="translate(0 97)">
+    <rect x="160" y="0" width="520" height="40" rx="20" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="357" y="70" width="6" height="410" rx="3" fill="var(--pv-surface, #EBE9E3)"/>
+    <rect x="160" y="64" width="150" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <circle cx="360" cy="74" r="18" fill="var(--pv-ink, #151515)"/>
+    <rect x="420" y="60" width="380" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="420" y="100" width="700" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="420" y="124" width="560" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="160" y="194" width="150" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <circle cx="360" cy="204" r="18" fill="var(--pv-glyph, #CFCBC2)"/>
+    <rect x="420" y="190" width="380" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="420" y="230" width="700" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="420" y="254" width="560" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="160" y="324" width="150" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <circle cx="360" cy="334" r="18" fill="var(--pv-glyph, #CFCBC2)"/>
+    <rect x="420" y="320" width="380" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="420" y="360" width="700" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="420" y="384" width="560" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="160" y="454" width="150" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <circle cx="360" cy="464" r="18" fill="var(--pv-glyph, #CFCBC2)"/>
+    <rect x="420" y="450" width="380" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="420" y="490" width="700" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="420" y="514" width="560" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+  </g>
+</svg>

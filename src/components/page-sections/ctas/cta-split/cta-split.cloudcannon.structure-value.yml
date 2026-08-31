@@ -42,9 +42,17 @@ preview:
     - CTA Split
   subtext:
     - key: heading
+  image: public/component-previews/page-sections/ctas/cta-split.svg
   icon: hero
+  gallery:
+    image: public/component-previews/page-sections/ctas/cta-split.svg
+    fit: cover
 picker_preview:
   text: CTA Split
   subtext: Split layout CTA with button stack.
+  image: public/component-previews/page-sections/ctas/cta-split.svg
+  gallery:
+    image: public/component-previews/page-sections/ctas/cta-split.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/page-sections/ctas/cta-split/cta-split.cloudcannon.inputs.yml

@@ -32,10 +32,18 @@ preview:
     - Team Grid
   subtext:
     - key: subtext
+  image: public/component-previews/page-sections/people/team-grid.svg
   icon: people
+  gallery:
+    image: public/component-previews/page-sections/people/team-grid.svg
+    fit: cover
 picker_preview:
   text: Team Grid
   subtext: Grid of team member cards with photos.
+  image: public/component-previews/page-sections/people/team-grid.svg
+  gallery:
+    image: public/component-previews/page-sections/people/team-grid.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/page-sections/people/team-grid/team-grid.cloudcannon.inputs.yml
 _structures:

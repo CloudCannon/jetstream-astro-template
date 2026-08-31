@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="t-accordion">
+  <title id="t-accordion">Accordion component preview</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --pv-paper: #151515;
+        --pv-panel: #1D1D1B;
+        --pv-surface: #232320;
+        --pv-line: #2E2D29;
+        --pv-glyph: #45443E;
+        --pv-body: #3A3934;
+        --pv-subject: #6E6A62;
+        --pv-ink: #F5F3EE;
+        --pv-on-ink: #6B6B6B;
+      }
+    }
+  </style>
+  <rect x="0" y="0" width="1280" height="720" fill="var(--pv-paper, #FFFFFF)"/>
+  <g transform="translate(0 154)">
+    <rect x="260" y="0" width="760" height="200" rx="10" fill="var(--pv-paper, #FFFFFF)" stroke="var(--pv-line, #E4E1DA)" stroke-width="2"/>
+    <rect x="292" y="34" width="380" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <polygon points="963,44 975,44 969,51" fill="var(--pv-subject, #A8A398)" stroke="var(--pv-subject, #A8A398)" stroke-width="8" stroke-linejoin="round"/>
+    <rect x="292" y="96" width="640" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="292" y="120" width="590" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="292" y="144" width="470" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="260" y="220" width="760" height="86" rx="10" fill="var(--pv-paper, #FFFFFF)" stroke="var(--pv-line, #E4E1DA)" stroke-width="2"/>
+    <rect x="292" y="255" width="420" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <polygon points="963,264 975,264 969,271" fill="var(--pv-subject, #A8A398)" stroke="var(--pv-subject, #A8A398)" stroke-width="8" stroke-linejoin="round"/>
+    <rect x="260" y="326" width="760" height="86" rx="10" fill="var(--pv-paper, #FFFFFF)" stroke="var(--pv-line, #E4E1DA)" stroke-width="2"/>
+    <rect x="292" y="361" width="330" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <polygon points="963,370 975,370 969,377" fill="var(--pv-subject, #A8A398)" stroke="var(--pv-subject, #A8A398)" stroke-width="8" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -6,7 +6,11 @@ ctaSplit:
       - CTA Split
     subtext:
       - key: heading
+    image: public/component-previews/page-sections/ctas/cta-split.svg
     icon: hero
+    gallery:
+      image: public/component-previews/page-sections/ctas/cta-split.svg
+      fit: cover
   params:
     args:
       parser: key_values

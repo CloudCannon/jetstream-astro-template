@@ -49,6 +49,16 @@ value:
     overlay: 0
   verticalOffset: {}
   rounded: false
+preview:
+  image: public/component-previews/page-sections/info-blocks/timeline.svg
+  gallery:
+    image: public/component-previews/page-sections/info-blocks/timeline.svg
+    fit: cover
+picker_preview:
+  image: public/component-previews/page-sections/info-blocks/timeline.svg
+  gallery:
+    image: public/component-previews/page-sections/info-blocks/timeline.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/page-sections/info-blocks/timeline/timeline.cloudcannon.inputs.yml
 _structures:

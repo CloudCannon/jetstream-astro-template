@@ -36,7 +36,10 @@
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "deps:sync": "rm -rf node_modules && npm install --os=linux --cpu=x64 --libc=glibc --ignore-scripts --no-audit && npm ci",
-    "deps:check": "npm ci --dry-run"
+    "deps:check": "npm ci --dry-run",
+    "previews:build": "node scripts/previews/build.mjs",
+    "previews:check": "node scripts/previews/build.mjs --check",
+    "previews:audit": "node scripts/previews/check.mjs"
   },
   "dependencies": {
     "@astrojs/compiler-rs": "^0.1.10",

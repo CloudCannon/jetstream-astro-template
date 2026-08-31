@@ -11,10 +11,18 @@ preview:
     - Bento Box
   subtext:
     - key: label
+  image: public/component-previews/building-blocks/wrappers/bento-box.svg
   icon: grid_on
+  gallery:
+    image: public/component-previews/building-blocks/wrappers/bento-box.svg
+    fit: cover
 picker_preview:
   text: Bento Box
   subtext: Arranges content into a grid that adapts to screen size, with items of varying widths.
+  image: public/component-previews/building-blocks/wrappers/bento-box.svg
+  gallery:
+    image: public/component-previews/building-blocks/wrappers/bento-box.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/building-blocks/wrappers/bento-box/bento-box.cloudcannon.inputs.yml
 _structures:

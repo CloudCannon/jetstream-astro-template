@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="t-cta-center">
+  <title id="t-cta-center">CTA center component preview</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --pv-paper: #151515;
+        --pv-panel: #1D1D1B;
+        --pv-surface: #232320;
+        --pv-line: #2E2D29;
+        --pv-glyph: #45443E;
+        --pv-body: #3A3934;
+        --pv-subject: #6E6A62;
+        --pv-ink: #F5F3EE;
+        --pv-on-ink: #6B6B6B;
+      }
+    }
+  </style>
+  <rect x="0" y="0" width="1280" height="720" fill="var(--pv-paper, #FFFFFF)"/>
+  <g transform="translate(0 153)">
+    <circle cx="640" cy="30" r="30" fill="var(--pv-glyph, #CFCBC2)"/>
+    <rect x="540" y="90" width="200" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="160" y="134" width="960" height="40" rx="20" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="160" y="190" width="560" height="40" rx="20" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="240" y="262" width="800" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="300" y="286" width="680" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="420" y="340" width="220" height="74" rx="10" fill="var(--pv-ink, #151515)"/>
+    <rect x="475" y="371" width="110" height="12" rx="6" fill="var(--pv-on-ink, #9A9A9A)"/>
+    <rect x="670" y="340" width="190" height="74" rx="10" fill="var(--pv-paper, #FFFFFF)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="2"/>
+    <rect x="720" y="371" width="90" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+  </g>
+</svg>

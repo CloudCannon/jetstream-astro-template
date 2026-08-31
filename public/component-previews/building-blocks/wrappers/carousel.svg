@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="t-carousel">
+  <title id="t-carousel">Carousel component preview</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --pv-paper: #151515;
+        --pv-panel: #1D1D1B;
+        --pv-surface: #232320;
+        --pv-line: #2E2D29;
+        --pv-glyph: #45443E;
+        --pv-body: #3A3934;
+        --pv-subject: #6E6A62;
+        --pv-ink: #F5F3EE;
+        --pv-on-ink: #6B6B6B;
+      }
+    }
+  </style>
+  <rect x="0" y="0" width="1280" height="720" fill="var(--pv-paper, #FFFFFF)"/>
+  <g transform="translate(0 128)">
+    <rect x="80" y="40" width="200" height="320" rx="10" fill="var(--pv-panel, #F7F6F3)"/>
+    <rect x="320" y="0" width="640" height="400" rx="10" fill="var(--pv-surface, #EBE9E3)"/>
+    <circle cx="768" cy="128" r="24" fill="var(--pv-glyph, #CFCBC2)"/>
+    <polygon points="463,303 588,212 682,303" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="18" stroke-linejoin="round"/>
+    <polygon points="631,305 742,232 848,305" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="14" stroke-linejoin="round"/>
+    <rect x="1000" y="40" width="200" height="320" rx="10" fill="var(--pv-panel, #F7F6F3)"/>
+    <circle cx="260" cy="200" r="40" fill="var(--pv-subject, #A8A398)"/>
+    <polygon points="265,191 265,209 256,200" fill="var(--pv-paper, #FFFFFF)" stroke="var(--pv-paper, #FFFFFF)" stroke-width="8" stroke-linejoin="round"/>
+    <circle cx="1020" cy="200" r="40" fill="var(--pv-subject, #A8A398)"/>
+    <polygon points="1015,191 1015,209 1024,200" fill="var(--pv-paper, #FFFFFF)" stroke="var(--pv-paper, #FFFFFF)" stroke-width="8" stroke-linejoin="round"/>
+    <circle cx="585" cy="460" r="5" fill="var(--pv-glyph, #CFCBC2)"/>
+    <rect x="610" y="456" width="31" height="8" rx="4" fill="var(--pv-subject, #A8A398)"/>
+    <circle cx="666" cy="460" r="5" fill="var(--pv-glyph, #CFCBC2)"/>
+    <circle cx="696" cy="460" r="5" fill="var(--pv-glyph, #CFCBC2)"/>
+  </g>
+</svg>

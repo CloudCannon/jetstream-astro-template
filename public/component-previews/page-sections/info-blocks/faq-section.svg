@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="t-faq-section">
+  <title id="t-faq-section">FAQ section component preview</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --pv-paper: #151515;
+        --pv-panel: #1D1D1B;
+        --pv-surface: #232320;
+        --pv-line: #2E2D29;
+        --pv-glyph: #45443E;
+        --pv-body: #3A3934;
+        --pv-subject: #6E6A62;
+        --pv-ink: #F5F3EE;
+        --pv-on-ink: #6B6B6B;
+      }
+    }
+  </style>
+  <rect x="0" y="0" width="1280" height="720" fill="var(--pv-paper, #FFFFFF)"/>
+  <g transform="translate(0 60)">
+    <circle cx="640" cy="26" r="26" fill="var(--pv-glyph, #CFCBC2)"/>
+    <rect x="160" y="78" width="960" height="40" rx="20" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="290" y="140" width="700" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="350" y="164" width="580" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="160" y="210" width="960" height="190" rx="10" fill="var(--pv-paper, #FFFFFF)" stroke="var(--pv-line, #E4E1DA)" stroke-width="2"/>
+    <rect x="192" y="242" width="420" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <polygon points="1063,252 1075,252 1069,259" fill="var(--pv-subject, #A8A398)" stroke="var(--pv-subject, #A8A398)" stroke-width="8" stroke-linejoin="round"/>
+    <rect x="192" y="300" width="820" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="192" y="324" width="760" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="192" y="348" width="600" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="160" y="418" width="960" height="82" rx="10" fill="var(--pv-paper, #FFFFFF)" stroke="var(--pv-line, #E4E1DA)" stroke-width="2"/>
+    <rect x="192" y="451" width="500" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <polygon points="1063,460 1075,460 1069,467" fill="var(--pv-subject, #A8A398)" stroke="var(--pv-subject, #A8A398)" stroke-width="8" stroke-linejoin="round"/>
+    <rect x="160" y="518" width="960" height="82" rx="10" fill="var(--pv-paper, #FFFFFF)" stroke="var(--pv-line, #E4E1DA)" stroke-width="2"/>
+    <rect x="192" y="551" width="380" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <polygon points="1063,560 1075,560 1069,567" fill="var(--pv-subject, #A8A398)" stroke="var(--pv-subject, #A8A398)" stroke-width="8" stroke-linejoin="round"/>
+  </g>
+</svg>

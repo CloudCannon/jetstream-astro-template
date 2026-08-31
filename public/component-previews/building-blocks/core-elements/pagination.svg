@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="t-pagination">
+  <title id="t-pagination">Pagination component preview</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --pv-paper: #151515;
+        --pv-panel: #1D1D1B;
+        --pv-surface: #232320;
+        --pv-line: #2E2D29;
+        --pv-glyph: #45443E;
+        --pv-body: #3A3934;
+        --pv-subject: #6E6A62;
+        --pv-ink: #F5F3EE;
+        --pv-on-ink: #6B6B6B;
+      }
+    }
+  </style>
+  <rect x="0" y="0" width="1280" height="720" fill="var(--pv-paper, #FFFFFF)"/>
+  <g transform="translate(0 326)">
+    <circle cx="394" cy="34" r="34" fill="var(--pv-subject, #A8A398)"/>
+    <polygon points="398,28 398,40 391,34" fill="var(--pv-paper, #FFFFFF)" stroke="var(--pv-paper, #FFFFFF)" stroke-width="8" stroke-linejoin="round"/>
+    <rect x="458" y="6" width="56" height="56" rx="10" fill="var(--pv-surface, #EBE9E3)"/>
+    <rect x="476" y="28" width="20" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="530" y="6" width="56" height="56" rx="10" fill="var(--pv-ink, #151515)"/>
+    <rect x="548" y="28" width="20" height="12" rx="6" fill="var(--pv-on-ink, #9A9A9A)"/>
+    <rect x="602" y="6" width="56" height="56" rx="10" fill="var(--pv-surface, #EBE9E3)"/>
+    <rect x="620" y="28" width="20" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="674" y="6" width="56" height="56" rx="10" fill="var(--pv-surface, #EBE9E3)"/>
+    <rect x="692" y="28" width="20" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <circle cx="886" cy="34" r="34" fill="var(--pv-subject, #A8A398)"/>
+    <polygon points="882,28 882,40 889,34" fill="var(--pv-paper, #FFFFFF)" stroke="var(--pv-paper, #FFFFFF)" stroke-width="8" stroke-linejoin="round"/>
+  </g>
+</svg>

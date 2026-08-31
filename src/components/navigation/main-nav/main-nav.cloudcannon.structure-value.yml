@@ -10,10 +10,18 @@ value:
 preview:
   text:
     - Main Nav
+  image: public/component-previews/navigation/main-nav.svg
   icon: navigation
+  gallery:
+    image: public/component-previews/navigation/main-nav.svg
+    fit: cover
 picker_preview:
   text: Main Nav
   subtext: "Header navigation combining logo, links, and actions."
+  image: public/component-previews/navigation/main-nav.svg
   icon: navigation
+  gallery:
+    image: public/component-previews/navigation/main-nav.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/navigation/main-nav/main-nav.cloudcannon.inputs.yml

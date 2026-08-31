@@ -47,5 +47,15 @@ value:
   contentBackground: false
   verticalOffset: {}
   rounded: false
+preview:
+  image: public/component-previews/page-sections/info-blocks/table.svg
+  gallery:
+    image: public/component-previews/page-sections/info-blocks/table.svg
+    fit: cover
+picker_preview:
+  image: public/component-previews/page-sections/info-blocks/table.svg
+  gallery:
+    image: public/component-previews/page-sections/info-blocks/table.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/page-sections/info-blocks/table/table.cloudcannon.inputs.yml

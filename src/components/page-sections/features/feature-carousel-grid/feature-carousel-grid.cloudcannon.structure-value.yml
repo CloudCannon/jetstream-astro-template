@@ -26,6 +26,16 @@ value:
     overlay: 0
   verticalOffset: {}
   rounded: false
+preview:
+  image: public/component-previews/page-sections/features/feature-carousel-grid.svg
+  gallery:
+    image: public/component-previews/page-sections/features/feature-carousel-grid.svg
+    fit: cover
+picker_preview:
+  image: public/component-previews/page-sections/features/feature-carousel-grid.svg
+  gallery:
+    image: public/component-previews/page-sections/features/feature-carousel-grid.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/page-sections/features/feature-carousel-grid/feature-carousel-grid.cloudcannon.inputs.yml
 _structures:
