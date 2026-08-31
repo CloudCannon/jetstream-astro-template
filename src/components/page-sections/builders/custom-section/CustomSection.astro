@@ -182,10 +182,16 @@ const arrayDataAttributes =
         .radial-background {
           aspect-ratio: 1 / 1;
           background: radial-gradient(
-            ellipse at 50% 50%,
+            ellipse closest-side at 50% 50%,
             var(--color-bg) 0%,
-            var(--color-bg) 40%,
-            transparent 80%
+            color-mix(in oklab, var(--color-bg) 98%, transparent) 30%,
+            color-mix(in oklab, var(--color-bg) 92%, transparent) 45%,
+            color-mix(in oklab, var(--color-bg) 80%, transparent) 58%,
+            color-mix(in oklab, var(--color-bg) 62%, transparent) 68%,
+            color-mix(in oklab, var(--color-bg) 40%, transparent) 78%,
+            color-mix(in oklab, var(--color-bg) 20%, transparent) 87%,
+            color-mix(in oklab, var(--color-bg) 7%, transparent) 94%,
+            transparent 100%
           );
           height: 100%;
           left: 50%;

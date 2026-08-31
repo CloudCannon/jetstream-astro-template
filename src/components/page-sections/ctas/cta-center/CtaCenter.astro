@@ -93,7 +93,15 @@ const {
       .outer-content > .content {
         position: static;
       }
+
       .outer-content > .background {
+        max-width: calc(var(--max-width) + calc((100vw - var(--max-width)) / 2));
+        z-index: var(--layer-below-2);
+      }
+
+      .outer-content > .background-image,
+      .outer-content > .background-video,
+      .outer-content > .background-overlay {
         max-width: calc(var(--max-width) + calc((100vw - var(--max-width)) / 2));
         z-index: var(--layer-below);
       }
@@ -114,7 +122,7 @@ const {
         top: var(--spacing-lg);
         right: 0;
         height: 100%;
-        z-index: var(--layer-below-2);
+        z-index: var(--layer-below-3);
         border: 1px solid var(--color-bg-surface);
         border-right: none;
         background: repeating-linear-gradient(
