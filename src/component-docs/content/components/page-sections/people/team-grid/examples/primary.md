@@ -10,31 +10,31 @@ blocks:
     - name: 'Michael Chen'
       role: 'CEO & Founder'
       bio: 'Michael brings over 15 years of experience in product development and team leadership.'
-      imageSource: /images/component-docs/profile.jpg
+      imageSource: /src/assets/images/staff-1.png
       imageAlt: 'Michael Chen'
     - name: 'Sarah Johnson'
       role: 'Lead Developer'
       bio: 'Sarah specializes in building scalable applications and mentoring engineering teams.'
-      imageSource: /images/component-docs/profile1.jpg
+      imageSource: /src/assets/images/staff-2-1.png
       imageAlt: 'Sarah Johnson'
     - name: 'David Kim'
       role: 'Design Director'
       bio: 'David creates beautiful, user-centered designs that solve real problems.'
-      imageSource: /images/component-docs/profile2.jpg
+      imageSource: /src/assets/images/staff-3-1.png
       imageAlt: 'David Kim'
     - name: 'Emily Rodriguez'
       role: 'Product Manager'
       bio: 'Emily ensures our products meet user needs while staying aligned with business goals.'
-      imageSource: /images/component-docs/profile3.jpg
+      imageSource: /src/assets/images/staff-4.png
       imageAlt: 'Emily Rodriguez'
     - name: 'Alex Thompson'
       role: 'Marketing Director'
       bio: 'Alex drives brand strategy and connects our products with the right audiences.'
-      imageSource: /images/component-docs/profile4.jpg
+      imageSource: /src/assets/images/staff-5.png
       imageAlt: 'Alex Thompson'
     - name: 'Jordan Martinez'
       role: 'UX Researcher'
       bio: 'Jordan uncovers user insights that shape our product decisions and improve experiences.'
-      imageSource: /images/component-docs/profile5.jpg
+      imageSource: /src/assets/images/staff-6.png
       imageAlt: 'Jordan Martinez'
 ---

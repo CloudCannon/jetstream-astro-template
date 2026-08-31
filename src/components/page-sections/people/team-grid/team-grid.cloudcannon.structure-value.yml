@@ -38,7 +38,7 @@ _structures:
           _component: page-sections/people/team-grid/team-item
           name: Team member name
           role: Job title
-          imageSource: /src/assets/images/component-docs/profile.jpg
+          imageSource: /src/assets/images/staff-1.png
           imageAlt: Team member photo
         preview:
           text:

@@ -11,7 +11,7 @@ slides:
           eyebrow: ""
           title: Slide title
           description: Short description for this slide.
-          imageSource: /src/assets/images/component-docs/sunset.jpg
+          imageSource: /src/assets/images/component-docs/website-feature.svg
           imageAlt: Slide image alt text
         preview:
           text:

@@ -20,7 +20,7 @@ value:
       variant: primary
       size: md
   image:
-    source: /src/assets/images/component-docs/dunedin-cliff.jpg
+    source: /src/assets/images/component-docs/website-hero.svg
     alt: Hero image
   reverse: false
   maxContentWidth: 3xl

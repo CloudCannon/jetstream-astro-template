@@ -8,7 +8,7 @@ value:
   eyebrowText: Eyebrow placeholder
   heading: Heading text
   subtext: Subtext placeholder text that will be replaced with actual content.
-  imageSource: /src/assets/images/component-docs/dunedin-cliff.jpg
+  imageSource: /src/assets/images/component-docs/website-split.svg
   imageAlt: CTA image
   buttonSections:
     - _component: building-blocks/core-elements/button

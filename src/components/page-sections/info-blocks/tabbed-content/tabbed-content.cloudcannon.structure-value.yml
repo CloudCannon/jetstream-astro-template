@@ -14,7 +14,6 @@ value:
   paddingVertical: "4xl"
   colorScheme: "light"
   backgroundColor: "base"
-  contentBackground: false
   verticalOffset: {}
   rounded: false
 _inputs_from_glob:

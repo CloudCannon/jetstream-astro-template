@@ -46,14 +46,5 @@ testimonialSection:
         type: string
         optional: true
         remove_empty: true
-      - editor_key: contentBackground
-        type: boolean
-        optional: true
-      - editor_key: verticalOffset
-        type: object
-        optional: true
-      - editor_key: rounded
-        type: boolean
-        optional: true
   _inputs_from_glob:
     - /src/components/page-sections/people/testimonial-section/testimonial-section.cloudcannon.inputs.yml

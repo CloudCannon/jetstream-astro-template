@@ -32,7 +32,6 @@ const {
   paddingVertical = "4xl",
   backgroundColor = "base",
   colorScheme = "light",
-  contentBackground = false,
   verticalOffset = {},
   rounded = false,
   class: className,
@@ -180,27 +179,29 @@ const snakePath =
     paddingVertical={paddingVertical}
     colorScheme={colorScheme}
     backgroundColor=""
-    contentBackground={contentBackground}
+    contentBackground={false}
   >
     <div class="horizontal-heading">
       <Icon
         class="icon"
         {...eyebrowIcon}
       />
-      <SimpleText
-        class="eyebrow"
-        alignmentHorizontal="left"
-        data-prop="eyebrowText"
-        text={eyebrowText}
-      />
-      <Heading
-        level="h1"
-        size="xl"
-        alignmentHorizontal="left"
-        class="heading"
-        data-prop="heading"
-        text={heading}
-      />
+      <div class="heading-group">
+        <SimpleText
+          class="eyebrow"
+          alignmentHorizontal="left"
+          data-prop="eyebrowText"
+          text={eyebrowText}
+        />
+        <Heading
+          level="h1"
+          size="xl"
+          alignmentHorizontal="left"
+          class="heading"
+          data-prop="heading"
+          text={heading}
+        />
+      </div>
       <Text
         text={subtext}
         alignmentHorizontal="left"
@@ -298,8 +299,16 @@ const snakePath =
         gap: var(--spacing-md);
         flex-wrap: wrap;
 
-        .heading {
+        .heading-group {
           flex: 0 1 700px;
+        }
+
+        .eyebrow {
+          margin-bottom: var(--spacing-xs);
+          margin-top: 0;
+        }
+
+        .heading {
           margin: 0;
         }
         .subtext {

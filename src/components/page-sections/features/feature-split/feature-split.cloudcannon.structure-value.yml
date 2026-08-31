@@ -9,7 +9,7 @@ value:
   heading: Heading text
   subtext: Subtext placeholder text that will be replaced with actual content.
   buttonSections: []
-  imageSource: /src/assets/images/component-docs/quiet-street.jpg
+  imageSource: /src/assets/images/component-docs/website-split.svg
   imageAlt: Feature image
   imageAspectRatio: portrait
   imageRounded: true

@@ -18,7 +18,7 @@ blocks:
       variant: secondary
       size: md
       link: '/brief.pdf'
-  imageSource: /images/component-docs/dunedin-cliff.jpg
+  imageSource: /src/assets/images/about-hero.png
   imageAlt: 'Product team reviewing plans together'
   imageRounded: true
 ---
