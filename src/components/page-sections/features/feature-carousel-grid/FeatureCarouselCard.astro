@@ -7,72 +7,72 @@ import BentoBoxItem from "@wrappers/bento-box/BentoBoxItem.astro";
 import Card from "@wrappers/card/Card.astro";
 
 const {
-  backgroundColor = "base",
-  border = true,
+  decorative = false,
+  style: backgroundStyle = "surface-linear-gradient",
   eyebrowIcon = {},
   eyebrowText = "",
   heading = "",
   text = "",
   columnSpan,
   rowSpan,
+  class: className,
   _component,
   useDefaultEditableBinding = false,
   ...htmlAttributes
 } = Astro.props;
 ---
-
 <BentoBoxItem
   columnSpan={columnSpan}
   rowSpan={rowSpan}
+  data-prop-columnSpan="columnSpan"
+  data-prop-rowSpan="rowSpan"
+  {...htmlAttributes}
 >
   <Card
-    class:list={["feature-carousel-card"]}
+    class:list={["feature-carousel-card", className]}
     paddingHorizontal="lg"
     paddingVertical="lg"
     rounded
-    border={border}
-    backgroundColor={backgroundColor}
-    {...htmlAttributes}
+    border={!decorative}
+    backgroundColor={decorative ? backgroundStyle : "base"}
   >
     {
-      eyebrowIcon?.name && (
-        <Icon
-          {...eyebrowIcon}
-          alignmentHorizontal="start"
-        />
-      )
-    }
-    {
-      eyebrowText && (
-        <SimpleText
-          class="eyebrow"
-          data-prop="eyebrowText"
-        >
-          {eyebrowText}
-        </SimpleText>
-      )
-    }
-    {
-      heading && (
-        <Heading
-          class="feature-slide-heading"
-          level="h3"
-          size="md"
-          alignmentHorizontal="start"
-          data-prop="heading"
-        >
-          {heading}
-        </Heading>
-      )
-    }
-    {
-      text && (
-        <Text
-          class="feature-slide-text"
-          alignmentHorizontal="start"
-          data-prop="text"
-          text={text}
-        />
+      !decorative && (
+        <Fragment>
+          {eyebrowIcon?.name && (
+            <Icon
+              {...eyebrowIcon}
+              alignmentHorizontal="start"
+            />
+          )}
+          {eyebrowText && (
+            <SimpleText
+              class="eyebrow"
+              data-prop="eyebrowText"
+            >
+              {eyebrowText}
+            </SimpleText>
+          )}
+          {heading && (
+            <Heading
+              class="feature-slide-heading"
+              level="h3"
+              size="md"
+              alignmentHorizontal="start"
+              data-prop="heading"
+            >
+              {heading}
+            </Heading>
+          )}
+          {text && (
+            <Text
+              class="feature-slide-text"
+              alignmentHorizontal="start"
+              data-prop="text"
+              text={text}
+            />
+          )}
+        </Fragment>
       )
     }
   </Card>

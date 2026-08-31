@@ -119,6 +119,7 @@ const mobileSlides = slides.flatMap(
             data-editable="array-item"
             data-id="page-sections/features/feature-carousel-grid/feature-carousel-slide"
             {...slide}
+            editable={true}
             class="feature-carousel-grid-slide"
           />
         ))
@@ -152,6 +153,19 @@ const mobileSlides = slides.flatMap(
       /* The desktop slides spill past the container to reveal the previous and
          next slides, so clip them at the section rather than the page. */
       overflow-x: clip;
+
+      /*
+        `CustomSection` puts `.content` on `--layer-1`, which makes it a stacking
+        context. With `backgroundColorHeight: header` the background lives on the
+        nested header section *inside* that `.content`, so it was pinned above the
+        previous section and a `verticalOffset` of "back" had nothing to slide
+        behind. The outer section paints no background of its own in that mode, so
+        letting `.content` stack in document order costs nothing here and frees the
+        header background to sit behind the previous component.
+      */
+      > .outer-content > .content {
+        z-index: var(--layer-auto);
+      }
     }
 
     .feature-carousel-grid-content .content {
