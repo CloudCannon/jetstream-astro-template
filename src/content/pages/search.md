@@ -8,7 +8,6 @@ pageSections:
   - _component: page-sections/search/search-section
     id:
     heading: How can we help?
-    headingSize: 2xl
     subtext: >-
       Deep dives into infrastructure, operational excellence, and the future of
       the edge-first web.

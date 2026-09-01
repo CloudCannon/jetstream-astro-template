@@ -9,7 +9,6 @@ value:
   eyebrowIcon: {}
   eyebrowText: Eyebrow placeholder
   heading: How can we help?
-  headingSize: 2xl
   subtext: Search every page and post on this website.
   placeholder: Search
   buttonText: Search
@@ -25,15 +24,6 @@ value:
   colorScheme: inherit
   backgroundColor: base
   contentBackground: false
-  background:
-    type: image
-    positionVertical: top
-    positionHorizontal: center
-    priority: false
-    imageSource: ""
-    imageAlt: ""
-    videoSource: null
-    overlay: 0
   verticalOffset: {}
   rounded: false
 preview:
