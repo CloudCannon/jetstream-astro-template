@@ -160,7 +160,10 @@ function createNavItemData(item, level, parentGroupId) {
                         <div class="nav-item-split">
                           <a
                             href={childData.path}
-                            class:list={["nav-item-link", childData.hasLabelExtras && "has-label-extras"]}
+                            class:list={[
+                              "nav-item-link",
+                              childData.hasLabelExtras && "has-label-extras",
+                            ]}
                             aria-current={childData.isCurrent ? "page" : undefined}
                           >
                             <NavItemLabel item={childData} />
@@ -184,7 +187,10 @@ function createNavItemData(item, level, parentGroupId) {
                       ) : (
                         <label
                           for={childData.dropdownId}
-                          class:list={["nav-item-trigger", childData.hasLabelExtras && "has-label-extras"]}
+                          class:list={[
+                            "nav-item-trigger",
+                            childData.hasLabelExtras && "has-label-extras",
+                          ]}
                           aria-controls={childData.contentId}
                           tabindex="0"
                           aria-current={childData.isCurrent ? "page" : undefined}

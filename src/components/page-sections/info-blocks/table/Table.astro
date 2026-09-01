@@ -385,7 +385,11 @@ const snakePath =
            * script, so the fade only starts once the border has left the
            * screen and never sits over it.
            */
-          --fade-start: clamp(0px, calc(var(--scroll-start, 0px) - var(--bleed)), var(--spacing-3xl));
+          --fade-start: clamp(
+            0px,
+            calc(var(--scroll-start, 0px) - var(--bleed)),
+            var(--spacing-3xl)
+          );
           --fade-end: clamp(0px, calc(var(--scroll-end, 0px) - var(--bleed)), var(--spacing-3xl));
 
           mask-image: linear-gradient(

@@ -291,7 +291,9 @@ function createNavItemData(item, level, parentGroupId) {
                                 <li class="nav-item">
                                   <a
                                     href={grandChildData.path}
-                                    class:list={[grandChildData.hasLabelExtras && "has-label-extras"]}
+                                    class:list={[
+                                      grandChildData.hasLabelExtras && "has-label-extras",
+                                    ]}
                                     aria-current={grandChildData.isCurrent ? "page" : undefined}
                                   >
                                     <NavItemLabel item={grandChildData} />
@@ -542,7 +544,7 @@ function createNavItemData(item, level, parentGroupId) {
         display: flex;
         flex-shrink: 0;
         justify-content: space-between;
-                padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) var(--spacing-2xl);
+        padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) var(--spacing-2xl);
 
         .mobile-logo {
           svg {
