@@ -3,6 +3,7 @@ icon: videocam
 description: Video component for YouTube, Vimeo, and HTML5 sources.
 value:
   _component: building-blocks/core-elements/video
+  id: ""
   type: youtube
   videoId: ""
   title: ""

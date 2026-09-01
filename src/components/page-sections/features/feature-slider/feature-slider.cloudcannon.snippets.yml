@@ -56,6 +56,10 @@ featureSlider:
       - editor_key: contentBackground
         type: boolean
         optional: true
+      - editor_key: background
+        type: object
+        optional: true
+        remove_empty: true
       - editor_key: verticalOffset
         type: object
         optional: true

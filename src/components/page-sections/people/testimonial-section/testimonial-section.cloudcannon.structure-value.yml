@@ -8,6 +8,7 @@ value:
   authorName: Author
   authorDescription: Author Role
   authorImage: https://placehold.co/80x80
+  alignmentHorizontal: start
   maxContentWidth: xl
   paddingVertical: sm
   colorScheme: inherit

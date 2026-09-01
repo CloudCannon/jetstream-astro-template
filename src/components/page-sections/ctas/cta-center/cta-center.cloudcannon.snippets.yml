@@ -55,6 +55,10 @@ ctaCenter:
             type: boolean
             optional: true
             remove_empty: false
+          - editor_key: background
+            type: object
+            optional: true
+            remove_empty: true
           - editor_key: verticalOffset
             type: object
             optional: true

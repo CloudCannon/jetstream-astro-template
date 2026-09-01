@@ -16,6 +16,10 @@ faqSection:
       parser: key_values
       options:
         models:
+          - editor_key: sectionLabel
+            type: string
+            optional: true
+            remove_empty: true
           - editor_key: id
             type: string
             optional: true
@@ -44,6 +48,10 @@ faqSection:
             type: string
             optional: true
             remove_empty: true
+          - editor_key: paddingHorizontal
+            type: string
+            optional: true
+            remove_empty: true
           - editor_key: paddingVertical
             type: string
             optional: true
@@ -61,6 +69,10 @@ faqSection:
             type: boolean
             optional: true
             remove_empty: false
+          - editor_key: background
+            type: object
+            optional: true
+            remove_empty: true
           - editor_key: verticalOffset
             type: object
             optional: true
