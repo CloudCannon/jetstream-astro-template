@@ -84,20 +84,24 @@ const {
   </CustomSection>
 
   <CustomSection
-    class:list={["feature-grid-background"]}
+    class:list={["feature-grid-background", featureGrid.overhang && "feature-grid-overhang-frame"]}
     maxContentWidth={featureGrid.gridBackgroundMaxWidth}
     paddingHorizontal=""
     paddingVertical="xs"
     colorScheme={colorScheme}
   >
     <CustomSection
-      class:list={["feature-grid-grid", featureGrid.overhang && "feature-grid-background-overhang"]}
+      class:list={[
+        "feature-grid-grid",
+        featureGrid.overhang && "feature-grid-overhang",
+        featureGrid.overhang && featureGrid.rounded && "feature-grid-overhang-rounded",
+      ]}
       maxContentWidth={featureGrid.gridMaxWidth}
       colorScheme={colorScheme}
       paddingVertical=""
       paddingHorizontal="md"
       backgroundColor={featureGrid.backgroundColor}
-      rounded={featureGrid.rounded}
+      rounded={featureGrid.overhang ? false : featureGrid.rounded}
     >
       <BentoBox
         gap="md"
@@ -124,14 +128,20 @@ const {
       padding-bottom: var(--padding-between);
     }
 
-    .feature-grid-background-overhang > .outer-content > .background {
-      block-size: auto;
-      bottom: var(--spacing-3xl);
-      margin-block: 0;
-      top: var(--spacing-3xl);
+
+    .feature-grid-overhang > .outer-content {
+      display: flow-root;
     }
 
-    .feature-grid-background-overhang > .outer-content.rounded > .background {
+    .feature-grid-overhang > .outer-content > .content {
+      margin-block: calc(var(--spacing-3xl) * -1);
+    }
+
+    .feature-grid-overhang-frame > .outer-content > .content {
+      padding-block: calc(var(--spacing-xs) + var(--spacing-3xl));
+    }
+
+    .feature-grid-overhang-rounded > .outer-content > .background {
       border-radius: var(--radius-3xl);
     }
   }

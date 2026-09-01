@@ -153,7 +153,7 @@ lockColorScheme:
   hidden: true
 backgroundColor:
   type: select
-  comment: Solid background color token behind the section content.
+  comment: Background color for the section.
   options:
     values:
       - id: none
@@ -166,6 +166,20 @@ backgroundColor:
         name: Accent
       - id: highlight
         name: Highlight
+      - id: highlight-grid
+        name: Highlight Grid
+      - id: surface-linear-gradient
+        name: Surface Linear Gradient
+      - id: brand-linear-gradient-reverse
+        name: Brand Linear Gradient Reverse
+      - id: brand-linear-gradient
+        name: Brand Linear Gradient
+      - id: brand-linear-gradient-muted
+        name: Brand Linear Gradient Muted
+      - id: highlight-linear-gradient
+        name: Highlight Linear Gradient
+      - id: highlight-radial-gradient
+        name: Highlight Radial Gradient
 contentBackground:
   type: switch
   comment: Add a radial background in the base color behind the content.
