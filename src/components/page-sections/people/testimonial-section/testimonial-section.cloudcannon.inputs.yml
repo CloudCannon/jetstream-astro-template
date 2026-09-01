@@ -121,3 +121,17 @@ backgroundColor:
         name: Accent
       - id: highlight
         name: Highlight
+      - id: highlight-grid
+        name: Highlight Grid
+      - id: surface-linear-gradient
+        name: Surface Linear Gradient
+      - id: brand-linear-gradient-reverse
+        name: Brand Linear Gradient Reverse
+      - id: brand-linear-gradient
+        name: Brand Linear Gradient
+      - id: brand-linear-gradient-muted
+        name: Brand Linear Gradient Muted
+      - id: highlight-linear-gradient
+        name: Highlight Linear Gradient
+      - id: highlight-radial-gradient
+        name: Highlight Radial Gradient
