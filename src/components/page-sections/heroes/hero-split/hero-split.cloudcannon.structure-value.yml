@@ -23,7 +23,6 @@ value:
     source: /src/assets/images/component-docs/website-hero.svg
     alt: Hero image
   reverse: false
-  maxContentWidth: 3xl
   paddingVertical: 4xl
   colorScheme: inherit
   backgroundColor: base
