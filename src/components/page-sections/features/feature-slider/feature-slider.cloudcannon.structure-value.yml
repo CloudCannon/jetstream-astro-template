@@ -31,7 +31,6 @@ preview:
     - Feature Slider
   subtext:
     - key: heading
-  image: public/component-previews/page-sections/features/feature-slider.svg
   icon: view_carousel
   gallery:
     image: public/component-previews/page-sections/features/feature-slider.svg
@@ -39,7 +38,6 @@ preview:
 picker_preview:
   text: Feature Slider
   subtext: Carousel of feature-focused cards.
-  image: public/component-previews/page-sections/features/feature-slider.svg
   gallery:
     image: public/component-previews/page-sections/features/feature-slider.svg
     fit: cover

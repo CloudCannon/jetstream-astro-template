@@ -8,7 +8,6 @@ value:
 preview:
   text:
     - Definition List
-  image: public/component-previews/building-blocks/core-elements/definition-list.svg
   icon: dns
   gallery:
     image: public/component-previews/building-blocks/core-elements/definition-list.svg
@@ -16,7 +15,6 @@ preview:
 picker_preview:
   text: Definition List
   subtext: Lists term/definition pairs for structured content.
-  image: public/component-previews/building-blocks/core-elements/definition-list.svg
   gallery:
     image: public/component-previews/building-blocks/core-elements/definition-list.svg
     fit: cover

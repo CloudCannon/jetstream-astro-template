@@ -4,7 +4,6 @@ table:
   preview:
     text:
       - table
-    image: public/component-previews/page-sections/info-blocks/table.svg
     icon: table_rows
     gallery:
       image: public/component-previews/page-sections/info-blocks/table.svg

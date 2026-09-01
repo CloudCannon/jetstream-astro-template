@@ -17,7 +17,6 @@ preview:
     - template: Input - {type}
   subtext:
     - key: name
-  image: public/component-previews/building-blocks/forms/input.svg
   icon: rectangle
   gallery:
     image: public/component-previews/building-blocks/forms/input.svg
@@ -25,7 +24,6 @@ preview:
 picker_preview:
   text: Input
   subtext: Single text input form field.
-  image: public/component-previews/building-blocks/forms/input.svg
   gallery:
     image: public/component-previews/building-blocks/forms/input.svg
     fit: cover

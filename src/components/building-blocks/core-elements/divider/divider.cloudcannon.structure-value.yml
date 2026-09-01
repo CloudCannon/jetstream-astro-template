@@ -7,7 +7,6 @@ value:
 preview:
   text:
     - Divider
-  image: public/component-previews/building-blocks/core-elements/divider.svg
   icon: horizontal_rule
   gallery:
     image: public/component-previews/building-blocks/core-elements/divider.svg
@@ -15,7 +14,6 @@ preview:
 picker_preview:
   text: Divider
   subtext: Visual separator for dividing content sections.
-  image: public/component-previews/building-blocks/core-elements/divider.svg
   gallery:
     image: public/component-previews/building-blocks/core-elements/divider.svg
     fit: cover

@@ -16,28 +16,32 @@
     }
   </style>
   <rect x="0" y="0" width="1280" height="720" fill="var(--pv-paper, #FFFFFF)"/>
-  <g transform="translate(0 97)">
-    <rect x="160" y="0" width="520" height="40" rx="20" fill="var(--pv-subject, #A8A398)"/>
-    <rect x="357" y="70" width="6" height="410" rx="3" fill="var(--pv-surface, #EBE9E3)"/>
-    <rect x="160" y="64" width="150" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
-    <circle cx="360" cy="74" r="18" fill="var(--pv-ink, #151515)"/>
-    <rect x="420" y="60" width="380" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
-    <rect x="420" y="100" width="700" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
-    <rect x="420" y="124" width="560" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
-    <rect x="160" y="194" width="150" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
-    <circle cx="360" cy="204" r="18" fill="var(--pv-glyph, #CFCBC2)"/>
-    <rect x="420" y="190" width="380" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
-    <rect x="420" y="230" width="700" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
-    <rect x="420" y="254" width="560" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
-    <rect x="160" y="324" width="150" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
-    <circle cx="360" cy="334" r="18" fill="var(--pv-glyph, #CFCBC2)"/>
-    <rect x="420" y="320" width="380" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
-    <rect x="420" y="360" width="700" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
-    <rect x="420" y="384" width="560" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
-    <rect x="160" y="454" width="150" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
-    <circle cx="360" cy="464" r="18" fill="var(--pv-glyph, #CFCBC2)"/>
-    <rect x="420" y="450" width="380" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
-    <rect x="420" y="490" width="700" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
-    <rect x="420" y="514" width="560" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+  <g transform="translate(0 125)">
+    <rect x="80" y="0" width="520" height="40" rx="20" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="80" y="68" width="1080" height="12" rx="6" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="80" y="92" width="700" height="12" rx="6" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="80" y="140" width="1120" height="6" rx="3" fill="var(--pv-subject, #A8A398)"/>
+    <circle cx="120" cy="143" r="18" fill="var(--pv-ink, #151515)"/>
+    <rect x="80" y="210" width="130" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="80" y="250" width="290" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="80" y="300" width="340" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="80" y="324" width="300" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="80" y="348" width="250" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <circle cx="505" cy="143" r="18" fill="var(--pv-ink, #151515)"/>
+    <rect x="465" y="210" width="130" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="465" y="250" width="290" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="465" y="300" width="340" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="465" y="324" width="300" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="465" y="348" width="250" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <circle cx="890" cy="143" r="18" fill="var(--pv-ink, #151515)"/>
+    <rect x="850" y="210" width="130" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="850" y="250" width="290" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="850" y="300" width="340" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="850" y="324" width="300" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="850" y="348" width="250" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <circle cx="1060" cy="430" r="40" fill="var(--pv-glyph, #CFCBC2)"/>
+    <polygon points="1065,421 1065,439 1056,430" fill="var(--pv-paper, #FFFFFF)" stroke="var(--pv-paper, #FFFFFF)" stroke-width="8" stroke-linejoin="round"/>
+    <circle cx="1160" cy="430" r="40" fill="var(--pv-subject, #A8A398)"/>
+    <polygon points="1155,421 1155,439 1164,430" fill="var(--pv-paper, #FFFFFF)" stroke="var(--pv-paper, #FFFFFF)" stroke-width="8" stroke-linejoin="round"/>
   </g>
 </svg>

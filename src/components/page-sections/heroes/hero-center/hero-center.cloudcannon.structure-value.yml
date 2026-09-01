@@ -46,7 +46,6 @@ preview:
     - Hero Center
   subtext:
     - key: heading
-  image: public/component-previews/page-sections/heroes/hero-center.svg
   icon: title
   gallery:
     image: public/component-previews/page-sections/heroes/hero-center.svg
@@ -54,7 +53,6 @@ preview:
 picker_preview:
   text: Hero Center
   subtext: Centered hero with heading, subtext, buttons, and a large image.
-  image: public/component-previews/page-sections/heroes/hero-center.svg
   gallery:
     image: public/component-previews/page-sections/heroes/hero-center.svg
     fit: cover

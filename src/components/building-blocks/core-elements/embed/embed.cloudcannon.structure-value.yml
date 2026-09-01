@@ -9,7 +9,6 @@ value:
 preview:
   text:
     - Embed
-  image: public/component-previews/building-blocks/core-elements/embed.svg
   icon: data_object
   gallery:
     image: public/component-previews/building-blocks/core-elements/embed.svg
@@ -17,7 +16,6 @@ preview:
 picker_preview:
   text: Embed
   subtext: Responsive wrapper for third-party embeds.
-  image: public/component-previews/building-blocks/core-elements/embed.svg
   gallery:
     image: public/component-previews/building-blocks/core-elements/embed.svg
     fit: cover

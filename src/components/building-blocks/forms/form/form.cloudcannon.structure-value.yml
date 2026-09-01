@@ -10,7 +10,6 @@ preview:
     - Form
   subtext:
     - key: label
-  image: public/component-previews/building-blocks/forms/form.svg
   icon: checklist_rtl
   gallery:
     image: public/component-previews/building-blocks/forms/form.svg
@@ -18,7 +17,6 @@ preview:
 picker_preview:
   text: Form
   subtext: Groups form fields into one submission area.
-  image: public/component-previews/building-blocks/forms/form.svg
   gallery:
     image: public/component-previews/building-blocks/forms/form.svg
     fit: cover

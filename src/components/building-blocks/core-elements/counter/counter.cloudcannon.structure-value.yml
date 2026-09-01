@@ -13,7 +13,6 @@ preview:
     - Counter
   subtext:
     - template: "{prefix}{number}{suffix}"
-  image: public/component-previews/building-blocks/core-elements/counter.svg
   icon: speed
   gallery:
     image: public/component-previews/building-blocks/core-elements/counter.svg
@@ -21,7 +20,6 @@ preview:
 picker_preview:
   text: Counter
   subtext: Animated counter for highlighting key stats or figures.
-  image: public/component-previews/building-blocks/core-elements/counter.svg
   gallery:
     image: public/component-previews/building-blocks/core-elements/counter.svg
     fit: cover

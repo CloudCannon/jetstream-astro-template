@@ -6,7 +6,6 @@ featureGrid:
       - Feature Grid
     subtext:
       - key: heading
-    image: public/component-previews/page-sections/features/feature-grid.svg
     icon: apps
     gallery:
       image: public/component-previews/page-sections/features/feature-grid.svg

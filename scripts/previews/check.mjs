@@ -13,7 +13,9 @@
  *   - a component has no `public/component-previews/<_component>.svg`;
  *   - an SVG under `public/component-previews/` matches no component (orphan);
  *   - a component's structure YAML is missing the
- *     `image: public/component-previews/<_component>.svg` wiring.
+ *     `gallery.image: public/component-previews/<_component>.svg` wiring, or
+ *     still carries that SVG as a block's own `image:` (the icon slot, which
+ *     belongs to `icon:`).
  *
  * The "are the committed SVGs in sync with their recipes?" drift guard is
  * `previews:build --check`, run alongside this in `previews:check`.
@@ -22,7 +24,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { dirname, join, sep } from "node:path";
 import { glob, globSync } from "glob";
 import * as yaml from "js-yaml";
-import { previewImagePath, snippetWantsPreviewImage } from "./wire-yaml.mjs";
+import { previewImagePath, snippetWantsGalleryImage } from "./wire-yaml.mjs";
 
 const root = join(dirname(new URL(import.meta.url).pathname), "..", "..");
 const previewsDir = join(root, "public", "component-previews");
@@ -76,19 +78,46 @@ const svgFiles = globSync("**/*.svg", {
 
 const orphans = svgFiles.filter((svg) => !expectedSvgs.has(svg)).sort();
 
-// 4. Wiring: every component references its SVG in its structure YAML.
+// 4. Wiring: every component's preview blocks put its SVG in the gallery slot,
+//    and leave the icon slot to `icon:`.
 
 const unwired = [];
 
+/**
+ * Check one `preview:` / `picker_preview:` block, collecting what is wrong.
+ * @param {object} block     the parsed block, or undefined
+ * @param {string} imagePath expected `gallery.image`
+ * @param {boolean} wantsGallery false when the gallery binds a content key
+ * @returns {string[]} problems, empty when the block is correct
+ */
+function blockProblems(block, imagePath, wantsGallery) {
+  const problems = [];
+
+  if (block?.image === imagePath) {
+    problems.push("drop `image:` — the icon slot belongs to `icon:`");
+  }
+
+  if (!wantsGallery) return problems;
+
+  if (block?.gallery?.image !== imagePath) {
+    problems.push(`needs \`gallery.image: ${imagePath}\``);
+  } else if (block.gallery.fit !== "cover") {
+    problems.push("needs `gallery.fit: cover`");
+  }
+
+  return problems;
+}
+
 for (const component of components) {
   const file = componentFile.get(component);
-  const absFile = join(root, file);
-  const imageLine = `image: ${previewImagePath(component)}`;
-  const source = readFileSync(absFile, "utf8");
+  const imagePath = previewImagePath(component);
+  const doc = yaml.load(readFileSync(join(root, file), "utf8")) ?? {};
+  const problems = [
+    ...blockProblems(doc.preview, imagePath, true),
+    ...blockProblems(doc.picker_preview, imagePath, true),
+  ];
 
-  if (!source.includes(imageLine) || !source.includes("fit: cover")) {
-    unwired.push({ component, file });
-  }
+  if (problems.length) unwired.push({ file, problems });
 
   // Components that are also MDX snippets carry the same thumbnail in their
   // snippets YAML, so the snippet picker matches the structure picker.
@@ -99,13 +128,13 @@ for (const component of components) {
 
   if (existsSync(join(root, snippetFile))) {
     const snippetSource = readFileSync(join(root, snippetFile), "utf8");
+    // A gallery bound to a content key keeps the author's own image there.
+    const wantsGallery = snippetWantsGalleryImage(snippetSource);
+    // A snippets file nests everything one level under the snippet name.
+    const snippet = Object.values(yaml.load(snippetSource) ?? {})[0] ?? {};
+    const snippetProblems = blockProblems(snippet.preview, imagePath, wantsGallery);
 
-    if (
-      snippetWantsPreviewImage(snippetSource) &&
-      (!snippetSource.includes(imageLine) || !snippetSource.includes("fit: cover"))
-    ) {
-      unwired.push({ component, file: snippetFile });
-    }
+    if (snippetProblems.length) unwired.push({ file: snippetFile, problems: snippetProblems });
   }
 }
 
@@ -136,9 +165,9 @@ if (orphans.length) {
 }
 
 if (unwired.length) {
-  console.error(`UNWIRED — structure YAML missing the preview image line:`);
-  for (const { component, file } of unwired) {
-    console.error(`   ${file} needs: image: ${previewImagePath(component)} and gallery.fit: cover`);
+  console.error(`UNWIRED — preview blocks not in the expected shape:`);
+  for (const { file, problems } of unwired) {
+    console.error(`   ${file}: ${problems.join("; ")}`);
   }
 }
 

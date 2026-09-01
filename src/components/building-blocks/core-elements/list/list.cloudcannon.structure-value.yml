@@ -23,7 +23,6 @@ value:
 preview:
   text:
     - List
-  image: public/component-previews/building-blocks/core-elements/list.svg
   icon: list
   gallery:
     image: public/component-previews/building-blocks/core-elements/list.svg
@@ -31,7 +30,6 @@ preview:
 picker_preview:
   text: List
   subtext: Lists items with icons, bullets, or numbers as markers.
-  image: public/component-previews/building-blocks/core-elements/list.svg
   gallery:
     image: public/component-previews/building-blocks/core-elements/list.svg
     fit: cover

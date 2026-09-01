@@ -16,34 +16,35 @@
     }
   </style>
   <rect x="0" y="0" width="1280" height="720" fill="var(--pv-paper, #FFFFFF)"/>
-  <g transform="translate(0 65)">
-    <circle cx="640" cy="26" r="26" fill="var(--pv-glyph, #CFCBC2)"/>
-    <rect x="360" y="78" width="560" height="40" rx="20" fill="var(--pv-subject, #A8A398)"/>
-    <rect x="280" y="142" width="720" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
-    <rect x="340" y="166" width="600" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
-    <rect x="80" y="220" width="258" height="300" rx="10" fill="var(--pv-surface, #EBE9E3)"/>
-    <circle cx="261" cy="316" r="15" fill="var(--pv-glyph, #CFCBC2)"/>
-    <polygon points="140,447 188,383 223,447" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="14" stroke-linejoin="round"/>
-    <polygon points="207,449 250,396 292,449" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="10" stroke-linejoin="round"/>
-    <rect x="80" y="546" width="181" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
-    <rect x="80" y="578" width="129" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
-    <rect x="368" y="220" width="258" height="300" rx="10" fill="var(--pv-surface, #EBE9E3)"/>
-    <circle cx="549" cy="316" r="15" fill="var(--pv-glyph, #CFCBC2)"/>
-    <polygon points="428,447 476,383 511,447" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="14" stroke-linejoin="round"/>
-    <polygon points="495,449 538,396 580,449" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="10" stroke-linejoin="round"/>
-    <rect x="368" y="546" width="181" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
-    <rect x="368" y="578" width="129" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
-    <rect x="656" y="220" width="258" height="300" rx="10" fill="var(--pv-surface, #EBE9E3)"/>
-    <circle cx="837" cy="316" r="15" fill="var(--pv-glyph, #CFCBC2)"/>
-    <polygon points="716,447 764,383 799,447" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="14" stroke-linejoin="round"/>
-    <polygon points="783,449 826,396 868,449" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="10" stroke-linejoin="round"/>
-    <rect x="656" y="546" width="181" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
-    <rect x="656" y="578" width="129" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
-    <rect x="944" y="220" width="256" height="300" rx="10" fill="var(--pv-surface, #EBE9E3)"/>
-    <circle cx="1123" cy="316" r="15" fill="var(--pv-glyph, #CFCBC2)"/>
-    <polygon points="1004,447 1051,383 1086,447" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="14" stroke-linejoin="round"/>
-    <polygon points="1070,449 1113,396 1154,449" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="10" stroke-linejoin="round"/>
-    <rect x="944" y="546" width="179" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
-    <rect x="944" y="578" width="128" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+  <g transform="translate(0 100)">
+    <rect x="360" y="0" width="560" height="40" rx="20" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="260" y="66" width="760" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="80" y="150" width="250" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="80" y="194" width="230" height="12" rx="6" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="80" y="218" width="140" height="12" rx="6" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="89" y="267" width="200" height="4" rx="1" fill="var(--pv-glyph, #CFCBC2)"/>
+    <circle cx="89" cy="269" r="9" fill="var(--pv-glyph, #CFCBC2)"/>
+    <circle cx="320" cy="410" r="110" fill="var(--pv-surface, #EBE9E3)"/>
+    <circle cx="350" cy="383" r="9" fill="var(--pv-glyph, #CFCBC2)"/>
+    <polygon points="281,448 308,417 328,448" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="8" stroke-linejoin="round"/>
+    <polygon points="322,448 344,425 365,448" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="8" stroke-linejoin="round"/>
+    <rect x="465" y="150" width="250" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="465" y="194" width="230" height="12" rx="6" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="465" y="218" width="140" height="12" rx="6" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="474" y="267" width="200" height="4" rx="1" fill="var(--pv-glyph, #CFCBC2)"/>
+    <circle cx="474" cy="269" r="9" fill="var(--pv-glyph, #CFCBC2)"/>
+    <circle cx="705" cy="410" r="110" fill="var(--pv-surface, #EBE9E3)"/>
+    <circle cx="735" cy="383" r="9" fill="var(--pv-glyph, #CFCBC2)"/>
+    <polygon points="666,448 693,417 713,448" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="8" stroke-linejoin="round"/>
+    <polygon points="707,448 729,425 750,448" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="8" stroke-linejoin="round"/>
+    <rect x="850" y="150" width="250" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="850" y="194" width="230" height="12" rx="6" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="850" y="218" width="140" height="12" rx="6" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="859" y="267" width="200" height="4" rx="1" fill="var(--pv-glyph, #CFCBC2)"/>
+    <circle cx="859" cy="269" r="9" fill="var(--pv-glyph, #CFCBC2)"/>
+    <circle cx="1090" cy="410" r="110" fill="var(--pv-surface, #EBE9E3)"/>
+    <circle cx="1120" cy="383" r="9" fill="var(--pv-glyph, #CFCBC2)"/>
+    <polygon points="1051,448 1078,417 1098,448" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="8" stroke-linejoin="round"/>
+    <polygon points="1092,448 1114,425 1135,448" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="8" stroke-linejoin="round"/>
   </g>
 </svg>

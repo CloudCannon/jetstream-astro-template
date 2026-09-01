@@ -22,7 +22,6 @@ preview:
     - Select
   subtext:
     - key: name
-  image: public/component-previews/building-blocks/forms/select.svg
   icon: view_list
   gallery:
     image: public/component-previews/building-blocks/forms/select.svg
@@ -30,7 +29,6 @@ preview:
 picker_preview:
   text: Select
   subtext: Form field for selecting one option from a list.
-  image: public/component-previews/building-blocks/forms/select.svg
   gallery:
     image: public/component-previews/building-blocks/forms/select.svg
     fit: cover

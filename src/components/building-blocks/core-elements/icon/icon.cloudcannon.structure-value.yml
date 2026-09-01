@@ -14,7 +14,6 @@ preview:
     - Icon
   subtext:
     - key: name
-  image: public/component-previews/building-blocks/core-elements/icon.svg
   icon: star
   gallery:
     image: public/component-previews/building-blocks/core-elements/icon.svg
@@ -22,7 +21,6 @@ preview:
 picker_preview:
   text: Icon
   subtext: SVG icon component.
-  image: public/component-previews/building-blocks/core-elements/icon.svg
   gallery:
     image: public/component-previews/building-blocks/core-elements/icon.svg
     fit: cover

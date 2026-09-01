@@ -13,7 +13,6 @@ preview:
     - Toggle
   subtext:
     - key: label
-  image: public/component-previews/building-blocks/forms/toggle.svg
   icon: toggle_on
   gallery:
     image: public/component-previews/building-blocks/forms/toggle.svg
@@ -21,7 +20,6 @@ preview:
 picker_preview:
   text: Toggle
   subtext: Toggle switch form field for binary choices.
-  image: public/component-previews/building-blocks/forms/toggle.svg
   gallery:
     image: public/component-previews/building-blocks/forms/toggle.svg
     fit: cover

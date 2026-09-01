@@ -13,7 +13,6 @@ preview:
     - Textarea
   subtext:
     - key: name
-  image: public/component-previews/building-blocks/forms/textarea.svg
   icon: text_ad
   gallery:
     image: public/component-previews/building-blocks/forms/textarea.svg
@@ -21,7 +20,6 @@ preview:
 picker_preview:
   text: Textarea
   subtext: Form field for entering multi-line text.
-  image: public/component-previews/building-blocks/forms/textarea.svg
   gallery:
     image: public/component-previews/building-blocks/forms/textarea.svg
     fit: cover

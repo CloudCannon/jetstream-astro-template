@@ -6,7 +6,6 @@ featureSplit:
       - Feature Split
     subtext:
       - key: heading
-    image: public/component-previews/page-sections/features/feature-split.svg
     icon: view_week
     gallery:
       image: public/component-previews/page-sections/features/feature-split.svg

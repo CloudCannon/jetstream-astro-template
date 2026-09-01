@@ -42,7 +42,6 @@ preview:
     - CTA Split
   subtext:
     - key: heading
-  image: public/component-previews/page-sections/ctas/cta-split.svg
   icon: hero
   gallery:
     image: public/component-previews/page-sections/ctas/cta-split.svg
@@ -50,7 +49,6 @@ preview:
 picker_preview:
   text: CTA Split
   subtext: Split layout CTA with button stack.
-  image: public/component-previews/page-sections/ctas/cta-split.svg
   gallery:
     image: public/component-previews/page-sections/ctas/cta-split.svg
     fit: cover

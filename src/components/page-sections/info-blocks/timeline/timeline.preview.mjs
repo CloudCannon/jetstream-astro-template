@@ -3,36 +3,45 @@ import {
   bar,
   box,
   dot,
+  glyph,
   ink,
   lines,
+  navButton,
   preview,
   repeat,
+  subject,
 } from "../../../../../scripts/previews/kit.mjs";
 
-// A continuous spine with dated nodes down it — the connecting line is the
-// component, so it has to run through every node.
-const B = band(960);
-const SPINE_X = B.left + 200;
+// A left-aligned header over a spine that runs *across* the section, nodes
+// strung along it and the entries hanging beneath. It is a horizontal carousel,
+// so the prev/next pair bottom-right is part of the silhouette.
+const B = band(1120);
+const COLS = 3;
+const CARD_W = 350;
+const PITCH = Math.round((B.w - CARD_W) / (COLS - 1));
+const SPINE_Y = 140;
+const SPINE_H = 6;
 const NODE_R = 18;
-const ROW = 130;
-const ROWS = 4;
-const TOP = 70;
+const NAV_Y = 430;
 
 export default preview({
-  width: 960,
+  width: 1120,
   title: "Timeline",
   draw: [
     bar(B.left, 0, 520, "display"),
-    box(SPINE_X - 3, TOP, 6, (ROWS - 1) * ROW + 20, { r: 3 }),
-    repeat(ROWS, (i) => {
-      const y = TOP + i * ROW;
+    lines(B.left, 68, [1080, 700], { fill: subject }),
+    box(B.left, SPINE_Y, B.w, SPINE_H, { r: SPINE_H / 2, fill: subject }),
+    repeat(COLS, (i) => {
+      const x = B.left + i * PITCH;
 
       return [
-        bar(B.left, y - 6, 150, "label"),
-        dot(SPINE_X, y + 4, NODE_R, { fill: i === 0 ? ink : undefined }),
-        bar(SPINE_X + 60, y - 10, 380, "heading"),
-        lines(SPINE_X + 60, y + 30, [700, 560]),
+        dot(x + 40, SPINE_Y + SPINE_H / 2, NODE_R, { fill: ink }),
+        bar(x, 210, 130, "label"),
+        bar(x, 250, 290, "heading"),
+        lines(x, 300, [340, 300, 250]),
       ];
     }),
+    navButton(B.right - 140, NAV_Y, "left", { fill: glyph }),
+    navButton(B.right - 40, NAV_Y, "right"),
   ],
 });

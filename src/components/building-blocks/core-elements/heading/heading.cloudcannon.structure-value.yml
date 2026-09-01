@@ -11,7 +11,6 @@ value:
   iconColor: default
   iconPosition: before
 preview:
-  image: public/component-previews/building-blocks/core-elements/heading.svg
   icon: title
   text:
     - Heading
@@ -23,7 +22,6 @@ preview:
 picker_preview:
   text: Heading
   subtext: Headings for content hierarchy.
-  image: public/component-previews/building-blocks/core-elements/heading.svg
   gallery:
     image: public/component-previews/building-blocks/core-elements/heading.svg
     fit: cover

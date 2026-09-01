@@ -13,7 +13,6 @@ preview:
     - Testimonial
   subtext:
     - key: authorName
-  image: public/component-previews/building-blocks/core-elements/testimonial.svg
   icon: format_quote
   gallery:
     image: public/component-previews/building-blocks/core-elements/testimonial.svg
@@ -21,7 +20,6 @@ preview:
 picker_preview:
   text: Testimonial
   subtext: Displays customer quotes and reviews.
-  image: public/component-previews/building-blocks/core-elements/testimonial.svg
   gallery:
     image: public/component-previews/building-blocks/core-elements/testimonial.svg
     fit: cover

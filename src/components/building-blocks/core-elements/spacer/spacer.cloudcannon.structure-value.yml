@@ -9,7 +9,6 @@ preview:
     - Spacer
   subtext:
     - key: size
-  image: public/component-previews/building-blocks/core-elements/spacer.svg
   icon: space_bar
   gallery:
     image: public/component-previews/building-blocks/core-elements/spacer.svg
@@ -17,7 +16,6 @@ preview:
 picker_preview:
   text: Spacer
   subtext: Adds adjustable spacing between content sections.
-  image: public/component-previews/building-blocks/core-elements/spacer.svg
   gallery:
     image: public/component-previews/building-blocks/core-elements/spacer.svg
     fit: cover

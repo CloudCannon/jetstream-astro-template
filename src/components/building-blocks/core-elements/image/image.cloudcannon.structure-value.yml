@@ -23,7 +23,6 @@ preview:
     - Image
   subtext:
     - key: alt
-  image: public/component-previews/building-blocks/core-elements/image.svg
   icon: image
   gallery:
     image: public/component-previews/building-blocks/core-elements/image.svg
@@ -31,7 +30,6 @@ preview:
 picker_preview:
   text: Image
   subtext: Optimized image component for local and remote sources.
-  image: public/component-previews/building-blocks/core-elements/image.svg
   gallery:
     image: public/component-previews/building-blocks/core-elements/image.svg
     fit: cover

@@ -18,7 +18,6 @@ preview:
     - Testimonial Section
   subtext:
     - key: authorName
-  image: public/component-previews/page-sections/people/testimonial-section.svg
   icon: format_quote
   gallery:
     image: public/component-previews/page-sections/people/testimonial-section.svg
@@ -26,7 +25,6 @@ preview:
 picker_preview:
   text: Testimonial Section
   subtext: Section with customer testimonial and author details.
-  image: public/component-previews/page-sections/people/testimonial-section.svg
   gallery:
     image: public/component-previews/page-sections/people/testimonial-section.svg
     fit: cover

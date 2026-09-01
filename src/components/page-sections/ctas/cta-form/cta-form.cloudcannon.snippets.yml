@@ -6,7 +6,6 @@ ctaForm:
       - CTA Form
     subtext:
       - key: heading
-    image: public/component-previews/page-sections/ctas/cta-form.svg
     icon: hero
     gallery:
       image: public/component-previews/page-sections/ctas/cta-form.svg

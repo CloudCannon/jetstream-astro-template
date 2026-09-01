@@ -21,7 +21,6 @@ preview:
     - Button Group
   subtext:
     - key: label
-  image: public/component-previews/building-blocks/wrappers/button-group.svg
   icon: rectangle
   gallery:
     image: public/component-previews/building-blocks/wrappers/button-group.svg
@@ -29,7 +28,6 @@ preview:
 picker_preview:
   text: Button Group
   subtext: Arranges buttons side by side with consistent spacing.
-  image: public/component-previews/building-blocks/wrappers/button-group.svg
   gallery:
     image: public/component-previews/building-blocks/wrappers/button-group.svg
     fit: cover

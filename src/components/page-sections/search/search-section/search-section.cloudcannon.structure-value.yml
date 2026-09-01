@@ -31,7 +31,6 @@ preview:
     - Search Section
   subtext:
     - key: heading
-  image: public/component-previews/page-sections/search/search-section.svg
   icon: search
   gallery:
     image: public/component-previews/page-sections/search/search-section.svg
@@ -41,7 +40,6 @@ picker_preview:
   subtext: >-
     Pagefind site search with a heading, content type tabs, a search field, and
     client-side results.
-  image: public/component-previews/page-sections/search/search-section.svg
   gallery:
     image: public/component-previews/page-sections/search/search-section.svg
     fit: cover

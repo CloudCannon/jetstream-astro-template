@@ -10,14 +10,12 @@ value:
 preview:
   text:
     - Mobile Navigation
-  image: public/component-previews/navigation/mobile.svg
   gallery:
     image: public/component-previews/navigation/mobile.svg
     fit: cover
 picker_preview:
   text: Mobile Navigation
   subtext: "Mobile navigation with full-screen overlay."
-  image: public/component-previews/navigation/mobile.svg
   icon: device-phone-mobile
   gallery:
     image: public/component-previews/navigation/mobile.svg

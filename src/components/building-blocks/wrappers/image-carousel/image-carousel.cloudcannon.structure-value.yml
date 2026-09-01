@@ -18,7 +18,6 @@ preview:
     - Image Carousel
   subtext:
     - key: label
-  image: public/component-previews/building-blocks/wrappers/image-carousel.svg
   icon: gallery_thumbnail
   gallery:
     image: public/component-previews/building-blocks/wrappers/image-carousel.svg
@@ -26,7 +25,6 @@ preview:
 picker_preview:
   text: Image Carousel
   subtext: Displays images in a carousel with a thumbnail strip for navigation.
-  image: public/component-previews/building-blocks/wrappers/image-carousel.svg
   gallery:
     image: public/component-previews/building-blocks/wrappers/image-carousel.svg
     fit: cover

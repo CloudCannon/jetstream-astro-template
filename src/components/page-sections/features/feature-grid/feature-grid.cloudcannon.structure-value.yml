@@ -36,7 +36,6 @@ preview:
     - Feature Grid
   subtext:
     - key: heading
-  image: public/component-previews/page-sections/features/feature-grid.svg
   icon: apps
   gallery:
     image: public/component-previews/page-sections/features/feature-grid.svg
@@ -44,7 +43,6 @@ preview:
 picker_preview:
   text: Feature Grid
   subtext: Grid of feature highlights with icons and descriptions.
-  image: public/component-previews/page-sections/features/feature-grid.svg
   gallery:
     image: public/component-previews/page-sections/features/feature-grid.svg
     fit: cover

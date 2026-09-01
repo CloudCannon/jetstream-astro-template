@@ -18,7 +18,6 @@ preview:
     - Split
   subtext:
     - key: label
-  image: public/component-previews/building-blocks/wrappers/split.svg
   icon: vertical_split
   gallery:
     image: public/component-previews/building-blocks/wrappers/split.svg
@@ -26,7 +25,6 @@ preview:
 picker_preview:
   text: Split
   subtext: Two-column layout for side-by-side content.
-  image: public/component-previews/building-blocks/wrappers/split.svg
   gallery:
     image: public/component-previews/building-blocks/wrappers/split.svg
     fit: cover

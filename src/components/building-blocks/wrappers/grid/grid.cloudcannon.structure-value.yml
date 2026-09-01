@@ -14,7 +14,6 @@ preview:
     - Grid
   subtext:
     - key: label
-  image: public/component-previews/building-blocks/wrappers/grid.svg
   icon: grid_on
   gallery:
     image: public/component-previews/building-blocks/wrappers/grid.svg
@@ -22,7 +21,6 @@ preview:
 picker_preview:
   text: Grid
   subtext: Arranges content into a grid that adapts to screen size.
-  image: public/component-previews/building-blocks/wrappers/grid.svg
   gallery:
     image: public/component-previews/building-blocks/wrappers/grid.svg
     fit: cover

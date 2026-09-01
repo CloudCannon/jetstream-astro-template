@@ -26,12 +26,10 @@ value:
   verticalOffset: {}
   rounded: false
 preview:
-  image: public/component-previews/page-sections/info-blocks/tabbed-content.svg
   gallery:
     image: public/component-previews/page-sections/info-blocks/tabbed-content.svg
     fit: cover
 picker_preview:
-  image: public/component-previews/page-sections/info-blocks/tabbed-content.svg
   gallery:
     image: public/component-previews/page-sections/info-blocks/tabbed-content.svg
     fit: cover

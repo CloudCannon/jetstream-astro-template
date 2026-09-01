@@ -15,7 +15,6 @@ preview:
     - Video
   subtext:
     - key: title
-  image: public/component-previews/building-blocks/core-elements/video.svg
   icon: videocam
   gallery:
     image: public/component-previews/building-blocks/core-elements/video.svg
@@ -23,7 +22,6 @@ preview:
 picker_preview:
   text: Video
   subtext: Video component for YouTube, Vimeo, and HTML5 sources.
-  image: public/component-previews/building-blocks/core-elements/video.svg
   gallery:
     image: public/component-previews/building-blocks/core-elements/video.svg
     fit: cover

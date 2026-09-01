@@ -9,14 +9,12 @@ value:
 preview:
   text:
     - Pagination
-  image: public/component-previews/building-blocks/core-elements/pagination.svg
   gallery:
     image: public/component-previews/building-blocks/core-elements/pagination.svg
     fit: cover
 picker_preview:
   text: Pagination
   subtext: "Navigation component for multi-page content."
-  image: public/component-previews/building-blocks/core-elements/pagination.svg
   icon: list
   gallery:
     image: public/component-previews/building-blocks/core-elements/pagination.svg

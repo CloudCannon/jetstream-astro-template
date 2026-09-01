@@ -16,7 +16,6 @@ preview:
     - Submit
   subtext:
     - key: text
-  image: public/component-previews/building-blocks/forms/submit.svg
   icon: check
   gallery:
     image: public/component-previews/building-blocks/forms/submit.svg
@@ -24,7 +23,6 @@ preview:
 picker_preview:
   text: Submit
   subtext: Button for submitting a form.
-  image: public/component-previews/building-blocks/forms/submit.svg
   gallery:
     image: public/component-previews/building-blocks/forms/submit.svg
     fit: cover

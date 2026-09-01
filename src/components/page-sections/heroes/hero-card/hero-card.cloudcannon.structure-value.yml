@@ -25,12 +25,10 @@ value:
   verticalOffset: {}
   rounded: false
 preview:
-  image: public/component-previews/page-sections/heroes/hero-card.svg
   gallery:
     image: public/component-previews/page-sections/heroes/hero-card.svg
     fit: cover
 picker_preview:
-  image: public/component-previews/page-sections/heroes/hero-card.svg
   gallery:
     image: public/component-previews/page-sections/heroes/hero-card.svg
     fit: cover

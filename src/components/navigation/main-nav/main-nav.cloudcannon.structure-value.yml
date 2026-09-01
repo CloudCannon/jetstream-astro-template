@@ -10,7 +10,6 @@ value:
 preview:
   text:
     - Main Nav
-  image: public/component-previews/navigation/main-nav.svg
   icon: navigation
   gallery:
     image: public/component-previews/navigation/main-nav.svg
@@ -18,7 +17,6 @@ preview:
 picker_preview:
   text: Main Nav
   subtext: "Header navigation combining logo, links, and actions."
-  image: public/component-previews/navigation/main-nav.svg
   icon: navigation
   gallery:
     image: public/component-previews/navigation/main-nav.svg

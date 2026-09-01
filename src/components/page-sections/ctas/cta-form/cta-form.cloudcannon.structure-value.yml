@@ -50,7 +50,6 @@ preview:
     - CTA Form
   subtext:
     - key: heading
-  image: public/component-previews/page-sections/ctas/cta-form.svg
   icon: hero
   gallery:
     image: public/component-previews/page-sections/ctas/cta-form.svg
@@ -58,7 +57,6 @@ preview:
 picker_preview:
   text: CTA Form
   subtext: Split layout CTA with form and image.
-  image: public/component-previews/page-sections/ctas/cta-form.svg
   gallery:
     image: public/component-previews/page-sections/ctas/cta-form.svg
     fit: cover

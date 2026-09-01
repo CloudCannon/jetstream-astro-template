@@ -6,7 +6,6 @@ ctaCenter:
       - CTA Center
     subtext:
       - key: heading
-    image: public/component-previews/page-sections/ctas/cta-center.svg
     icon: hero
     gallery:
       image: public/component-previews/page-sections/ctas/cta-center.svg

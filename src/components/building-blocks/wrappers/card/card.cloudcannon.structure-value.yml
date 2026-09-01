@@ -30,7 +30,6 @@ preview:
     - Card
   subtext:
     - key: label
-  image: public/component-previews/building-blocks/wrappers/card.svg
   icon: crop_square
   gallery:
     image: public/component-previews/building-blocks/wrappers/card.svg
@@ -38,7 +37,6 @@ preview:
 picker_preview:
   text: Card
   subtext: Groups related content within a section.
-  image: public/component-previews/building-blocks/wrappers/card.svg
   gallery:
     image: public/component-previews/building-blocks/wrappers/card.svg
     fit: cover

@@ -1,10 +1,16 @@
 /**
  * Surgically wire `image: public/component-previews/<component>.svg` into a
  * component's structure-value YAML, under both `preview:` and `picker_preview:`
- * — as the top-level `image:` and as `gallery.image` (the large picker-card
- * slot). CloudCannon resolves these against the source tree, the same way the
- * icon picker uses `src/icons/{id}.svg`. A site URL (`/component-previews/...`)
- * does not exist as a file and the picker shows "No preview available".
+ * — as `gallery.image` only, the large picker-card slot. CloudCannon resolves
+ * that against the source tree, the same way the icon picker uses
+ * `src/icons/{id}.svg`. A site URL (`/component-previews/...`) does not exist as
+ * a file and the picker shows "No preview available".
+ *
+ * The block's own top-level `image:` is deliberately NOT wired, and is stripped
+ * if a previous run left one: it drives the small icon slot in list view, where
+ * a 16:9 thumbnail squeezed into a square reads as mush. That slot falls back to
+ * the block's `icon:` (or the structure's root `icon:`), which is what the
+ * non-gallery preview already shows.
  *
  * Formatting-preserving and idempotent: an already-correct line is left
  * byte-identical, so re-running the build produces no spurious diffs.
@@ -65,8 +71,13 @@ function isDirectChild(line, childIndent, key) {
 }
 
 /**
- * Ensure `image: <imagePath>` exists under a YAML block (`preview:` /
- * `picker_preview:`), preserving existing formatting.
+ * Strip a block's own `image: <imagePath>` line, so the icon slot falls through
+ * to the block's `icon:` instead of a squashed 16:9 thumbnail.
+ *
+ * Only ever matches a *direct* child of the block, and only when it points at
+ * this component's preview SVG — a hand-authored `image:` pointing anywhere
+ * else is someone's deliberate choice and is left alone, as is the deeper
+ * `gallery.image` that `ensureGalleryImage` owns.
  *
  * `indent` is the block header's own indentation — `""` for the top-level
  * blocks in a structure-value file, `"  "` for the blocks nested under a
@@ -77,46 +88,23 @@ function isDirectChild(line, childIndent, key) {
  * @param {string} [indent]
  * @returns {string[]}
  */
-export function ensureImageLine(lines, blockName, imagePath, indent = "") {
+export function removeImageLine(lines, blockName, imagePath, indent = "") {
   const block = findBlock(lines, blockName, indent);
 
-  if (!block) {
-    // Block is missing — create a minimal one before the first `_`-prefixed
-    // meta key (`_inputs_from_glob:`, `_structures:`, …), else at the end.
-    const insertAt = lines.findIndex((line) => new RegExp(`^${indent}_[a-z]`).test(line));
-    const created = [`${indent}${blockName}:`, `${indent}  image: ${imagePath}`];
-    const at = insertAt === -1 ? lines.length : insertAt;
-
-    return [...lines.slice(0, at), ...created, ...lines.slice(at)];
-  }
+  if (!block) return lines;
 
   const { start, end, childIndent } = block;
-  const newLine = `${childIndent}image: ${imagePath}`;
-
-  // Only ever match a *direct* child of the block. A deeper `image:` belongs to
-  // a nested sub-block (`gallery:` uses one) and must be left alone here —
-  // `ensureGalleryImage` owns that line.
   const imageIdx = lines.findIndex(
-    (line, i) => i > start && i < end && isDirectChild(line, childIndent, "image")
+    (line, i) =>
+      i > start &&
+      i < end &&
+      isDirectChild(line, childIndent, "image") &&
+      line.replace(/^\s+image:\s*/, "").trim() === imagePath
   );
 
-  if (imageIdx !== -1) {
-    if (lines[imageIdx].replace(/^\s+image:\s*/, "").trim() === imagePath) {
-      return lines; // Already correct — leave byte-identical.
-    }
-    const next = [...lines];
+  if (imageIdx === -1) return lines;
 
-    next[imageIdx] = newLine;
-    return next;
-  }
-
-  // Insert before the existing `icon:` fallback if present, else at block end.
-  const iconIdx = lines.findIndex(
-    (line, i) => i > start && i < end && isDirectChild(line, childIndent, "icon")
-  );
-  const insertAt = iconIdx !== -1 ? iconIdx : end;
-
-  return [...lines.slice(0, insertAt), newLine, ...lines.slice(insertAt)];
+  return [...lines.slice(0, imageIdx), ...lines.slice(imageIdx + 1)];
 }
 
 /**
@@ -137,7 +125,20 @@ export function ensureImageLine(lines, blockName, imagePath, indent = "") {
 export function ensureGalleryImage(lines, blockName, imagePath, indent = "") {
   const block = findBlock(lines, blockName, indent);
 
-  if (!block) return lines;
+  if (!block) {
+    // Block is missing — create a minimal one before the first `_`-prefixed
+    // meta key (`_inputs_from_glob:`, `_structures:`, …), else at the end.
+    const insertAt = lines.findIndex((line) => new RegExp(`^${indent}_[a-z]`).test(line));
+    const created = [
+      `${indent}${blockName}:`,
+      `${indent}  gallery:`,
+      `${indent}    image: ${imagePath}`,
+      `${indent}    fit: cover`,
+    ];
+    const at = insertAt === -1 ? lines.length : insertAt;
+
+    return [...lines.slice(0, at), ...created, ...lines.slice(at)];
+  }
 
   const { start, end, childIndent } = block;
   const galleryHeader = `${childIndent}gallery:`;
@@ -214,10 +215,10 @@ export function wirePreviewImage(component, absFile) {
   const imagePath = previewImagePath(component);
   let lines = original.split("\n");
 
-  lines = ensureImageLine(lines, "preview", imagePath);
-  lines = ensureImageLine(lines, "picker_preview", imagePath);
   lines = ensureGalleryImage(lines, "preview", imagePath);
   lines = ensureGalleryImage(lines, "picker_preview", imagePath);
+  lines = removeImageLine(lines, "preview", imagePath);
+  lines = removeImageLine(lines, "picker_preview", imagePath);
 
   const updated = lines.join("\n");
 
@@ -228,19 +229,20 @@ export function wirePreviewImage(component, absFile) {
 }
 
 /**
- * Whether a snippets file should get the static component thumbnail.
+ * Whether a snippets file's `gallery:` slot should get the static component
+ * thumbnail.
  *
- * A snippet whose preview defines a `gallery:` block already renders an image
- * pulled from the author's own content (`Image` uses `gallery.image: key:
- * source`). That is strictly more informative than a generic component
- * thumbnail, so those snippets opt out.
+ * A snippet whose gallery binds a content key already renders an image pulled
+ * from the author's own content (`Image` uses `gallery.image: key: source`).
+ * That is strictly more informative than a generic component thumbnail, so
+ * those galleries opt out and keep the author's image.
  *
  * Shared by the wiring (build.mjs) and the drift guard (check.mjs) so the two
  * cannot disagree about which files are expected to carry the line.
  * @param {string} source  contents of the snippets YAML
  * @returns {boolean}
  */
-export function snippetWantsPreviewImage(source) {
+export function snippetWantsGalleryImage(source) {
   // Opt out only when gallery already shows the author's own image
   // (`image: { key: ... }` / a key cascade). A gallery we wired ourselves
   // (`image: public/component-previews/...`) must stay updatable.
@@ -252,22 +254,22 @@ export function snippetWantsPreviewImage(source) {
  *
  * A snippets file nests its blocks one level under the snippet name, so the
  * `preview:` block sits at indent 2. Only `preview:` is wired — a snippet's
- * `picker_preview` uses `preview` as its base, so the image is inherited by the
- * snippet picker without a second block.
+ * `picker_preview` uses `preview` as its base, so the gallery is inherited by
+ * the snippet picker without a second block.
  * @param {string} component  kebab `_component` path
  * @param {string} absFile    absolute path to the snippets YAML
- * @returns {"written" | "unchanged" | "skipped"}
+ * @returns {"written" | "unchanged"}
  */
 export function wireSnippetPreviewImage(component, absFile) {
   const original = readFileSync(absFile, "utf8");
-
-  if (!snippetWantsPreviewImage(original)) return "skipped";
-
   const imagePath = previewImagePath(component);
   let lines = original.split("\n");
 
-  lines = ensureImageLine(lines, "preview", imagePath, "  ");
-  lines = ensureGalleryImage(lines, "preview", imagePath, "  ");
+  if (snippetWantsGalleryImage(original)) {
+    lines = ensureGalleryImage(lines, "preview", imagePath, "  ");
+  }
+
+  lines = removeImageLine(lines, "preview", imagePath, "  ");
 
   const updated = lines.join("\n");
 

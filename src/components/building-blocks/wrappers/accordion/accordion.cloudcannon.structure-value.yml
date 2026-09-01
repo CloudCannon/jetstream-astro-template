@@ -12,7 +12,6 @@ preview:
     - Accordion
   subtext:
     - key: label
-  image: public/component-previews/building-blocks/wrappers/accordion.svg
   icon: expand_all
   gallery:
     image: public/component-previews/building-blocks/wrappers/accordion.svg
@@ -20,7 +19,6 @@ preview:
 picker_preview:
   text: Accordion
   subtext: Interactive component for showing and hiding content panels.
-  image: public/component-previews/building-blocks/wrappers/accordion.svg
   gallery:
     image: public/component-previews/building-blocks/wrappers/accordion.svg
     fit: cover

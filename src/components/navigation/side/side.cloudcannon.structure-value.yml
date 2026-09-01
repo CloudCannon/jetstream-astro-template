@@ -7,14 +7,12 @@ value:
 preview:
   text:
     - Side Navigation
-  image: public/component-previews/navigation/side.svg
   gallery:
     image: public/component-previews/navigation/side.svg
     fit: cover
 picker_preview:
   text: Side Navigation
   subtext: "Sidebar navigation with expandable sections."
-  image: public/component-previews/navigation/side.svg
   icon: sidebar
   gallery:
     image: public/component-previews/navigation/side.svg

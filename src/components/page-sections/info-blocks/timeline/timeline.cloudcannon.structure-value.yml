@@ -50,12 +50,10 @@ value:
   verticalOffset: {}
   rounded: false
 preview:
-  image: public/component-previews/page-sections/info-blocks/timeline.svg
   gallery:
     image: public/component-previews/page-sections/info-blocks/timeline.svg
     fit: cover
 picker_preview:
-  image: public/component-previews/page-sections/info-blocks/timeline.svg
   gallery:
     image: public/component-previews/page-sections/info-blocks/timeline.svg
     fit: cover

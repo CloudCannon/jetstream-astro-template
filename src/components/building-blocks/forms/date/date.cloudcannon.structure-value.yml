@@ -14,7 +14,6 @@ preview:
     - Date
   subtext:
     - key: label
-  image: public/component-previews/building-blocks/forms/date.svg
   icon: calendar
   gallery:
     image: public/component-previews/building-blocks/forms/date.svg
@@ -22,7 +21,6 @@ preview:
 picker_preview:
   text: Date
   subtext: Form field for selecting a date.
-  image: public/component-previews/building-blocks/forms/date.svg
   gallery:
     image: public/component-previews/building-blocks/forms/date.svg
     fit: cover

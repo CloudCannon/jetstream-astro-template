@@ -20,7 +20,6 @@ preview:
     - Choice Group
   subtext:
     - key: title
-  image: public/component-previews/building-blocks/forms/choice-group.svg
   icon: check_box
   gallery:
     image: public/component-previews/building-blocks/forms/choice-group.svg
@@ -28,7 +27,6 @@ preview:
 picker_preview:
   text: Choice Group
   subtext: Form field for selecting one or more options.
-  image: public/component-previews/building-blocks/forms/choice-group.svg
   gallery:
     image: public/component-previews/building-blocks/forms/choice-group.svg
     fit: cover

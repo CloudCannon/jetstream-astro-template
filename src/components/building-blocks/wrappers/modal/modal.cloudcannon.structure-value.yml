@@ -16,7 +16,6 @@ preview:
     - Modal
   subtext:
     - key: label
-  image: public/component-previews/building-blocks/wrappers/modal.svg
   icon: open_in_new
   gallery:
     image: public/component-previews/building-blocks/wrappers/modal.svg
@@ -24,7 +23,6 @@ preview:
 picker_preview:
   text: Modal
   subtext: Dialog overlay triggered by a button, for focused content or actions.
-  image: public/component-previews/building-blocks/wrappers/modal.svg
   gallery:
     image: public/component-previews/building-blocks/wrappers/modal.svg
     fit: cover
