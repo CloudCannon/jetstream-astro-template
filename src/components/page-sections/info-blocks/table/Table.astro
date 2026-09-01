@@ -307,10 +307,13 @@ const snakePath =
        * The box is part of the scrolled content, so native scrolling moves its
        * edges — nothing is repositioned per frame. `fit-content` keeps it as
        * wide as the table when that overflows, and as wide as the scroller when
-       * it doesn't.
+       * it doesn't. The auto margins centre a narrow table, and collapse to 0
+       * once it overflows so the scroll still starts at the table's first
+       * column.
        */
       .table-wrapper {
         width: fit-content;
+        margin-inline: auto;
         padding: var(--spacing-md);
         background: var(--color-bg);
       }
