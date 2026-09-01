@@ -39,15 +39,6 @@ value:
   colorScheme: inherit
   backgroundColor: base
   contentBackground: false
-  background:
-    type: image
-    positionVertical: top
-    positionHorizontal: center
-    priority: false
-    imageSource: ""
-    imageAlt: ""
-    videoSource: null
-    overlay: 0
   verticalOffset: {}
   rounded: false
 preview:
