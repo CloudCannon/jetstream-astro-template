@@ -48,8 +48,8 @@ const pageTitle = blogPage?.data?.title ?? "Blog";
 const pageDescription =
   blogPage?.data?.description ??
   "Read our latest articles and insights on web development, design, and technology.";
-const heroSections = blogPage?.data?.heroSections ?? [];
-const ctaSections = blogPage?.data?.ctaSections ?? [];
+const heroSection = blogPage?.data?.heroSection;
+const ctaSection = blogPage?.data?.ctaSection;
 
 const team = await getCollection("team");
 ---
@@ -58,14 +58,10 @@ const team = await getCollection("team");
   title={pageTitle}
   description={pageDescription}
 >
-  <div
-    data-editable="array"
-    data-prop="heroSections"
-    data-component-key="_component"
-    data-id-key="_component"
-  >
-    <RenderBlock contentSections={heroSections} />
-  </div>
+  <RenderBlock
+    contentSections={heroSection}
+    dataProp="heroSection"
+  />
 
   <CustomSection
     id="posts"
@@ -195,14 +191,10 @@ const team = await getCollection("team");
     }
   </CustomSection>
 
-  <div
-    data-editable="array"
-    data-prop="ctaSections"
-    data-component-key="_component"
-    data-id-key="_component"
-  >
-    <RenderBlock contentSections={ctaSections} />
-  </div>
+  <RenderBlock
+    contentSections={ctaSection}
+    dataProp="ctaSection"
+  />
 </Page>
 
 <style is:global>

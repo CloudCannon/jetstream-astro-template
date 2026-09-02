@@ -53,6 +53,21 @@ collections_config:
         hide_extra_inputs: false
         remove_empty_inputs: false
         remove_extra_inputs: false
+        _inputs:
+          heroSection:
+            type: object
+            comment: The single hero shown above the list of blog posts.
+            options:
+              structures: _structures.heroSection
+              preview:
+                icon: view_carousel
+          ctaSection:
+            type: object
+            comment: The single call to action shown below the list of blog posts.
+            options:
+              structures: _structures.ctaSection
+              preview:
+                icon: ads_click
   blog:
     path: src/content/blog
     glob:

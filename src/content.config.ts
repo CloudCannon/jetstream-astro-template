@@ -2,6 +2,12 @@ import { glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
 
 const contentBlockSchema = z.object({ _component: z.string() }).passthrough();
+/**
+ * A field holding a single block rather than a list of them. `_component` is
+ * optional here because an object Input starts out empty in the CMS, before an
+ * editor picks a Structure for it.
+ */
+const singleContentBlockSchema = z.object({ _component: z.string().optional() }).passthrough();
 const docsViewerSizeSchema = z.enum(["sm", "md", "lg", "xl"]);
 
 /**
@@ -26,8 +32,8 @@ const pageSchema = z.object({
   image: z.string().optional(),
   canonical: z.string().optional(),
   pageSections: z.array(contentBlockSchema).optional(),
-  heroSections: z.array(contentBlockSchema).optional(),
-  ctaSections: z.array(contentBlockSchema).optional(),
+  heroSection: singleContentBlockSchema.optional().nullable(),
+  ctaSection: singleContentBlockSchema.optional().nullable(),
   cta: z.any().optional(),
 });
 

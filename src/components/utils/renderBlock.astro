@@ -3,8 +3,13 @@ import { pascalToKebab } from "@components/utils/pascalToKebab";
 import type { ContentBlock } from "../../types";
 
 export interface Props {
-  contentSections: ContentBlock[];
+  /**
+   * An array renders a list of blocks; a single object renders one block, for
+   * inputs that hold exactly one component (e.g. a page's hero or CTA).
+   */
+  contentSections?: ContentBlock | ContentBlock[] | null;
   useDefaultEditableBinding?: boolean;
+  dataProp?: string;
 }
 
 type AstroComponent = (_props: Record<string, unknown>) => unknown;
@@ -32,13 +37,24 @@ Object.entries(componentImports).forEach(([path, obj]) => {
   components[componentName] = (obj as Record<string, AstroComponent>).default;
 });
 
-const { contentSections, useDefaultEditableBinding = true } = Astro.props;
+const { contentSections, useDefaultEditableBinding = true, dataProp } = Astro.props;
+
+const isSingleBlock = !!contentSections && !Array.isArray(contentSections);
+const blocks: ContentBlock[] = isSingleBlock
+  ? [contentSections as ContentBlock]
+  : ((contentSections as ContentBlock[]) ?? []);
+
+const editableAttributes = (block: ContentBlock) => {
+  if (!useDefaultEditableBinding) return {};
+
+  return isSingleBlock
+    ? { "data-editable": "component", "data-component": block._component, "data-prop": dataProp }
+    : { "data-editable": "array-item", "data-id": block._component };
+};
 ---
 
 {
-  // Array-level editable attributes are owned by the caller's container element.
-  // This utility only resolves blocks and marks each rendered block as an array item.
-  contentSections?.map((block) => {
+  blocks.map((block) => {
     const Component = components[block._component];
 
     if (!Component && block._component) {
@@ -50,8 +66,7 @@ const { contentSections, useDefaultEditableBinding = true } = Astro.props;
 
     return Component ? (
       <Component
-        data-editable={useDefaultEditableBinding ? "array-item" : undefined}
-        data-id={block._component}
+        {...editableAttributes(block)}
         {...block}
         useDefaultEditableBinding={useDefaultEditableBinding}
       />
