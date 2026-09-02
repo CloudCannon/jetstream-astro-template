@@ -1,11 +1,10 @@
 ---
 _schema: default
-permalink:
 title:
-description: >-
-  An Astro template built for CloudCannon with visual editing, flexible
-  components, and an exceptional developer experience. Deploy your next project
-  with speed and style.
+description: An Astro template built for CloudCannon with visual editing,
+  flexible components, and an exceptional developer experience. Deploy your next
+  project with speed and style.
+permalink:
 keywords: []
 pageSections:
   - _component: page-sections/heroes/hero-center
@@ -13,16 +12,14 @@ pageSections:
     eyebrowText:
     heading: Introducing<br /><span class="highlight-text">Jetstream</span>
     headingSize: 4xl
-    subtext: >-
-      A new Astro template by CloudCannon, built with our [Astro Component
+    subtext: A new Astro template by CloudCannon, built with our [Astro Component
       Starter](https://lemon-pear.cloudvent.net/) for top performance, true
       visual editing, and an ideal developer experience.
     buttonSections:
       - _component: building-blocks/core-elements/button
         text: Deploy Jetstream on CloudCannon
         hideText: false
-        link: >-
-          https://app.cloudcannon.com/register#sites/connect/github/cloudcannon/jetstream-astro-template
+        link: https://app.cloudcannon.com/register#sites/connect/github/cloudcannon/jetstream-astro-template
         iconName: arrow-up-right
         iconColor: default
         iconPosition: after
@@ -53,6 +50,7 @@ pageSections:
     backgroundDecoration: true
     sectionHeight: full
     maxContentWidth: lg
+    paddingVertical: md
     colorScheme: inherit
     backgroundColor: highlight-grid
     contentBackground: true
@@ -60,11 +58,8 @@ pageSections:
       size: nav-height
       direction: back
     rounded: false
-    paddingVertical: md
   - _component: page-sections/features/logo-strip
-    heading: >-
-      We’ve solved the internet for the world’s most ambitious engineering
-      teams.
+    heading: We’ve solved the internet for the world’s most ambitious engineering teams.
     images:
       - source: /src/assets/images/apex.svg
         alt: Apex logo
@@ -112,8 +107,7 @@ pageSections:
       alignmentHorizontal: center
     eyebrowText:
     heading: 'Jetstream protects what matters most: <br />your uptime percentage'
-    subtext: >-
-      Everything you need to scale from boutique team to a global enterprise
+    subtext: Everything you need to scale from boutique team to a global enterprise
       without the operational friction —&nbsp;or the science fiction.
     featureGrid:
       features:
@@ -126,8 +120,7 @@ pageSections:
           eyebrowIcon: {}
           eyebrowText:
           title: Content delivery acceleration
-          description: >-
-            Your websites will load faster than human perception allows. We're
+          description: Your websites will load faster than human perception allows. We're
             not saying we've broken the laws of physics, but our CDN operates at
             speeds that would make light jealous.
           columnSpan: 5
@@ -141,8 +134,7 @@ pageSections:
           eyebrowIcon: {}
           eyebrowText: We've got this.
           title: DDoS mitigation that never sleeps
-          description: >-
-            Bad actors don't stand a chance against our behavioral analysis
+          description: Bad actors don't stand a chance against our behavioral analysis
             engines, which have been trained on every known attack pattern, plus
             several we invented just to be thorough.
           columnSpan: 3
@@ -156,10 +148,9 @@ pageSections:
           eyebrowIcon: {}
           eyebrowText:
           title: Zero-trust security framework
-          description: >-
-            We trust nothing and verify everything, twice. Sometimes three times
-            if it's Tuesday. Our security team operates under the principle that
-            paranoia isn't a bug — it's a feature we bill for.
+          description: We trust nothing and verify everything, twice. Sometimes three
+            times if it's Tuesday. Our security team operates under the
+            principle that paranoia isn't a bug — it's a feature we bill for.
           columnSpan: 4
           rowSpan: 1
         - _component: page-sections/features/feature-grid/feature-item
@@ -171,8 +162,7 @@ pageSections:
           eyebrowIcon: {}
           eyebrowText:
           title: Automated SSL / TLS management
-          description: >-
-            Our automated certificate lifecycle system renews your SSL
+          description: Our automated certificate lifecycle system renews your SSL
             certificates before they even think about expiring. We've eliminated
             the 3am renewal panic entirely.
           columnSpan: 3
@@ -186,8 +176,7 @@ pageSections:
           eyebrowIcon: {}
           eyebrowText:
           title: DNS resolution bordering on prescient
-          description: >-
-            Our global DNS infrastructure responds in fractions of milliseconds
+          description: Our global DNS infrastructure responds in fractions of milliseconds
             that require new units of measurement. Your domain names resolve
             before users finished typing them.
           columnSpan: 7
@@ -211,8 +200,7 @@ pageSections:
     eyebrowIcon: {}
     eyebrowText:
     heading: Customer solutions that solve themselves
-    subtext: >-
-      We don't just provide infrastructure — we provide infrastructure that
+    subtext: We don't just provide infrastructure — we provide infrastructure that
       understands your business. And your heart.
     tabs:
       - _component: building-blocks/wrappers/content-selector/content-selector-item
@@ -294,13 +282,12 @@ pageSections:
             label: ''
             firstColumnContentSections:
               - _component: building-blocks/core-elements/simple-text
-                text: >-
-                  FinTrust needed transaction speeds that matched customer
-                  expectations and security that exceeded regulatory paranoia.
-                  Their customers now experience instantaneous transfers while
-                  attempted attacks are neutralized before they even realize
-                  they've failed. Banking infrastructure that's faster than
-                  fraud and more reliable than gravity.
+                text: FinTrust needed transaction speeds that matched customer expectations and
+                  security that exceeded regulatory paranoia. Their customers
+                  now experience instantaneous transfers while attempted attacks
+                  are neutralized before they even realize they've failed.
+                  Banking infrastructure that's faster than fraud and more
+                  reliable than gravity.
                 alignmentHorizontal: start
                 size: md
             secondColumnContentSections: []
@@ -366,12 +353,12 @@ pageSections:
       direction: ''
     rounded: false
   - _component: page-sections/people/testimonial-section
-    text: >-
-      Downtime used to be a weekly crisis. Now it's a theoretical concept we
+    text: Downtime used to be a weekly crisis. Now it's a theoretical concept we
       vaguely remember.
     authorName: Dr. Liz Vante
     authorDescription: CTO, MediConnect Healthcare
     authorImage: /src/assets/images/testimonial.png
+    alignmentHorizontal: start
     maxContentWidth: xl
     paddingVertical: 2xl
     colorScheme: dark
@@ -395,8 +382,7 @@ pageSections:
       alignmentHorizontal: center
     eyebrowText:
     heading: Pricing that scales with your ambition
-    subtext: >-
-      Choose the plan that matches your current infrastructure needs, then
+    subtext: Choose the plan that matches your current infrastructure needs, then
       upgrade when your inevitable success makes it necessary. We'll be here,
       ready with congratulations and additional bandwidth.
     featureGrid:
@@ -419,7 +405,7 @@ pageSections:
                 iconName: check-circle
                 iconColor: purple
                 link: ''
-              - text: "Complimentary network topology consult with\Lour most artistic engineer"
+              - text: Complimentary network topology consult with our most artistic engineer
                 iconName: check-circle
                 iconColor: purple
                 link: ''
@@ -457,7 +443,9 @@ pageSections:
                 iconName: check-circle
                 iconColor: purple
                 link: ''
-              - text: "Annual infrastructure health assessment conducted by our senior architects,\Lcomplete with a 40-page report bound in a collectible presentation folder"
+              - text: Annual infrastructure health assessment conducted by our senior
+                  architects, complete with a 40-page report bound in a
+                  collectible presentation folder
                 iconName: check-circle
                 iconColor: purple
                 link: ''
@@ -509,7 +497,7 @@ pageSections:
     maxContentWidth: xl
     paddingVertical: 4xl
     colorScheme: dark
-    backgroundColor: highlight-radial-gradient
+    backgroundColor: highlight-radial-gradient-animated
     contentBackground: false
     rounded: true
 ---
