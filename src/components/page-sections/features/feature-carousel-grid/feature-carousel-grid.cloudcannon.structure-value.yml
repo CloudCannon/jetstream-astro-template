@@ -90,6 +90,8 @@ _structures:
                             name: Highlight Linear Gradient
                           - id: highlight-radial-gradient
                             name: Highlight Radial Gradient
+                          - id: highlight-radial-gradient-animated
+                            name: Highlight Radial Gradient Animated
                     eyebrowIcon:
                       hidden: decorative
                       type: object

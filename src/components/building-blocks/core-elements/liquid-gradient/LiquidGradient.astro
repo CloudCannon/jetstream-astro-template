@@ -1,0 +1,239 @@
+---
+/**
+ * Animated layer stack behind the `highlight-radial-gradient-animated`
+ * background variant. Ported from the "Liquid Gradient Card" Claude Design
+ * prototype, with every hard-coded hex swapped for a theme token so the effect
+ * follows the light/dark palette instead of pinning one purple.
+ *
+ * Rendered inside the `.background` div by CustomSection and Card, which is
+ * why the variant itself needs no CSS of its own — the ground gradient lives
+ * on this component's wrapper. It is one shared definition rather than a rule
+ * duplicated per component, so all sections offering the variant stay in sync.
+ *
+ * Seven independently drifting layers are the point: each carries its own
+ * keyframe track, which is what a single element with a stacked `background`
+ * cannot do — those layers can only pan together, reading as a slide rather
+ * than as liquid.
+ *
+ * Deliberately CSS-only, and deliberately free of `filter`, `mix-blend-mode`
+ * and `will-change`. A blur here is actively harmful: sections using this
+ * background animate SVG mask attributes (HeroCenter's `slide-mask`), which
+ * repaint rather than composite, and blurred layers in the same group get
+ * re-blurred on every one of those repaints — which showed up as the hero's
+ * animated line flashing. Transform-only animation on unfiltered layers
+ * composites cleanly alongside it.
+ *
+ * Dropping the blur means the layers have to be soft on their own, which is
+ * a stricter constraint than it first appears: the prototype's blur was also
+ * concealing where its blobs were clipped by their own boxes. Hence the
+ * explicit ellipse sizing on every layer below — that, not the blur, is what
+ * keeps the edges invisible.
+ *
+ * Tunable via `--liquid-gradient-speed` (the prototype's `speed` prop): every
+ * duration divides by it, so 2 runs twice as fast and 0.5 half as fast.
+ */
+---
+
+<div
+  class="liquid-gradient"
+  aria-hidden="true"
+>
+  <div
+    class="liquid-layer"
+    data-liquid-layer="a"
+  >
+  </div>
+  <div
+    class="liquid-layer"
+    data-liquid-layer="b"
+  >
+  </div>
+  <div
+    class="liquid-layer"
+    data-liquid-layer="c"
+  >
+  </div>
+  <div
+    class="liquid-layer"
+    data-liquid-layer="d"
+  >
+  </div>
+  <div
+    class="liquid-layer"
+    data-liquid-layer="e"
+  >
+  </div>
+  <div
+    class="liquid-layer"
+    data-liquid-layer="sheen"
+  >
+  </div>
+  <div class="liquid-tint"></div>
+</div>
+
+<style is:global>
+  @layer components {
+    .liquid-gradient {
+      --liquid-gradient-speed: 1;
+
+      /*
+        The ground the drifting layers move over. Deep at both ends and
+        brighter through the middle, matching the prototype's four-stop
+        105deg ramp — mixing `highlight` into `primary` reproduces that
+        brighter middle in either theme, where naming a second token
+        outright would go pale in one of them.
+      */
+      background: linear-gradient(
+        105deg,
+        var(--color-bg-primary) 0%,
+        color-mix(in oklab, var(--color-bg-primary) 72%, var(--color-bg-highlight)) 38%,
+        color-mix(in oklab, var(--color-bg-primary) 55%, var(--color-bg-highlight)) 62%,
+        var(--color-bg-primary) 100%
+      );
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      position: absolute;
+
+      > .liquid-layer {
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+        inset: -35%;
+        position: absolute;
+      }
+
+      /*
+        Each layer's `transform` repeats its own 0% keyframe. The global
+        reduced-motion rule in base/_animations.css drops the animations, and
+        without these the layers would all park dead-centre as one blob
+        instead of holding the prototype's opening composition.
+
+        Every blob is an explicitly sized ellipse — percentages of its own
+        box — rather than the prototype's `circle at 50% 50%`. That default
+        sizes to the farthest CORNER, so on a wide layer the blob was still
+        opaque when it reached the top and bottom edges and got clipped
+        square; the prototype's blur was hiding those cut lines. Sized this
+        way the falloff completes inside the box on every axis, at any
+        section aspect ratio, so there is no edge left to hide.
+
+        Keep the largest radius under 50%, and mind that the stops run to
+        100% — a blob that reaches its extent at less than full transparency
+        puts the straight edges right back.
+      */
+      > [data-liquid-layer="a"] {
+        animation-delay: calc(-4.3s / var(--liquid-gradient-speed));
+        animation-duration: calc(13s / var(--liquid-gradient-speed));
+        animation-name: liquid-drift-a;
+        background: radial-gradient(
+          ellipse 42% 42% at 50% 50%,
+          color-mix(in oklab, var(--color-bg-inverse-highlight) 82%, transparent) 0%,
+          color-mix(in oklab, var(--color-bg-inverse-highlight) 62%, transparent) 26%,
+          color-mix(in oklab, var(--color-bg-inverse-highlight) 34%, transparent) 50%,
+          color-mix(in oklab, var(--color-bg-inverse-highlight) 12%, transparent) 74%,
+          transparent 100%
+        );
+        transform: translate3d(-38%, -22%, 0) scale(1) rotate(0deg);
+      }
+
+      > [data-liquid-layer="b"] {
+        animation-duration: calc(17s / var(--liquid-gradient-speed));
+        animation-name: liquid-drift-b;
+        background: radial-gradient(
+          ellipse 38% 38% at 50% 50%,
+          var(--color-bg-primary) 0%,
+          color-mix(in oklab, var(--color-bg-primary) 88%, transparent) 26%,
+          color-mix(in oklab, var(--color-bg-primary) 58%, transparent) 50%,
+          color-mix(in oklab, var(--color-bg-primary) 22%, transparent) 74%,
+          transparent 100%
+        );
+        transform: translate3d(46%, 28%, 0) scale(1.4) rotate(0deg);
+      }
+
+      > [data-liquid-layer="c"] {
+        animation-duration: calc(21s / var(--liquid-gradient-speed));
+        animation-name: liquid-drift-c;
+        background: radial-gradient(
+          ellipse 46% 40% at 50% 50%,
+          var(--color-bg-highlight) 0%,
+          color-mix(in oklab, var(--color-bg-highlight) 72%, transparent) 26%,
+          color-mix(in oklab, var(--color-bg-highlight) 40%, transparent) 50%,
+          color-mix(in oklab, var(--color-bg-highlight) 14%, transparent) 74%,
+          transparent 100%
+        );
+        transform: translate3d(-30%, 40%, 0) scale(1.1) rotate(20deg);
+      }
+
+      > [data-liquid-layer="d"] {
+        --liquid-indigo: color-mix(
+          in oklab,
+          var(--color-bg-primary) 80%,
+          var(--color-bg-highlight)
+        );
+
+        animation-duration: calc(15s / var(--liquid-gradient-speed));
+        animation-name: liquid-drift-d;
+        background: radial-gradient(
+          ellipse 40% 40% at 50% 50%,
+          var(--liquid-indigo) 0%,
+          color-mix(in oklab, var(--liquid-indigo) 78%, transparent) 26%,
+          color-mix(in oklab, var(--liquid-indigo) 46%, transparent) 50%,
+          color-mix(in oklab, var(--liquid-indigo) 16%, transparent) 74%,
+          transparent 100%
+        );
+        transform: translate3d(34%, -40%, 0) scale(0.95) rotate(-25deg);
+      }
+
+      /* Shares drift-c with layer c, offset half a cycle by the negative
+         delay so the two never overlap despite the same track. */
+      > [data-liquid-layer="e"] {
+        animation-delay: calc(-10.5s / var(--liquid-gradient-speed));
+        animation-duration: calc(21s / var(--liquid-gradient-speed));
+        animation-name: liquid-drift-c;
+        background: radial-gradient(
+          ellipse 48% 44% at 50% 50%,
+          color-mix(in oklab, var(--color-bg-inverse-highlight) 60%, transparent) 0%,
+          color-mix(in oklab, var(--color-bg-inverse-highlight) 44%, transparent) 26%,
+          color-mix(in oklab, var(--color-bg-inverse-highlight) 24%, transparent) 50%,
+          color-mix(in oklab, var(--color-bg-inverse-highlight) 8%, transparent) 74%,
+          transparent 100%
+        );
+        transform: translate3d(-30%, 40%, 0) scale(1.1) rotate(20deg);
+      }
+
+      /* The specular pass — what reads as glass rather than as coloured
+         smoke. The prototype swept a linear band, but a linear gradient's
+         iso-lines are straight by definition, so without its 60px blur the
+         band showed hard edges. An elongated ellipse sweeps the same way
+         with nothing straight in it. */
+      > [data-liquid-layer="sheen"] {
+        animation-duration: calc(12s / var(--liquid-gradient-speed));
+        animation-name: liquid-sheen;
+        animation-timing-function: ease-in-out;
+        background: radial-gradient(
+          ellipse 46% 26% at 50% 50%,
+          color-mix(in oklab, var(--gray-0) 55%, transparent) 0%,
+          color-mix(in oklab, var(--gray-0) 38%, transparent) 30%,
+          color-mix(in oklab, var(--gray-0) 18%, transparent) 58%,
+          transparent 100%
+        );
+        inset: -20%;
+        opacity: 0.05;
+        transform: translate3d(-60%, -10%, 0) rotate(12deg);
+      }
+
+      /* Unifying wash on top, pulling the whole stack back toward the base
+         hue so the blobs read as one material. Lighter than the prototype's,
+         which sat over `screen`-blended layers and had more glow to tame. */
+      > .liquid-tint {
+        background: linear-gradient(
+          105deg,
+          color-mix(in oklab, var(--color-bg-primary) 28%, transparent) 0%,
+          color-mix(in oklab, var(--color-bg-primary) 20%, transparent) 50%,
+          color-mix(in oklab, var(--color-bg-primary) 28%, transparent) 100%
+        );
+        inset: 0;
+        position: absolute;
+      }
+    }
+  }
+</style>
