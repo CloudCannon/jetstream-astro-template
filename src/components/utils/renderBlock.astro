@@ -9,7 +9,6 @@ export interface Props {
    */
   contentSections?: ContentBlock | ContentBlock[] | null;
   useDefaultEditableBinding?: boolean;
-  dataProp?: string;
 }
 
 type AstroComponent = (_props: Record<string, unknown>) => unknown;
@@ -37,20 +36,33 @@ Object.entries(componentImports).forEach(([path, obj]) => {
   components[componentName] = (obj as Record<string, AstroComponent>).default;
 });
 
-const { contentSections, useDefaultEditableBinding = true, dataProp } = Astro.props;
+/*
+  A `data-editable="component"` region names this component, and the Visual
+  Editor re-renders it by calling it with the field's value spread as props —
+  the block's own fields, or nothing at all while an editor has the block
+  removed. Both of those resolve to `blocks` below alongside the normal call.
+*/
+const {
+  contentSections,
+  useDefaultEditableBinding = true,
+  ...editorProps
+} = (Astro.props ?? {}) as Props & Partial<ContentBlock>;
 
-const isSingleBlock = !!contentSections && !Array.isArray(contentSections);
-const blocks: ContentBlock[] = isSingleBlock
-  ? [contentSections as ContentBlock]
-  : ((contentSections as ContentBlock[]) ?? []);
+const isList = Array.isArray(contentSections);
+const singleBlock = ((contentSections as ContentBlock) ??
+  (editorProps._component ? editorProps : null)) as ContentBlock | null;
+const blocks: ContentBlock[] = isList ? contentSections : singleBlock ? [singleBlock] : [];
 
-const editableAttributes = (block: ContentBlock) => {
-  if (!useDefaultEditableBinding) return {};
-
-  return isSingleBlock
-    ? { "data-editable": "component", "data-component": block._component, "data-prop": dataProp }
-    : { "data-editable": "array-item", "data-id": block._component };
-};
+/*
+  Editable attributes for the field itself are owned by the caller's container
+  element — `data-editable="array"` for a list of blocks, `data-editable="component"`
+  for a single one. This utility only resolves blocks, and marks each one as an
+  array item when it is rendering a list.
+*/
+const editableAttributes = (block: ContentBlock) =>
+  useDefaultEditableBinding && isList
+    ? { "data-editable": "array-item", "data-id": block._component }
+    : {};
 ---
 
 {
