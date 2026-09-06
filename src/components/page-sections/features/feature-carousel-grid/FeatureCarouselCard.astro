@@ -87,18 +87,25 @@ const {
       height: 100%;
       min-height: 200px;
 
-      &.border {
-        border: 1px solid transparent;
-        box-shadow: 0px 10px 15px -3px #1118271a;
+      /* Card puts `rounded` and `border` on its inner element, not on the
+         wrapper this class lands on, so reach through to it. The shadow has to
+         sit on that element too — on the wrapper it has no radius to follow and
+         squares off the card's rounded corners. Blanking the border there lets
+         the ring below read as the border. */
+      > .card-inner.border {
+        border-color: transparent;
+        box-shadow: var(--shadow-raised);
       }
 
-      &.border::before {
+      /* The ring stays on the wrapper: .card-inner clips its own pseudo-elements
+         with overflow: hidden. .card-inner is z-index 1, so 0 holds the ring
+         behind it — the pattern Card uses for its own hover gradient. */
+      &:has(> .card-inner.border)::before {
         --angle: 0deg;
         content: "";
         position: absolute;
-        inset: 0;
-        z-index: -1;
-        margin: -2px;
+        inset: -2px;
+        z-index: 0;
         border-radius: calc(var(--radius-md) + 2px);
         background: conic-gradient(
           from var(--angle),

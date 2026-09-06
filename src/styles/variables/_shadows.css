@@ -1,0 +1,10 @@
+:where(:root) {
+  /* Elevation. The tint comes from --color-shadow in the theme files, so these
+     stay theme-aware; change the offsets here to reshape the lifted-panel look
+     used by the nav and hero. */
+  --shadow-raised: 10px 10px 29px 10px var(--color-shadow);
+
+  /* Focus. Keep these consistent across every focusable element. */
+  --shadow-focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --shadow-focus-inset: 0 0 2px 2px var(--color-focus-ring) inset;
+}
