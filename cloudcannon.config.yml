@@ -113,7 +113,7 @@ collections_config:
         type: date
         options:
           required: true
-        comment: The publication date.
+        comment: The publication date. Note that date in the post will not live update, you will need to save and rebuild.
         cascade: true
       author:
         type: select
