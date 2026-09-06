@@ -53,7 +53,6 @@ const {
       direction="row"
       align="center"
       class="desktop-button-group"
-      style="gap: var(--spacing-xl);"
       buttonSections={buttonSections}
       useDefaultEditableBinding={false}
     />
@@ -81,13 +80,13 @@ const {
 
       .desktop-main-nav.bar,
       .desktop-button-group.button-group {
-        @container (max-width: 768px) {
+        @container (max-width: 840px) {
           display: none;
         }
       }
 
       .nav-hamburger.mobile-button {
-        @container (min-width: 769px) {
+        @container (min-width: 841px) {
           display: none;
         }
       }
@@ -124,12 +123,16 @@ const {
           margin-top: 0;
 
           > .button-group__items {
-            gap: var(--spacing-xl);
+            gap: var(--spacing-md);
             width: auto;
           }
 
           .button > .button-inner {
             border-radius: var(--radius-sm);
+          }
+
+          .button > .button-inner.icon-only .icon svg {
+            font-size: 1.25em;
           }
         }
       }
