@@ -16,7 +16,7 @@ socials:
           - Add URL
         icon: share
         image:
-          - template: src/icons/{icon}.svg
+          - template: /src/icons/{icon}.svg
       picker_preview:
         text: Social Link
         subtext: A social media link with icon and URL.
