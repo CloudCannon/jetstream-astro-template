@@ -75,6 +75,7 @@ collections_config:
     name:
     icon: article
     url: "/blog/{permalink|if=permalink}[slug|unless=permalink]/"
+    new_preview_url: "/blog/sample-blog-post-with-a-range-of-snippets"
     disable_url: false
     description: >-
       Welcome to the **Blog Collection**! This *Collection* contains all the
