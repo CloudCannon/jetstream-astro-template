@@ -6,6 +6,6 @@ blocks:
     text: 'The impact was immediate. Our workflow feels lighter, and results speak for themselves'
     authorName: 'Casey Lin'
     authorDescription: 'Author'
-    authorImage: /src/assets/images/component-docs/profile.jpg
+    authorImage: /src/assets/images/staff-1.png
     alignmentHorizontal: start
 ---

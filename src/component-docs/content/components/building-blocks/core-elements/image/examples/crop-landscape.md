@@ -3,7 +3,7 @@ title: 'Cropped to Landscape (4:3)'
 spacing: 'all'
 blocks:
   _component: 'building-blocks/core-elements/image'
-  source: /images/component-docs/castle.jpg
+  source: /src/assets/images/blog-snippets.png
   alt: 'Castle'
   aspectRatio: landscape
   style: 'max-width: 500px;'

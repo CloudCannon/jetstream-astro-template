@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="t-feature-slider">
+  <title id="t-feature-slider">Feature slider component preview</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --pv-paper: #151515;
+        --pv-panel: #1D1D1B;
+        --pv-surface: #232320;
+        --pv-line: #2E2D29;
+        --pv-glyph: #45443E;
+        --pv-body: #3A3934;
+        --pv-subject: #6E6A62;
+        --pv-ink: #F5F3EE;
+        --pv-on-ink: #6B6B6B;
+      }
+    }
+  </style>
+  <rect x="0" y="0" width="1280" height="720" fill="var(--pv-paper, #FFFFFF)"/>
+  <g transform="translate(0 53)">
+    <rect x="380" y="0" width="520" height="40" rx="20" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="260" y="70" width="760" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="330" y="94" width="620" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="80" y="260" width="130" height="260" rx="10" fill="var(--pv-panel, #F7F6F3)"/>
+    <rect x="230" y="220" width="820" height="340" rx="10" fill="var(--pv-surface, #EBE9E3)"/>
+    <circle cx="804" cy="329" r="20" fill="var(--pv-glyph, #CFCBC2)"/>
+    <polygon points="413,477 574,399 695,477" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="16" stroke-linejoin="round"/>
+    <polygon points="628,479 771,417 908,479" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="12" stroke-linejoin="round"/>
+    <rect x="1070" y="260" width="130" height="260" rx="10" fill="var(--pv-panel, #F7F6F3)"/>
+    <circle cx="585" cy="610" r="5" fill="var(--pv-glyph, #CFCBC2)"/>
+    <rect x="610" y="606" width="31" height="8" rx="4" fill="var(--pv-subject, #A8A398)"/>
+    <circle cx="666" cy="610" r="5" fill="var(--pv-glyph, #CFCBC2)"/>
+    <circle cx="696" cy="610" r="5" fill="var(--pv-glyph, #CFCBC2)"/>
+  </g>
+</svg>

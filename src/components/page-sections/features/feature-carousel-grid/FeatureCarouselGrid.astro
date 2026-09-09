@@ -19,6 +19,7 @@ const {
   colorScheme = "inherit",
   backgroundColor,
   backgroundColorHeight = "header",
+  background,
   contentBackground = false,
   verticalOffset = {},
   rounded = false,
@@ -51,6 +52,7 @@ const mobileSlides = slides.flatMap(
   verticalOffset={verticalOffset}
   id={id}
   backgroundColor={backgroundColorHeight === "full" ? backgroundColor : ""}
+  background={backgroundColorHeight === "full" ? background : undefined}
   {...htmlAttributes}
 >
   <CustomSection
@@ -63,6 +65,7 @@ const mobileSlides = slides.flatMap(
     verticalOffset={verticalOffset}
     contentBackground={backgroundColorHeight === "header" ? contentBackground : false}
     backgroundColor={backgroundColorHeight === "header" ? backgroundColor : ""}
+    background={backgroundColorHeight === "header" ? background : undefined}
   >
     <Icon
       {...eyebrowIcon}
@@ -93,7 +96,7 @@ const mobileSlides = slides.flatMap(
   <CustomSection
     class:list={["feature-carousel-grid-container"]}
     maxContentWidth={maxContentWidth}
-    paddingHorizontal="xs"
+    paddingHorizontal="3xl"
     paddingVertical={paddingVertical}
     rounded={false}
     colorScheme={colorScheme}
@@ -116,6 +119,7 @@ const mobileSlides = slides.flatMap(
             data-editable="array-item"
             data-id="page-sections/features/feature-carousel-grid/feature-carousel-slide"
             {...slide}
+            editable={true}
             class="feature-carousel-grid-slide"
           />
         ))
@@ -145,6 +149,25 @@ const mobileSlides = slides.flatMap(
 
 <style is:global>
   @layer page-sections {
+    .feature-carousel-grid {
+      /* The desktop slides spill past the container to reveal the previous and
+         next slides, so clip them at the section rather than the page. */
+      overflow-x: clip;
+
+      /*
+        `CustomSection` puts `.content` on `--layer-1`, which makes it a stacking
+        context. With `backgroundColorHeight: header` the background lives on the
+        nested header section *inside* that `.content`, so it was pinned above the
+        previous section and a `verticalOffset` of "back" had nothing to slide
+        behind. The outer section paints no background of its own in that mode, so
+        letting `.content` stack in document order costs nothing here and frees the
+        header background to sit behind the previous component.
+      */
+      > .outer-content > .content {
+        z-index: var(--layer-auto);
+      }
+    }
+
     .feature-carousel-grid-content .content {
       padding-bottom: var(--spacing-md);
     }
@@ -153,10 +176,44 @@ const mobileSlides = slides.flatMap(
         padding-top: 0;
       }
       .desktop-carousel {
+        /* Embla only moves the looping slide to the other end when the viewport
+           has room beside the active slide, so the viewport is stretched past
+           the container by this much on each side. Without it, the last slide
+           is never placed before the first one and nothing peeks in on the left
+           while the first slide is selected. */
+        --carousel-peek: var(--spacing-md);
+
         display: none;
 
         @media (width >= 768px) {
           display: block;
+        }
+
+        /* Two slides can never fill both sides of the active one, so Embla
+           turns looping off entirely if we ask for room on both sides. */
+        > .carousel-inner:not(:has(.slide:nth-child(3))) {
+          --carousel-peek: 0px;
+        }
+
+        /* Slides stay at the container width; letting the viewport overflow is
+           what makes the previous/next slides peek in from either side. */
+        > .carousel-inner > .viewport {
+          margin-inline: calc(var(--carousel-peek) * -1);
+          overflow: visible;
+          /* Auto, so the negative margins widen the viewport rather than
+             shifting it sideways against the base `width: 100%`. */
+          width: auto;
+        }
+
+        .slide {
+          /* Cancels out the widened viewport above. */
+          --slide-width: calc(100% - var(--carousel-peek) * 2);
+
+          transition: opacity var(--animation-normal) ease;
+        }
+
+        .slide[data-selected="false"] {
+          opacity: 0.35;
         }
       }
 

@@ -1,63 +1,60 @@
 ---
 title: Primary Bento Box
-spacing: 'all'
+spacing: null
 blocks:
   _component: building-blocks/wrappers/bento-box
-  columns: 3
-  minRowHeight: 180
+  gap: md
   items:
-    - colSpan: 2
-      rowSpan: 1
-      contentSections:
-        - _component: building-blocks/wrappers/card
-          paddingHorizontal: md
-          paddingVertical: md
-          rounded: true
-          backgroundColor: surface
-          contentSections:
-            - _component: building-blocks/core-elements/heading
-              text: Featured
-              level: h3
-            - _component: building-blocks/core-elements/text
-              text: Spans two columns for a wide, prominent placement.
-    - colSpan: 1
+    - columnSpan: 6
       rowSpan: 2
       contentSections:
         - _component: building-blocks/wrappers/card
-          paddingHorizontal: md
-          paddingVertical: md
-          rounded: true
           backgroundColor: accent
+          paddingHorizontal: lg
+          paddingVertical: lg
           contentSections:
             - _component: building-blocks/core-elements/heading
-              text: Tall
+              text: Large Feature
               level: h3
             - _component: building-blocks/core-elements/text
-              text: Spans two rows, creating a vertical emphasis alongside smaller items.
-    - colSpan: 1
+              text: This item spans 6 columns and 2 rows, making it a prominent feature in the grid.
+    - columnSpan: 6
       rowSpan: 1
       contentSections:
         - _component: building-blocks/wrappers/card
+          backgroundColor: surface
           paddingHorizontal: md
           paddingVertical: md
-          rounded: true
-          backgroundColor: surface
           contentSections:
             - _component: building-blocks/core-elements/heading
-              text: Item 3
+              text: Medium Item
               level: h3
-    - colSpan: 1
+            - _component: building-blocks/core-elements/text
+              text: A 6-column, 1-row card.
+    - columnSpan: 3
       rowSpan: 1
       contentSections:
         - _component: building-blocks/wrappers/card
+          backgroundColor: highlight
           paddingHorizontal: md
           paddingVertical: md
-          rounded: true
-          backgroundColor: surface
           contentSections:
             - _component: building-blocks/core-elements/heading
-              text: Item 4
+              text: Small
               level: h3
-  label: ''
-  gap: md
+            - _component: building-blocks/core-elements/text
+              text: 3-column item.
+    - columnSpan: 3
+      rowSpan: 1
+      contentSections:
+        - _component: building-blocks/wrappers/card
+          backgroundColor: highlight
+          paddingHorizontal: md
+          paddingVertical: md
+          contentSections:
+            - _component: building-blocks/core-elements/heading
+              text: Small
+              level: h3
+            - _component: building-blocks/core-elements/text
+              text: Another 3-column item.
 ---

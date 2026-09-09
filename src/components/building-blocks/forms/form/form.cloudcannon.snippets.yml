@@ -7,6 +7,9 @@ form:
     subtext:
       - key: label
     icon: checklist_rtl
+    gallery:
+      image: public/component-previews/building-blocks/forms/form.svg
+      fit: cover
   definitions:
     component_name: Form
     named_args:

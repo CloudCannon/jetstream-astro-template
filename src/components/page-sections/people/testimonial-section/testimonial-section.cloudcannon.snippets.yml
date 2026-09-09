@@ -7,6 +7,9 @@ testimonialSection:
     subtext:
       - key: authorName
     icon: format_quote
+    gallery:
+      image: public/component-previews/page-sections/people/testimonial-section.svg
+      fit: cover
   definitions:
     component_name: TestimonialSection
     named_args:
@@ -27,6 +30,10 @@ testimonialSection:
         optional: true
         remove_empty: true
       - editor_key: authorImage
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: alignmentHorizontal
         type: string
         optional: true
         remove_empty: true

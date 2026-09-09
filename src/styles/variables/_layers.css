@@ -1,4 +1,5 @@
 :where(:root) {
+  --layer-below-3: -3;
   --layer-below-2: -2;
   --layer-below: -1;
   --layer-auto: auto;

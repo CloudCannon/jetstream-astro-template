@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="t-choice-group">
+  <title id="t-choice-group">Choice group component preview</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --pv-paper: #151515;
+        --pv-panel: #1D1D1B;
+        --pv-surface: #232320;
+        --pv-line: #2E2D29;
+        --pv-glyph: #45443E;
+        --pv-body: #3A3934;
+        --pv-subject: #6E6A62;
+        --pv-ink: #F5F3EE;
+        --pv-on-ink: #6B6B6B;
+      }
+    }
+  </style>
+  <rect x="0" y="0" width="1280" height="720" fill="var(--pv-paper, #FFFFFF)"/>
+  <g transform="translate(0 264)">
+    <rect x="360" y="0" width="180" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="360" y="40" width="32" height="32" rx="6" fill="var(--pv-glyph, #CFCBC2)"/>
+    <rect x="416" y="48" width="504" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="360" y="100" width="32" height="32" rx="6" fill="var(--pv-ink, #151515)"/>
+    <rect x="416" y="108" width="504" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="360" y="160" width="32" height="32" rx="6" fill="var(--pv-glyph, #CFCBC2)"/>
+    <rect x="416" y="168" width="384" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+  </g>
+</svg>

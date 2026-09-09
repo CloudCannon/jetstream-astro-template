@@ -7,12 +7,23 @@ ctaSplit:
     subtext:
       - key: heading
     icon: hero
+    gallery:
+      image: public/component-previews/page-sections/ctas/cta-split.svg
+      fit: cover
   params:
     args:
       parser: key_values
       options:
         models:
           - editor_key: id
+            type: string
+            optional: true
+            remove_empty: true
+          - editor_key: eyebrowIcon
+            type: object
+            optional: true
+            remove_empty: true
+          - editor_key: eyebrowText
             type: string
             optional: true
             remove_empty: true
@@ -34,12 +45,31 @@ ctaSplit:
           - editor_key: reverse
             type: boolean
             optional: true
+          - editor_key: maxContentWidth
+            type: string
+            optional: true
+            remove_empty: true
+          - editor_key: paddingVertical
+            type: string
+            optional: true
+            remove_empty: true
           - editor_key: colorScheme
             type: string
             optional: true
             remove_empty: true
           - editor_key: backgroundColor
             type: string
+            optional: true
+            remove_empty: true
+          - editor_key: contentBackground
+            type: boolean
+            optional: true
+          - editor_key: background
+            type: object
+            optional: true
+            remove_empty: true
+          - editor_key: verticalOffset
+            type: object
             optional: true
             remove_empty: true
           - editor_key: rounded

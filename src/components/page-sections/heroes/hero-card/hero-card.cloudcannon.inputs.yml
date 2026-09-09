@@ -126,6 +126,9 @@ eyebrowIcon:
   comment: Optional icon displayed above the eyebrow.
   options:
     structures: _structures.eyebrowIcon
+eyebrowText:
+  type: text
+  comment: Optional label displayed above the heading.
 heading:
   type: html
   comment: Main heading text for the section.
@@ -219,6 +222,20 @@ backgroundColor:
         name: Highlight Linear Gradient
       - id: highlight-radial-gradient
         name: Highlight Radial Gradient
+      - id: highlight-radial-gradient-animated
+        name: Highlight Radial Gradient Animated
+background:
+  type: object
+  comment: Optional background still image or looping HTML5 video (self-hosted). Shared positioning applies to whichever type you choose. Video is hidden when the user prefers reduced motion.
+  options:
+    empty_type: object
+    structures: _structures.background
+    preview:
+      icon: wallpaper
+      text:
+        - Background
+      subtext:
+        - key: type
 verticalOffset:
   type: object
   comment: Offset section up above or below the previous section.

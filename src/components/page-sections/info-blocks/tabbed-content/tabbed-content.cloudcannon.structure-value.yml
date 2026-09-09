@@ -14,7 +14,24 @@ value:
   paddingVertical: "4xl"
   colorScheme: "light"
   backgroundColor: "base"
+  background:
+    type: image
+    positionVertical: top
+    positionHorizontal: center
+    priority: false
+    imageSource: ""
+    imageAlt: ""
+    videoSource: null
+    overlay: 0
   verticalOffset: {}
   rounded: false
+preview:
+  gallery:
+    image: public/component-previews/page-sections/info-blocks/tabbed-content.svg
+    fit: cover
+picker_preview:
+  gallery:
+    image: public/component-previews/page-sections/info-blocks/tabbed-content.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/page-sections/info-blocks/tabbed-content/tabbed-content.cloudcannon.inputs.yml

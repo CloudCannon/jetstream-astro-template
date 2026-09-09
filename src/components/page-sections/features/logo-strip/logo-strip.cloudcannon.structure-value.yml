@@ -14,5 +14,13 @@ value:
   lockColorScheme: false
   verticalOffset: {}
   rounded: true
+preview:
+  gallery:
+    image: public/component-previews/page-sections/features/logo-strip.svg
+    fit: cover
+picker_preview:
+  gallery:
+    image: public/component-previews/page-sections/features/logo-strip.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/page-sections/features/logo-strip/logo-strip.cloudcannon.inputs.yml

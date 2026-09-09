@@ -123,6 +123,7 @@ Additional styling tokens live in `src/styles/variables/` if you need to go deep
 - `_spacing.css`: Spacing scale for padding, gaps, and margins
 - `_content-widths.css`: Max widths for page sections
 - `_radius.css`: Border radius values
+- `_shadows.css`: Elevation and focus-ring shadows (their color comes from `--color-shadow` and `--color-focus-ring` in the theme files)
 - `_animations.css`: Transition timing
 
 These are less likely to need changes early on, but they're there when you need them.

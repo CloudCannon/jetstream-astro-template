@@ -7,6 +7,9 @@ ctaCenter:
     subtext:
       - key: heading
     icon: hero
+    gallery:
+      image: public/component-previews/page-sections/ctas/cta-center.svg
+      fit: cover
   params:
     args:
       parser: key_values
@@ -51,6 +54,14 @@ ctaCenter:
             type: boolean
             optional: true
             remove_empty: false
+          - editor_key: background
+            type: object
+            optional: true
+            remove_empty: true
+          - editor_key: verticalOffset
+            type: object
+            optional: true
+            remove_empty: true
           - editor_key: rounded
             type: boolean
             optional: true

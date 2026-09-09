@@ -1,3 +1,6 @@
+id:
+  type: text
+  comment: Unique identifier for the video which can be used as an anchor link.
 type:
   type: select
   options:

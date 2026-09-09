@@ -31,8 +31,14 @@ preview:
   subtext:
     - key: label
   icon: crop_square
+  gallery:
+    image: public/component-previews/building-blocks/wrappers/card.svg
+    fit: cover
 picker_preview:
   text: Card
   subtext: Groups related content within a section.
+  gallery:
+    image: public/component-previews/building-blocks/wrappers/card.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/building-blocks/wrappers/card/card.cloudcannon.inputs.yml

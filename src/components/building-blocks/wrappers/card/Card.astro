@@ -2,6 +2,7 @@
 import Component from "@components/utils/renderBlock.astro";
 import { slugifyLabel } from "@components/utils/slugify";
 import Image from "@core-elements/image/Image.astro";
+import LiquidGradient from "@core-elements/liquid-gradient/LiquidGradient.astro";
 import Video from "@core-elements/video/Video.astro";
 
 const {
@@ -119,7 +120,9 @@ const usesAfterContentSections = !hasAfterSlot && showBeforeAfter && afterConten
         <div
           aria-hidden="true"
           class:list={["background", backgroundColor && `bg-${backgroundColor}`]}
-        />
+        >
+          {backgroundColor === "highlight-radial-gradient-animated" && <LiquidGradient />}
+        </div>
       )
     }
 
@@ -522,6 +525,11 @@ const usesAfterContentSections = !hasAfterSlot && showBeforeAfter && afterConten
           background-repeat: no-repeat;
           background-size: cover;
         }
+
+        /* .bg-highlight-radial-gradient-animated has no rule here on purpose:
+           its ground gradient and drifting layers both live in the shared
+           LiquidGradient component, rendered inside .background above. One
+           definition serves every section offering the variant. */
       }
     }
   }

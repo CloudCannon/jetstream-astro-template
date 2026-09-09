@@ -31,19 +31,56 @@ function log(...args) {
   if (DEBUG) console.log("[editor-live-sync]", ...args);
 }
 
-function syncBentoBoxSpans(target) {
-  const parent = target.closest(".bento-box-item");
+/*
+  Column spans only apply from this breakpoint up; below it every item is full
+  width. The inline styles written here have to respect that or they would
+  override the responsive rules in BentoBoxItem's stylesheet.
+*/
+const BENTO_COLUMN_QUERY = "(width >= 768px)";
 
-  if (!parent) return;
+/**
+ * The grid child is normally `.bento-box-item`, but CloudCannon wraps a
+ * re-rendered array item in `<editable-array-item>`, and that wrapper becomes
+ * the grid child instead. Style whichever element is actually in the grid, and
+ * clear the other so a stale span cannot survive a re-render.
+ */
+function bentoGridTarget(spanEl) {
+  const item = spanEl.closest(".bento-box-item");
 
-  const colSpan = Number(target.dataset.colSpan) || 1;
-  const rowSpan = Number(target.dataset.rowSpan) || 1;
+  if (!item) return null;
 
-  parent.style.gridColumn = colSpan > 1 ? `span ${colSpan}` : "";
-  parent.style.gridRow = rowSpan > 1 ? `span ${rowSpan}` : "";
+  const wrapper = item.parentElement;
+  const wrapped = wrapper?.tagName === "EDITABLE-ARRAY-ITEM";
+
+  return { target: wrapped ? wrapper : item, stale: wrapped ? item : null };
 }
 
-const BENTO_BOX_ATTRS = ["data-col-span", "data-row-span"];
+function syncBentoBoxSpans(spanEl) {
+  const grid = bentoGridTarget(spanEl);
+
+  if (!grid) return;
+
+  // Attribute names must match what BentoBoxItem renders: data-column-span / data-row-span.
+  const colSpan = Number(spanEl.dataset.columnSpan) || 1;
+  const rowSpan = Number(spanEl.dataset.rowSpan) || 1;
+  const columnsActive = window.matchMedia(BENTO_COLUMN_QUERY).matches;
+
+  grid.target.style.gridColumn = columnsActive && colSpan > 1 ? `span ${colSpan}` : "";
+  grid.target.style.gridRow = rowSpan > 1 ? `span ${rowSpan}` : "";
+
+  if (grid.stale) {
+    grid.stale.style.gridColumn = "";
+    grid.stale.style.gridRow = "";
+  }
+}
+
+function syncAllBentoBoxSpans(root = document) {
+  for (const spanEl of root.querySelectorAll("[data-column-span], [data-row-span]")) {
+    syncBentoBoxSpans(spanEl);
+  }
+}
+
+const BENTO_BOX_ATTRS = ["data-column-span", "data-row-span"];
 
 /**
  * Carousel config is read from attributes on `.carousel-inner` at
@@ -199,11 +236,11 @@ const observer = new MutationObserver((mutations) => {
       for (const node of mutation.addedNodes) {
         if (node.nodeType !== Node.ELEMENT_NODE) continue;
 
-        if (node.dataset?.colSpan || node.dataset?.rowSpan) {
+        if (node.dataset?.columnSpan || node.dataset?.rowSpan) {
           syncBentoBoxSpans(node);
         }
 
-        for (const child of node.querySelectorAll("[data-col-span], [data-row-span]")) {
+        for (const child of node.querySelectorAll("[data-column-span], [data-row-span]")) {
           syncBentoBoxSpans(child);
         }
 
@@ -223,6 +260,15 @@ observer.observe(document.body, {
 // Initialise any components already in the editor DOM.
 setupAllCarousels();
 setupAllImageCarousels();
+
+// Apply spans to items already on the page. Without this the grid keeps whatever
+// layout the static build produced until the first mutation happens to fire.
+syncAllBentoBoxSpans();
+
+// Column spans come and go at the breakpoint, so re-apply when it changes.
+window.matchMedia(BENTO_COLUMN_QUERY).addEventListener("change", () => {
+  syncAllBentoBoxSpans();
+});
 
 log("observer active", {
   bentoAttrs: BENTO_BOX_ATTRS,

@@ -15,8 +15,14 @@ preview:
   subtext:
     - key: label
   icon: calendar
+  gallery:
+    image: public/component-previews/building-blocks/forms/date.svg
+    fit: cover
 picker_preview:
   text: Date
   subtext: Form field for selecting a date.
+  gallery:
+    image: public/component-previews/building-blocks/forms/date.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/building-blocks/forms/date/date.cloudcannon.inputs.yml

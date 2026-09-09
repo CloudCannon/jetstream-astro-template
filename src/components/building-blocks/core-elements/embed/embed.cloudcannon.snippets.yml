@@ -7,10 +7,17 @@ embed:
     subtext:
       - key: html
     icon: data_object
+    gallery:
+      image: public/component-previews/building-blocks/core-elements/embed.svg
+      fit: cover
   definitions:
     component_name: Embed
     content_key: html
     named_args:
+      - editor_key: id
+        type: string
+        optional: true
+        remove_empty: true
       - editor_key: aspectRatio
         type: string
         optional: true

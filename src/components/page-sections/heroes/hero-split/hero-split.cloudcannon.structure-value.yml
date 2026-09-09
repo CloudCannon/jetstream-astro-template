@@ -20,14 +20,22 @@ value:
       variant: primary
       size: md
   image:
-    source: /src/assets/images/component-docs/dunedin-cliff.jpg
+    source: /src/assets/images/component-docs/website-hero.svg
     alt: Hero image
   reverse: false
-  maxContentWidth: 3xl
   paddingVertical: 4xl
   colorScheme: inherit
   backgroundColor: base
   contentBackground: false
+  background:
+    type: image
+    positionVertical: top
+    positionHorizontal: center
+    priority: false
+    imageSource: ""
+    imageAlt: ""
+    videoSource: null
+    overlay: 0
   verticalOffset: {}
   rounded: false
 preview:
@@ -36,8 +44,14 @@ preview:
   subtext:
     - key: heading
   icon: title
+  gallery:
+    image: public/component-previews/page-sections/heroes/hero-split.svg
+    fit: cover
 picker_preview:
   text: Hero Split
   subtext: Prominent section block for landing pages.
+  gallery:
+    image: public/component-previews/page-sections/heroes/hero-split.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/page-sections/heroes/hero-split/hero-split.cloudcannon.inputs.yml

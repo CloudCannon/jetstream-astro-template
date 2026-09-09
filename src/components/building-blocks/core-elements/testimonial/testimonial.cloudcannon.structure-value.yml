@@ -14,8 +14,14 @@ preview:
   subtext:
     - key: authorName
   icon: format_quote
+  gallery:
+    image: public/component-previews/building-blocks/core-elements/testimonial.svg
+    fit: cover
 picker_preview:
   text: Testimonial
   subtext: Displays customer quotes and reviews.
+  gallery:
+    image: public/component-previews/building-blocks/core-elements/testimonial.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/building-blocks/core-elements/testimonial/testimonial.cloudcannon.inputs.yml

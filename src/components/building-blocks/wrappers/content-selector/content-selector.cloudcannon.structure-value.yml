@@ -12,9 +12,15 @@ preview:
   subtext:
     - key: label
   icon: view_sidebar
+  gallery:
+    image: public/component-previews/building-blocks/wrappers/content-selector.svg
+    fit: cover
 picker_preview:
   text: Content Selector
   subtext: Lets users switch between different content panels using tabs.
+  gallery:
+    image: public/component-previews/building-blocks/wrappers/content-selector.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/building-blocks/wrappers/content-selector/content-selector.cloudcannon.inputs.yml
 _structures:

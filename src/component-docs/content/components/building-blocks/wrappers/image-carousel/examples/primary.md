@@ -4,25 +4,25 @@ spacing: null
 blocks:
   _component: building-blocks/wrappers/image-carousel
   images:
-    - source: /src/assets/images/component-docs/quiet-street.jpg
+    - source: /src/assets/images/blog-markdown.png
       alt: 'Quiet Street'
-    - source: /src/assets/images/component-docs/sunset.jpg
+    - source: /src/assets/images/blog-ddos.png
       alt: 'Sunset'
-    - source: /src/assets/images/component-docs/sheep.jpg
+    - source: /src/assets/images/blog-country.png
       alt: 'Sheep'
-    - source: /src/assets/images/component-docs/castle.jpg
+    - source: /src/assets/images/blog-snippets.png
       alt: 'Castle'
-    - source: /src/assets/images/component-docs/dunedin-cliff.jpg
+    - source: /src/assets/images/about-hero.png
       alt: 'Dunedin Cliff'
-    - source: /src/assets/images/component-docs/quiet-street.jpg
+    - source: /src/assets/images/blog-markdown.png
       alt: 'Quiet Street'
-    - source: /src/assets/images/component-docs/sunset.jpg
+    - source: /src/assets/images/blog-ddos.png
       alt: 'Sunset'
-    - source: /src/assets/images/component-docs/sheep.jpg
+    - source: /src/assets/images/blog-country.png
       alt: 'Sheep'
-    - source: /src/assets/images/component-docs/castle.jpg
+    - source: /src/assets/images/blog-snippets.png
       alt: 'Castle'
-    - source: /src/assets/images/component-docs/dunedin-cliff.jpg
+    - source: /src/assets/images/about-hero.png
       alt: 'Dunedin Cliff'
   showArrows: true
   loop: true

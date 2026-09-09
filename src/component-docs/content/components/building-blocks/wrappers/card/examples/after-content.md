@@ -15,7 +15,7 @@ blocks:
       text: "The image below is placed in the afterContentSections area, which sits outside the card's internal padding. This is ideal for footer images or visual footers."
   afterContentSections:
     - _component: building-blocks/core-elements/image
-      source: '/images/component-docs/dunedin-cliff.jpg'
+      source: '/src/assets/images/about-hero.png'
       alt: 'Dunedin Cliff'
       aspectRatio: widescreen
   style: 'max-width: 400px; margin-inline: auto;'

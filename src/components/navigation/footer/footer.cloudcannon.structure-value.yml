@@ -12,9 +12,15 @@ preview:
   text:
     - Footer
   icon: footer
+  gallery:
+    image: public/component-previews/navigation/footer.svg
+    fit: cover
 picker_preview:
   text: Footer
   subtext: "Footer block with logo, links, and legal information."
   icon: footer
+  gallery:
+    image: public/component-previews/navigation/footer.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/navigation/footer/footer.cloudcannon.inputs.yml

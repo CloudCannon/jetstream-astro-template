@@ -31,3 +31,7 @@ yarn-error.log*
 # temporary files
 *.tmp
 *.temp
+
+
+.agents
+skills-lock.json

@@ -8,6 +8,9 @@ video:
     subtext:
       - key: title
     icon: videocam
+    gallery:
+      image: public/component-previews/building-blocks/core-elements/video.svg
+      fit: cover
   definitions:
     component_name: Video
     named_args:

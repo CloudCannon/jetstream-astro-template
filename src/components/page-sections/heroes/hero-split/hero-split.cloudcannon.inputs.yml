@@ -57,25 +57,6 @@ subtext:
     italic: true
     link: true
     underline: true
-maxContentWidth:
-  type: select
-  comment: Maximum width constraint for the content.
-  options:
-    values:
-      - id: xs
-        name: Extra Small
-      - id: sm
-        name: Small
-      - id: md
-        name: Medium
-      - id: lg
-        name: Large
-      - id: xl
-        name: Extra Large
-      - id: 2xl
-        name: 2xl
-      - id: 3xl
-        name: 3xl
 paddingVertical:
   type: select
   comment: Vertical padding applied to the custom section content.
@@ -137,9 +118,23 @@ backgroundColor:
         name: Highlight Linear Gradient
       - id: highlight-radial-gradient
         name: Highlight Radial Gradient
+      - id: highlight-radial-gradient-animated
+        name: Highlight Radial Gradient Animated
 contentBackground:
   type: switch
   comment: Add a radial background in the base color behind the content.
+background:
+  type: object
+  comment: Optional background still image or looping HTML5 video (self-hosted). Shared positioning applies to whichever type you choose. Video is hidden when the user prefers reduced motion.
+  options:
+    empty_type: object
+    structures: _structures.background
+    preview:
+      icon: wallpaper
+      text:
+        - Background
+      subtext:
+        - key: type
 verticalOffset:
   type: object
   comment: Offset section up above or below the previous section.

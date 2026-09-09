@@ -7,6 +7,9 @@ featureGrid:
     subtext:
       - key: heading
     icon: apps
+    gallery:
+      image: public/component-previews/page-sections/features/feature-grid.svg
+      fit: cover
   params:
     args:
       parser: key_values
@@ -50,6 +53,10 @@ featureGrid:
             type: boolean
             optional: true
             remove_empty: false
+          - editor_key: background
+            type: object
+            optional: true
+            remove_empty: true
           - editor_key: verticalOffset
             type: object
             optional: true

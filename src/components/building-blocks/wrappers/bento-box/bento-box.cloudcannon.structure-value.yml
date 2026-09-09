@@ -1,11 +1,9 @@
 label: Bento Box
-icon: dashboard
-description: A grid layout where items can span multiple columns and rows.
+icon: grid_on
+description: Arranges content into a grid that adapts to screen size, with items of varying widths.
 value:
   _component: building-blocks/wrappers/bento-box
   label: ""
-  columns: "3"
-  minRowHeight: 150
   items: []
   gap: md
 preview:
@@ -13,55 +11,52 @@ preview:
     - Bento Box
   subtext:
     - key: label
-  icon: dashboard
+  icon: grid_on
+  gallery:
+    image: public/component-previews/building-blocks/wrappers/bento-box.svg
+    fit: cover
 picker_preview:
   text: Bento Box
-  subtext: A grid layout where items can span multiple columns and rows.
+  subtext: Arranges content into a grid that adapts to screen size, with items of varying widths.
+  gallery:
+    image: public/component-previews/building-blocks/wrappers/bento-box.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/building-blocks/wrappers/bento-box/bento-box.cloudcannon.inputs.yml
 _structures:
   bentoBoxItems:
     values:
-      - label: Bento Box Item
+      - label: Grid Item
         value:
-          colSpan: "1"
-          rowSpan: "1"
+          _component: building-blocks/wrappers/bento-box/bento-box-item
           contentSections: []
+          columnSpan: 4
+          rowSpan: 1
         preview:
-          icon: dashboard_customize
-          text: Bento Box Item
+          icon: grid_view
+          text: Grid Item
           subtext:
-            - template: '{colSpan}x{rowSpan} — Contains {contentSections|array_length} content {"block"|pluralize=contentSections}'
-            - Add content blocks to this bento item
+            - template: Contains {contentSections|array_length} content {"block"|pluralize=contentSections}
+            - Add one or more content blocks to the grid item
         _inputs:
-          colSpan:
-            comment: Number of columns this item spans.
-            type: select
-            options:
-              values:
-                - id: "1"
-                  name: 1 Column
-                - id: "2"
-                  name: 2 Columns
-                - id: "3"
-                  name: 3 Columns
-                - id: "4"
-                  name: 4 Columns
-          rowSpan:
-            comment: Number of rows this item spans.
-            type: select
-            options:
-              values:
-                - id: "1"
-                  name: 1 Row
-                - id: "2"
-                  name: 2 Rows
-                - id: "3"
-                  name: 3 Rows
-                - id: "4"
-                  name: 4 Rows
           contentSections:
             type: array
-            comment: Content sections to render within this bento box item.
+            comment: Content sections to render within this grid item.
             options:
-              structures: _structures.bentoBoxSections
+              structures: _structures.gridItemSections
+          columnSpan:
+            type: range
+            comment: The number of columns the item should span, each row has 12 columns.
+            options:
+              min: 1
+              max: 12
+              step: 1
+              default: 4
+          rowSpan:
+            type: range
+            comment: The number of rows the item should span.
+            options:
+              min: 1
+              max: 4
+              step: 1
+              default: 1

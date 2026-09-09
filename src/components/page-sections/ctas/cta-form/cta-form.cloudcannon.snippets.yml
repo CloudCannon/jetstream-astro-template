@@ -7,6 +7,9 @@ ctaForm:
     subtext:
       - key: heading
     icon: hero
+    gallery:
+      image: public/component-previews/page-sections/ctas/cta-form.svg
+      fit: cover
   params:
     args:
       parser: key_values
@@ -21,6 +24,10 @@ ctaForm:
             optional: true
             remove_empty: true
           - editor_key: eyebrowText
+            type: string
+            optional: true
+            remove_empty: true
+          - editor_key: subtext
             type: string
             optional: true
             remove_empty: true
@@ -55,6 +62,10 @@ ctaForm:
             remove_empty: true
           - editor_key: contentBackground
             type: boolean
+            optional: true
+            remove_empty: true
+          - editor_key: background
+            type: object
             optional: true
             remove_empty: true
           - editor_key: verticalOffset

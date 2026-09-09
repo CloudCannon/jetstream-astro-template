@@ -55,6 +55,9 @@ _structures:
         value:
           name: ""
           path: ""
+          subtext: ""
+          iconName: ""
+          iconPosition: before
           children: []
         _inputs:
           name:
@@ -67,6 +70,29 @@ _structures:
               hide_link_to_file: true
               hide_link_to_email_address: true
               hide_link_to_telephone: true
+          subtext:
+            type: text
+            comment: "Optional description shown beneath the name in the dropdown."
+          iconName:
+            type: select
+            comment: "Optional icon shown alongside the name. Sourced from [Heroicons](https://heroicons.com/)."
+            options:
+              values: _select_data.icons
+              preview:
+                text:
+                  - key: name
+                image:
+                  - template: src/icons/{id}.svg
+          iconPosition:
+            type: select
+            comment: "Whether the icon sits before or after the name."
+            hidden: "!iconName"
+            options:
+              values:
+                - id: before
+                  name: Before
+                - id: after
+                  name: After
           children:
             type: array
             comment: "Grandchild navigation items for nested dropdowns."
@@ -79,6 +105,9 @@ _structures:
         value:
           name: ""
           path: ""
+          subtext: ""
+          iconName: ""
+          iconPosition: before
         _inputs:
           name:
             type: text
@@ -90,3 +119,26 @@ _structures:
               hide_link_to_file: true
               hide_link_to_email_address: true
               hide_link_to_telephone: true
+          subtext:
+            type: text
+            comment: "Optional description shown beneath the name in the dropdown."
+          iconName:
+            type: select
+            comment: "Optional icon shown alongside the name. Sourced from [Heroicons](https://heroicons.com/)."
+            options:
+              values: _select_data.icons
+              preview:
+                text:
+                  - key: name
+                image:
+                  - template: src/icons/{id}.svg
+          iconPosition:
+            type: select
+            comment: "Whether the icon sits before or after the name."
+            hidden: "!iconName"
+            options:
+              values:
+                - id: before
+                  name: Before
+                - id: after
+                  name: After

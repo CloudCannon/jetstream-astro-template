@@ -53,6 +53,21 @@ collections_config:
         hide_extra_inputs: false
         remove_empty_inputs: false
         remove_extra_inputs: false
+        _inputs:
+          heroSection:
+            type: object
+            comment: The single hero shown above the list of blog posts.
+            options:
+              structures: _structures.heroSection
+              preview:
+                icon: view_carousel
+          ctaSection:
+            type: object
+            comment: The single call to action shown below the list of blog posts.
+            options:
+              structures: _structures.ctaSection
+              preview:
+                icon: ads_click
   blog:
     path: src/content/blog
     glob:
@@ -60,6 +75,7 @@ collections_config:
     name:
     icon: article
     url: "/blog/{permalink|if=permalink}[slug|unless=permalink]/"
+    new_preview_url: "/blog/sample-blog-post-with-a-range-of-snippets"
     disable_url: false
     description: >-
       Welcome to the **Blog Collection**! This *Collection* contains all the
@@ -98,7 +114,7 @@ collections_config:
         type: date
         options:
           required: true
-        comment: The publication date.
+        comment: The publication date. Note that date in the post will not live update, you will need to save and rebuild.
         cascade: true
       author:
         type: select
@@ -126,16 +142,17 @@ collections_config:
         options:
           required: true
           allow_create: true
-          values:
-            - Caching
-            - Uptime
-            - Downtime
-            - Example
-            - Security
-            - Performance
-            - CDN
-            - Prediction
-        comment: Tag relevant to this post's content.
+          values: data.tags.tags
+          value_key: name
+          preview:
+            text:
+              - key: name
+            image:
+              - template: src/icons/{icon}.svg
+        comment: >-
+          Tag relevant to this post's content. Each tag's icon is set in the
+          *Tags* data file — type a new tag here to create one, and it will use
+          the default icon until you give it its own.
         cascade: true
       counters:
         type: array
@@ -1061,6 +1078,9 @@ _select_data:
       name: X Circle
     - id: x-mark
       name: X Mark
+data_config:
+  tags:
+    path: src/data/tags.json
 _snippets_imports:
   mdx: true
 file_config:
@@ -1116,6 +1136,56 @@ file_config:
           underline: true
         comment: Optional subtext displayed beneath the heading.
         cascade: true
+  - glob: src/data/tags.json
+    _inputs:
+      defaultIcon:
+        type: select
+        options:
+          required: true
+          values: _select_data.icons
+          preview:
+            text:
+              - key: name
+            image:
+              - template: src/icons/{id}.svg
+        comment: >-
+          Icon used for any blog tag that has not been given its own icon below,
+          including new tags created while writing a post.
+      tags:
+        type: array
+        comment: >-
+          The tags available to blog posts, and the icon shown alongside each
+          one. Removing a tag here does not remove it from posts already using
+          it — those posts fall back to the default icon.
+        options:
+          structures:
+            style: select
+            values:
+              - label: Tag
+                icon: sell
+                value:
+                  name: New Tag
+                  icon: tag
+                _inputs:
+                  name:
+                    type: text
+                    options:
+                      required: true
+                    comment: >-
+                      The tag as it appears on posts. Must match the tag saved
+                      on a post exactly, ignoring capitalisation.
+                  icon:
+                    type: select
+                    options:
+                      values: _select_data.icons
+                      preview:
+                        text:
+                          - key: name
+                        image:
+                          - template: src/icons/{id}.svg
+                    comment: >-
+                      Icon displayed alongside this tag. Sourced from
+                      [Heroicons](https://heroicons.com/).
   - glob: src/content/blog/index.md
     _inputs:
       pageSections:
