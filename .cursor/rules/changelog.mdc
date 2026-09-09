@@ -6,17 +6,19 @@ alwaysApply: true
 
 # Changelog
 
-When making functional changes to the project (bug fixes, new features, enhancements, breaking changes), add an entry to the `[Unreleased]` section of `CHANGELOG.md`.
+When making user-facing changes to the project (bug fixes, new features, enhancements, breaking changes,
+documentation that changes how the template is used), add an entry to `CHANGELOG.md`.
 
-Use the [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format with these categories:
+This project is continuously improved and **does not follow semantic versioning or use an `[Unreleased]` section**.
+Entries are grouped under a date heading, newest first:
 
-- **Added** — new features
-- **Changed** — changes to existing functionality
-- **Deprecated** — soon-to-be removed features
-- **Removed** — removed features
-- **Fixed** — bug fixes
-- **Security** — vulnerability fixes
+```markdown
+## September 9, 2026
 
-**Never create duplicate category headers.** Before adding an entry, read the existing `[Unreleased]` section and append to the matching `###` heading that already exists. Only create a new `###` heading if one doesn't exist yet for that category.
+- Short description of the change, in the past tense
+```
+
+Before adding an entry, read the top of `CHANGELOG.md`. If a heading for today's date already exists, append a
+bullet to it rather than creating a second heading for the same date.
 
 Skip changelog entries for refactors, code style changes, or other internal-only changes with no user-facing impact.
