@@ -29,7 +29,10 @@ yarn-error.log*
 .vscode/
 
 # agent skills installed via `npx skills add` (see AGENTS.md)
+# skills-lock.json is committed so the same versions can be restored
 .agents/
+.claude/skills/
+agent/
 
 # temporary files
 *.tmp

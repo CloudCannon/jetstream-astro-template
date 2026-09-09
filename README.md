@@ -77,13 +77,36 @@ for the full workflow.
 
 ### AI Agent Skills
 
-This template works with [CloudCannon's agent skills](https://github.com/CloudCannon/agent-skills) — instructions
-that teach AI coding agents how to configure CloudCannon, add visual editing, set up snippets, and make a site
-multilingual. Install them into `.agents/skills/`, where coding agents pick them up:
+If you build with an AI coding agent (Claude Code, Cursor, Copilot, and others), install
+[CloudCannon's agent skills](https://github.com/CloudCannon/agent-skills). They teach your agent how CloudCannon
+configuration, editable regions, and snippets actually work, so it stops guessing.
 
 ```bash
-npx skills add CloudCannon/agent-skills
+npx skills add cloudcannon/agent-skills --all
 ```
+
+To see what's on offer before installing anything, or to install a subset:
+
+```bash
+npx skills add cloudcannon/agent-skills --list
+npx skills add cloudcannon/agent-skills --skill <names>
+```
+
+Other useful flags and commands:
+
+| Command                           | What it does                                                  |
+| --------------------------------- | ------------------------------------------------------------- |
+| `--all`                           | Install every skill for every detected agent, without prompts |
+| `-l`, `--list`                    | List the skills in the repository without installing          |
+| `-g`, `--global`                  | Install for your user account instead of just this project    |
+| `npx skills ls`                   | List the skills you have installed, project and global        |
+| `npx skills update`               | Update installed skills to their latest versions              |
+| `npx skills remove`               | Remove installed skills                                       |
+| `npx skills experimental_install` | Restore the exact skills recorded in `skills-lock.json`       |
+
+Skills install to `.agents/skills/`, with agent-specific directories such as `.claude/skills/` and `agent/skills/`
+pointing at them. Those directories are gitignored, but `skills-lock.json` is committed — so a teammate can restore
+the same set and versions you used.
 
 In Claude Code you can install them as a plugin instead:
 
@@ -92,12 +115,8 @@ In Claude Code you can install them as a plugin instead:
 /plugin install agent-skills@cloudcannon
 ```
 
-Then ask for work by name — for example, _"Add visual editing to the pricing page using the
-cloudcannon-visual-editing skill."_
-
-This template also ships its own skills in [`.cursor/skills/`](.cursor/skills) for template-specific tasks:
-creating components, theming, adding fonts, and authoring page content. See [AGENTS.md](AGENTS.md) for which
-skill to reach for when.
+This template also ships its own skills in [`.cursor/skills/`](.cursor/skills), covering tasks specific to this
+component library. See [AGENTS.md](AGENTS.md) for which skill to reach for when.
 
 ## Site Details
 

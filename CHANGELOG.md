@@ -8,9 +8,9 @@
 - Documented the CloudCannon CLI dev server in the README and Project Tour: install `@cloudcannon/cli`, `cloudcannon login`, `npm run build`, then `cloudcannon dev dist` to edit local files in CloudCannon
 - Renamed the README _Setup_ section to _Getting Started_
 - Corrected `package.json` `engines.node` to `>=24.0.0` to match `.nvmrc` and the README prerequisites
-- Documented the CloudCannon agent skills in the README, including how to install them with `npx skills add CloudCannon/agent-skills`
+- Documented the CloudCannon agent skills in the README: installing with `npx skills add cloudcannon/agent-skills --all`, the useful `skills` CLI flags and commands, and where skills land on disk
 - Added `AGENTS.md`, describing the project for AI coding agents and which skill to use for which task
-- Gitignored `.agents/`, so skills installed locally are not committed
+- Gitignored the directories `npx skills add` writes to (`.agents/`, `.claude/skills/`, `agent/`), keeping `skills-lock.json` tracked
 - Rewrote the `changelog` Cursor rule to match this changelog's dated format instead of Keep a Changelog
 
 ## May 4, 2026
