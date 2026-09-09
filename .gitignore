@@ -28,6 +28,9 @@ yarn-error.log*
 # vscode settings
 .vscode/
 
+# agent skills installed via `npx skills add` (see AGENTS.md)
+.agents/
+
 # temporary files
 *.tmp
 *.temp
