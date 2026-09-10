@@ -255,7 +255,7 @@ ${indent}</${componentName}>`;
   } else if (items && componentPath.includes("content-selector")) {
     // Handle content selector items as slot content
     const itemsArray = Array.isArray(items) ? items : [items];
-    const itemComponentName = "ContentSelectorPanel";
+    const itemComponentName = "ContentSelectorItem";
     const containerProps = { ...props };
 
     delete containerProps.items;

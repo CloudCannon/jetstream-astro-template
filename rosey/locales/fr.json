@@ -564,6 +564,11 @@
     "value": "Évaluation annuelle de la santé de votre infrastructure réalisée par nos architectes seniors, accompagnée d'un rapport de 40 pages relié dans une chemise de présentation à collectionner",
     "_base_original": "Annual infrastructure health assessment conducted by our senior architects, complete with a 40-page report bound in a collectible presentation folder"
   },
+  "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:price_amount": {
+    "original": "300",
+    "value": "300",
+    "_base_original": "300"
+  },
   "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:price_prefix": {
     "original": "$",
     "value": "$",
@@ -603,6 +608,11 @@
     "original": "Automated SSL certificate management",
     "value": "Gestion automatisée des certificats SSL",
     "_base_original": "Automated SSL certificate management"
+  },
+  "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:price_amount": {
+    "original": "49",
+    "value": "49",
+    "_base_original": "49"
   },
   "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:price_prefix": {
     "original": "$",
@@ -775,9 +785,9 @@
     "_base_original": "<p><strong>Mitigation rate against 12,000+ daily attack attempts</strong></p>"
   },
   "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:b3940bab-473b-427f-bc06-93077c3cee52:text": {
-    "original": "We implemented our low-latency routing protocol and deployed dedicated health sector edge nodes with HIPAA-compliant encryption that doesn't slow things down.<br>Doctors can read patient expressions in real-time, and medical care is delivered at the speed of actual conversation — which, our research indicates, is how medical care should work.",
-    "value": "Nous avons mis en place notre protocole de routage à faible latence et déployé des nœuds périphériques dédiés au secteur de la santé, avec un chiffrement conforme à la HIPAA qui ne ralentit rien.<br>Les médecins peuvent lire les expressions de leurs patients en temps réel, et les soins sont dispensés à la vitesse d'une véritable conversation — ce qui, d'après nos recherches, est la façon dont les soins devraient fonctionner.",
-    "_base_original": "We implemented our low-latency routing protocol and deployed dedicated health sector edge nodes with HIPAA-compliant encryption that doesn't slow things down.<br>Doctors can read patient expressions in real-time, and medical care is delivered at the speed of actual conversation — which, our research indicates, is how medical care should work."
+    "original": "We implemented our low-latency routing protocol and deployed dedicated health sector edge nodes with HIPAA-compliant encryption that doesn't slow things down. Doctors can read patient expressions in real-time, and medical care is delivered at the speed of actual conversation — which, our research indicates, is how medical care should work.",
+    "value": "Nous avons mis en place notre protocole de routage à faible latence et déployé des nœuds périphériques dédiés au secteur de la santé, avec un chiffrement conforme à la HIPAA qui ne ralentit rien.<br />Les médecins peuvent lire les expressions de leurs patients en temps réel, et les soins sont dispensés à la vitesse d'une véritable conversation — ce qui, d'après nos recherches, est la façon dont les soins devraient fonctionner.",
+    "_base_original": "We implemented our low-latency routing protocol and deployed dedicated health sector edge nodes with HIPAA-compliant encryption that doesn't slow things down. Doctors can read patient expressions in real-time, and medical care is delivered at the speed of actual conversation — which, our research indicates, is how medical care should work."
   },
   "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:c339bedd-58c0-44a2-8be0-f985ee463f05:suffix": {
     "original": "s",
@@ -1479,6 +1489,11 @@
     "value": "Commencer",
     "_base_original": "Get started"
   },
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:price_amount": {
+    "original": "49",
+    "value": "49",
+    "_base_original": "49"
+  },
   "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:price_prefix": {
     "original": "$",
     "value": "$",
@@ -1518,6 +1533,11 @@
     "original": "Get started",
     "value": "Commencer",
     "_base_original": "Get started"
+  },
+  "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:price_amount": {
+    "original": "300",
+    "value": "300",
+    "_base_original": "300"
   },
   "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:price_prefix": {
     "original": "$",

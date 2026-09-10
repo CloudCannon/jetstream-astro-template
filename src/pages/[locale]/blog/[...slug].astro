@@ -68,13 +68,16 @@ const author = team.find((m: any) => m.data.uuid === post.data.author);
 ---
 
 <!-- roseyRoot must be the English path, not this page's URL, or the shared chrome mints a
-     duplicate `fr/blog/x:…` key set. No switcher: the body is translated in the file. -->
+     duplicate `fr/blog/x:…` key set. The switcher offers this locale alone: the post body is
+     translated in the content file, so the other locales would pair this article with the
+     wrong language's chrome, but its own locale lines up with the page already served here
+     and is what makes the shared strings — share, sidebar heading, nav, footer — editable. -->
 <Page
   title={post.data.title}
   description={post.data.description}
   image={post.data.image}
   roseyRoot={`blog/${slug}`}
-  hideLocaleSwitcher
+  localeSwitcherLocales={[locale]}
 >
   <CustomSection
     class:list={["hero-feature"]}
@@ -270,7 +273,10 @@ const author = team.find((m: any) => m.data.uuid === post.data.author);
         }
 
         <div class="share-section">
-          {/* Source-edited on the English route only — one string, one place. */}
+          {
+            /* Source-edited on the English route only — one string, one place. Here it is the
+            Rosey key that makes it editable, through the connector's locale switcher. */
+          }
           <SimpleText
             size="md"
             class="share-section-text"

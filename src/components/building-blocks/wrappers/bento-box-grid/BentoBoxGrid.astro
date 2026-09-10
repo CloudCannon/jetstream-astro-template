@@ -1,6 +1,7 @@
 ---
 import { isEditable } from "@component-utils/editable";
-import BentoBoxGridItem from "./BentoBoxGridItem.astro";
+import RenderBlock from "@components/utils/renderBlock.astro";
+import BentoBoxGridCell from "./BentoBoxGridCell.astro";
 
 const {
   layout = "center",
@@ -59,15 +60,23 @@ if (!_component && !hasItems && !hasSlotContent) return;
   >
     <slot>
       {
+        /* The grid owns the cells, so any block can be an item — not just BentoBoxGridItem.
+          The cell is what hosts the array-item region; the block renders its own content root
+          inside it. */
+      }
+      {
         items?.map((item: any) => (
-          <BentoBoxGridItem
-            data-component="building-blocks/wrappers/bento-box-grid/bento-box-grid-item"
-            data-id={item._uuid ?? "building-blocks/wrappers/bento-box-grid/bento-box-grid-item"}
-            data-editable="array-item"
+          <BentoBoxGridCell
+            component={effectiveChildrenProp ? item._component : undefined}
+            uuid={item._uuid}
             class:list={`layout-${layout}`}
-            useDefaultEditableBinding={!!effectiveChildrenProp}
-            {...item}
-          />
+          >
+            <RenderBlock
+              contentSections={[item]}
+              useDefaultEditableBinding={!!effectiveChildrenProp}
+              markArrayItems={false}
+            />
+          </BentoBoxGridCell>
         ))
       }
     </slot>

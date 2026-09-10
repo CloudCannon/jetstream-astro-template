@@ -3,7 +3,7 @@ import { ClientRouter } from "astro:transitions";
 import { fade } from "astro:transitions";
 import SeoHead from "@components/utils/SeoHead.astro";
 import StructuredData from "@components/utils/StructuredData.astro";
-import { defaultLocale, localeCodes } from "@component-utils/locales";
+import { defaultLocale, localeCodes, type Locale } from "@component-utils/locales";
 import seoData from "@data/seo.json";
 import "@styles/style.css";
 import SiteFonts from "@layouts/SiteFonts.astro";
@@ -32,6 +32,10 @@ export interface Props {
   roseyTitleKey?: string;
   roseyDescriptionKey?: string;
   hideLocaleSwitcher?: boolean;
+  // Narrows the switcher to these locales instead of hiding it. For routes that are built
+  // natively per locale: the page is already in one language, so offering the others would
+  // show this locale's content under another locale's translations.
+  localeSwitcherLocales?: readonly Locale[];
 }
 
 const props = Astro.props;
@@ -41,9 +45,13 @@ const titleKey =
 const descriptionKey =
   props.roseyDescriptionKey ?? (props.roseySeo ? `${pageRoseyRoot}:page_description` : undefined);
 
-// Excluding every locale is how the connector is told to hide its locale switcher.
-// Astro drops the attribute when this is undefined, so other pages are untouched.
-const rccExclude = props.hideLocaleSwitcher ? localeCodes.join(",") : undefined;
+// The connector takes locales away, not adds them: excluding every one hides the switcher,
+// excluding all but one leaves that single locale editable. Astro drops the attribute when
+// this is undefined, so pages that offer every locale are untouched.
+const offeredLocales = props.hideLocaleSwitcher ? [] : (props.localeSwitcherLocales ?? null);
+const rccExclude = offeredLocales
+  ? localeCodes.filter((code) => !offeredLocales.includes(code)).join(",")
+  : undefined;
 ---
 
 <!doctype html>

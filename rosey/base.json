@@ -1266,6 +1266,14 @@
       },
       "total": 1
     },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:price_amount": {
+      "original": " 300 ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
     "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:0ffab0e6-cf9c-40b6-a570-072c5008692b:price_prefix": {
       "original": " $ ",
       "value": null,
@@ -1324,6 +1332,14 @@
     },
     "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:51714e17-4b62-460c-8719-77b8bf487f48:fb1fd775-33d3-42ab-92ee-d40c6450a058:text": {
       "original": " Automated SSL certificate management ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "index:42c4dfc8-8062-4821-b718-00f18eda1f3f:147d29d5-a5d8-468c-b0ef-af62fc4eadc2:price_amount": {
+      "original": " 49 ",
       "value": null,
       "pages": {
         "index.html": 1
@@ -1635,7 +1651,7 @@
       "total": 1
     },
     "index:f8ffd665-c3ba-42e6-a64f-e868d9495c87:b3940bab-473b-427f-bc06-93077c3cee52:text": {
-      "original": "  We implemented our low-latency routing protocol and deployed dedicated health sector edge nodes with HIPAA-compliant encryption that doesn't slow things down.<br>Doctors can read patient expressions in real-time, and medical care is delivered at the speed of actual conversation — which, our research indicates, is how medical care should work.  ",
+      "original": "  We implemented our low-latency routing protocol and deployed dedicated health sector edge nodes with HIPAA-compliant encryption that doesn't slow things down. Doctors can read patient expressions in real-time, and medical care is delivered at the speed of actual conversation — which, our research indicates, is how medical care should work.  ",
       "value": null,
       "pages": {
         "index.html": 1
@@ -3874,6 +3890,14 @@
       },
       "total": 1
     },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:price_amount": {
+      "original": " 49 ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
     "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:680d06e4-ff2a-4d5d-ab54-7fac47157f70:price_prefix": {
       "original": " $ ",
       "value": null,
@@ -3932,6 +3956,14 @@
     },
     "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:4e1e3ab0-e40b-4f16-9818-3327f2166a96:button_text": {
       "original": " Get started ",
+      "value": null,
+      "pages": {
+        "pricing/index.html": 1
+      },
+      "total": 1
+    },
+    "pricing:9f8dc073-5d55-42f0-8dd1-2346d822f318:911a1efb-95a3-4d8e-a09e-3cb3b6de364c:price_amount": {
+      "original": " 300 ",
       "value": null,
       "pages": {
         "pricing/index.html": 1
@@ -4970,7 +5002,7 @@
       "total": 14
     },
     "tags:security": {
-      "original": " Security ",
+      "original": "Security",
       "value": null,
       "pages": {
         "blog/2/index.html": 1,
@@ -4989,7 +5021,7 @@
       "total": 14
     },
     "tags:uptime": {
-      "original": " Uptime ",
+      "original": "Uptime",
       "value": null,
       "pages": {
         "blog/2/index.html": 2,

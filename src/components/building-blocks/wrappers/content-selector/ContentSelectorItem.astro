@@ -14,7 +14,6 @@ const {
   _uuid,
   _component,
   "data-children-prop": childrenDataProp,
-  ...htmlAttributes
 } = Astro.props;
 
 const uniqueId = crypto.randomUUID();
@@ -29,10 +28,13 @@ const arrayDataAttributes = effectiveChildrenProp
   : {};
 ---
 
-<div
-  class="content-selector-item"
-  {...htmlAttributes}
->
+{
+  /* One root, so the component can still be dropped into ContentSelector's slot or rendered
+    on its own. It is transparent because the tab and panel have to be grid items of
+    `.content-selector-items` to be placed; the `.content-selector-item` element that
+    ContentSelector puts around this one is transparent for the same reason. */
+}
+<div class="content-selector-item-content">
   <input
     type="radio"
     name={groupName}
@@ -92,7 +94,8 @@ const arrayDataAttributes = effectiveChildrenProp
 
 <style is:global>
   @layer components {
-    .content-selector-item {
+    .content-selector-item,
+    .content-selector-item-content {
       display: contents;
     }
 

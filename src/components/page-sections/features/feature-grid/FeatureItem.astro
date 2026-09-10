@@ -4,7 +4,6 @@ import Icon from "@core-elements/icon/Icon.astro";
 import Image from "@core-elements/image/Image.astro";
 import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import Text from "@core-elements/text/Text.astro";
-import BentoBoxGridItem from "@wrappers/bento-box-grid/BentoBoxGridItem.astro";
 import Card from "@wrappers/card/Card.astro";
 
 const {
@@ -25,12 +24,16 @@ const {
   _component,
   ...htmlAttributes
 } = Astro.props;
+
+// This root is the content of a grid cell; the cell itself is BentoBoxGridCell, which also
+// owns the `.bento-box-grid-item-content` styling. See the reasoning there for why the spans
+// live here rather than on the cell.
 ---
 
-<BentoBoxGridItem
-  columnSpan={columnSpan}
-  rowSpan={rowSpan}
-  class="feature-grid-item"
+<div
+  class="bento-box-grid-item-content feature-grid-item"
+  data-column-span={columnSpan}
+  data-row-span={rowSpan}
   data-rosey-ns={_uuid}
   {...htmlAttributes}
 >
@@ -75,7 +78,7 @@ const {
       text={description}
     />
   </Card>
-</BentoBoxGridItem>
+</div>
 
 <style is:global>
   @layer page-sections {

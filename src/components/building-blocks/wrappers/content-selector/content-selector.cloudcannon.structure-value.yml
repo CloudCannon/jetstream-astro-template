@@ -20,10 +20,16 @@ _inputs_from_glob:
   - /src/components/building-blocks/wrappers/content-selector/content-selector.cloudcannon.inputs.yml
 _structures:
   contentSelectorItems:
+    # Same shape as the Tab structure in tabbed-content: the item is a component,
+    # so it needs a key CloudCannon can identify it by and a `_uuid` for its
+    # translation namespace.
+    id_key: _component
     values:
       - label: Content Selector Item
         icon: place_item
         value:
+          _component: building-blocks/wrappers/content-selector/content-selector-item
+          _uuid:
           title: Section Title
           contentSections: []
         preview:

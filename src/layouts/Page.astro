@@ -6,6 +6,7 @@ import MainComponent from "@components/utils/MainComponent.astro";
 import footerData from "@data/footer.json";
 import mainNavData from "@data/mainNav.json";
 import Layout from "@layouts/BaseLayout.astro";
+import type { Locale } from "@component-utils/locales";
 
 import type { ContentBlock } from "../types";
 
@@ -49,6 +50,7 @@ type Props = {
   roseyTitleKey?: string;
   roseyDescriptionKey?: string;
   hideLocaleSwitcher?: boolean;
+  localeSwitcherLocales?: readonly Locale[];
 };
 
 const {
@@ -69,6 +71,7 @@ const {
   roseyTitleKey,
   roseyDescriptionKey,
   hideLocaleSwitcher,
+  localeSwitcherLocales,
 } = Astro.props as Props;
 
 const title = frontmatter?.title ?? titleProp;
@@ -101,6 +104,7 @@ const derivedRoseyRoot = Astro.url.pathname.replace(/^\/|\/$/g, "") || "index";
   roseyTitleKey={roseyTitleKey}
   roseyDescriptionKey={roseyDescriptionKey}
   hideLocaleSwitcher={hideLocaleSwitcher}
+  localeSwitcherLocales={localeSwitcherLocales}
 >
   {mainNav.themeToggle && <ThemeToggleScript slot="head" />}
   <MainNavigation {...mainNav} />

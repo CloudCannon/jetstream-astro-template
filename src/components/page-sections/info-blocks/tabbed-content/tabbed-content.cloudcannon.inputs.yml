@@ -2,11 +2,17 @@ tabs:
   type: array
   options:
     structures:
+      # A tab is a component item, so it is identified the same way every other
+      # component array is. Without this CloudCannon cannot tell which structure a
+      # stored tab came from, and the tab's `_inputs` — including the structures for
+      # `contentSections` — never reach anything nested inside it.
+      id_key: _component
       values:
         - label: Tab
           icon: view_sidebar
           value:
             _component: building-blocks/wrappers/content-selector/content-selector-item
+            _uuid:
             title: Section Title
             subtext: Subtext placeholder
             contentSections: []

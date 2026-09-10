@@ -81,7 +81,7 @@ export async function formatBlocksAstro(blocks: any): Promise<string> {
 
       // Handle content-selector items even when metadata fallback wiring is unavailable.
       if (block._component?.includes("building-blocks/wrappers/content-selector") && block.items) {
-        uniqueComponents.add("building-blocks/wrappers/content-selector/content-selector-panel");
+        uniqueComponents.add("building-blocks/wrappers/content-selector/content-selector-item");
         const items = Array.isArray(block.items) ? block.items : [block.items];
 
         items.forEach((item: any) => {

@@ -1,11 +1,11 @@
 ---
 _schema: default
-permalink:
 title:
 description: >-
   An Astro template built for CloudCannon with visual editing, flexible
   components, and an exceptional developer experience. Deploy your next project
   with speed and style.
+permalink:
 keywords: []
 pageSections:
   - _component: page-sections/heroes/hero-center
@@ -109,13 +109,13 @@ pageSections:
     id: services
     eyebrowIcon:
       _component: building-blocks/core-elements/icon
-      _uuid: b1a1197b-3b17-45bd-b14e-e5660a5fcf64
       name: light-bulb
       size: 3xl
       color: brand-gradient
       background: true
       iconOffset: true
       alignmentHorizontal: center
+      _uuid: b1a1197b-3b17-45bd-b14e-e5660a5fcf64
     eyebrowText:
     heading: 'Jetstream protects what matters most: <br />your uptime percentage'
     subtext: >-
@@ -241,11 +241,10 @@ pageSections:
                 text: >-
                   We implemented our low-latency routing protocol and deployed
                   dedicated health sector edge nodes with HIPAA-compliant
-                  encryption that doesn't slow things down.
-
-                  Doctors can read patient expressions in real-time, and medical
-                  care is delivered at the speed of actual conversation — which,
-                  our research indicates, is how medical care should work.
+                  encryption that doesn't slow things down. Doctors can read
+                  patient expressions in real-time, and medical care is
+                  delivered at the speed of actual conversation — which, our
+                  research indicates, is how medical care should work.
                 alignmentHorizontal: start
                 size: md
             secondColumnContentSections: []
@@ -419,13 +418,13 @@ pageSections:
     _uuid: 42c4dfc8-8062-4821-b718-00f18eda1f3f
     eyebrowIcon:
       _component: building-blocks/core-elements/icon
-      _uuid: ccc71e52-80c9-4604-9f0a-3588a466e87d
       name: presentation-chart-line
       size: 3xl
       color: brand-gradient
       background: true
       iconOffset: true
       alignmentHorizontal: center
+      _uuid: ccc71e52-80c9-4604-9f0a-3588a466e87d
     eyebrowText:
     heading: Pricing that scales with your ambition
     subtext: >-
@@ -441,7 +440,7 @@ pageSections:
             prefix: $
             amount: '49'
             suffix: /mo
-          subtext: 'For organizations that need reliability '
+          subtext: For organizations that need reliability
           list:
             _component: building-blocks/core-elements/list
             _uuid: 51714e17-4b62-460c-8719-77b8bf487f48

@@ -9,6 +9,7 @@ import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import Page from "@layouts/Page.astro";
 import CustomSection from "@page-sections/builders/custom-section/CustomSection.astro";
 import BentoBoxGrid from "@wrappers/bento-box-grid/BentoBoxGrid.astro";
+import BentoBoxGridCell from "@wrappers/bento-box-grid/BentoBoxGridCell.astro";
 import BentoBoxGridItem from "@wrappers/bento-box-grid/BentoBoxGridItem.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import Card from "@wrappers/card/Card.astro";
@@ -127,54 +128,56 @@ const team = await getCollection("team");
               const author = team.find((m: any) => m.data.uuid === post.data.author);
 
               return (
-                <BentoBoxGridItem columnSpan={columnSpan}>
-                  <Card
-                    link={`/blog/${slug}`}
-                    rounded={true}
-                    border={false}
-                    backgroundColor="accent"
-                    paddingVertical="md"
-                    paddingHorizontal="md"
-                  >
-                    {post.data.image && (
-                      <Image
-                        source={post.data.image}
-                        alt={post.data.image_alt}
-                        aspectRatio="landscape"
-                        rounded={true}
-                        style="max-height: 230px; width: 100%;"
-                      />
-                    )}
-                    {/* Reuses the shared tags: keys, so card labels translate without
+                <BentoBoxGridCell>
+                  <BentoBoxGridItem columnSpan={columnSpan}>
+                    <Card
+                      link={`/blog/${slug}`}
+                      rounded={true}
+                      border={false}
+                      backgroundColor="accent"
+                      paddingVertical="md"
+                      paddingHorizontal="md"
+                    >
+                      {post.data.image && (
+                        <Image
+                          source={post.data.image}
+                          alt={post.data.image_alt}
+                          aspectRatio="landscape"
+                          rounded={true}
+                          style="max-height: 230px; width: 100%;"
+                        />
+                      )}
+                      {/* Reuses the shared tags: keys, so card labels translate without
                         adding any of their own. */}
-                    <SimpleText
-                      size="sm"
-                      style="color: var(--color-text-brand); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-xs);"
-                      data-rosey-root="tags"
-                      data-rosey={slugifyLabel(post.data.tag ?? "")}
-                    >
-                      {post.data.tag}
-                    </SimpleText>
-                    <Heading
-                      level="h3"
-                      size="md"
-                      style="margin-bottom: var(--spacing-md); margin-top: var(--spacing-sm);"
-                      text={post.data.title.replace(/<[^>]*>/g, "")}
-                    />
-                    <SimpleText
-                      size="md"
-                      style="margin-top: 0;"
-                    >
-                      {post.data.description}
-                    </SimpleText>
-                    <SimpleText
-                      size="sm"
-                      style="font-weight: var(--font-weight-bold); color: var(--color-text-muted); margin-bottom: var(--spacing-xs);"
-                    >
-                      By {author?.data.name || "Anonymous"} | {pubDate}
-                    </SimpleText>
-                  </Card>
-                </BentoBoxGridItem>
+                      <SimpleText
+                        size="sm"
+                        style="color: var(--color-text-brand); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-xs);"
+                        data-rosey-root="tags"
+                        data-rosey={slugifyLabel(post.data.tag ?? "")}
+                      >
+                        {post.data.tag}
+                      </SimpleText>
+                      <Heading
+                        level="h3"
+                        size="md"
+                        style="margin-bottom: var(--spacing-md); margin-top: var(--spacing-sm);"
+                        text={post.data.title.replace(/<[^>]*>/g, "")}
+                      />
+                      <SimpleText
+                        size="md"
+                        style="margin-top: 0;"
+                      >
+                        {post.data.description}
+                      </SimpleText>
+                      <SimpleText
+                        size="sm"
+                        style="font-weight: var(--font-weight-bold); color: var(--color-text-muted); margin-bottom: var(--spacing-xs);"
+                      >
+                        By {author?.data.name || "Anonymous"} | {pubDate}
+                      </SimpleText>
+                    </Card>
+                  </BentoBoxGridItem>
+                </BentoBoxGridCell>
               );
             })}
           </BentoBoxGrid>

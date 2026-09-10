@@ -5,6 +5,9 @@ import type { ContentBlock } from "../../types";
 export interface Props {
   contentSections: ContentBlock[];
   useDefaultEditableBinding?: boolean;
+  // Set false when the caller renders its own element around each block to host the array-item
+  // region — a grid cell, say. The blocks still wire up their own nested regions.
+  markArrayItems?: boolean;
 }
 
 type AstroComponent = (_props: Record<string, unknown>) => unknown;
@@ -32,7 +35,7 @@ Object.entries(componentImports).forEach(([path, obj]) => {
   components[componentName] = (obj as Record<string, AstroComponent>).default;
 });
 
-const { contentSections, useDefaultEditableBinding = true } = Astro.props;
+const { contentSections, useDefaultEditableBinding = true, markArrayItems = true } = Astro.props;
 ---
 
 {
@@ -53,9 +56,9 @@ const { contentSections, useDefaultEditableBinding = true } = Astro.props;
       // cloning a sibling's DOM. A clone would inherit the sibling's data-rosey-ns and
       // silently collide translation keys until the editor reloads.
       <Component
-        data-editable={useDefaultEditableBinding ? "array-item" : undefined}
-        data-component={block._component}
-        data-id={block._uuid ?? block._component}
+        data-editable={markArrayItems && useDefaultEditableBinding ? "array-item" : undefined}
+        data-component={markArrayItems ? block._component : undefined}
+        data-id={markArrayItems ? (block._uuid ?? block._component) : undefined}
         {...block}
         useDefaultEditableBinding={useDefaultEditableBinding}
       />

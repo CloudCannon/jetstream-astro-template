@@ -1,11 +1,11 @@
 ---
 import { isEditable } from "@component-utils/editable";
-import ContentSelectorPanel from "./ContentSelectorPanel.astro";
+import ContentSelectorItem from "./ContentSelectorItem.astro";
 import { slugifyLabel } from "@components/utils/slugify";
-import type { ContentSelectorItem } from "../../../../types";
+import type { ContentSelectorItem as ContentSelectorItemProps } from "../../../../types";
 
 const {
-  items = [] as ContentSelectorItem[],
+  items = [] as ContentSelectorItemProps[],
   navigationPosition = "start",
   class: className,
   label,
@@ -22,6 +22,10 @@ if (!htmlAttributes.id && label) {
 
 const uniqueId = crypto.randomUUID();
 const groupName = `tabs-${uniqueId}`;
+
+// Must match the file name: CloudCannon registers components by path, and the array reads
+// each item's key from its `_component` field, which content already sets to this value.
+const itemComponent = "building-blocks/wrappers/content-selector/content-selector-item";
 
 const isContentBlock = isEditable(Astro.props);
 const effectiveChildrenProp = childrenDataProp ?? (isContentBlock ? "items" : null);
@@ -52,20 +56,25 @@ if (!_component && !hasItems && !hasSlotContent) return;
   >
     <slot>
       {
-        items?.map((item: ContentSelectorItem, index: number) => (
-          <ContentSelectorPanel
-            title={item.title}
-            subtext={item.subtext}
-            iconName={item.iconName}
-            iconColor={item.iconColor}
-            contentSections={item.contentSections}
-            _component={item._component}
-            checked={index === 0}
-            groupName={groupName}
-            navigationPosition={navigationPosition}
-            useDefaultEditableBinding={!!effectiveChildrenProp}
+        items?.map((item: ContentSelectorItemProps, index: number) => (
+          /* The region host must wrap the item, never be its root: a re-render diffs the
+          rendered component's children into the host's children, so region attrs on the
+          item's own root nest it one level deeper. The host keeps `.content-selector-item`
+          so it is what the first/last-tab rules count, and stays transparent so the tab and
+          panel inside it are still grid items of `.content-selector-items`. */
+          <div
+            class="content-selector-item"
             data-editable="array-item"
-          />
+            data-component={itemComponent}
+            data-id={item._uuid ?? itemComponent}
+          >
+            <ContentSelectorItem
+              checked={index === 0}
+              groupName={groupName}
+              useDefaultEditableBinding={!!effectiveChildrenProp}
+              {...item}
+            />
+          </div>
         ))
       }
     </slot>
@@ -169,15 +178,17 @@ if (!_component && !hasItems && !hasSlotContent) return;
         border: 0 solid var(--color-bg-muted);
         width: 100%;
 
-        &:not(:has(.content-selector-item > .content-selector-input:checked))
+        /* Descendant, not child: the item component keeps its own transparent root inside
+          the `.content-selector-item` host. */
+        &:not(:has(.content-selector-item .content-selector-input:checked))
           .content-selector-item:first-of-type
-          > .content-selector-tab::before {
+          .content-selector-tab::before {
           background: var(--color-bg-primary);
         }
 
-        &:not(:has(.content-selector-item > .content-selector-input:checked))
+        &:not(:has(.content-selector-item .content-selector-input:checked))
           .content-selector-item:first-of-type
-          > .content-selector-panel {
+          .content-selector-panel {
           display: block;
         }
 

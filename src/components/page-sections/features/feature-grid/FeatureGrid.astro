@@ -5,7 +5,6 @@ import Icon from "@core-elements/icon/Icon.astro";
 import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import Text from "@core-elements/text/Text.astro";
 import BentoBoxGrid from "@wrappers/bento-box-grid/BentoBoxGrid.astro";
-import RenderBlock from "@components/utils/renderBlock.astro";
 
 const {
   id = "",
@@ -101,11 +100,10 @@ const {
     >
       <BentoBoxGrid
         gap="md"
+        items={featureGrid.features}
         data-children-prop="featureGrid.features"
         class="feature-grid-grid"
-      >
-        {featureGrid.features && <RenderBlock contentSections={featureGrid.features} />}
-      </BentoBoxGrid>
+      />
     </CustomSection>
   </CustomSection>
 </CustomSection>
