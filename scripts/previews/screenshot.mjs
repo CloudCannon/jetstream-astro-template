@@ -8,8 +8,14 @@
  * ground recipe authoring (`*.preview.mjs`) — they are never an input to the
  * committed SVGs, which are produced deterministically by `build.mjs`.
  *
- * Requires Chrome/Edge/Chromium (or CHROME_PATH). Output defaults to
- * `.preview-screenshots/` (git-ignored, regenerated on demand).
+ * Requires Chrome/Edge/Chromium (or CHROME_PATH) and playwright-core, which is
+ * deliberately NOT a project dependency — nothing in the build or `npm run
+ * check` needs a browser. Install it only when capturing screenshots:
+ *
+ *   npm install --no-save playwright-core
+ *
+ * Output defaults to `.preview-screenshots/` (git-ignored, regenerated on
+ * demand).
  */
 import { execSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, statSync } from "node:fs";
@@ -17,7 +23,21 @@ import { createServer } from "node:http";
 import { dirname, extname, join, sep } from "node:path";
 import { glob } from "glob";
 import * as yaml from "js-yaml";
-import { chromium } from "playwright-core";
+
+// Resolved at runtime rather than imported statically, so a missing
+// playwright-core produces the instruction below instead of ERR_MODULE_NOT_FOUND.
+let chromium;
+
+try {
+  ({ chromium } = await import("playwright-core"));
+} catch {
+  console.error(
+    "playwright-core is not installed. It is not a project dependency — this\n" +
+      "script is the only thing that needs a browser. Install it with:\n\n" +
+      "  npm install --no-save playwright-core\n"
+  );
+  process.exit(1);
+}
 
 const root = join(dirname(new URL(import.meta.url).pathname), "..", "..");
 const distDir = join(root, "dist");

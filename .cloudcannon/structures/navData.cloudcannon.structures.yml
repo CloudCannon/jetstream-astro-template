@@ -24,8 +24,12 @@ navData:
           type: text
           comment: Display text for the navigation item.
         path:
-          type: text
+          type: url
           comment: URL path for the navigation item.
+          options:
+            hide_link_to_file: true
+            hide_link_to_email_address: true
+            hide_link_to_telephone: true
         children:
           type: array
           label: Child Navigation Items
@@ -57,8 +61,12 @@ navData:
                     type: text
                     comment: Display text for the child navigation item.
                   path:
-                    type: text
+                    type: url
                     comment: URL path for the child navigation item.
+                    options:
+                      hide_link_to_file: true
+                      hide_link_to_email_address: true
+                      hide_link_to_telephone: true
                   subtext:
                     type: text
                     comment: Optional description shown beneath the name in the dropdown.
@@ -112,8 +120,12 @@ navData:
                               type: text
                               comment: Display text for the grandchild navigation item.
                             path:
-                              type: text
+                              type: url
                               comment: URL path for the grandchild navigation item.
+                              options:
+                                hide_link_to_file: true
+                                hide_link_to_email_address: true
+                                hide_link_to_telephone: true
                             subtext:
                               type: text
                               comment: Optional description shown beneath the name in the dropdown.

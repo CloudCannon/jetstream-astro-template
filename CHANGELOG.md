@@ -3,7 +3,7 @@
 > This template is continuously improved and does not follow strict versioned releases.
 > Updates below reflect incremental changes to the latest version.
 
-## September 9, 2026
+## September 15, 2026
 
 - Added component previews. Each component has a preview recipe compiled to an SVG thumbnail shown in the component picker, built with `previews:build`.
 - Added optional icons and subtext to navigation items.
