@@ -67,6 +67,38 @@ Jetstream features advanced visual editing capabilities with CloudCannon's split
 - **Navigation**: Fully accessible, responsive navigation management
 - **Footer**: Configurable footer elements and links
 
+## Component Previews
+
+Every component has a thumbnail shown in CloudCannon's component picker. These are
+not screenshots — each component defines a recipe in a `*.preview.mjs` file next to
+it, which is compiled to a deterministic SVG in `public/component-previews/`.
+
+The SVGs are committed, so **after editing a recipe you must rebuild them**:
+
+```bash
+npm run previews:build
+```
+
+`npm run check` (and CI) verifies that every component has a preview and that no
+committed SVG is stale, so a recipe change without a rebuild fails the check. To
+verify without writing anything:
+
+```bash
+npm run previews:verify
+```
+
+Two authoring aids are available while designing a recipe. Neither is part of the
+build, and both write git-ignored output:
+
+```bash
+npm run previews:montage   # one labelled contact sheet of every preview, to compare them side by side
+node scripts/previews/screenshot.mjs   # reference PNGs of the real rendered components
+```
+
+The screenshot script needs a browser and `playwright-core`, which is intentionally
+not a project dependency — install it with `npm install --no-save playwright-core`
+when you need it.
+
 ## Prerequisites
 
 - Node.js >= 24.0.0

@@ -3,7 +3,7 @@ title: Feature Grid
 spacing: all
 blocks:
   _component: 'page-sections/features/feature-grid'
-  eyebrow: 'Why teams switch'
+  eyebrowText: 'Why teams switch'
   heading: 'Operational clarity in every workflow'
   subtext: 'Spotlight the core capabilities that make your product different, with consistent icon cards that wrap automatically on any screen.'
   alignmentHorizontal: center

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="t-tabbed-content">
+  <title id="t-tabbed-content">Tabbed content component preview</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --pv-paper: #151515;
+        --pv-panel: #1D1D1B;
+        --pv-surface: #232320;
+        --pv-line: #2E2D29;
+        --pv-glyph: #45443E;
+        --pv-body: #3A3934;
+        --pv-subject: #6E6A62;
+        --pv-ink: #F5F3EE;
+        --pv-on-ink: #6B6B6B;
+      }
+    }
+  </style>
+  <rect x="0" y="0" width="1280" height="720" fill="var(--pv-paper, #FFFFFF)"/>
+  <g transform="translate(0 65)">
+    <rect x="80" y="0" width="200" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="80" y="44" width="640" height="40" rx="20" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="80" y="110" width="820" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="80" y="134" width="700" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="80" y="170" width="220" height="68" rx="10" fill="var(--pv-ink, #151515)"/>
+    <rect x="130" y="198" width="120" height="12" rx="6" fill="var(--pv-on-ink, #9A9A9A)"/>
+    <rect x="374" y="198" width="120" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="618" y="198" width="120" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="80" y="248" width="1120" height="2" rx="1" fill="var(--pv-line, #E4E1DA)"/>
+    <rect x="80" y="290" width="520" height="300" rx="10" fill="var(--pv-surface, #EBE9E3)"/>
+    <circle cx="444" cy="386" r="18" fill="var(--pv-glyph, #CFCBC2)"/>
+    <polygon points="197,517 298,449 374,517" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="14" stroke-linejoin="round"/>
+    <polygon points="332,519 423,464 510,519" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="10" stroke-linejoin="round"/>
+    <rect x="660" y="310" width="420" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="660" y="370" width="540" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="660" y="394" width="500" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="660" y="418" width="520" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="660" y="442" width="380" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+  </g>
+</svg>

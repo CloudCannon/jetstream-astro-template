@@ -6,35 +6,18 @@ import ThemeToggle from "@components/navigation/theme-toggle/ThemeToggle.astro";
 import Image from "@core-elements/image/Image.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 
-type NavButton = {
-  text?: string;
-  /** Button schema uses `link`; legacy entries may use `href`. */
-  link?: string;
-  href?: string;
-  [key: string]: unknown;
-};
-
 const {
   logoSource,
   logoAlternateSource,
   logoAlt = "logo",
   navData = [],
-  buttonSections = [] as NavButton[],
+  buttonSections = [],
   themeToggle = false,
   class: className,
   useDefaultEditableBinding: _useDefaultEditableBinding = false,
   _component,
   ...htmlAttributes
 } = Astro.props;
-
-const mobileNavData = [
-  ...navData,
-  ...buttonSections.map((button: any) => ({
-    name: button.text || "Button",
-    path: button.link || button.href || "#",
-    children: [],
-  })),
-];
 ---
 
 <CustomSection
@@ -70,7 +53,6 @@ const mobileNavData = [
       direction="row"
       align="center"
       class="desktop-button-group"
-      style="gap: var(--spacing-xl);"
       buttonSections={buttonSections}
       useDefaultEditableBinding={false}
     />
@@ -79,7 +61,8 @@ const mobileNavData = [
     logoSource={logoSource}
     logoAlternateSource={logoAlternateSource}
     logoAlt={logoAlt}
-    navData={mobileNavData}
+    navData={navData}
+    buttonSections={buttonSections}
     class="mobile-main-nav"
     useDefaultEditableBinding={false}
   />
@@ -97,13 +80,13 @@ const mobileNavData = [
 
       .desktop-main-nav.bar,
       .desktop-button-group.button-group {
-        @container (max-width: 768px) {
+        @container (max-width: 840px) {
           display: none;
         }
       }
 
       .nav-hamburger.mobile-button {
-        @container (min-width: 769px) {
+        @container (min-width: 841px) {
           display: none;
         }
       }
@@ -115,7 +98,7 @@ const mobileNavData = [
         gap: var(--spacing-md);
         background-color: var(--color-bg);
         border: 2px solid var(--color-border-subtle);
-        box-shadow: 10px 10px 29px 10px var(--color-shadow);
+        box-shadow: var(--shadow-raised);
         padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) var(--spacing-2xl);
         border-top-left-radius: var(--radius-4xl);
         border-bottom-left-radius: var(--radius-4xl);
@@ -140,12 +123,16 @@ const mobileNavData = [
           margin-top: 0;
 
           > .button-group__items {
-            gap: var(--spacing-xl);
+            gap: var(--spacing-md);
             width: auto;
           }
 
           .button > .button-inner {
             border-radius: var(--radius-sm);
+          }
+
+          .button > .button-inner.icon-only .icon svg {
+            font-size: 1.25em;
           }
         }
       }

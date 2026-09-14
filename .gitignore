@@ -31,3 +31,11 @@ yarn-error.log*
 # temporary files
 *.tmp
 *.temp
+
+# component preview authoring aids (regenerated on demand)
+.preview-screenshots/
+.preview-montage.png
+
+# agent tooling
+.agents
+skills-lock.json

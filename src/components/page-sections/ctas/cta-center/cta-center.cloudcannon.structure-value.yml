@@ -23,6 +23,16 @@ value:
   colorScheme: inherit
   backgroundColor: base
   contentBackground: false
+  background:
+    type: image
+    positionVertical: top
+    positionHorizontal: center
+    priority: false
+    imageSource: ""
+    imageAlt: ""
+    videoSource: null
+    overlay: 0
+  verticalOffset: {}
   rounded: false
 preview:
   text:
@@ -30,8 +40,14 @@ preview:
   subtext:
     - key: heading
   icon: hero
+  gallery:
+    image: public/component-previews/page-sections/ctas/cta-center.svg
+    fit: cover
 picker_preview:
   text: CTA Center
   subtext: Centered CTA with stacked text and buttons.
+  gallery:
+    image: public/component-previews/page-sections/ctas/cta-center.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/page-sections/ctas/cta-center/cta-center.cloudcannon.inputs.yml

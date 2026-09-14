@@ -24,7 +24,6 @@ pageSections:
       alt: Did you know that the internet is based in NZ's central North Island?
       rounded: false
     reverse: false
-    maxContentWidth: 3xl
     paddingVertical: 4xl
     colorScheme: inherit
     backgroundColor: highlight-grid
@@ -247,7 +246,7 @@ pageSections:
               misconfiguration away from happening.
             columnSpan: 6
             rowSpan: 1
-    maxContentWidth: 3xl
+    maxContentWidth: xl
     paddingVertical: 4xl
     colorScheme: inherit
     backgroundColor: surface-linear-gradient
