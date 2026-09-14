@@ -6,12 +6,19 @@ value:
   logoSource: null
   logoAlt: null
   navData: []
+  buttonSections: []
 preview:
   text:
     - Mobile Navigation
+  gallery:
+    image: public/component-previews/navigation/mobile.svg
+    fit: cover
 picker_preview:
   text: Mobile Navigation
   subtext: "Mobile navigation with full-screen overlay."
   icon: device-phone-mobile
+  gallery:
+    image: public/component-previews/navigation/mobile.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/navigation/mobile/mobile.cloudcannon.inputs.yml

@@ -7,10 +7,11 @@ import Pagination from "@core-elements/pagination/Pagination.astro";
 import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import Page from "@layouts/Page.astro";
 import CustomSection from "@page-sections/builders/custom-section/CustomSection.astro";
-import BentoBoxGrid from "@wrappers/bento-box-grid/BentoBoxGrid.astro";
-import BentoBoxGridItem from "@wrappers/bento-box-grid/BentoBoxGridItem.astro";
+import BentoBox from "@wrappers/bento-box/BentoBox.astro";
+import BentoBoxItem from "@wrappers/bento-box/BentoBoxItem.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import Card from "@wrappers/card/Card.astro";
+import { getTagIcon } from "@utils/blog";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths({ paginate }) {
@@ -47,8 +48,8 @@ const pageTitle = blogPage?.data?.title ?? "Blog";
 const pageDescription =
   blogPage?.data?.description ??
   "Read our latest articles and insights on web development, design, and technology.";
-const heroSections = blogPage?.data?.heroSections ?? [];
-const ctaSections = blogPage?.data?.ctaSections ?? [];
+const heroSection = blogPage?.data?.heroSection;
+const ctaSection = blogPage?.data?.ctaSection;
 
 const team = await getCollection("team");
 ---
@@ -58,12 +59,11 @@ const team = await getCollection("team");
   description={pageDescription}
 >
   <div
-    data-editable="array"
-    data-prop="heroSections"
-    data-component-key="_component"
-    data-id-key="_component"
+    data-editable="component"
+    data-component="utils/render-block"
+    data-prop="heroSection"
   >
-    <RenderBlock contentSections={heroSections} />
+    <RenderBlock contentSections={heroSection} />
   </div>
 
   <CustomSection
@@ -78,11 +78,11 @@ const team = await getCollection("team");
       page.data.length > 0 ? (
         <>
           {allTags.length > 0 && (
-            <ButtonGroup>
+            <ButtonGroup class="blog-filters">
               <Button
                 link="/blog#posts"
                 variant={selectedTag === "all" ? "secondary" : "base"}
-                text="All"
+                text="All posts"
                 editable={false}
               />
               {allTags.map((tag: string) => (
@@ -90,16 +90,14 @@ const team = await getCollection("team");
                   link={`/blog/tag/${tag}#posts`}
                   variant={selectedTag === tag ? "secondary" : "base"}
                   text={tag}
+                  iconName={getTagIcon(tag)}
                   editable={false}
                 />
               ))}
             </ButtonGroup>
           )}
-          <BentoBoxGrid
+          <BentoBox
             gap="sm"
-            layout="start"
-            minItemWidth="320"
-            maxItemWidth="400"
             style="margin-top: var(--spacing-2xl)"
             editable={false}
             class="blog-grid"
@@ -121,7 +119,7 @@ const team = await getCollection("team");
               const author = team.find((m: any) => m.data.uuid === post.data.author);
 
               return (
-                <BentoBoxGridItem
+                <BentoBoxItem
                   columnSpan={columnSpan}
                   editable={false}
                 >
@@ -173,10 +171,10 @@ const team = await getCollection("team");
                       By {author?.data.name || "Anonymous"} | {pubDate}
                     </SimpleText>
                   </Card>
-                </BentoBoxGridItem>
+                </BentoBoxItem>
               );
             })}
-          </BentoBoxGrid>
+          </BentoBox>
           <Pagination
             page={page}
             showArrows={true}
@@ -197,12 +195,11 @@ const team = await getCollection("team");
   </CustomSection>
 
   <div
-    data-editable="array"
-    data-prop="ctaSections"
-    data-component-key="_component"
-    data-id-key="_component"
+    data-editable="component"
+    data-component="utils/render-block"
+    data-prop="ctaSection"
   >
-    <RenderBlock contentSections={ctaSections} />
+    <RenderBlock contentSections={ctaSection} />
   </div>
 </Page>
 
@@ -211,6 +208,10 @@ const team = await getCollection("team");
     .blog-grid .card .image .image-inner {
       max-height: 230px;
       width: 100%;
+    }
+
+    .blog-filters .button > .button-inner {
+      border-radius: var(--radius-3xl);
     }
   }
 </style>

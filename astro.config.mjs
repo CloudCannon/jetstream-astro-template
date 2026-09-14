@@ -143,6 +143,7 @@ export default defineConfig({
         "@component-docs": path.resolve(__dirname, "src/component-docs"),
         "@layouts": path.resolve(__dirname, "src/layouts"),
         "@component-utils": path.resolve(__dirname, "src/components/utils"),
+        "@utils": path.resolve(__dirname, "src/utils"),
         "@styles": path.resolve(__dirname, "src/styles"),
       },
     },

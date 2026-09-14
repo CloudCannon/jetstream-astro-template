@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="t-hero-card">
+  <title id="t-hero-card">Hero card component preview</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --pv-paper: #151515;
+        --pv-panel: #1D1D1B;
+        --pv-surface: #232320;
+        --pv-line: #2E2D29;
+        --pv-glyph: #45443E;
+        --pv-body: #3A3934;
+        --pv-subject: #6E6A62;
+        --pv-ink: #F5F3EE;
+        --pv-on-ink: #6B6B6B;
+      }
+    }
+  </style>
+  <rect x="0" y="0" width="1280" height="720" fill="var(--pv-paper, #FFFFFF)"/>
+  <g transform="translate(0 65)">
+    <circle cx="124" cy="66" r="44" fill="var(--pv-glyph, #CFCBC2)"/>
+    <rect x="200" y="20" width="200" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="200" y="54" width="560" height="40" rx="20" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="860" y="24" width="340" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="860" y="48" width="300" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="860" y="72" width="250" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="80" y="210" width="1120" height="360" rx="10" fill="var(--pv-paper, #FFFFFF)" stroke="var(--pv-line, #E4E1DA)" stroke-width="2"/>
+    <rect x="110" y="240" width="440" height="300" rx="10" fill="var(--pv-surface, #EBE9E3)"/>
+    <circle cx="418" cy="336" r="18" fill="var(--pv-glyph, #CFCBC2)"/>
+    <polygon points="209,467 294,399 358,467" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="14" stroke-linejoin="round"/>
+    <polygon points="324,469 400,414 473,469" fill="var(--pv-glyph, #CFCBC2)" stroke="var(--pv-glyph, #CFCBC2)" stroke-width="10" stroke-linejoin="round"/>
+    <rect x="590" y="250" width="180" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="590" y="286" width="480" height="26" rx="13" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="590" y="338" width="540" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="590" y="362" width="480" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="590" y="386" width="420" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="590" y="460" width="120" height="40" rx="20" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="590" y="512" width="150" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="780" y="460" width="120" height="40" rx="20" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="780" y="512" width="150" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+    <rect x="970" y="460" width="120" height="40" rx="20" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="970" y="512" width="150" height="12" rx="6" fill="var(--pv-body, #DAD7D0)"/>
+  </g>
+</svg>

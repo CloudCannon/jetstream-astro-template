@@ -10,8 +10,14 @@ preview:
   subtext:
     - key: size
   icon: space_bar
+  gallery:
+    image: public/component-previews/building-blocks/core-elements/spacer.svg
+    fit: cover
 picker_preview:
   text: Spacer
   subtext: Adds adjustable spacing between content sections.
+  gallery:
+    image: public/component-previews/building-blocks/core-elements/spacer.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/building-blocks/core-elements/spacer/spacer.cloudcannon.inputs.yml

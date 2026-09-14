@@ -39,6 +39,8 @@ featureGridItem:
                 name: Highlight Linear Gradient
               - id: highlight-radial-gradient
                 name: Highlight Radial Gradient
+              - id: highlight-radial-gradient-animated
+                name: Highlight Radial Gradient Animated
         features:
           type: array
           label: Features
@@ -86,6 +88,7 @@ featureGridItem:
         overhang:
           comment: Whether the cards overhang the grid background.
 featureGridItems:
+  id_key: _component
   values:
     - label: Feature Item
       icon: star

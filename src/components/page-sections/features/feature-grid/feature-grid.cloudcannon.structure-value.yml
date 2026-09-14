@@ -20,6 +20,15 @@ value:
   colorScheme: "inherit"
   backgroundColor: "base"
   contentBackground: false
+  background:
+    type: image
+    positionVertical: top
+    positionHorizontal: center
+    priority: false
+    imageSource: ""
+    imageAlt: ""
+    videoSource: null
+    overlay: 0
   verticalOffset: {}
   rounded: false
 preview:
@@ -28,8 +37,14 @@ preview:
   subtext:
     - key: heading
   icon: apps
+  gallery:
+    image: public/component-previews/page-sections/features/feature-grid.svg
+    fit: cover
 picker_preview:
   text: Feature Grid
   subtext: Grid of feature highlights with icons and descriptions.
+  gallery:
+    image: public/component-previews/page-sections/features/feature-grid.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/page-sections/features/feature-grid/feature-grid.cloudcannon.inputs.yml

@@ -18,11 +18,11 @@ const {
   buttonSections = [],
   image = {},
   reverse = false,
-  maxContentWidth = "3xl",
   paddingVertical = "4xl",
   colorScheme = "inherit",
   backgroundColor,
   contentBackground = false,
+  background,
   verticalOffset = {},
   rounded = false,
   class: className,
@@ -38,6 +38,7 @@ const {
   paddingVertical={paddingVertical}
   colorScheme={colorScheme}
   backgroundColor={backgroundColor}
+  background={background}
   contentBackground={contentBackground}
   verticalOffset={verticalOffset}
   rounded={rounded}
@@ -46,7 +47,7 @@ const {
   {...htmlAttributes}
 >
   <CustomSection
-    maxContentWidth={maxContentWidth}
+    maxContentWidth="3xl"
     paddingHorizontal="lg"
     paddingVertical=""
     colorScheme={colorScheme}
@@ -64,7 +65,7 @@ const {
     >
   </CustomSection>
   <CustomSection
-    maxContentWidth={maxContentWidth}
+    maxContentWidth="3xl"
     paddingHorizontal="lg"
     paddingVertical=""
     colorScheme={colorScheme}
