@@ -1,6 +1,5 @@
 eyebrowIcon:
   id_key: _component
   style: select
-  comment: Optional icon displayed above the eyebrow.
   values_from_glob:
     - /src/components/building-blocks/core-elements/icon/icon.cloudcannon.structure-value.yml

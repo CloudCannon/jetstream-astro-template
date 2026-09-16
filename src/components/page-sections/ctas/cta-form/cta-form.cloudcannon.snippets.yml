@@ -6,7 +6,7 @@ ctaForm:
       - CTA Form
     subtext:
       - key: heading
-    icon: hero
+    icon: call_to_action
     gallery:
       image: public/component-previews/page-sections/ctas/cta-form.svg
       fit: cover
