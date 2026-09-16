@@ -77,34 +77,35 @@ _structures:
             comment: Icon for the item.
             options:
               structures:
-                - label: Icon
-                  value:
-                    name: ""
-                    color: ""
-                  _inputs:
-                    name:
-                      type: select
-                      comment: The name of the icon to display from the icon library.
-                      options:
-                        values: _select_data.icons
-                        preview:
-                          text:
-                            - key: name
-                          image:
-                            - template: src/icons/{id}.svg
-                    color:
-                      type: select
-                      comment: The color of the icon.
-                      options:
-                        values:
-                          - id: default
-                            name: Default (inherit)
-                          - id: brand
-                            name: Brand
-                          - id: brand-inverse
-                            name: Brand Inverse
-                          - id: brand-gradient
-                            name: Brand Gradient
+                values:
+                  - label: Icon
+                    value:
+                      name: ""
+                      color: ""
+                    _inputs:
+                      name:
+                        type: select
+                        comment: The name of the icon to display from the icon library.
+                        options:
+                          values: _select_data.icons
+                          preview:
+                            text:
+                              - key: name
+                            image:
+                              - template: src/icons/{id}.svg
+                      color:
+                        type: select
+                        comment: The color of the icon.
+                        options:
+                          values:
+                            - id: default
+                              name: Default (inherit)
+                            - id: brand
+                              name: Brand
+                            - id: brand-inverse
+                              name: Brand Inverse
+                            - id: brand-gradient
+                              name: Brand Gradient
           date:
             type: text
             comment: Date for the item.

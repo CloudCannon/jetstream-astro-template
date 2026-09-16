@@ -11,36 +11,37 @@ filters:
     the tabs to show. The first tab is selected by default.
   options:
     structures:
-      - label: Search Filter
-        icon: filter_alt
-        value:
-          label: ""
-          type: ""
-        preview:
-          text:
-            - key: label
-          subtext:
-            - key: type
+      values:
+        - label: Search Filter
           icon: filter_alt
-        _inputs:
-          label:
-            type: text
-            comment: The tab label shown to visitors.
-          type:
-            type: select
-            comment: >-
-              Limit this tab to one content type. Leave empty to search the
-              whole website.
-            options:
-              allow_empty: true
-              empty_type: string
-              values:
-                - id: ""
-                  name: Everything
-                - id: Page
-                  name: Pages
-                - id: Article
-                  name: Blog posts
+          value:
+            label: ""
+            type: ""
+          preview:
+            text:
+              - key: label
+            subtext:
+              - key: type
+            icon: filter_alt
+          _inputs:
+            label:
+              type: text
+              comment: The tab label shown to visitors.
+            type:
+              type: select
+              comment: >-
+                Limit this tab to one content type. Leave empty to search the
+                whole website.
+              options:
+                allow_empty: true
+                empty_type: string
+                values:
+                  - id: ""
+                    name: Everything
+                  - id: Page
+                    name: Pages
+                  - id: Article
+                    name: Blog posts
 resultsPerPage:
   type: number
   comment: How many results to show before the “Load more results” button.
@@ -164,51 +165,7 @@ verticalOffset:
     empty_type: object
     preview:
       icon: arrow_upward
-    structures:
-      - label: Vertical Offset
-        icon: arrow-upward
-        value:
-          size: "xl"
-          direction: "front"
-        _inputs:
-          size:
-            type: select
-            comment: Size of the vertical offset.
-            options:
-              values:
-                - id: none
-                  name: None
-                - id: xs
-                  name: Extra Small
-                - id: sm
-                  name: Small
-                - id: md
-                  name: Medium
-                - id: lg
-                  name: Large
-                - id: xl
-                  name: Extra Large
-                - id: 2xl
-                  name: 2xl
-                - id: 3xl
-                  name: 3xl
-                - id: 4xl
-                  name: 4xl
-                - id: 5xl
-                  name: 5xl
-                - id: 6xl
-                  name: 6xl
-                - id: nav-height
-                  name: Navigation Height
-          direction:
-            type: select
-            comment: "Direction of the offset - in front or behind the previous component. Note: this will have no effect with some components such as the navigaton bar."
-            options:
-              values:
-                - id: front
-                  name: Front
-                - id: back
-                  name: Back
+    structures: _structures.vertical_offset
 rounded:
   type: switch
   comment: Whether to apply rounded corners to the section.

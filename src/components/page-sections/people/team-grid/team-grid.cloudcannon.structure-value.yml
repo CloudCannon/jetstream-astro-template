@@ -1,5 +1,5 @@
 label: Team Grid
-icon: people
+icon: group
 description: Grid layout for showcasing team members.
 value:
   _component: page-sections/people/team-grid
@@ -32,7 +32,7 @@ preview:
     - Team Grid
   subtext:
     - key: subtext
-  icon: people
+  icon: group
   gallery:
     image: public/component-previews/page-sections/people/team-grid.svg
     fit: cover

@@ -1,7 +1,7 @@
 faqItems:
   values:
     - label: FAQ Item
-      icon: help_outline
+      icon: help
       value:
         _component: building-blocks/wrappers/accordion/accordion-item
         title: Question text
