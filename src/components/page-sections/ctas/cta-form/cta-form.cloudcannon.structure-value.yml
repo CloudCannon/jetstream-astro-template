@@ -1,5 +1,5 @@
 label: CTA Form
-icon: hero
+icon: call_to_action
 description: Side-by-side CTA with copy and form on one side and image on the other.
 value:
   _component: page-sections/ctas/cta-form
@@ -50,7 +50,7 @@ preview:
     - CTA Form
   subtext:
     - key: heading
-  icon: hero
+  icon: call_to_action
   gallery:
     image: public/component-previews/page-sections/ctas/cta-form.svg
     fit: cover

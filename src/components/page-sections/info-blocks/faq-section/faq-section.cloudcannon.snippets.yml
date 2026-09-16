@@ -6,7 +6,7 @@ faqSection:
       - FAQ Section
     subtext:
       - key: heading
-    icon: help_outline
+    icon: help
     gallery:
       image: public/component-previews/page-sections/info-blocks/faq-section.svg
       fit: cover

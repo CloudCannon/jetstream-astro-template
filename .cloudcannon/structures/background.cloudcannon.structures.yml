@@ -1,6 +1,5 @@
 background:
   style: select
-  comment: Optional background still image or looping HTML5 video (self-hosted).
   values:
     - label: Background
       icon: wallpaper

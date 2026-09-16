@@ -31,67 +31,68 @@ icons:
     min_items: 2
     max_items: 2
     structures:
-      - label: Icon
-        icon: icon
-        value:
-          name: ""
-          color: ""
-          background: false
-          size: ""
-        preview:
-          text:
-            - Icon
-          subtext:
-            - key: name
-          icon: star
-        _inputs:
-          name:
-            type: select
-            comment: The name of the icon to display from the icon library.
-            options:
-              values: _select_data.icons
-              preview:
-                text:
-                  - key: name
-                image:
-                  - template: src/icons/{id}.svg
-          size:
-            type: select
-            comment: The size of the icon.
-            options:
-              values:
-                - id: none
-                  name: None
-                - id: sm
-                  name: Small
-                - id: md
-                  name: Medium
-                - id: lg
-                  name: Large
-                - id: xl
-                  name: Extra Large
-                - id: 2xl
-                  name: 2xl
-                - id: 3xl
-                  name: 3xl
-                - id: 4xl
-                  name: 4xl
-          color:
-            type: select
-            comment: The color of the icon.
-            options:
-              values:
-                - id: default
-                  name: Default (inherit)
-                - id: brand
-                  name: Brand
-                - id: brand-inverse
-                  name: Brand Inverse
-                - id: brand-gradient
-                  name: Brand Gradient
-          background:
-            type: switch
-            comment: Show a background behind the icon.
+      values:
+        - label: Icon
+          icon: circle
+          value:
+            name: ""
+            color: ""
+            background: false
+            size: ""
+          preview:
+            text:
+              - Icon
+            subtext:
+              - key: name
+            icon: star
+          _inputs:
+            name:
+              type: select
+              comment: The name of the icon to display from the icon library.
+              options:
+                values: _select_data.icons
+                preview:
+                  text:
+                    - key: name
+                  image:
+                    - template: src/icons/{id}.svg
+            size:
+              type: select
+              comment: The size of the icon.
+              options:
+                values:
+                  - id: none
+                    name: None
+                  - id: sm
+                    name: Small
+                  - id: md
+                    name: Medium
+                  - id: lg
+                    name: Large
+                  - id: xl
+                    name: Extra Large
+                  - id: 2xl
+                    name: 2xl
+                  - id: 3xl
+                    name: 3xl
+                  - id: 4xl
+                    name: 4xl
+            color:
+              type: select
+              comment: The color of the icon.
+              options:
+                values:
+                  - id: default
+                    name: Default (inherit)
+                  - id: brand
+                    name: Brand
+                  - id: brand-inverse
+                    name: Brand Inverse
+                  - id: brand-gradient
+                    name: Brand Gradient
+            background:
+              type: switch
+              comment: Show a background behind the icon.
 buttonSections:
   type: array
   comment: Calls-to-action shown beneath the copy block.
@@ -235,51 +236,7 @@ verticalOffset:
     empty_type: object
     preview:
       icon: arrow_upward
-    structures:
-      - label: Vertical Offset
-        icon: arrow-upward
-        value:
-          size: "xl"
-          direction: "front"
-        _inputs:
-          size:
-            type: select
-            comment: Size of the vertical offset.
-            options:
-              values:
-                - id: none
-                  name: None
-                - id: xs
-                  name: Extra Small
-                - id: sm
-                  name: Small
-                - id: md
-                  name: Medium
-                - id: lg
-                  name: Large
-                - id: xl
-                  name: Extra Large
-                - id: 2xl
-                  name: 2xl
-                - id: 3xl
-                  name: 3xl
-                - id: 4xl
-                  name: 4xl
-                - id: 5xl
-                  name: 5xl
-                - id: 6xl
-                  name: 6xl
-                - id: nav-height
-                  name: Navigation Height
-          direction:
-            type: select
-            comment: "Direction of the offset - in front or behind the previous component. Note: this will have no effect with some components such as the navigaton bar."
-            options:
-              values:
-                - id: front
-                  name: Front
-                - id: back
-                  name: Back
+    structures: _structures.vertical_offset
 rounded:
   type: switch
   comment: Whether to apply rounded corners to the section.
