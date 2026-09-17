@@ -1,0 +1,5 @@
+ctaSection:
+  id_key: _component
+  style: modal
+  values_from_glob:
+    - /src/components/page-sections/ctas/**/*.cloudcannon.structure-value.yml

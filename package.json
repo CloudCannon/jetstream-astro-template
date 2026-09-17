@@ -23,8 +23,8 @@
     "build:with-docs": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "npm run lint && npm run format",
-    "check:fix": "npm run lint:fix && npm run format:fix",
+    "check": "npm run lint && npm run format && npm run previews:verify",
+    "check:fix": "npm run lint:fix && npm run format:fix && npm run previews:build",
     "lint": "npm run lint:js && npm run lint:css && npm run lint:yml",
     "lint:js": "eslint .",
     "lint:yml": "eslint \"**/*.{yml,yaml}\"",
@@ -36,7 +36,12 @@
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "deps:sync": "rm -rf node_modules && npm install --os=linux --cpu=x64 --libc=glibc --ignore-scripts --no-audit && npm ci",
-    "deps:check": "npm ci --dry-run"
+    "deps:check": "npm ci --dry-run",
+    "previews:build": "node scripts/previews/build.mjs",
+    "previews:check": "node scripts/previews/build.mjs --check",
+    "previews:audit": "node scripts/previews/check.mjs",
+    "previews:verify": "npm run previews:check && npm run previews:audit",
+    "previews:montage": "node scripts/previews/montage.mjs"
   },
   "dependencies": {
     "@astrojs/compiler-rs": "^0.1.10",

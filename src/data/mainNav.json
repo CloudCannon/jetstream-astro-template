@@ -9,13 +9,19 @@
       "path": null,
       "children": [
         {
-          "name": "What we do best ↓",
+          "name": "What we do best",
           "path": "/#services",
+          "subtext": "",
+          "iconName": "arrow-down",
+          "iconPosition": "after",
           "children": []
         },
         {
-          "name": "Problems we've solved ↓",
+          "name": "Problems we've solved",
           "path": "/#solutions",
+          "subtext": "",
+          "iconName": "arrow-down",
+          "iconPosition": "after",
           "children": []
         }
       ]

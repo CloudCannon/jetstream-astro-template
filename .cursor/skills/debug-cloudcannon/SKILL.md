@@ -215,7 +215,6 @@ Components appear in pickers based on which structure files reference them. Stru
 | `modalSections`           | Content inside modals                                             |
 | `carouselSections`        | Content inside carousels                                          |
 | `contentSelectorSections` | Content inside content selector panels                            |
-| `bentoBoxSections`        | Content inside bento box items                                    |
 | `buttonSections`          | Buttons only                                                      |
 | `formBlocks`              | Form field components                                             |
 

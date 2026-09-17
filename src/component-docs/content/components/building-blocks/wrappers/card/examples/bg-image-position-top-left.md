@@ -10,7 +10,7 @@ blocks:
     type: image
     positionVertical: top
     positionHorizontal: left
-    imageSource: /src/assets/images/component-docs/dunedin-cliff.jpg
+    imageSource: /src/assets/images/about-hero.png
     imageAlt: 'Dunedin cliffside'
     overlay: -0.3
   contentSections:

@@ -11,36 +11,37 @@ filters:
     the tabs to show. The first tab is selected by default.
   options:
     structures:
-      - label: Search Filter
-        icon: filter_alt
-        value:
-          label: ""
-          type: ""
-        preview:
-          text:
-            - key: label
-          subtext:
-            - key: type
+      values:
+        - label: Search Filter
           icon: filter_alt
-        _inputs:
-          label:
-            type: text
-            comment: The tab label shown to visitors.
-          type:
-            type: select
-            comment: >-
-              Limit this tab to one content type. Leave empty to search the
-              whole website.
-            options:
-              allow_empty: true
-              empty_type: string
-              values:
-                - id: ""
-                  name: Everything
-                - id: Page
-                  name: Pages
-                - id: Article
-                  name: Blog posts
+          value:
+            label: ""
+            type: ""
+          preview:
+            text:
+              - key: label
+            subtext:
+              - key: type
+            icon: filter_alt
+          _inputs:
+            label:
+              type: text
+              comment: The tab label shown to visitors.
+            type:
+              type: select
+              comment: >-
+                Limit this tab to one content type. Leave empty to search the
+                whole website.
+              options:
+                allow_empty: true
+                empty_type: string
+                values:
+                  - id: ""
+                    name: Everything
+                  - id: Page
+                    name: Pages
+                  - id: Article
+                    name: Blog posts
 resultsPerPage:
   type: number
   comment: How many results to show before the “Load more results” button.
@@ -52,21 +53,17 @@ unavailableMessage:
   comment: >-
     Message shown when the search index can't be loaded. The index is generated
     after the site builds, so it is unavailable when previewing locally.
-headingSize:
-  comment: The font size of the heading text.
-  type: select
-  options:
-    values:
-      - id: xl
-        name: Extra Large
-      - id: 2xl
-        name: 2xl
-      - id: 3xl
-        name: 3xl
-
 id:
   type: text
   comment: Unique identifier for the section which can be used as an anchor link.
+eyebrowIcon:
+  type: object
+  comment: Optional icon displayed above the eyebrow.
+  options:
+    structures: _structures.eyebrowIcon
+eyebrowText:
+  type: text
+  comment: Optional label displayed above the heading.
 heading:
   type: html
   comment: Main heading text for the section.
@@ -156,9 +153,19 @@ backgroundColor:
         name: Highlight Linear Gradient
       - id: highlight-radial-gradient
         name: Highlight Radial Gradient
+      - id: highlight-radial-gradient-animated
+        name: Highlight Radial Gradient Animated
 contentBackground:
   type: switch
   comment: Add a radial background in the base color behind the content.
+verticalOffset:
+  type: object
+  comment: Offset section up above or below the previous section.
+  options:
+    empty_type: object
+    preview:
+      icon: arrow_upward
+    structures: _structures.vertical_offset
 rounded:
   type: switch
   comment: Whether to apply rounded corners to the section.

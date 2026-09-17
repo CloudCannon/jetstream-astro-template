@@ -24,56 +24,130 @@ navData:
           type: text
           comment: Display text for the navigation item.
         path:
-          type: text
+          type: url
           comment: URL path for the navigation item.
+          options:
+            hide_link_to_file: true
+            hide_link_to_email_address: true
+            hide_link_to_telephone: true
         children:
           type: array
           label: Child Navigation Items
           comment: Child navigation items for dropdown menus.
           options:
             structures:
-              - label: Navigation Item
-                icon: link
-                value:
-                  name: ""
-                  path: ""
-                  children: []
-                preview:
-                  text:
-                    - key: name
-                    - Navigation Item
-                  subtext:
-                    - key: path
-                    - Add path
-                _inputs:
-                  name:
-                    type: text
-                    comment: Display text for the child navigation item.
-                  path:
-                    type: text
-                    comment: URL path for the child navigation item.
-                  children:
-                    type: array
-                    label: Grandchild Navigation Items
-                    comment: Grandchild navigation items for nested dropdowns.
-                    options:
-                      structures:
-                        - label: Navigation Item
-                          icon: link
-                          value:
-                            name: ""
-                            path: ""
-                          preview:
-                            text:
-                              - key: name
-                              - Navigation Item
-                            subtext:
-                              - key: path
-                              - Add path
-                          _inputs:
-                            name:
-                              type: text
-                              comment: Display text for the grandchild navigation item.
-                            path:
-                              type: text
-                              comment: URL path for the grandchild navigation item.
+              values:
+                - label: Navigation Item
+                  icon: link
+                  value:
+                    name: ""
+                    path: ""
+                    subtext: ""
+                    iconName: ""
+                    iconPosition: before
+                    children: []
+                  preview:
+                    text:
+                      - key: name
+                      - Navigation Item
+                    subtext:
+                      - key: subtext
+                      - key: path
+                      - Add path
+                    icon:
+                      - key: iconName
+                      - link
+                  _inputs:
+                    name:
+                      type: text
+                      comment: Display text for the child navigation item.
+                    path:
+                      type: url
+                      comment: URL path for the child navigation item.
+                      options:
+                        hide_link_to_file: true
+                        hide_link_to_email_address: true
+                        hide_link_to_telephone: true
+                    subtext:
+                      type: text
+                      comment: Optional description shown beneath the name in the dropdown.
+                    iconName:
+                      type: select
+                      comment: Optional icon shown alongside the name. Sourced from [Heroicons](https://heroicons.com/).
+                      options:
+                        values: _select_data.icons
+                        preview:
+                          text:
+                            - key: name
+                          image:
+                            - template: src/icons/{id}.svg
+                    iconPosition:
+                      type: select
+                      comment: Whether the icon sits before or after the name.
+                      hidden: "!iconName"
+                      options:
+                        values:
+                          - id: before
+                            name: Before
+                          - id: after
+                            name: After
+                    children:
+                      type: array
+                      label: Grandchild Navigation Items
+                      comment: Grandchild navigation items for nested dropdowns.
+                      options:
+                        structures:
+                          values:
+                            - label: Navigation Item
+                              icon: link
+                              value:
+                                name: ""
+                                path: ""
+                                subtext: ""
+                                iconName: ""
+                                iconPosition: before
+                              preview:
+                                text:
+                                  - key: name
+                                  - Navigation Item
+                                subtext:
+                                  - key: subtext
+                                  - key: path
+                                  - Add path
+                                icon:
+                                  - key: iconName
+                                  - link
+                              _inputs:
+                                name:
+                                  type: text
+                                  comment: Display text for the grandchild navigation item.
+                                path:
+                                  type: url
+                                  comment: URL path for the grandchild navigation item.
+                                  options:
+                                    hide_link_to_file: true
+                                    hide_link_to_email_address: true
+                                    hide_link_to_telephone: true
+                                subtext:
+                                  type: text
+                                  comment: Optional description shown beneath the name in the dropdown.
+                                iconName:
+                                  type: select
+                                  comment: Optional icon shown alongside the name. Sourced from [Heroicons](https://heroicons.com/).
+                                  options:
+                                    values: _select_data.icons
+                                    preview:
+                                      text:
+                                        - key: name
+                                      image:
+                                        - template: src/icons/{id}.svg
+                                iconPosition:
+                                  type: select
+                                  comment: Whether the icon sits before or after the name.
+                                  hidden: "!iconName"
+                                  options:
+                                    values:
+                                      - id: before
+                                        name: Before
+                                      - id: after
+                                        name: After

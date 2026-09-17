@@ -56,6 +56,88 @@
   }
 }
 
+/*
+  Liquid-glass drift, ported from the "Liquid Gradient Card" design prototype.
+  Consumed by the LiquidGradient component behind the
+  .bg-highlight-radial-gradient-animated background variant.
+
+  Each track combines translate, scale and rotate on one `transform` so a layer
+  tumbles as it travels — rotation is what keeps a blurred blob from reading as
+  a sliding disc. Travel is deliberately large (up to ~48% and 1.7x): the layers
+  sit at inset -35% under `overflow: hidden`, and the base gradient covers the
+  section on its own, so a layer wandering out of frame uncovers ground rather
+  than a gap.
+
+  Every track returns to its 0% value at 100% rather than using `alternate`,
+  giving a continuous loop instead of a visible there-and-back. Durations live
+  on the layers (13s-21s, all mutually indivisible) so the stack never repeats
+  the same arrangement twice.
+*/
+@keyframes liquid-drift-a {
+  0%,
+  100% {
+    transform: translate3d(-38%, -22%, 0) scale(1) rotate(0deg);
+  }
+
+  33% {
+    transform: translate3d(42%, 26%, 0) scale(1.6) rotate(60deg);
+  }
+
+  66% {
+    transform: translate3d(14%, -34%, 0) scale(1.15) rotate(-40deg);
+  }
+}
+
+@keyframes liquid-drift-b {
+  0%,
+  100% {
+    transform: translate3d(46%, 28%, 0) scale(1.4) rotate(0deg);
+  }
+
+  40% {
+    transform: translate3d(-40%, -18%, 0) scale(0.95) rotate(-55deg);
+  }
+
+  75% {
+    transform: translate3d(-10%, 38%, 0) scale(1.55) rotate(35deg);
+  }
+}
+
+@keyframes liquid-drift-c {
+  0%,
+  100% {
+    transform: translate3d(-30%, 40%, 0) scale(1.1) rotate(20deg);
+  }
+
+  50% {
+    transform: translate3d(48%, -36%, 0) scale(1.7) rotate(-50deg);
+  }
+}
+
+@keyframes liquid-drift-d {
+  0%,
+  100% {
+    transform: translate3d(34%, -40%, 0) scale(0.95) rotate(-25deg);
+  }
+
+  45% {
+    transform: translate3d(-44%, 22%, 0) scale(1.5) rotate(45deg);
+  }
+}
+
+@keyframes liquid-sheen {
+  0%,
+  100% {
+    opacity: 0.05;
+    transform: translate3d(-60%, -10%, 0) rotate(12deg);
+  }
+
+  50% {
+    opacity: 0.34;
+    transform: translate3d(60%, 10%, 0) rotate(-6deg);
+  }
+}
+
 @keyframes flatten {
   to {
     transform: perspective(500px) rotateX(0deg);

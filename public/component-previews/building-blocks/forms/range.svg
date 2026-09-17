@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="t-range">
+  <title id="t-range">Range component preview</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      svg {
+        --pv-paper: #151515;
+        --pv-panel: #1D1D1B;
+        --pv-surface: #232320;
+        --pv-line: #2E2D29;
+        --pv-glyph: #45443E;
+        --pv-body: #3A3934;
+        --pv-subject: #6E6A62;
+        --pv-ink: #F5F3EE;
+        --pv-on-ink: #6B6B6B;
+      }
+    }
+  </style>
+  <rect x="0" y="0" width="1280" height="720" fill="var(--pv-paper, #FFFFFF)"/>
+  <g transform="translate(0 323)">
+    <rect x="360" y="0" width="180" height="16" rx="8" fill="var(--pv-subject, #A8A398)"/>
+    <rect x="360" y="46" width="560" height="10" rx="5" fill="var(--pv-surface, #EBE9E3)"/>
+    <rect x="360" y="46" width="347" height="10" rx="5" fill="var(--pv-ink, #151515)"/>
+    <circle cx="707" cy="51" r="24" fill="var(--pv-ink, #151515)"/>
+    <circle cx="707" cy="51" r="12" fill="var(--pv-paper, #FFFFFF)"/>
+  </g>
+</svg>

@@ -4,7 +4,7 @@ import Heading from "@core-elements/heading/Heading.astro";
 import Icon from "@core-elements/icon/Icon.astro";
 import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import Text from "@core-elements/text/Text.astro";
-import BentoBoxGrid from "@wrappers/bento-box-grid/BentoBoxGrid.astro";
+import BentoBox from "@wrappers/bento-box/BentoBox.astro";
 import RenderBlock from "@components/utils/renderBlock.astro";
 
 const {
@@ -26,6 +26,7 @@ const {
   colorScheme = "inherit",
   backgroundColor,
   contentBackground,
+  background,
   verticalOffset = {},
   rounded = false,
   class: className,
@@ -42,6 +43,7 @@ const {
   rounded={rounded}
   colorScheme={colorScheme}
   backgroundColor={backgroundColor}
+  background={background}
   rounded={rounded}
   verticalOffset={verticalOffset}
   id={id}
@@ -53,7 +55,7 @@ const {
     maxContentWidth={maxContentWidth}
     paddingHorizontal="md"
     paddingVertical=""
-    rounded={rounded}
+    rounded={false}
     colorScheme={colorScheme}
     backgroundColor=""
     contentBackground={contentBackground}
@@ -82,24 +84,29 @@ const {
   </CustomSection>
 
   <CustomSection
-    class:list={["feature-grid-background"]}
+    class:list={["feature-grid-background", featureGrid.overhang && "feature-grid-overhang-frame"]}
     maxContentWidth={featureGrid.gridBackgroundMaxWidth}
     paddingHorizontal=""
     paddingVertical="xs"
     colorScheme={colorScheme}
   >
     <CustomSection
-      class:list={["feature-grid-grid", featureGrid.overhang && "feature-grid-background-overhang"]}
+      class:list={[
+        "feature-grid-grid",
+        featureGrid.overhang && "feature-grid-overhang",
+        featureGrid.overhang && featureGrid.rounded && "feature-grid-overhang-rounded",
+      ]}
       maxContentWidth={featureGrid.gridMaxWidth}
       colorScheme={colorScheme}
       paddingVertical=""
       paddingHorizontal="md"
       backgroundColor={featureGrid.backgroundColor}
-      rounded={featureGrid.rounded}
+      rounded={featureGrid.overhang ? false : featureGrid.rounded}
     >
-      <BentoBoxGrid
+      <BentoBox
         gap="md"
         data-children-prop="featureGrid.features"
+        data-children-component-key="_component"
         class="feature-grid-grid"
       >
         {
@@ -110,7 +117,7 @@ const {
             />
           )
         }
-      </BentoBoxGrid>
+      </BentoBox>
     </CustomSection>
   </CustomSection>
 </CustomSection>
@@ -121,12 +128,19 @@ const {
       padding-bottom: var(--padding-between);
     }
 
-    .feature-grid-background-overhang > .outer-content > .background {
-      margin-top: var(--spacing-3xl);
-      margin-bottom: var(--spacing-3xl);
+    .feature-grid-overhang > .outer-content {
+      display: flow-root;
     }
 
-    .feature-grid-background-overhang > .outer-content.rounded > .background {
+    .feature-grid-overhang > .outer-content > .content {
+      margin-block: calc(var(--spacing-3xl) * -1);
+    }
+
+    .feature-grid-overhang-frame > .outer-content > .content {
+      padding-block: calc(var(--spacing-xs) + var(--spacing-3xl));
+    }
+
+    .feature-grid-overhang-rounded > .outer-content > .background {
       border-radius: var(--radius-3xl);
     }
   }

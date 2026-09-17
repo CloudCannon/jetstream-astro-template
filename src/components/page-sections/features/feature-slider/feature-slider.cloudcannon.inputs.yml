@@ -1,57 +1,151 @@
-eyebrow:
-  type: text
-  comment: Optional eyebrow text displayed above the heading.
-heading:
-  type: text
-  comment: Main heading for the slider section.
-subtext:
-  type: textarea
-  comment: Supporting copy beneath the heading.
 slides:
   type: array
   label: Slides
   comment: Structured feature slides rendered inside the carousel.
   options:
     structures:
-      - label: Feature slide
-        icon: view_carousel
-        value:
-          _component: page-sections/features/feature-slider/feature-slider-item
-          eyebrow: ""
-          title: Slide title
-          description: Short description for this slide.
-          imageSource: /src/assets/images/component-docs/sunset.jpg
-          imageAlt: Slide image alt text
-        preview:
-          text:
-            - key: title
-            - Feature slide
-          subtext:
-            - key: description
-            - Add description for this slide
-        _inputs:
-          eyebrow:
-            type: text
-            comment: Optional eyebrow text displayed above the title.
-          title:
-            type: text
-            comment: Heading text shown on the slide.
-          description:
-            type: markdown
-            comment: Supporting body copy shown on the slide.
-          imageSource:
-            type: image
-            comment: Image shown on the side of the slide.
-            options:
-              paths:
-                uploads: src/assets/images
-                static: ""
-              resize_style: contain
-              width: 1920
-              height: 1280
-          imageAlt:
-            type: text
-            comment: Alt text describing the slide image.
+      values:
+        - label: Feature slide
+          icon: view_carousel
+          value:
+            _component: page-sections/features/feature-slider/feature-slider-item
+            eyebrow: ""
+            title: Slide title
+            description: Short description for this slide.
+            imageSource: /src/assets/images/component-docs/website-feature.svg
+            imageAlt: Slide image alt text
+          preview:
+            text:
+              - key: title
+              - Feature slide
+            subtext:
+              - key: description
+              - Add description for this slide
+          _inputs:
+            eyebrow:
+              type: text
+              comment: Optional eyebrow text displayed above the title.
+            title:
+              type: text
+              comment: Heading text shown on the slide.
+            description:
+              type: markdown
+              comment: Supporting body copy shown on the slide.
+            imageSource:
+              type: image
+              comment: Image shown on the side of the slide.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+                resize_style: contain
+                width: 1920
+                height: 1280
+            imageAlt:
+              type: text
+              comment: Alt text describing the slide image.
+sectionLabel:
+  type: text
+  comment: Optional label to identify the section in the editor. When set and no HTML id is provided, an id is derived from this value.
+
+eyebrowIcon:
+  type: object
+  comment: Optional icon displayed above the eyebrow.
+  options:
+    structures: _structures.eyebrowIcon
+eyebrowText:
+  type: text
+  comment: Optional label displayed above the heading.
+heading:
+  type: text
+  comment: Main heading for the slider section.
+subtext:
+  type: textarea
+  comment: Supporting copy beneath the heading.
+maxContentWidth:
+  type: select
+  comment: Maximum width constraint for the content.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: xs
+        name: Extra Small
+      - id: sm
+        name: Small
+      - id: md
+        name: Medium
+      - id: lg
+        name: Large
+      - id: xl
+        name: Extra Large
+      - id: 2xl
+        name: 2xl
+      - id: 3xl
+        name: 3xl
+paddingHorizontal:
+  type: select
+  comment: Horizontal padding applied to the section content.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: xs
+        name: Extra Small
+      - id: sm
+        name: Small
+      - id: md
+        name: Medium
+      - id: lg
+        name: Large
+      - id: xl
+        name: Extra Large
+      - id: 2xl
+        name: 2xl
+      - id: 3xl
+        name: 3xl
+paddingVertical:
+  type: select
+  comment: Vertical padding applied to the section content.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: xs
+        name: Extra Small
+      - id: sm
+        name: Small
+      - id: md
+        name: Medium
+      - id: lg
+        name: Large
+      - id: xl
+        name: Extra Large
+      - id: 2xl
+        name: 2xl
+      - id: 3xl
+        name: 3xl
+      - id: 4xl
+        name: 4xl
+      - id: 5xl
+        name: 5xl
+      - id: 6xl
+        name: 6xl
+colorScheme:
+  type: select
+  comment: Color scheme theme for the section wrapper.
+  options:
+    values:
+      - id: inherit
+        name: Inherit
+      - id: light
+        name: Light
+      - id: dark
+        name: Dark
+lockColorScheme:
+  type: switch
+  comment: Keep the selected color scheme from flipping when the visitor toggles the site theme.
+  hidden: true
 backgroundColor:
   type: select
   comment: Background color for the section.
@@ -81,3 +175,31 @@ backgroundColor:
         name: Highlight Linear Gradient
       - id: highlight-radial-gradient
         name: Highlight Radial Gradient
+      - id: highlight-radial-gradient-animated
+        name: Highlight Radial Gradient Animated
+contentBackground:
+  type: switch
+  comment: Add a radial background in the base color behind the content.
+background:
+  type: object
+  comment: Optional background still image or looping HTML5 video (self-hosted). Shared positioning applies to whichever type you choose. Video is hidden when the user prefers reduced motion.
+  options:
+    empty_type: object
+    structures: _structures.background
+    preview:
+      icon: wallpaper
+      text:
+        - Background
+      subtext:
+        - key: type
+verticalOffset:
+  type: object
+  comment: Offset section up above or below the previous section.
+  options:
+    empty_type: object
+    preview:
+      icon: arrow_upward
+    structures: _structures.vertical_offset
+rounded:
+  type: switch
+  comment: Whether to apply rounded corners to the section.

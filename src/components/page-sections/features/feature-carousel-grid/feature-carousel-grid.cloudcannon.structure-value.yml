@@ -15,8 +15,25 @@ value:
   backgroundColor: base
   backgroundColorHeight: header
   contentBackground: false
+  background:
+    type: image
+    positionVertical: top
+    positionHorizontal: center
+    priority: false
+    imageSource: ""
+    imageAlt: ""
+    videoSource: null
+    overlay: 0
   verticalOffset: {}
   rounded: false
+preview:
+  gallery:
+    image: public/component-previews/page-sections/features/feature-carousel-grid.svg
+    fit: cover
+picker_preview:
+  gallery:
+    image: public/component-previews/page-sections/features/feature-carousel-grid.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/page-sections/features/feature-carousel-grid/feature-carousel-grid.cloudcannon.inputs.yml
 _structures:
@@ -33,69 +50,72 @@ _structures:
             type: array
             options:
               structures:
-                - label: Card
-                  value:
-                    _component: page-sections/features/feature-carousel-grid/feature-carousel-card
-                    decorative: false
-                    style: surface-linear-gradient
-                    eyebrowIcon: {}
-                    eyebrowText: ""
-                    heading: Feature Carousel Card Title
-                    text: Feature Carousel Card Description
-                    columnSpan: 4
-                    rowSpan: 1
-                  preview:
-                    icon: credit_card
-                    text:
-                      - key: heading
-                      - key: style
-                  _inputs:
-                    decorative:
-                      type: switch
-                      comment: Card with background and no content.
-                    style:
-                      hidden: "!decorative"
-                      type: select
-                      comment: Style of the card.
-                      options:
-                        values:
-                          - id: highlight-grid
-                            name: Highlight Grid
-                          - id: surface-linear-gradient
-                            name: Surface Linear Gradient
-                          - id: brand-linear-gradient-reverse
-                            name: Brand Linear Gradient Reverse
-                          - id: brand-linear-gradient
-                            name: Brand Linear Gradient
-                          - id: brand-linear-gradient-muted
-                            name: Brand Linear Gradient Muted
-                          - id: highlight-linear-gradient
-                            name: Highlight Linear Gradient
-                          - id: highlight-radial-gradient
-                            name: Highlight Radial Gradient
-                    eyebrowIcon:
-                      hidden: decorative
-                      type: object
-                      comment: Optional icon for the card.
-                      options:
-                        structures: _structures.eyebrowIcon
-                    eyebrowText:
-                      hidden: decorative
-                    heading:
-                      hidden: decorative
-                    text:
-                      hidden: decorative
-                    columnSpan:
-                      type: range
-                      comment: Column span of the card.
-                      options:
-                        min: 1
-                        max: 12
-                        step: 1
-                    rowSpan:
-                      type: range
-                      comment: Row span of the card.
-                      options:
-                        min: 1
-                        max: 4
-                        step: 1
+                values:
+                  - label: Card
+                    value:
+                      _component: page-sections/features/feature-carousel-grid/feature-carousel-card
+                      decorative: false
+                      style: surface-linear-gradient
+                      eyebrowIcon: {}
+                      eyebrowText: ""
+                      heading: Feature Carousel Card Title
+                      text: Feature Carousel Card Description
+                      columnSpan: 4
+                      rowSpan: 1
+                    preview:
+                      icon: credit_card
+                      text:
+                        - key: heading
+                        - key: style
+                    _inputs:
+                      decorative:
+                        type: switch
+                        comment: Card with background and no content.
+                      style:
+                        hidden: "!decorative"
+                        type: select
+                        comment: Style of the card.
+                        options:
+                          values:
+                            - id: highlight-grid
+                              name: Highlight Grid
+                            - id: surface-linear-gradient
+                              name: Surface Linear Gradient
+                            - id: brand-linear-gradient-reverse
+                              name: Brand Linear Gradient Reverse
+                            - id: brand-linear-gradient
+                              name: Brand Linear Gradient
+                            - id: brand-linear-gradient-muted
+                              name: Brand Linear Gradient Muted
+                            - id: highlight-linear-gradient
+                              name: Highlight Linear Gradient
+                            - id: highlight-radial-gradient
+                              name: Highlight Radial Gradient
+                            - id: highlight-radial-gradient-animated
+                              name: Highlight Radial Gradient Animated
+                      eyebrowIcon:
+                        hidden: decorative
+                        type: object
+                        comment: Optional icon for the card.
+                        options:
+                          structures: _structures.eyebrowIcon
+                      eyebrowText:
+                        hidden: decorative
+                      heading:
+                        hidden: decorative
+                      text:
+                        hidden: decorative
+                      columnSpan:
+                        type: range
+                        comment: Column span of the card.
+                        options:
+                          min: 1
+                          max: 12
+                          step: 1
+                      rowSpan:
+                        type: range
+                        comment: Row span of the card.
+                        options:
+                          min: 1
+                          max: 4
+                          step: 1

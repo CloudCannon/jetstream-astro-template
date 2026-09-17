@@ -39,6 +39,8 @@ featureGridItem:
                 name: Highlight Linear Gradient
               - id: highlight-radial-gradient
                 name: Highlight Radial Gradient
+              - id: highlight-radial-gradient-animated
+                name: Highlight Radial Gradient Animated
         features:
           type: array
           label: Features
@@ -86,6 +88,7 @@ featureGridItem:
         overhang:
           comment: Whether the cards overhang the grid background.
 featureGridItems:
+  id_key: _component
   values:
     - label: Feature Item
       icon: star
@@ -165,7 +168,6 @@ featureGridItems:
             min: 1
             max: 12
             step: 1
-            default: 4
         rowSpan:
           type: range
           comment: The number of rows the item should span.
@@ -173,7 +175,6 @@ featureGridItems:
             min: 1
             max: 4
             step: 1
-            default: 1
     - label: Pricing Item
       icon: attach_money
       value:
@@ -254,7 +255,6 @@ featureGridItems:
             min: 1
             max: 12
             step: 1
-            default: 4
         rowSpan:
           type: range
           comment: The number of rows the item should span.
@@ -262,4 +262,3 @@ featureGridItems:
             min: 1
             max: 4
             step: 1
-            default: 1

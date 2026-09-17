@@ -24,6 +24,6 @@ blocks:
     - _component: 'building-blocks/forms/submit'
       text: 'Send message'
       variant: primary
-  imageSource: /images/component-docs/sunset.jpg
+  imageSource: /src/assets/images/blog-ddos.png
   imageAlt: 'Contact us.'
 ---

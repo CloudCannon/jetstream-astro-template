@@ -32,6 +32,9 @@ _structures:
         value:
           name: null
           path: null
+          subtext: null
+          iconName: null
+          iconPosition: before
           children: null
         _inputs:
           name:
@@ -40,6 +43,29 @@ _structures:
           path:
             type: text
             comment: The URL/path for the navigation item.
+          subtext:
+            type: text
+            comment: Optional description shown beneath the name in the dropdown.
+          iconName:
+            type: select
+            comment: Optional icon shown alongside the name. Sourced from [Heroicons](https://heroicons.com/).
+            options:
+              values: _select_data.icons
+              preview:
+                text:
+                  - key: name
+                image:
+                  - template: src/icons/{id}.svg
+          iconPosition:
+            type: select
+            comment: Whether the icon sits before or after the name.
+            hidden: "!iconName"
+            options:
+              values:
+                - id: before
+                  name: Before
+                - id: after
+                  name: After
           children:
             type: array
             comment: Optional nested navigation items (level 3, final level).
@@ -52,6 +78,9 @@ _structures:
         value:
           name: null
           path: null
+          subtext: null
+          iconName: null
+          iconPosition: before
         _inputs:
           name:
             type: text
@@ -59,3 +88,26 @@ _structures:
           path:
             type: text
             comment: The URL/path for the navigation item.
+          subtext:
+            type: text
+            comment: Optional description shown beneath the name in the dropdown.
+          iconName:
+            type: select
+            comment: Optional icon shown alongside the name. Sourced from [Heroicons](https://heroicons.com/).
+            options:
+              values: _select_data.icons
+              preview:
+                text:
+                  - key: name
+                image:
+                  - template: src/icons/{id}.svg
+          iconPosition:
+            type: select
+            comment: Whether the icon sits before or after the name.
+            hidden: "!iconName"
+            options:
+              values:
+                - id: before
+                  name: Before
+                - id: after
+                  name: After

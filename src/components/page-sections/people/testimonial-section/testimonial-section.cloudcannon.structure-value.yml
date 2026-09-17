@@ -8,27 +8,25 @@ value:
   authorName: Author
   authorDescription: Author Role
   authorImage: https://placehold.co/80x80
+  alignmentHorizontal: start
   maxContentWidth: xl
   paddingVertical: sm
   colorScheme: inherit
   backgroundColor: surface
-  background:
-    type: image
-    positionVertical: top
-    positionHorizontal: center
-    priority: false
-    imageSource: ""
-    imageAlt: ""
-    videoSource: null
-    overlay: 0
 preview:
   text:
     - Testimonial Section
   subtext:
     - key: authorName
   icon: format_quote
+  gallery:
+    image: public/component-previews/page-sections/people/testimonial-section.svg
+    fit: cover
 picker_preview:
   text: Testimonial Section
   subtext: Section with customer testimonial and author details.
+  gallery:
+    image: public/component-previews/page-sections/people/testimonial-section.svg
+    fit: cover
 _inputs_from_glob:
   - /src/components/page-sections/people/testimonial-section/testimonial-section.cloudcannon.inputs.yml
