@@ -3,7 +3,7 @@
 > This template is continuously improved and does not follow strict versioned releases.
 > Updates below reflect incremental changes to the latest version.
 
-## September 9, 2026
+## September 18, 2026
 
 - Documented the CloudCannon CLI dev server in the README and Project Tour: install `@cloudcannon/cli`, `cloudcannon login`, `npm run build`, then `cloudcannon dev dist` to edit local files in CloudCannon
 - Renamed the README _Setup_ section to _Getting Started_
