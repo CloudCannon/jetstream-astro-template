@@ -6,44 +6,36 @@ Jetstream is an [Astro](https://astro.build/) marketing template built on the
 editing experience is configured in `cloudcannon.config.yml` plus the per-component
 `*.cloudcannon.inputs.yml` / `*.cloudcannon.structure-value.yml` files.
 
-## Two sets of skills
+## Skills
 
-**Template skills** — committed to this repo in [`.cursor/skills/`](.cursor/skills). These cover how _this_
-component library works: its three-file component pattern, its design tokens, its content files.
+Two sets of skills apply to this repo.
 
-**CloudCannon skills** — installed from [CloudCannon/agent-skills](https://github.com/CloudCannon/agent-skills), not
-committed here. These cover CloudCannon itself, independent of any one template. Install with
-`npx skills add CloudCannon/agent-skills` (writes to `.agents/skills/`, which is gitignored) or, in Claude Code,
-`/plugin marketplace add CloudCannon/agent-skills` then `/plugin install agent-skills@cloudcannon`.
+**Template skills** — committed in [`.cursor/skills/`](.cursor/skills), covering how _this_ component library works:
+its three-file component pattern, its design tokens, its content files. To see what's available:
 
-When both could apply, prefer the template skill for anything about this repo's components and structure, and the
-CloudCannon skill for anything about CloudCannon's configuration format or editing features.
+```bash
+awk 'FNR<=3 && /^(name|description):/ {print FILENAME": "$0}' .cursor/skills/*/SKILL.md
+```
 
-## Which skill to use when
+**CloudCannon skills** — from [CloudCannon/agent-skills](https://github.com/CloudCannon/agent-skills), covering
+CloudCannon itself, independent of any one template. Not committed here. To see what's available:
 
-| You are…                                                                            | Use                          |
-| ----------------------------------------------------------------------------------- | ---------------------------- |
-| Building a new component, building block, wrapper, or page section                  | `create-component`           |
-| Turning a screenshot of a UI section into a component                               | `screenshot-to-component`    |
-| Assembling a page from existing components, populating `pageSections` YAML          | `page-content-authoring`     |
-| Changing colors, fonts, spacing, or other design tokens; matching a brand           | `theming`                    |
-| Adding or switching a font, or debugging font loading                               | `adding-fonts`               |
-| Editing navigation, footer, or SEO data (`mainNav.json`, `footer.json`, `seo.json`) | `site-data-navigation`       |
-| Writing blog posts, or using components inside MDX                                  | `blog-mdx-content`           |
-| Wiring `data-prop` / `data-children-prop` bindings on a component                   | `editable-regions`           |
-| A component is missing from the picker, or the Visual Editor won't update           | `debug-cloudcannon`          |
-| Porting an existing site's pages and branding into this component library           | `migrate-existing-site`      |
-| Editing `cloudcannon.config.yml` — collections, inputs, structures, collection URLs | `cloudcannon-configuration`  |
-| Adding visual editing to a site that doesn't have it yet                            | `cloudcannon-visual-editing` |
-| Setting up MDX components or inline HTML for the Content Editor                     | `cloudcannon-snippets`       |
-| Onboarding a site to CloudCannon end to end                                         | `migrate-to-cloudcannon`     |
-| Making the site translatable with Rosey                                             | `make-site-multilingual`     |
-| Filling in or updating Rosey locale files                                           | `translate-site`             |
-| Facing a request with more than one sensible answer — before building it            | `brainstorming`              |
+```bash
+npx skills add cloudcannon/agent-skills --list
+```
 
-The last six are CloudCannon skills; the rest ship with this template. Two pairs overlap by name: use
-`migrate-existing-site` to bring a site _into this component library_, and `migrate-to-cloudcannon` to get a site
-_onto CloudCannon_; use `debug-cloudcannon` for problems with this template's components, and
+Install with `npx skills add cloudcannon/agent-skills --skill <names>` (writes to `.agents/skills/`, which is
+gitignored), or in Claude Code with `/plugin marketplace add CloudCannon/agent-skills` then
+`/plugin install agent-skills@cloudcannon`.
+
+**Read the list before starting non-trivial work** — each skill's description says when it applies. A skill installed
+mid-session may not appear in your skill tool until the session restarts; when that happens, read its `SKILL.md`
+directly and follow it.
+
+When both sets could apply, prefer the template skill for anything about this repo's components and structure, and the
+CloudCannon skill for anything about CloudCannon's configuration format or editing features. Two pairs overlap by
+name: use `migrate-existing-site` to bring a site _into this component library_, and `migrate-to-cloudcannon` to get a
+site _onto CloudCannon_; use `debug-cloudcannon` for problems with this template's components, and
 `cloudcannon-configuration` for problems with the config file itself.
 
 ## Repo conventions
