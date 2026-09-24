@@ -35,6 +35,19 @@ npm run dev
 
 This starts the Astro dev server with hot reloading. Open [localhost:4321](http://localhost:4321) to view your site locally.
 
+## Run CloudCannon locally
+
+To work on the editing experience — `cloudcannon.config.yml`, inputs, and structures — run the [CloudCannon CLI](https://cloudcannon.com/documentation/developer-reference/cli/) dev server against your local files:
+
+```bash
+npm install --global @cloudcannon/cli
+cloudcannon login
+npm run build
+cloudcannon dev dist
+```
+
+`cloudcannon dev` serves the built output, so re-run `npm run build` after component or template changes. The dev server runs on port `10101` by default. Validate your configuration with `cloudcannon validate` before committing.
+
 ## Design principles
 
 **Intentionally unbranded.** The starter ships with a neutral, gray-based design on purpose. It's meant to disappear into whatever brand you bring to it. Update a few CSS variables in the theme files and the entire site shifts to match your colors, fonts, and personality.
